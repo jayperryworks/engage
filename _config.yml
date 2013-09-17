@@ -1,0 +1,6 @@
+name: The Engage Group
+
+markdown: redcarpet
+pygments: true
+
+exclude: ["README.md", "codekit-config.json"]
