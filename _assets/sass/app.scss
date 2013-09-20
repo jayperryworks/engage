@@ -14,7 +14,9 @@
    Basic Layout
    ========================================================================== */
 
-
+.wrapper, header nav {
+	@include outer-container;
+}
 
 
 

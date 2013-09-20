@@ -57,8 +57,8 @@
       "debugStyle" : 0
     },
     "\/assets\/js\/vendor\/jquery-1.10.2.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/assets\/js\/vendor\/jquery-1.10.2.min.js",
@@ -87,6 +87,17 @@
       "inputAbbreviatedPath" : "\/_layouts\/default.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/_assets\/js\/plugins\/console.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/console.min.js",
+      "fileType" : 64
     },
     "\/_assets\/sass\/_modules.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -145,8 +156,8 @@
       "fileType" : 2048
     },
     "\/assets\/js\/vendor\/modernizr-2.6.2.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/assets\/js\/vendor\/modernizr-2.6.2.min.js",
@@ -154,10 +165,27 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/assets\/js\/modernizr-2.6.2.min.min.js",
       "fileType" : 64
+    },
+    "\/_assets\/js\/app.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/js\/app.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/app.min.js",
+      "fileType" : 64
     }
   },
   "manualImportLinks" : [
-
+    {
+      "type" : 0,
+      "position" : 0,
+      "linkedFileAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
+      "baseFileAbbreviatedPath" : "\/_assets\/js\/app.js",
+      "followForSyntaxChecking" : 1
+    }
   ],
   "projectSettings" : {
     "hamlNoEscapeInAttributes" : 0,

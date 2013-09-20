@@ -1,0 +1,456 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"grid",
+				"grid-column"
+			],
+			[
+				"default",
+				"default-font"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 307.0,
+		"selected_items":
+		[
+			[
+				"enc",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"HTML: Encode Special Characters"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 358.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jayperry/Projects/PSU/release/README.md",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_assets/sass/app.scss",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_config.yml",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/Guardfile",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_assets/sass/_modules.scss",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_assets/sass/_print.scss",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_assets/sass/_grid_settings.scss",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_assets/sass/_normalize.scss",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_assets/sass/_syntax.scss",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/assets/css/normalize.css",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/Gemfile",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/.gitignore",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/spec_helper.rb",
+		"/Users/jayperry/Projects/_Internal/Snakehead/writing/chapters/chapter 2/02_coffee_with_suan.md",
+		"/Users/jayperry/Projects/_Internal/Snakehead/writing/chapters/chapter 2/01_after_crash.md",
+		"/Users/jayperry/Projects/_Internal/Writing/Blog/130902_blog_open_editions.md",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/gemfile.rb",
+		"/Users/jayperry/Projects/PSI/Worksmart/round 6/prototype/app/assets/stylesheets/_modules.scss",
+		"/Users/jayperry/Desktop/fluid-fixed-sidebars.scss",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/content/02-logo/03-affiliates/page.txt",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/content/02-logo/03-sk&a-group/page.txt",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/content/02-logo/04-structural-engineers/page.txt",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/content/02-logo/06-specialty-tags/page.txt",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/content/02-logo/02-full-name/page.txt",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/site/plugins/kirbytext.extended.php",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/download.php",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/assets/javascripts/vendor/jquery.js",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/assets/javascripts/foundation/foundation.alerts.js",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/config.rb",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/index.php",
+		"/Users/jayperry/Projects/Artsmith/SK&A/styleguide/build/site/config/config.php",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/post-commit.sh",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/README.md",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/_site/README.md",
+		"/Users/jayperry/Projects/_Internal/Snakehead/build/prototype-r3/index.html",
+		"/Users/jayperry/Projects/System13/Form Accelerator/styleguide/build/config.rb",
+		"/Users/jayperry/Projects/System13/Form Accelerator/styleguide/build/assets/stylesheets/app.css",
+		"/Users/jayperry/Projects/System13/Form Accelerator/styleguide/build/assets/sass/app.scss",
+		"/Users/jayperry/Projects/System13/Form Accelerator/styleguide/build/sass/app.scss",
+		"/Users/jayperry/Projects/System13/Form Accelerator/styleguide/build/sass/_settings.scss",
+		"/Users/jayperry/Projects/System13/Form Accelerator/styleguide/build/assets/sass/_settings.scss",
+		"/Users/jayperry/Projects/System13/Form Accelerator/styleguide/build/README.md",
+		"/Users/jayperry/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/sass/_grid_settings.scss",
+		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/javascripts/plugins.js",
+		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/sass/_globals.scss",
+		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/javascripts/vendor/jquery-1.10.2.min.js",
+		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/javascripts/vendor/three.min.js",
+		"/Users/jayperry/Desktop/key",
+		"/private/etc/hosts",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/04-structural-engineers/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/04-colors/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/03-sk&a-group/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/03-affiliates/page.txt",
+		"/Users/jayperry/Library/Application Support/Sublime Text 2/Packages/User/download-dropdown.sublime-snippet",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/02-full-name/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/06-specialty-tags/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/05-specialty-tags/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/01-basic-logo/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/01-home/home.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-font/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/_fonts.scss",
+		"/Users/jayperry/Library/Caches/TemporaryItems/.htaccess",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/site.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/app.scss",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/_tables.scss",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/templates/default.php",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/snippets/header.php",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/05-graphics/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/.htaccess",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/.htaccess",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/snippets/footer.php",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/04-structural-engineers/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/02-sk&a-group/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/03-affiliates/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/01-full-name/page.txt",
+		"/Users/jayperry/Library/Application Support/Sublime Text 2/Packages/User/download-dropdown",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/page.txt",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/_old/index.html",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/_settings.scss",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/config/config.php",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/04-affiliate-lockup/page.txt",
+		"/Users/jayperry/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/normalize.scss",
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/images/ska-group-logo.png"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"px)",
+			"px;",
+			"screen:",
+			"screen}",
+			"#{$",
+			"screen}",
+			"/assets/javascripts",
+			"\"assets",
+			"\"",
+			"{{ site.url }}",
+			"\"css/",
+			"stylesheet",
+			"home",
+			"/css",
+			"file",
+			"background",
+			"grid",
+			":",
+			"c",
+			"$c;",
+			"placeholder",
+			"Utlity",
+			"table",
+			"h6",
+			"3px 3px 5px 6px #ccc",
+			", $radius: $global-radius",
+			"subhead</",
+			"transition",
+			"button",
+			"';",
+			"url('",
+			"grid",
+			"</strong>",
+			"strong>",
+			": ",
+			"illustrator",
+			"= \"",
+			"\"",
+			"stylesheets",
+			"assets/",
+			"\n						",
+			"</tr>\n					<tr>",
+			"src=\"",
+			"	\n",
+			"div",
+			"$canvas",
+			"three.js",
+			"css",
+			";",
+			"eps",
+			"md",
+			"eps",
+			"<ul id=\"md-pos-png\" class=\"f-dropdown\">\n	<li>(file: SK&AMD_full_cmyk_positive.eps text: Print - CMYK)</li>\n	<li>(file: SK&AMD_full_rgb_positive.eps text: Screen - RGB)</li>\n	<li>(file: SK&AMD_full_grayscale_positive.eps text: Black & White)</li>\n</ul>",
+			"eps",
+			"dc",
+			"eps",
+			"ska",
+			"eps",
+			"sustain",
+			"eps",
+			"rr",
+			"eps",
+			"design",
+			"eps",
+			"sustain",
+			"eps",
+			"pdf",
+			"rr",
+			"eps",
+			"design",
+			"positive",
+			"pos",
+			"eps",
+			"ska",
+			"rev",
+			"ETI",
+			"png",
+			"eps",
+			"Download<",
+			"Download",
+			"url('",
+			"K:",
+			"Y:",
+			"M:",
+			"C:",
+			"B:",
+			"G:",
+			"*R*:",
+			"R:",
+			"extra",
+			"markdown.extra",
+			"pos",
+			"positive",
+			"reverse",
+			"positive",
+			"pos",
+			"positive",
+			"pos",
+			"Pos",
+			"pos",
+			"positive",
+			"pos",
+			"Sk&ADC",
+			"autocomplete",
+			"png",
+			"reverse",
+			".js\"(",
+			"></script>",
+			"<script src=",
+			"src=\"javascripts",
+			"close"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"png",
+			"pdf",
+			"eti",
+			"png",
+			"pdf",
+			"md",
+			"png",
+			"pdf",
+			"dc",
+			"png",
+			"pdf",
+			"diversity",
+			"png",
+			"pdf",
+			"sustain",
+			"png",
+			"pdf",
+			"rr",
+			"pdf",
+			"png",
+			"diversity",
+			"png",
+			"pdf",
+			"png",
+			"sustain",
+			"png",
+			"pdf",
+			"rr",
+			"reverse",
+			"rev",
+			"png",
+			"pdf",
+			"design",
+			"reverse",
+			"SK&A",
+			"pdf",
+			"png",
+			"Download: EPS<",
+			"url('../fonts/",
+			"**K:**",
+			"**Y:**",
+			"**M:**",
+			"**C:**",
+			"**B:**",
+			"**G:**",
+			"**R:**",
+			"*R*:",
+			"rev",
+			"reverse",
+			"positive",
+			"reverse",
+			"rev",
+			"reverse",
+			"rev",
+			"reverse",
+			"rev",
+			"eti",
+			"rev",
+			"SK&AMD",
+			"eti",
+			".js\")",
+			"( ?>",
+			"<?php echo js(",
+			"src=\"assets/javascripts"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 277.0,
+	"status_bar_visible": true
+}
