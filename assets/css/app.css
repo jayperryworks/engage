@@ -757,7 +757,8 @@ audio,
 canvas,
 img,
 video {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%; }
 
 /*
  * Remove default fieldset styles.
@@ -850,6 +851,44 @@ textarea {
     display: table; }
   .wrapper:after, header nav:after {
     clear: both; }
+
+.intro .brand {
+  display: block;
+  margin: 0 auto; }
+.intro h1 {
+  display: block;
+  float: left;
+  margin-right: 2.22785%;
+  width: 100%;
+  text-align: center; }
+  .intro h1:last-child {
+    margin-right: 0; }
+.intro p {
+  display: block;
+  float: left;
+  margin-right: 2.22785%;
+  width: 65.92405%;
+  margin-left: 17.03797%; }
+  .intro p:last-child {
+    margin-right: 0; }
+
+.services {
+  display: block;
+  float: left;
+  margin-right: 2.22785%;
+  width: 82.96203%;
+  margin-left: 8.51899%; }
+  .services:last-child {
+    margin-right: 0; }
+  .services li {
+    display: block;
+    float: left;
+    margin-right: 2.68538%;
+    width: 17.8517%; }
+    .services li:last-child {
+      margin-right: 0; }
+    .services li img {
+      display: block; }
 
 /* ==========================================================================
    Print styles.

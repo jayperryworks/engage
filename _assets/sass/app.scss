@@ -18,6 +18,36 @@
 	@include outer-container;
 }
 
+.intro {
+	.brand {
+		display: block;
+		margin: 0 auto;
+	}
 
+	h1 {
+		@include span-columns($grid-columns);
+		text-align: center;
+	}
+
+	p {
+		@include span-columns(8);
+		@include shift(2);
+	}
+}
+
+	.services {
+		@include span-columns(10);
+		@include shift(1);
+
+		li {
+			//@include inline-block();
+			@include span-columns(2 of 10);
+
+			img {
+
+				display: block;
+			}
+		}
+	}
 
 @import "print";
