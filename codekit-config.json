@@ -88,15 +88,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/_assets\/js\/plugins\/console.js" : {
+    "\/assets\/js\/app.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
+      "inputAbbreviatedPath" : "\/assets\/js\/app.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/console.min.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/app.min.min.js",
       "fileType" : 64
     },
     "\/_assets\/sass\/_modules.scss" : {
@@ -111,6 +111,52 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/_assets\/sass\/_helpers.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/_helpers.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_helpers.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/sass\/_base.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/_base.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_base.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/js\/plugins\/console.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/console.min.js",
+      "fileType" : 64
+    },
+    "\/_assets\/js\/plugins\/jqwidont.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/jqwidont.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/jqwidont.min.min.js",
+      "fileType" : 64
+    },
     "\/apple-touch-icon-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -121,30 +167,6 @@
       "outputAbbreviatedPath" : "\/apple-touch-icon-precomposed.png",
       "initialSize" : 1226,
       "fileType" : 8192
-    },
-    "\/_assets\/sass\/_globals.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/_globals.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_globals.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/_assets\/sass\/_print.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/_print.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_print.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     },
     "\/_layouts\/post.html" : {
       "ignoreWasSetByUser" : 0,
@@ -166,6 +188,18 @@
       "outputAbbreviatedPath" : "\/assets\/assets\/js\/modernizr-2.6.2.min.min.js",
       "fileType" : 64
     },
+    "\/_assets\/sass\/_print.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/_print.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_print.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/_assets\/js\/app.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -183,6 +217,13 @@
       "type" : 0,
       "position" : 0,
       "linkedFileAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
+      "baseFileAbbreviatedPath" : "\/_assets\/js\/app.js",
+      "followForSyntaxChecking" : 1
+    },
+    {
+      "type" : 1,
+      "position" : 1,
+      "linkedFileAbbreviatedPath" : "\/_assets\/js\/plugins\/jqwidont.min.js",
       "baseFileAbbreviatedPath" : "\/_assets\/js\/app.js",
       "followForSyntaxChecking" : 1
     }
