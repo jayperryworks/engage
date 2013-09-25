@@ -1,0 +1,64 @@
+// Global type
+
+h1, .h1, %h1 {
+	@extend %lato;
+	font-size: em(30);
+	line-height: 1.2;
+	// letter-spacing: -0.01em;
+
+	@media #{$small} {
+		font-size: em(36);
+	}
+
+	@media #{$large} {
+		font-size: em(40);
+	}
+}
+
+h1 > .subhead {
+	@extend %lato-bold;
+	font-size: 0.6em;
+	line-height: 1.2;
+	text-transform: uppercase;
+
+	@media #{$large} {
+		font-size: 0.5em;
+	}
+}
+
+h2 {
+	@extend %lato;
+	font-size: em(22);
+}
+
+.amp {
+	@extend %amp;
+	font-size: 1.2em; // RELATIVE to its parent. Will be slightly larger.
+}
+
+a {
+	color: $color-primary;
+	text-decoration: none;
+	@extend %base-transition;
+
+	&:hover, &:active {
+		color: darken($color-primary, 10);
+	}
+}
+
+p, li, ol {
+	@extend %lora;
+	line-height: $base-line-height;
+	margin-top: 0;
+}
+
+.abstract, p:first-child {
+	font-size: ms(1);
+}
+
+// Colors (themes)
+
+%theme-dark {
+	color: white;
+	background: $bg-dark;
+}

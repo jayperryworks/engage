@@ -1,14 +1,29 @@
-// base styles and helpers
-@import "normalize";
-@import "helpers";
+
+/* ==========================================================================
+   Frameworks
+   ========================================================================== */
 
 // bourbon and NEAT grid frameworks
 @import "bourbon/bourbon";
-@import "grid_settings";
+@import "neat-settings";
 @import "neat/neat";
 
-@import "syntax"; // for code highlighting
-@import "base"; // BP base styles
+
+/* ==========================================================================
+   CORE styles
+   ========================================================================== */
+
+@import "core/normalize"; // reset
+@import "core/settings"; // global variables
+@import "core/helpers"; // helper classes/mixins
+@import "core/base"; // BP base styles
+@import "core/content"; // global/base-level typography, color etc.
+@import "core/layout"; // global layout
+
+/* ==========================================================================
+   MODULE styles
+   ========================================================================== */
+
 @import "modules";
 
 
@@ -21,40 +36,116 @@
 	@include outer-container;
 }
 
+// Header
+.main-header {
+	background: #2F2F2F;
+	border-top: 1px solid #000;
+}
+	.brand-icon {
+		@include hide-text;
+		background: $black url("../logo-engage--full.png");
+	}
+
+	.main-menu {
+		float: left;
+		color: $lightGray;
+
+		a {
+			color: $lightGray;
+		}
+
+		& > li {
+			@include inline-block;
+		}
+	}
+
+	.search {
+		float: right;
+	}
+
+	.secondary-menu {
+		float: right;
+
+		a {
+			@extend %lato-bold;
+			color: $medGray;
+			text-transform: uppercase;
+		}
+
+		& > li {
+			@include inline-block;
+		}
+	}
+
 // Intro section
 .intro {
-	background: #3A3A3A;
-	
-	.brand {
+	background: $bg-dark;
+
+	.logo-engage.full {
 		display: block;
-		margin: 0 auto;
+		margin: em(84) auto em(48) auto;
+		max-width: em(300);
 	}
 
 	h1 {
 		@include span-columns($grid-columns);
 		text-align: center;
+		color: white;
+		margin-top: 0;
+
+		& > .subhead {
+			color: $green;
+		}
 	}
 
 	p {
 		@include span-columns(8);
 		@include shift(2);
+		text-align: center;
+		color: $medGray;
 	}
 }
 
 	.services {
 		@include span-columns(10);
 		@include shift(1);
+		padding: 0;
 
 		li {
-			//@include inline-block();
-			@include span-columns(2 of 10);
+			height: em(200);
+			width: 20%;
+			@include span-columns(2 of 10, collapse);
 			text-align: center;
-			background: #4D4D4D;
+			background: $darkGray;
+			vertical-align: middle;
+			@extend %lato-bold;
+			text-transform: uppercase;
+			font-size: em(14);
+			border-right: 3px solid $bg-dark;
+			@extend %base-transition;
+
+			&:last-child {
+				border: none;
+			}
+
+			&:hover {
+				background: lighten($darkGray, 3);
+
+				a {
+					color: white;
+				}
+			}
 
 			img {
 				display: block;
+				margin: 0 auto;
 			}
 		}
-	}
 
-@import "print";
+		a {
+			display: block;
+			color: $lightGray;
+			@extend %base-transition;
+			margin-top: em(18);
+		}
+	}
