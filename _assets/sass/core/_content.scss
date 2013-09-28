@@ -1,10 +1,13 @@
-// Global type
+// ==============================================================================
+// 	Global type
+// ==============================================================================
+
+// http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
 
 h1, .h1, %h1 {
 	@extend %lato;
 	@include rem(font-size, 48px);
 	line-height: 1.2;
-	// letter-spacing: -0.01em;
 
 	// @include media($small) {
 	// 	@include rem(font-size, 36);
@@ -53,7 +56,7 @@ p, li, ol {
 }
 
 .abstract, p:first-child {
-	font-size: ms(1);
+	@include rem(font-size, 18px);
 }
 
 // Colors (themes)

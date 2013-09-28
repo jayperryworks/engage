@@ -1,16 +1,25 @@
-/* ==========================================================================
-   Typography settings
-   ========================================================================== */
+// ==========================================================================
+// 	Typography settings
+// ==========================================================================
 
-// http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
-
-$base-font-size: 16; // in pixels
+$base-font-size--default: 16; // in pixels
 $base-line-height: 1.5; // base line height (ratio, no units)
+
+// base font sizes @ each breakpoint
+// see media queries below for breakpoint sizes
+$base-font-size--xsmall: 14px;
+$base-font-size--small: 16px;
+$base-font-size--medium: 18px;
+$base-font-size--large: 22px;
 
 $lato: 'Lato', #{$helvetica};
 $lora: 'Lora', #{$georgia};
 
 $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
+
+
+// Lato (header/display font)
+// -----------------------------------------------------------------------------
 
 %lato {
 	font-family: $lato;
@@ -27,6 +36,9 @@ $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 	@extend %lato;
 	font-weight: 900;
 }
+
+// Lora (text font)
+// -----------------------------------------------------------------------------
 
 %lora {
 	font-family: $lora;
@@ -59,33 +71,26 @@ $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 
 // ==========================================================================
 // 	Media queries
+//  -> mobile first, using base font sizes to scale everything
 // ==========================================================================
 
-$xsmall-font: 14px;
-$small-font: 16px;
-$medium-font: 18px;
-$large-font: 20px;
-
 // screen size breakpoints (values in px but do not include unit)
-$xsmall-screen: rem(480, $xsmall-font);
-$small-screen: rem(768, $small-font);
-$medium-screen: rem(1280, $medium-font);
-$large-screen: rem(1440, $large-font);
+$screen--xsmall: em(480);
+$screen--small: em(768);
+$screen--medium: em(1280);
+$screen--large: em(1440);
 
-$xsmall: new-breakpoint(min-width 480px 4);
-$small: new-breakpoint(min-width 768px 8);
-$medium: new-breakpoint(min-width 1280px 12);
-$large: new-breakpoint(min-width 1440px 12);
+$xsmall: new-breakpoint(min-width $screen--xsmall 4);
+$small: new-breakpoint(min-width $screen--small 8);
+$medium: new-breakpoint(min-width $screen--medium 12);
+$large: new-breakpoint(min-width $screen--large 12);
 
-// $xsmall: "only screen and (min-width: #{$xsmall-screen})";
-// $small: "only screen and (min-width: #{$small-screen})";
-// $medium: "only screen and (min-width: #{$medium-screen})";
-// $large: "only screen and (min-width: #{$large-screen})";
 $landscape: "only screen and (orientation: landscape)";
 $portrait: "only screen and (orientation: portrait)";
 
 // for print and high-resolution displays
 $print: "print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)";
+
 
 // ==========================================================================
 // 	Animation

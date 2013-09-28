@@ -458,33 +458,6 @@ table {
   border-spacing: 0; }
 
 /* ==========================================================================
-   Typography settings
-   ========================================================================== */
-h1 > .subhead, .main-menu a, .secondary-menu a, .services li, h1, .h1, h2 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-style: normal; }
-
-h1 > .subhead, .main-menu a, .secondary-menu a, .services li {
-  font-weight: 700; }
-
-p, li, ol {
-  font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-style: normal; }
-
-.amp {
-  font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
-  font-style: italic;
-  font-weight: normal !important;
-  margin: 0 0.0625em 0 -0.0625em; }
-
-a, .services li, .services a {
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
-
-/* ==========================================================================
    HTML5 BP Helper classes
    ========================================================================== */
 /*
@@ -536,6 +509,30 @@ a, .services li, .services a {
   /* Style adjustments for viewports that meet the condition */ }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
+h1 > .subhead, .main-menu a, .secondary-menu a, .services li, h1, .h1, h2 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+
+h1 > .subhead, .main-menu a, .secondary-menu a, .services li {
+  font-weight: 700; }
+
+p, li, ol {
+  font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.amp {
+  font-family: "Baskerville", "Palatino", "Book Antiqua", serif;
+  font-style: italic;
+  font-weight: normal !important;
+  margin: 0 0.0625em 0 -0.0625em; }
+
+a, .services li, .services a {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; }
+
 .highlight {
   background: #ffffff; }
 
@@ -935,7 +932,7 @@ h1 > .subhead {
   font-size: 0.6em;
   line-height: 1.2;
   text-transform: uppercase; }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 90em) {
     h1 > .subhead {
       font-size: 0.5em; } }
 
@@ -957,7 +954,8 @@ p, li, ol {
   margin-top: 0; }
 
 .abstract, p:first-child {
-  font-size: ms(1); }
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 /* ==========================================================================
    MODULE styles
@@ -970,36 +968,42 @@ p, li, ol {
    add quick and dirty CSS here, clean up and move to the right place later
    ========================================================================== */
 html {
-  font-size: 14px; }
-  @media screen and (min-width: 768px) {
+  font-size: 87.5%; }
+  @media screen and (min-width: 48em) {
     html {
-      font-size: 16px; } }
-  @media screen and (min-width: 1280px) {
+      font-size: 100%; } }
+  @media screen and (min-width: 80em) {
     html {
-      font-size: 18px; } }
-  @media screen and (min-width: 1440px) {
+      font-size: 112.5%; } }
+  @media screen and (min-width: 90em) {
     html {
-      font-size: 20px; } }
+      font-size: 137.5%; } }
 
 .wrapper, .main-header > nav {
   *zoom: 1;
   max-width: 1440px;
   margin-left: auto;
-  margin-right: auto;
-  max-width: 102.85714rem; }
+  margin-right: auto; }
   .wrapper:before, .wrapper:after, .main-header > nav:before, .main-header > nav:after {
     content: " ";
     display: table; }
   .wrapper:after, .main-header > nav:after {
     clear: both; }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 48em) {
     .wrapper, .main-header > nav {
-      max-width: 72rem; } }
+      max-width: 90%; } }
+  @media screen and (min-width: 80em) {
+    .wrapper, .main-header > nav {
+      margin: 0 2.66667rem; } }
+  @media screen and (min-width: 90em) {
+    .wrapper, .main-header > nav {
+      margin: 0 auto;
+      max-width: 1368px;
+      max-width: 62.18182rem; } }
 
 .main-header {
   background: #2F2F2F;
   border-top: 1px solid #000;
-  padding-top: -1px;
   height: 3.75em; }
   .main-header > nav {
     height: 100%; }
@@ -1031,19 +1035,19 @@ html {
   .main-menu > li {
     display: block;
     float: left;
-    margin: 0 !important;
+    margin: 0;
     padding: 0; }
   .main-menu a {
     display: table-cell;
-    margin: 0;
-    padding: 0 1.5em;
+    padding: 0 1.125em;
     height: 3.75em;
     vertical-align: middle;
     color: #cbcbcb;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: -20px; }
     .main-menu a:hover, .main-menu a:active {
-      color: #4d4d4d;
-      background: #83ae52; }
+      color: white;
+      background: #272727; }
 
 .search {
   float: right; }

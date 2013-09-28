@@ -5,26 +5,26 @@
   @return $number / ($number * 0 + 1);
 }
 
-// Convert a base px value into rem (1:1 conversion b/c it's baseline)
-@function baseline-rem($base) {
-  @return strip-units($base);
-}
-
 // convert to rem
 // @param $base (optional): base font size
-@function rem($px-size, $base: $base-font-size) {
-  @return #{strip-units($px-size)/strip-units($base)}rem;
+// based on http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+@function rem($px-size, $base: $base-font-size--default) {
+  @return #{strip-units($px-size/$base)}rem;
 }
 
-// from https://github.com/bitmanic/rem
-@mixin rem($property, $px-values, $base: $base-font-size) {
-  // Convert the base value parameter into rem units
-  $baseline: strip-units($base);
+@function percent($px-size, $base: $base-font-size--default) {
+  @return (strip-units($px-size/$base-font-size--default))*100%;
+}
+
+// based on https://github.com/bitmanic/rem
+// @param $px-values: number or list of numbers (0 3px 3px 0)
+// -> NONZERO VALUES MUST HAVE UNITS
+@mixin rem($property, $px-values, $base: $base-font-size--default) {
   // Print the first line in pixel values
   #{$property}: $px-values;
   // If there is only one (numeric) value, return the property/value line for it.
   @if type-of($px-values) == "number" {
-    #{$property}: rem($px-values);
+    #{$property}: rem($px-values, $base);
   } @else {
     // Create an empty list that we can dump values into
     $rem-values: ();
@@ -33,7 +33,7 @@
       @if $value == 0 or type-of( $value ) != "number" {
         $rem-values: append($rem-values, $value); 
       } @else {
-        $rem-values: append($rem-values, rem($value)); 
+        $rem-values: append($rem-values, rem($value, $base)); 
       }
     }
     // Return the property and its list of converted values

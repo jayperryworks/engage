@@ -14,9 +14,9 @@
    ========================================================================== */
 
 @import "core/normalize"; // reset
-@import "core/settings"; // global variables
 @import "core/helpers/html5bp"; // helper classes/mixins
 @import "core/helpers/rem"; // helper classes/mixins
+@import "core/settings"; // global variables
 @import "core/base"; // BP base styles
 @import "core/content"; // global/base-level typography, color etc.
 @import "core/layout"; // global layout
@@ -27,7 +27,6 @@
 
 @import "modules";
 
-
 /* ==========================================================================
    Inbox -- 
    add quick and dirty CSS here, clean up and move to the right place later
@@ -37,36 +36,39 @@ html {
 	// set up the base font size at each breakpoint
 	// this will scale the whole layout proportionately as the screen size changes
 	// and we only have to change one thing
-	font-size: $xsmall-font;
+	font-size: percent($base-font-size--xsmall);
 
 	@include media($small) {
-		font-size: $small-font;
+		font-size: percent($base-font-size--small);
 	}
 
 	@include media($medium) {
-		font-size: $medium-font;
+		font-size: percent($base-font-size--medium);
 	}
 
 	@include media($large) {
-		font-size: $large-font;
+		font-size: percent($base-font-size--large);
 	}
 }
 
 .wrapper, %wrapper {
 	@include outer-container;
-	max-width: rem($max-width, 14px);
-
-	// @include media($small) {
-	// 	max-width: rem($max-width, $small-font);
-	// }
-
-	// @include media($medium) {
-	// 	max-width: rem($max-width, $medium-font);
-	// }
-
-	@include media($large) {
-		max-width: rem($max-width, $large-font);
+	
+	@include media($small) {
+		max-width: 90%;
 	}
+
+	@include media($medium) {
+		margin: 0 rem(48px, $base-font-size--medium);
+	}
+
+	@include media($large){
+		margin: 0 auto;
+		//account for increased font size @large screens
+		@include rem(max-width, $max-width - 72px, $base-font-size--large);
+	}
+
+	//padding: rem($margin, $base-font-size--xsmall);
 }
 
 $header-h: em(60);
@@ -76,7 +78,6 @@ $header-h: em(60);
 
 	background: #2F2F2F;
 	border-top: 1px solid #000;
-	padding-top: -1px; // to offset the border
 	height: $header-h;
 	//font-size: em(12);
 	
@@ -107,23 +108,23 @@ $header-h: em(60);
 		& > li {
 			display: block;
 			float: left;
-			margin: 0 !important;
+			margin: 0;
 			padding: 0;
 		}
 
 		a {
 			@extend %lato-bold;
 			display: table-cell;
-			margin: 0;
-			padding: 0 em(24);
+			padding: 0 em(18);
 			height: $header-h;
 			vertical-align: middle;
 			color: $lightGray;
 			text-transform: uppercase;
+			margin-top: -20px;
 
 			&:hover, &:active {
-				color: $darkGray;
-				background: $green;
+				color: white;
+				background: darken(#2F2F2F, 3);
 			}
 		}
 	}
