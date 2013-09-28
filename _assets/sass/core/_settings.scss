@@ -1,15 +1,11 @@
-// Typography settings
+/* ==========================================================================
+   Typography settings
+   ========================================================================== */
+
 // http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
 
 $base-font-size: 16; // in pixels
-$base-mod-scale-ratio: 1.5;
-$base-line-height: 1.5;
-
-// run a modular scale calculation and convert to em's
-// @param $i: an increment value (positive: bigger than base, negative: smaller)
-@function ms($i) {
-	@return em(modular-scale($base-font-size, $i, $base-mod-scale-ratio));
-}
+$base-line-height: 1.5; // base line height (ratio, no units)
 
 $lato: 'Lato', #{$helvetica};
 $lora: 'Lora', #{$georgia};
@@ -61,44 +57,65 @@ $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 	margin: 0 em(1) 0 em(-1);
 }
 
-// Colors
+// ==========================================================================
+// 	Media queries
+// ==========================================================================
 
-// highlights
-$purple: #7C4099;
-$green: #83AE52;
-$red: #B14B4B;
-
-$black: #3A3A3A;
-$darkGray: #4D4D4D;
-$medGray: #808080;
-$lightGray: #CBCBCB;
-
-$bg-dark: $black;
-
-$color-primary: $green;
-
-
-/* Media queries (default breakpoints)
-********************************************************************/
+$xsmall-font: 14px;
+$small-font: 16px;
+$medium-font: 18px;
+$large-font: 20px;
 
 // screen size breakpoints (values in px but do not include unit)
-$xsmall-screen: em(480);
-$small-screen: em(768);
-$medium-screen: em(1280);
-$large-screen: em(1440);
+$xsmall-screen: rem(480, $xsmall-font);
+$small-screen: rem(768, $small-font);
+$medium-screen: rem(1280, $medium-font);
+$large-screen: rem(1440, $large-font);
 
-$xsmall: "only screen and (min-width: #{$xsmall-screen})";
-$small: "only screen and (min-width: #{$small-screen})";
-$medium: "only screen and (min-width: #{$medium-screen})";
-$large: "only screen and (min-width: #{$large-screen})";
+$xsmall: new-breakpoint(min-width 480px 4);
+$small: new-breakpoint(min-width 768px 8);
+$medium: new-breakpoint(min-width 1280px 12);
+$large: new-breakpoint(min-width 1440px 12);
+
+// $xsmall: "only screen and (min-width: #{$xsmall-screen})";
+// $small: "only screen and (min-width: #{$small-screen})";
+// $medium: "only screen and (min-width: #{$medium-screen})";
+// $large: "only screen and (min-width: #{$large-screen})";
 $landscape: "only screen and (orientation: landscape)";
 $portrait: "only screen and (orientation: portrait)";
 
 // for print and high-resolution displays
 $print: "print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)";
 
-// Animation
+// ==========================================================================
+// 	Animation
+// ==========================================================================
 
 %base-transition {
 	@include transition (all 0.2s ease-in);
 }
+
+// ==========================================================================
+// 	Colors
+// 	-> Use the "theme variables" (bottom) in your actual CSS. 
+// 	-> The "name" variables (ie $purple) are just references for the theme.
+// ==========================================================================
+
+// Highlights - REFERENCE ONLY, DO NOT USE
+// --------------------------------------------------------------------------
+$purple: #7C4099;
+$green: #83AE52;
+$red: #B14B4B;
+
+// Neutrals - REFERENCE ONLY, DO NOT USE
+// --------------------------------------------------------------------------
+$black: #3A3A3A;
+$darkGray: #4D4D4D;
+$medGray: #808080;
+$lightGray: #CBCBCB;
+
+// Theme variables
+// --------------------------------------------------------------------------
+$bg-dark: $black;
+
+$color-primary: $green;

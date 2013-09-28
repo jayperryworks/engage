@@ -8,4 +8,7 @@ _site/assets/css/app.css
 
 _site/index.html
 
-_site/index.html
+_site/*
+
+engage.sublime-project
+engage.sublime-workspace

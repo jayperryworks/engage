@@ -2,27 +2,49 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8326",
   "files" : {
-    "\/_assets\/sass\/core\/_base.scss" : {
+    "\/_assets\/sass\/_modules.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base.scss",
+      "inputAbbreviatedPath" : "\/_assets\/sass\/_modules.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base.css",
+      "outputAbbreviatedPath" : "\/assets\/css\/_modules.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_assets\/sass\/app.scss" : {
+    "\/assets\/js\/vendor\/jquery-1.10.2.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/vendor\/jquery-1.10.2.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/assets\/js\/jquery-1.10.2.min.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/images\/icon-services-email.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/app.scss",
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-email.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-email.png",
+      "initialSize" : 1904,
+      "fileType" : 8192
+    },
+    "\/_assets\/sass\/core\/_html5bp.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_html5bp.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/app.css",
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_html5bp.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -37,6 +59,185 @@
       "initialSize" : 1638,
       "fileType" : 8192
     },
+    "\/assets\/images\/icon-services-mobile.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
+      "initialSize" : 1322,
+      "fileType" : 8192
+    },
+    "\/assets\/js\/app.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/app.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/app.min.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/images\/icon-services-donation.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
+      "initialSize" : 2198,
+      "fileType" : 8192
+    },
+    "\/_assets\/sass\/core\/helpers\/_html5bp.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/helpers\/_html5bp.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_html5bp.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/sass\/core\/_base.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/sass\/core\/_normalize.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_normalize.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_normalize.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/js\/plugins\/console.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/console.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/images\/logo-engage--icon-rev.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/logo-engage--icon-rev.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/logo-engage--icon-rev.png",
+      "initialSize" : 1525,
+      "fileType" : 8192
+    },
+    "\/assets\/css\/app.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/css\/app.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/_assets\/sass\/core\/_settings.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_settings.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_settings.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_layouts\/post.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_layouts\/post.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/assets\/js\/vendor\/modernizr-2.6.2.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/vendor\/modernizr-2.6.2.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/assets\/js\/modernizr-2.6.2.min.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/images\/icon-services-web.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-web.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-web.png",
+      "initialSize" : 2031,
+      "fileType" : 8192
+    },
+    "\/_assets\/sass\/core\/_layout.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_layout.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_layout.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/sass\/core\/helpers\/_rem.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/helpers\/_rem.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_rem.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/sass\/core\/_base-syntax.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base-syntax.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-syntax.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/_assets\/js\/app.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -47,6 +248,45 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/app.min.js",
       "fileType" : 64
+    },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/_assets\/sass\/core\/_base-print.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base-print.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-print.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/assets\/css\/_base-print.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/assets\/css\/_helpers.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/css\/_helpers.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/_assets\/sass\/core\/_content.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -71,168 +311,6 @@
       "outputAbbreviatedPath" : "\/_assets\/assets\/js\/jqwidont.min.min.js",
       "fileType" : 64
     },
-    "\/assets\/css\/app.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/css\/app.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/_assets\/sass\/core\/_layout.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_layout.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_layout.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/assets\/images\/icon-services-mobile.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
-      "initialSize" : 1322,
-      "fileType" : 8192
-    },
-    "\/_assets\/js\/plugins\/console.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/console.min.js",
-      "fileType" : 64
-    },
-    "\/_assets\/sass\/core\/_normalize.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_normalize.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_normalize.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/_layouts\/default.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_layouts\/default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/_assets\/sass\/_neat-settings.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/_neat-settings.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_neat-settings.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/assets\/js\/vendor\/jquery-1.10.2.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/vendor\/jquery-1.10.2.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/assets\/js\/jquery-1.10.2.min.min.js",
-      "fileType" : 64
-    },
-    "\/_layouts\/post.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_layouts\/post.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/_assets\/sass\/core\/_settings.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_settings.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_settings.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/assets\/js\/app.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/app.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/app.min.min.js",
-      "fileType" : 64
-    },
-    "\/assets\/images\/icon-services-email.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-email.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-email.png",
-      "initialSize" : 1904,
-      "fileType" : 8192
-    },
-    "\/_assets\/sass\/core\/_base-syntax.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base-syntax.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-syntax.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/assets\/js\/vendor\/modernizr-2.6.2.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/vendor\/modernizr-2.6.2.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/assets\/js\/modernizr-2.6.2.min.min.js",
-      "fileType" : 64
-    },
-    "\/assets\/css\/_helpers.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/css\/_helpers.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/images\/logo-engage--full.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -244,27 +322,14 @@
       "initialSize" : 5501,
       "fileType" : 8192
     },
-    "\/assets\/images\/icon-services-donation.png" : {
+    "\/_layouts\/default.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
-      "initialSize" : 2198,
-      "fileType" : 8192
-    },
-    "\/assets\/images\/icon-services-web.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-web.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-web.png",
-      "initialSize" : 2031,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/_layouts\/default.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/apple-touch-icon-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
@@ -277,57 +342,27 @@
       "initialSize" : 1226,
       "fileType" : 8192
     },
-    "\/_assets\/sass\/_modules.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/_modules.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_modules.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/_assets\/assets\/css\/_base-print.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-print.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/_assets\/sass\/core\/_base-print.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base-print.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-print.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/index.html" : {
+    "\/_assets\/sass\/app.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/_assets\/sass\/app.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/app.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
-    "\/_assets\/sass\/core\/_helpers.scss" : {
+    "\/_assets\/sass\/_neat-settings.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_helpers.scss",
+      "inputAbbreviatedPath" : "\/_assets\/sass\/_neat-settings.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_helpers.css",
+      "outputAbbreviatedPath" : "\/assets\/css\/_neat-settings.css",
       "fileType" : 4,
       "debugStyle" : 0
     }

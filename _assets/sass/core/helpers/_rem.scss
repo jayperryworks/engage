@@ -1,0 +1,42 @@
+
+// Eric Meyer's awesome strip unit helper
+// http://stackoverflow.com/questions/12328259/how-do-you-strip-the-unit-from-any-number-in-sass/12335841#12335841
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Convert a base px value into rem (1:1 conversion b/c it's baseline)
+@function baseline-rem($base) {
+  @return strip-units($base);
+}
+
+// convert to rem
+// @param $base (optional): base font size
+@function rem($px-size, $base: $base-font-size) {
+  @return #{strip-units($px-size)/strip-units($base)}rem;
+}
+
+// from https://github.com/bitmanic/rem
+@mixin rem($property, $px-values, $base: $base-font-size) {
+  // Convert the base value parameter into rem units
+  $baseline: strip-units($base);
+  // Print the first line in pixel values
+  #{$property}: $px-values;
+  // If there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == "number" {
+    #{$property}: rem($px-values);
+  } @else {
+    // Create an empty list that we can dump values into
+    $rem-values: ();
+    @each $value in $px-values {
+      // If the value is zero or not a number, return it
+      @if $value == 0 or type-of( $value ) != "number" {
+        $rem-values: append($rem-values, $value); 
+      } @else {
+        $rem-values: append($rem-values, rem($value)); 
+      }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values; 
+  } 
+}

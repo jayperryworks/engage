@@ -15,7 +15,8 @@
 
 @import "core/normalize"; // reset
 @import "core/settings"; // global variables
-@import "core/helpers"; // helper classes/mixins
+@import "core/helpers/html5bp"; // helper classes/mixins
+@import "core/helpers/rem"; // helper classes/mixins
 @import "core/base"; // BP base styles
 @import "core/content"; // global/base-level typography, color etc.
 @import "core/layout"; // global layout
@@ -32,30 +33,98 @@
    add quick and dirty CSS here, clean up and move to the right place later
    ========================================================================== */
 
-.wrapper, header nav {
-	@include outer-container;
+html {
+	// set up the base font size at each breakpoint
+	// this will scale the whole layout proportionately as the screen size changes
+	// and we only have to change one thing
+	font-size: $xsmall-font;
+
+	@include media($small) {
+		font-size: $small-font;
+	}
+
+	@include media($medium) {
+		font-size: $medium-font;
+	}
+
+	@include media($large) {
+		font-size: $large-font;
+	}
 }
+
+.wrapper, %wrapper {
+	@include outer-container;
+	max-width: rem($max-width, 14px);
+
+	// @include media($small) {
+	// 	max-width: rem($max-width, $small-font);
+	// }
+
+	// @include media($medium) {
+	// 	max-width: rem($max-width, $medium-font);
+	// }
+
+	@include media($large) {
+		max-width: rem($max-width, $large-font);
+	}
+}
+
+$header-h: em(60);
 
 // Header
 .main-header {
+
 	background: #2F2F2F;
 	border-top: 1px solid #000;
+	padding-top: -1px; // to offset the border
+	height: $header-h;
+	//font-size: em(12);
+	
+	& > nav {
+		@extend %wrapper;
+		height: 100%;
+	}
 }
 	.brand-icon {
 		@include hide-text;
-		background: $black url("../logo-engage--full.png");
+		display: block;
+		width: 60px;
+		height: 100%;
+		top: 0;
+		margin: 0;
+		float: left;
+		background: $black url("../images/logo-engage--icon-rev.png") center no-repeat;
 	}
 
 	.main-menu {
+		@include clearfix;
 		float: left;
 		color: $lightGray;
-
-		a {
-			color: $lightGray;
+		padding: 0;
+		margin: 0;
+		height: $header-h;
+		
+		& > li {
+			display: block;
+			float: left;
+			margin: 0 !important;
+			padding: 0;
 		}
 
-		& > li {
-			@include inline-block;
+		a {
+			@extend %lato-bold;
+			display: table-cell;
+			margin: 0;
+			padding: 0 em(24);
+			height: $header-h;
+			vertical-align: middle;
+			color: $lightGray;
+			text-transform: uppercase;
+
+			&:hover, &:active {
+				color: $darkGray;
+				background: $green;
+			}
 		}
 	}
 

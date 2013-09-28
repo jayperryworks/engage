@@ -457,12 +457,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-h1 > .subhead, .secondary-menu a, .services li, h1, .h1, h2 {
+/* ==========================================================================
+   Typography settings
+   ========================================================================== */
+h1 > .subhead, .main-menu a, .secondary-menu a, .services li, h1, .h1, h2 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal; }
 
-h1 > .subhead, .secondary-menu a, .services li {
+h1 > .subhead, .main-menu a, .secondary-menu a, .services li {
   font-weight: 700; }
 
 p, li, ol {
@@ -476,8 +479,6 @@ p, li, ol {
   font-weight: normal !important;
   margin: 0 0.0625em 0 -0.0625em; }
 
-/* Media queries (default breakpoints)
-********************************************************************/
 a, .services li, .services a {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -926,25 +927,21 @@ textarea {
   padding: 0.2em 0; }
 
 h1, .h1 {
-  font-size: 1.875em;
+  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.2; }
-  @media only screen and (min-width: 48em) {
-    h1, .h1 {
-      font-size: 2.25em; } }
-  @media only screen and (min-width: 90em) {
-    h1, .h1 {
-      font-size: 2.5em; } }
 
 h1 > .subhead {
   font-size: 0.6em;
   line-height: 1.2;
   text-transform: uppercase; }
-  @media only screen and (min-width: 90em) {
+  @media screen and (min-width: 1440px) {
     h1 > .subhead {
       font-size: 0.5em; } }
 
 h2 {
-  font-size: 1.375em; }
+  font-size: 22px;
+  font-size: 1.375rem; }
 
 .amp {
   font-size: 1.2em; }
@@ -960,7 +957,7 @@ p, li, ol {
   margin-top: 0; }
 
 .abstract, p:first-child {
-  font-size: 1.5em; }
+  font-size: ms(1); }
 
 /* ==========================================================================
    MODULE styles
@@ -972,38 +969,81 @@ p, li, ol {
    Inbox -- 
    add quick and dirty CSS here, clean up and move to the right place later
    ========================================================================== */
-.wrapper, header nav {
+html {
+  font-size: 14px; }
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 16px; } }
+  @media screen and (min-width: 1280px) {
+    html {
+      font-size: 18px; } }
+  @media screen and (min-width: 1440px) {
+    html {
+      font-size: 20px; } }
+
+.wrapper, .main-header > nav {
   *zoom: 1;
-  max-width: 90em;
+  max-width: 1440px;
   margin-left: auto;
-  margin-right: auto; }
-  .wrapper:before, .wrapper:after, header nav:before, header nav:after {
+  margin-right: auto;
+  max-width: 102.85714rem; }
+  .wrapper:before, .wrapper:after, .main-header > nav:before, .main-header > nav:after {
     content: " ";
     display: table; }
-  .wrapper:after, header nav:after {
+  .wrapper:after, .main-header > nav:after {
     clear: both; }
+  @media screen and (min-width: 1440px) {
+    .wrapper, .main-header > nav {
+      max-width: 72rem; } }
 
 .main-header {
   background: #2F2F2F;
-  border-top: 1px solid #000; }
+  border-top: 1px solid #000;
+  padding-top: -1px;
+  height: 3.75em; }
+  .main-header > nav {
+    height: 100%; }
 
 .brand-icon {
   color: transparent;
   font: 0/0 a;
   text-shadow: none;
-  background: #3a3a3a url("../logo-engage--full.png"); }
+  display: block;
+  width: 60px;
+  height: 100%;
+  top: 0;
+  margin: 0;
+  float: left;
+  background: #3a3a3a url("../images/logo-engage--icon-rev.png") center no-repeat; }
 
 .main-menu {
+  *zoom: 1;
   float: left;
-  color: #cbcbcb; }
-  .main-menu a {
-    color: #cbcbcb; }
+  color: #cbcbcb;
+  padding: 0;
+  margin: 0;
+  height: 3.75em; }
+  .main-menu:before, .main-menu:after {
+    content: " ";
+    display: table; }
+  .main-menu:after {
+    clear: both; }
   .main-menu > li {
-    display: inline-block;
-    vertical-align: baseline;
-    zoom: 1;
-    *display: inline;
-    *vertical-align: auto; }
+    display: block;
+    float: left;
+    margin: 0 !important;
+    padding: 0; }
+  .main-menu a {
+    display: table-cell;
+    margin: 0;
+    padding: 0 1.5em;
+    height: 3.75em;
+    vertical-align: middle;
+    color: #cbcbcb;
+    text-transform: uppercase; }
+    .main-menu a:hover, .main-menu a:active {
+      color: #4d4d4d;
+      background: #83ae52; }
 
 .search {
   float: right; }
