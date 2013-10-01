@@ -3,59 +3,78 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>{{ site.name }} &rsaquo; {{ page.name }}</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ site.name }} &rsaquo; {{ page.name }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-      <link rel="stylesheet" href="{{ site.url }}/assets/css/app.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/app.css">
 
-      <!-- Google fonts -->
-      <link href='http://fonts.googleapis.com/css?family=Lato:300,700,900' rel='stylesheet' type='text/css'>
-     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700,900' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
-      <!-- Modernizr -->
-      <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body id="{{ page.name }}">
-      <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
+    <!-- Modernizr -->
+    <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body id="{{ page.name }}">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-      {{ content }}
+    <!-- header -->
+    <header role="banner" class="main-header">
+      <nav>
+        <!-- <a href="#" class="brand-icon">The Engage Group</a> -->
+        <ul class="main-menu">
+          <li><a href="#">What we do</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Case studies</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+        <!-- <a href="#" class="search">Search</a> -->
+        <ul class="secondary-menu">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">R+D</a></li>
+          <li><a href="#">Client login</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <!-- footer -->
-      <footer>
-        <div class="wrapper">
-          <a href="#" class="brand-logo">The Engage Group</a>
-          <span class="shout-out">A member of <a href="http://pmgdirect.net/family/">The PNG Group</a></span>
-          <div class="contact">
-            <h3>Get in touch</h3>
-            <ul>
-              <li><a href="#">hello@engageyourcause.com</a></li>
-              <li><em>P</em> <a href="#">443.539.2650</a></li>
-              <li><em>F</em> <a href="#">443.539.2750</a></li>
-              <li class="address">7160 Columbia Gateway Drive, Suite 300 <br />Columbia, MD 21046</li>
-            </ul>
-          </div>
-          <div class="social">
-            <h3>Connect with us</h3>
-            <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Github</a></li>
-            </ul>
-          </div>
-          <p class="copyright">
-            &copy; 2013 The Engage Group, a membasdfasdfasdgfer of The Production Management Group, Ltd. family. All rights reserved.© 2013 The Engage Group, a member of The Production Management Group, Ltd. family. All rights reserved.
-          </p>
+    {{ content }}
+
+    <!-- footer -->
+    <footer>
+      <div class="wrapper">
+        <a href="#" class="brand-logo">The Engage Group</a>
+        <span class="shout-out">A member of <a href="http://pmgdirect.net/family/">The PNG Group</a></span>
+        <div class="contact">
+          <h3>Get in touch</h3>
+          <ul>
+            <li><a href="#">hello@engageyourcause.com</a></li>
+            <li><em>P</em> <a href="#">443.539.2650</a></li>
+            <li><em>F</em> <a href="#">443.539.2750</a></li>
+            <li class="address">7160 Columbia Gateway Drive, Suite 300 <br />Columbia, MD 21046</li>
+          </ul>
         </div>
-      </footer>
+        <div class="social">
+          <h3>Connect with us</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Github</a></li>
+          </ul>
+        </div>
+        <p class="copyright">
+          &copy; 2013 The Engage Group, a membasdfasdfasdgfer of The Production Management Group, Ltd. family. All rights reserved.© 2013 The Engage Group, a member of The Production Management Group, Ltd. family. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

@@ -2,17 +2,14 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8326",
   "files" : {
-    "\/_assets\/sass\/_modules.scss" : {
+    "\/_layouts\/default.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/_modules.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_modules.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/_layouts\/default.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/js\/vendor\/jquery-1.10.2.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -81,6 +78,17 @@
       "outputAbbreviatedPath" : "\/assets\/js\/app.min.min.js",
       "fileType" : 64
     },
+    "\/assets\/images\/icon-services-donation.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
+      "initialSize" : 2198,
+      "fileType" : 8192
+    },
     "\/_assets\/sass\/core\/helpers\/_html5bp.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -92,17 +100,6 @@
       "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_html5bp.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/assets\/images\/icon-services-donation.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-donation.png",
-      "initialSize" : 2198,
-      "fileType" : 8192
     },
     "\/_assets\/sass\/core\/_base.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -148,6 +145,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/assets\/images\/logo-engage--icon-rev.png",
       "initialSize" : 1525,
+      "fileType" : 8192
+    },
+    "\/assets\/images\/logo-engage--full-bw.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/logo-engage--full-bw.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/logo-engage--full-bw.png",
+      "initialSize" : 2794,
       "fileType" : 8192
     },
     "\/assets\/css\/app.css" : {
@@ -322,15 +330,6 @@
       "initialSize" : 5501,
       "fileType" : 8192
     },
-    "\/_layouts\/default.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_layouts\/default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/apple-touch-icon-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -341,6 +340,18 @@
       "outputAbbreviatedPath" : "\/apple-touch-icon-precomposed.png",
       "initialSize" : 1226,
       "fileType" : 8192
+    },
+    "\/_assets\/sass\/_modules.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/_modules.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_modules.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/_assets\/sass\/app.scss" : {
       "ignoreWasSetByUser" : 0,

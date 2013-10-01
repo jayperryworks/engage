@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Frameworks
+   Frameworks/dependencies
    ========================================================================== */
 * {
   -webkit-box-sizing: border-box;
@@ -924,8 +924,8 @@ textarea {
   padding: 0.2em 0; }
 
 h1, .h1 {
-  font-size: 48px;
-  font-size: 3rem;
+  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.2; }
 
 h1 > .subhead {
@@ -944,10 +944,10 @@ h2 {
   font-size: 1.2em; }
 
 a {
-  color: #83ae52;
+  color: #7c4099;
   text-decoration: none; }
   a:hover, a:active {
-    color: #698c41; }
+    color: #5f3175; }
 
 p, li, ol {
   line-height: 1.5;
@@ -956,6 +956,10 @@ p, li, ol {
 .abstract, p:first-child {
   font-size: 18px;
   font-size: 1.125rem; }
+
+.intro {
+  color: white;
+  background: #7c4099; }
 
 /* ==========================================================================
    MODULE styles
@@ -1004,7 +1008,9 @@ html {
 .main-header {
   background: #2F2F2F;
   border-top: 1px solid #000;
-  height: 3.75em; }
+  height: 5em;
+  font-size: 12px;
+  font-size: 0.75rem; }
   .main-header > nav {
     height: 100%; }
 
@@ -1020,32 +1026,31 @@ html {
   float: left;
   background: #3a3a3a url("../images/logo-engage--icon-rev.png") center no-repeat; }
 
-.main-menu {
+.main-menu, .secondary-menu {
   *zoom: 1;
   float: left;
   color: #cbcbcb;
   padding: 0;
   margin: 0;
-  height: 3.75em; }
-  .main-menu:before, .main-menu:after {
+  height: 5em; }
+  .main-menu:before, .secondary-menu:before, .main-menu:after, .secondary-menu:after {
     content: " ";
     display: table; }
-  .main-menu:after {
+  .main-menu:after, .secondary-menu:after {
     clear: both; }
-  .main-menu > li {
+  .main-menu > li, .secondary-menu > li {
     display: block;
     float: left;
     margin: 0;
     padding: 0; }
-  .main-menu a {
+  .main-menu a, .secondary-menu a {
     display: table-cell;
     padding: 0 1.125em;
-    height: 3.75em;
+    height: 5em;
     vertical-align: middle;
     color: #cbcbcb;
-    text-transform: uppercase;
-    margin-top: -20px; }
-    .main-menu a:hover, .main-menu a:active {
+    text-transform: uppercase; }
+    .main-menu a:hover, .secondary-menu a:hover, .main-menu a:active, .secondary-menu a:active {
       color: white;
       background: #272727; }
 
@@ -1065,10 +1070,10 @@ html {
     *vertical-align: auto; }
 
 .intro {
-  background: #3a3a3a; }
+  border-bottom: 8px solid #3a3a3a; }
   .intro .logo-engage.full {
     display: block;
-    margin: 5.25em auto 3em auto;
+    margin: 3.125em auto 1.5em auto;
     max-width: 18.75em; }
   .intro h1 {
     display: block;
@@ -1088,8 +1093,9 @@ html {
     margin-right: 1.94175%;
     width: 66.01942%;
     margin-left: 16.99029%;
-    text-align: center;
-    color: gray; }
+    border-top: 1px solid black;
+    padding: 1em;
+    text-align: center; }
     .intro p:last-child {
       margin-right: 0; }
 

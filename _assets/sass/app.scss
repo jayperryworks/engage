@@ -1,6 +1,6 @@
 
 /* ==========================================================================
-   Frameworks
+   Frameworks/dependencies
    ========================================================================== */
 
 // bourbon and NEAT grid frameworks
@@ -71,7 +71,7 @@ html {
 	//padding: rem($margin, $base-font-size--xsmall);
 }
 
-$header-h: em(60);
+$header-h: em(80);
 
 // Header
 .main-header {
@@ -79,7 +79,7 @@ $header-h: em(60);
 	background: #2F2F2F;
 	border-top: 1px solid #000;
 	height: $header-h;
-	//font-size: em(12);
+	@include rem(font-size, 12px);
 	
 	& > nav {
 		@extend %wrapper;
@@ -100,7 +100,7 @@ $header-h: em(60);
 	.main-menu {
 		@include clearfix;
 		float: left;
-		color: $lightGray;
+		color: $gray--light;
 		padding: 0;
 		margin: 0;
 		height: $header-h;
@@ -118,9 +118,8 @@ $header-h: em(60);
 			padding: 0 em(18);
 			height: $header-h;
 			vertical-align: middle;
-			color: $lightGray;
+			color: $gray--light;
 			text-transform: uppercase;
-			margin-top: -20px;
 
 			&:hover, &:active {
 				color: white;
@@ -134,11 +133,12 @@ $header-h: em(60);
 	}
 
 	.secondary-menu {
+		@extend .main-menu;
 		float: right;
 
 		a {
 			@extend %lato-bold;
-			color: $medGray;
+			color: $gray--medium;
 			text-transform: uppercase;
 		}
 
@@ -149,11 +149,12 @@ $header-h: em(60);
 
 // Intro section
 .intro {
-	background: $bg-dark;
+	@extend %theme-color;
+	border-bottom: $border--thick;
 
 	.logo-engage.full {
 		display: block;
-		margin: em(84) auto em(48) auto;
+		margin: em(50) auto em(24) auto;
 		max-width: em(300);
 	}
 
@@ -171,8 +172,9 @@ $header-h: em(60);
 	p {
 		@include span-columns(8);
 		@include shift(2);
+		border-top: $border--thin;
+		padding: 1em;
 		text-align: center;
-		color: $medGray;
 	}
 }
 
@@ -186,12 +188,12 @@ $header-h: em(60);
 			width: 20%;
 			@include span-columns(2 of 10, collapse);
 			text-align: center;
-			background: $darkGray;
+			background: $gray--dark;
 			vertical-align: middle;
 			@extend %lato-bold;
 			text-transform: uppercase;
 			font-size: em(14);
-			border-right: 3px solid $bg-dark;
+			border-right: 3px solid $bg--dark;
 			@extend %base-transition;
 
 			&:last-child {
@@ -199,7 +201,7 @@ $header-h: em(60);
 			}
 
 			&:hover {
-				background: lighten($darkGray, 3);
+				background: lighten($gray--dark, 3);
 
 				a {
 					color: white;
@@ -214,7 +216,7 @@ $header-h: em(60);
 
 		a {
 			display: block;
-			color: $lightGray;
+			color: $gray--light;
 			@extend %base-transition;
 			margin-top: em(18);
 		}

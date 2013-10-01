@@ -6,7 +6,7 @@
 
 h1, .h1, %h1 {
 	@extend %lato;
-	@include rem(font-size, 48px);
+	@include rem(font-size, 40px);
 	line-height: 1.2;
 
 	// @include media($small) {
@@ -59,9 +59,21 @@ p, li, ol {
 	@include rem(font-size, 18px);
 }
 
-// Colors (themes)
+// ==============================================================================
+// 	Global type
+// ==============================================================================
 
 %theme-dark {
 	color: white;
-	background: $bg-dark;
+	background: $bg--dark;
+}
+
+%theme-color {
+	color: white;
+	background: $bg--color;
+}
+
+%theme-light {
+	color: $color-text--headline;
+	background: $bg--light;
 }

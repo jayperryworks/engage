@@ -114,13 +114,24 @@ $red: #B14B4B;
 
 // Neutrals - REFERENCE ONLY, DO NOT USE
 // --------------------------------------------------------------------------
-$black: #3A3A3A;
-$darkGray: #4D4D4D;
-$medGray: #808080;
-$lightGray: #CBCBCB;
+$black: #3a3a3a;
+$gray--dark: #4d4d4d;
+$gray--medium: #808080;
+$gray--light: #cbcbcb;
+$white: #fff;
 
 // Theme variables
 // --------------------------------------------------------------------------
-$bg-dark: $black;
+$color-primary: $purple;
+$color-secondary: $green;
+$color-text--headline: $black;
+$color-text--body: $gray--dark;
+$color-text--secondary: $gray--medium;
 
-$color-primary: $green;
+$bg--dark: $black;
+$bg--color: $color-primary;
+$bg--light: white;
+$bg--midtone: $gray--light;
+
+$border--thick: 8px solid $black;
+$border--thin: 1px solid black;
