@@ -8,6 +8,7 @@
 @import "neat-settings";
 @import "neat/neat";
 
+@import "vendor/flexslider"; // carousel css
 
 /* ==========================================================================
    CORE styles
@@ -16,6 +17,7 @@
 @import "core/normalize"; // reset
 @import "core/helpers/html5bp"; // helper classes/mixins
 @import "core/helpers/rem"; // helper classes/mixins
+@import "core/helpers/layout"; // general layout helpers
 @import "core/settings"; // global variables
 @import "core/base"; // BP base styles
 @import "core/content"; // global/base-level typography, color etc.
@@ -53,22 +55,20 @@ html {
 
 .wrapper, %wrapper {
 	@include outer-container;
-	
+	@include rem(margin, 0 $base-margin--xsmall, $base-font-size--xsmall);
+
 	@include media($small) {
-		max-width: 90%;
+		@include rem(margin, 0 $base-margin--small, $base-font-size--small);
 	}
 
 	@include media($medium) {
-		margin: 0 rem(48px, $base-font-size--medium);
+		@include rem(margin, 0 $base-margin--medium, $base-font-size--medium);
 	}
 
-	@include media($large){
+	@include media($large) {
 		margin: 0 auto;
-		//account for increased font size @large screens
-		@include rem(max-width, $max-width - 72px, $base-font-size--large);
+		@include rem(max-width, $max-width - $base-margin--large, $base-font-size--large);
 	}
-
-	//padding: rem($margin, $base-font-size--xsmall);
 }
 
 $header-h: em(80);
@@ -77,7 +77,7 @@ $header-h: em(80);
 .main-header {
 
 	background: #2F2F2F;
-	border-top: 1px solid #000;
+	border-bottom: $border--thin;
 	height: $header-h;
 	@include rem(font-size, 12px);
 	
@@ -123,7 +123,11 @@ $header-h: em(80);
 
 			&:hover, &:active {
 				color: white;
-				background: darken(#2F2F2F, 3);
+			}
+
+			&.active {
+				color: lighten($gray--light, 20);
+				background: darken($bg--dark, 3);
 			}
 		}
 	}
@@ -137,32 +141,38 @@ $header-h: em(80);
 		float: right;
 
 		a {
-			@extend %lato-bold;
 			color: $gray--medium;
-			text-transform: uppercase;
-		}
 
-		& > li {
-			@include inline-block;
+			&:hover, &:active {
+				color: lighten($gray--medium, 20);
+			}
 		}
 	}
 
 // Intro section
 .intro {
 	@extend %theme-color;
+	padding: em(50) 0;
 	border-bottom: $border--thick;
 
 	.logo-engage.full {
 		display: block;
-		margin: em(50) auto em(24) auto;
-		max-width: em(300);
+		margin: 0 auto 1em auto;
+		// max-width: rem(300);
+		// border-bottom: $border--thin;
 	}
 
 	h1 {
 		@include span-columns($grid-columns);
+		padding-top: 1em;
 		text-align: center;
 		color: white;
 		margin-top: 0;
+		border-top: $border--thin;
+		
+		@include media($medium) {
+			@include span-columns-center(10);
+		}
 
 		& > .subhead {
 			color: $green;
@@ -172,52 +182,175 @@ $header-h: em(80);
 	p {
 		@include span-columns(8);
 		@include shift(2);
-		border-top: $border--thin;
-		padding: 1em;
+		// padding: 1em;
+		text-align: center;
+		// margin-bottom: em(50);
+		color: darken($black, 10);
+	}
+}
+
+.feature {
+	@include clearfix;
+}
+
+.carousel {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	// overflow: hidden;
+	@include rem(height, 400px);
+	background: url(../images/carousel-wolf-900x500-retina.jpg) center center;
+	background-size: cover;
+	color: white;
+
+	li {
+		@extend %wrapper;
+		padding-top: 3em;
+		// margin: 0;
+		// padding: 0;
+		list-style: none;
+		
+	}
+
+	.button {
+		margin-top: 3em;
+	}
+}
+
+	.feature-slide {
+		display: block;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100%;
+	}
+
+	.carousel-nav {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		@include span-columns-center(10);
+		@include row;
+		margin-top: -8px;
+		z-index: 3;
+
+		& > li {
+			margin: 0;
+			padding: 0;
+			width: 20%;
+			float: left;
+			display: table;
+			
+			padding: 0;
+			
+			list-style: none;
+			
+			
+		}
+
+		a {
+			@include rem(height, 160px);
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			border-top: $border--thick;
+			background: $bg--light;
+
+			&.active {
+				border-color: $color-primary;
+			}
+
+			&:hover {
+				border-color: $color-primary;
+			}
+		}
+	}
+
+.what-we-do {
+	background: lighten(#EDEBE8, 3);
+	border-top: $border--thick;
+	border-color: darken(#EDEBE8, 5);
+	text-align: center;
+
+	h5 {
+		@extend %header-tag;
+	}
+
+	p {
+		@include span-columns(12);
+		text-align: left;
+
+
+
+		@include media($small) {
+			@include span-columns-center(6, 8);
+		}
+
+		@include media($medium) {
+			@include span-columns-center(8, 12);
+		}
+
+		&:last-child {
+			margin-bottom: em(50);
+		}
+	}
+}
+
+.tools {
+	text-align: center;
+	border-top: $border--thick;
+	border-color: darken(white, 10);
+
+	h5 {
+		@extend %header-tag;
+	}
+
+	ul {
+		position: relative;
+		@include rem(margin, 50px 0);
+		padding: 0;
+		@include span-columns(12);
+		@include row;
+	}
+
+	li {
+		margin: 0;
+		width: (100%/3);
+		float: left;
+		display: table;
+		padding: 0;
+		list-style: none;
+		border-right: $border--thin;
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	.thumb {
+		@include rem(height, 160px);
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
 		text-align: center;
 	}
 }
 
-	.services {
-		@include span-columns(10);
+.blog {
+
+	.recent-articles {
+		@include span-columns(6);
 		@include shift(1);
-		padding: 0;
-
-		li {
-			height: em(200);
-			width: 20%;
-			@include span-columns(2 of 10, collapse);
-			text-align: center;
-			background: $gray--dark;
-			vertical-align: middle;
-			@extend %lato-bold;
-			text-transform: uppercase;
-			font-size: em(14);
-			border-right: 3px solid $bg--dark;
-			@extend %base-transition;
-
-			&:last-child {
-				border: none;
-			}
-
-			&:hover {
-				background: lighten($gray--dark, 3);
-
-				a {
-					color: white;
-				}
-			}
-
-			img {
-				display: block;
-				margin: 0 auto;
-			}
-		}
-
-		a {
-			display: block;
-			color: $gray--light;
-			@extend %base-transition;
-			margin-top: em(18);
-		}
 	}
+
+	.events {
+		@include span-columns(4);
+		@include omega;
+	}
+}
+
+footer {
+	@extend %theme-dark;
+}

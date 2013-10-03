@@ -10,13 +10,22 @@ $base-line-height: 1.5; // base line height (ratio, no units)
 $base-font-size--xsmall: 14px;
 $base-font-size--small: 16px;
 $base-font-size--medium: 18px;
-$base-font-size--large: 22px;
+$base-font-size--large: 20px;
 
+$raleway: 'Raleway', #{$helvetica};
 $lato: 'Lato', #{$helvetica};
 $lora: 'Lora', #{$georgia};
 
 $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 
+// Raleway (header/display font)
+// -----------------------------------------------------------------------------
+
+%raleway {
+	font-family: $raleway;
+	font-weight: 300;
+	font-style: normal;
+}
 
 // Lato (header/display font)
 // -----------------------------------------------------------------------------
@@ -66,7 +75,7 @@ $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 	font-family: $amp;
 	font-style: italic;
 	font-weight: normal !important; // can't ever be bold. sorry.
-	margin: 0 em(1) 0 em(-1);
+	// margin: 0 em(1) 0 em(-1);
 }
 
 // ==========================================================================
@@ -78,7 +87,7 @@ $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 $screen--xsmall: em(480);
 $screen--small: em(768);
 $screen--medium: em(1280);
-$screen--large: em(1440);
+$screen--large: em(strip-units($max-width)); //1440px
 
 $xsmall: new-breakpoint(min-width $screen--xsmall 4);
 $small: new-breakpoint(min-width $screen--small 8);
@@ -91,6 +100,17 @@ $portrait: "only screen and (orientation: portrait)";
 // for print and high-resolution displays
 $print: "print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)";
 
+// ==========================================================================
+// 	Layout settings
+//  -> see _neat-settings for grid-specific variables
+// ==========================================================================
+
+// Margins at the outside of the layout (at edges of browser/grid)
+// --------------------------------------------------------------------------
+$base-margin--xsmall: 18px;
+$base-margin--small: 24px;
+$base-margin--medium: 72px;
+$base-margin--large: 72px;
 
 // ==========================================================================
 // 	Animation
@@ -114,13 +134,13 @@ $red: #B14B4B;
 
 // Neutrals - REFERENCE ONLY, DO NOT USE
 // --------------------------------------------------------------------------
-$black: #3a3a3a;
+$black: #282828;
 $gray--dark: #4d4d4d;
 $gray--medium: #808080;
 $gray--light: #cbcbcb;
 $white: #fff;
 
-// Theme variables
+// Themes
 // --------------------------------------------------------------------------
 $color-primary: $purple;
 $color-secondary: $green;
@@ -132,6 +152,3 @@ $bg--dark: $black;
 $bg--color: $color-primary;
 $bg--light: white;
 $bg--midtone: $gray--light;
-
-$border--thick: 8px solid $black;
-$border--thin: 1px solid black;

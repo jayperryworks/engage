@@ -5,17 +5,15 @@
 // http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
 
 h1, .h1, %h1 {
-	@extend %lato;
+	@extend %raleway;
 	@include rem(font-size, 40px);
 	line-height: 1.2;
 
-	// @include media($small) {
-	// 	@include rem(font-size, 36);
-	// }
-
-	// @include media($large) {
-	// 	@include rem(font-size, 40);
-	// }
+	& > em {
+		@extend %lato-black;
+		@include rem(font-size, 54px);
+		text-transform: uppercase;
+	}
 }
 
 h1 > .subhead {
@@ -26,17 +24,36 @@ h1 > .subhead {
 
 	@include media($large) {
 		font-size: 0.5em;
+		text-transform: uppercase;
 	}
 }
 
-h2 {
-	@extend %lato;
-	@include rem(font-size, 22px);
+h2, .h2, %h2 {
+	@extend %raleway;
+	@include rem(font-size, 36px);
 }
 
-.amp {
-	@extend %amp;
-	font-size: 1.2em; // RELATIVE to its parent. Will be slightly larger.
+h3, .h3, %h3 {
+	@extend %lato-bold;
+	@include rem(font-size, 24px);
+}
+
+h4, .h4, %h4 {
+	@extend %lato-black;
+	@include rem(font-size, 18px);
+	text-transform: uppercase;
+}
+
+h5, .h5, %h5 {
+	@extend %lato-black;
+	@include rem(font-size, 12px);
+	text-transform: uppercase;
+}
+
+h6, .h6, %h6 {
+	@extend %lato-black;
+	@include rem(font-size, 10px);
+	text-transform: uppercase;
 }
 
 a {
@@ -49,6 +66,16 @@ a {
 	}
 }
 
+// makes a white-on-black "tag" from a lower header (h4-h6)
+%header-tag {
+	@include inline-block;
+	position: relative;
+	color: $gray--light;
+	background: $bg--dark;
+	padding: em(12) em(27);
+	margin: -8px 0 0 0;
+}
+
 p, li, ol {
 	@extend %lora;
 	line-height: $base-line-height;
@@ -59,9 +86,27 @@ p, li, ol {
 	@include rem(font-size, 18px);
 }
 
+.amp {
+	@extend %amp;
+	font-size: 1.2em; // RELATIVE to its parent. Will be slightly larger.
+	// letter-spacing: -0.05em;
+}
+
+// if @fontface is available...
+.fontface .amp {
+	
+}
+
 // ==============================================================================
-// 	Global type
+// 	Themes
 // ==============================================================================
+
+$border--thick: 8px solid $black;
+$border--thin: 1px solid black;
+
+// @mixin $border--thick($side, $color) {
+	
+// }
 
 %theme-dark {
 	color: white;
@@ -76,4 +121,8 @@ p, li, ol {
 %theme-light {
 	color: $color-text--headline;
 	background: $bg--light;
+}
+
+%theme-midtone {
+	background: $bg--midtone;
 }

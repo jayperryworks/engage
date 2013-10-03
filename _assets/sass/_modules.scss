@@ -1,6 +1,27 @@
-/* ==========================================================================
-   Modules
-   ========================================================================== */
+// ==========================================================================
+//  Modules
+// ==========================================================================
 
+// Buttons
+// ----------------------------------------------------------------------------
 
+// @mixin button(color: $color-primary, )
 
+.button, %button {
+  @extend %lato-black;
+  @extend %base-transition;
+  @include rem(font-size, 12px);
+  display: inline-block;
+  padding: em(16) em(40);
+  border-radius: em(100);
+  background: white;
+  border: $border--thick;
+  color: $black;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $black;
+    // background: $color-primary;
+    border-color: $color-primary;
+  }
+}

@@ -2,14 +2,29 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8326",
   "files" : {
-    "\/_layouts\/default.html" : {
+    "\/_assets\/sass\/core\/base\/_print.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_layouts\/default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/base\/_print.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_print.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/sass\/_modules.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/_modules.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_modules.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/assets\/js\/vendor\/jquery-1.10.2.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -67,6 +82,18 @@
       "initialSize" : 1322,
       "fileType" : 8192
     },
+    "\/_assets\/sass\/core\/helpers\/_html5bp.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/helpers\/_html5bp.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_html5bp.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/assets\/js\/app.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -89,15 +116,27 @@
       "initialSize" : 2198,
       "fileType" : 8192
     },
-    "\/_assets\/sass\/core\/helpers\/_html5bp.scss" : {
+    "\/_assets\/sass\/core\/base\/_syntax.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/helpers\/_html5bp.scss",
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/base\/_syntax.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_html5bp.css",
+      "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_syntax.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_assets\/sass\/vendor\/_flexslider.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/vendor\/_flexslider.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_flexslider.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -124,6 +163,17 @@
       "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_normalize.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/assets\/images\/carousel-wolf-900x500-retina.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/carousel-wolf-900x500-retina.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/carousel-wolf-900x500-retina.jpg",
+      "initialSize" : 212295,
+      "fileType" : 4096
     },
     "\/_assets\/js\/plugins\/console.js" : {
       "ignoreWasSetByUser" : 0,
@@ -234,18 +284,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_assets\/sass\/core\/_base-syntax.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base-syntax.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-syntax.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/_assets\/js\/app.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -266,35 +304,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/_assets\/sass\/core\/_base-print.scss" : {
+    "\/_assets\/js\/plugins\/jquery.flexslider-min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/_base-print.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-print.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/_assets\/assets\/css\/_base-print.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/assets\/css\/_base-print.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/assets\/css\/_helpers.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/css\/_helpers.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/jquery.flexslider-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/jquery.flexslider-min.min.js",
+      "fileType" : 64
     },
     "\/_assets\/sass\/core\/_content.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -330,6 +349,27 @@
       "initialSize" : 5501,
       "fileType" : 8192
     },
+    "\/_assets\/sass\/core\/helpers\/_layout.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/sass\/core\/helpers\/_layout.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_layout.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_layouts\/default.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_layouts\/default.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/apple-touch-icon-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -340,18 +380,6 @@
       "outputAbbreviatedPath" : "\/apple-touch-icon-precomposed.png",
       "initialSize" : 1226,
       "fileType" : 8192
-    },
-    "\/_assets\/sass\/_modules.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/sass\/_modules.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_modules.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     },
     "\/_assets\/sass\/app.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -387,9 +415,16 @@
       "followForSyntaxChecking" : 1
     },
     {
-      "type" : 1,
+      "type" : 0,
       "position" : 1,
       "linkedFileAbbreviatedPath" : "\/_assets\/js\/plugins\/jqwidont.min.js",
+      "baseFileAbbreviatedPath" : "\/_assets\/js\/app.js",
+      "followForSyntaxChecking" : 1
+    },
+    {
+      "type" : 0,
+      "position" : 2,
+      "linkedFileAbbreviatedPath" : "\/_assets\/js\/plugins\/jquery.flexslider-min.js",
       "baseFileAbbreviatedPath" : "\/_assets\/js\/app.js",
       "followForSyntaxChecking" : 1
     }

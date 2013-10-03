@@ -1,0 +1,17 @@
+// ==================================================================================
+// General layout helpers
+// ==================================================================================
+
+
+// Center an element within the NEAT grid
+// -> Requires Bourbon NEAT
+// -------------------------------------------------------------------------------
+
+@mixin span-columns-center($cols, $total-cols: $grid-columns, $display: block) {
+	@include span-columns($cols);
+	@include shift(($total-cols - $cols)/2);
+}
+
+%grid-margin {
+	
+}
