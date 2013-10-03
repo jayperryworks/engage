@@ -27,6 +27,16 @@ $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 	font-style: normal;
 }
 
+%raleway-bold {
+	@extend %raleway;
+	font-weight: 600;
+}
+
+%raleway-heavy {
+	@extend %raleway;
+	font-weight: 900;
+}
+
 // Lato (header/display font)
 // -----------------------------------------------------------------------------
 

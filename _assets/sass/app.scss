@@ -55,20 +55,7 @@ html {
 
 .wrapper, %wrapper {
 	@include outer-container;
-	@include rem(margin, 0 $base-margin--xsmall, $base-font-size--xsmall);
-
-	@include media($small) {
-		@include rem(margin, 0 $base-margin--small, $base-font-size--small);
-	}
-
-	@include media($medium) {
-		@include rem(margin, 0 $base-margin--medium, $base-font-size--medium);
-	}
-
-	@include media($large) {
-		margin: 0 auto;
-		@include rem(max-width, $max-width - $base-margin--large, $base-font-size--large);
-	}
+	@include base-grid-margins;
 }
 
 $header-h: em(80);
@@ -76,16 +63,49 @@ $header-h: em(80);
 // Header
 .main-header {
 
-	background: #2F2F2F;
+	@extend %theme-dark;
+	@include rem(font-size, 12px);
 	border-bottom: $border--thin;
 	height: $header-h;
-	@include rem(font-size, 12px);
+	text-align: justify;
+	width: 100%;
 	
-	& > nav {
-		@extend %wrapper;
-		height: 100%;
+	& > a {
+		@include inline-list--centered($header-h);
 	}
+
+	img {
+		vertical-align: middle;
+	}
+
+	// & > nav {
+	// 	@extend %wrapper;
+	// 	height: 100%;
+	// }
 }
+	.icon-menu {
+		@include rem(padding, 0 24px);
+		// display: block;
+		float: left;
+	}
+	
+	.logo-engage.full {
+		$w: 230px;
+		@include rem(width, $w);
+		@include rem(padding, 0 24px);
+		// display: table;
+		position: absolute;
+		left: 50%;
+		margin-left: -($w/2);
+	}
+
+	.clients-login {
+		@include rem(padding, 0 24px);
+		position: relative;
+		// display: table;
+		float: right;
+	}
+
 	.brand-icon {
 		@include hide-text;
 		display: block;
@@ -150,121 +170,122 @@ $header-h: em(80);
 	}
 
 // Intro section
-.intro {
-	@extend %theme-color;
-	padding: em(50) 0;
-	border-bottom: $border--thick;
+// KILLED
+// .intro {
+// 	@extend %theme-color;
+// 	padding: em(50) 0;
+// 	border-bottom: $border--thick;
 
-	.logo-engage.full {
-		display: block;
-		margin: 0 auto 1em auto;
-		// max-width: rem(300);
-		// border-bottom: $border--thin;
-	}
-
-	h1 {
-		@include span-columns($grid-columns);
-		padding-top: 1em;
-		text-align: center;
-		color: white;
-		margin-top: 0;
-		border-top: $border--thin;
+// 	h1 {
+// 		@include span-columns($grid-columns);
+// 		padding-top: 1em;
+// 		text-align: center;
+// 		color: white;
+// 		margin-top: 0;
+// 		border-top: $border--thin;
 		
-		@include media($medium) {
-			@include span-columns-center(10);
-		}
+// 		@include media($medium) {
+// 			@include span-columns-center(10);
+// 		}
 
-		& > .subhead {
-			color: $green;
-		}
-	}
+// 		& > .subhead {
+// 			color: $green;
+// 		}
+// 	}
 
-	p {
-		@include span-columns(8);
-		@include shift(2);
-		// padding: 1em;
-		text-align: center;
-		// margin-bottom: em(50);
-		color: darken($black, 10);
-	}
-}
+// 	p {
+// 		@include span-columns(8);
+// 		@include shift(2);
+// 		// padding: 1em;
+// 		text-align: center;
+// 		// margin-bottom: em(50);
+// 		color: darken($black, 10);
+// 	}
+// }
 
 .feature {
 	@include clearfix;
-}
-
-.carousel {
-	position: relative;
+	text-align: center;
 	margin: 0;
-	padding: 0;
-	// overflow: hidden;
-	@include rem(height, 400px);
-	background: url(../images/carousel-wolf-900x500-retina.jpg) center center;
-	background-size: cover;
-	color: white;
+}
 
-	li {
-		@extend %wrapper;
-		padding-top: 3em;
-		// margin: 0;
-		// padding: 0;
-		list-style: none;
-		
+.feature-hero {
+	@extend %theme-dark;
+
+	h1 {
+		@include base-grid-margins(padding, $full: true);
+		position: absolute;
+		width: 100%;
+		z-index: 5;
+		margin-top: 1.5em;
 	}
 
-	.button {
-		margin-top: 3em;
+	h3 {
+		margin: 0.8em 0;
 	}
 }
 
-	.feature-slide {
-		display: block;
-		position: relative;
-		top: 0;
-		left: 0;
-		z-index: 0;
-		width: 100%;
-	}
-
-	.carousel-nav {
+	.hero-carousel {
 		position: relative;
 		margin: 0;
 		padding: 0;
-		@include span-columns-center(10);
-		@include row;
-		margin-top: -8px;
-		z-index: 3;
-
-		& > li {
-			margin: 0;
-			padding: 0;
-			width: 20%;
-			float: left;
-			display: table;
-			
-			padding: 0;
-			
-			list-style: none;
-			
-			
+		@include rem(height, 500px);
+		background: url(../images/carousel-wolf.jpg) center center;
+		background-size: cover;
+		color: white;
+	}
+		.hero-carousel-slide {
+			@include base-grid-margins(padding, $full: true);
+			@include rem(bottom, 50px);
+			position: absolute;
+			text-align: center;
+			display: block;
+			width: 100%;
+			list-style: none;	
 		}
 
-		a {
-			@include rem(height, 160px);
+		.carousel-nav {
+			@include span-columns-center(10);
+			@include row;
+			@include clearfix;
 			position: relative;
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
-			border-top: $border--thick;
-			background: $bg--light;
+			margin-top: -8px;
+			padding: 0;
+			z-index: 3;
 
-			&.active {
-				border-color: $color-primary;
+			& > li {
+				margin: 0;
+				padding: 0;
+				width: 20%;
+				float: left;
+				display: table;
+				padding: 0;
+				list-style: none;
 			}
 
-			&:hover {
-				border-color: $color-primary;
+			.thumb {
+				@include inline-list--centered($height: 160px);
+				position: relative;
+				border-top: $border--thick;
+				background: $bg--light;
+
+				&.active {
+					border-color: $color-primary;
+				}
+
+				&:hover {
+					border-color: $color-primary;
+				}
 			}
+		}
+
+	.feature-blurb {
+		@extend %wrapper;
+		text-align: center;
+		clear: both;
+
+		& > p {
+			@include span-columns-center(6);
 		}
 	}
 

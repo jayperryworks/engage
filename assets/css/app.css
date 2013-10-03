@@ -765,20 +765,26 @@ table {
   /* Style adjustments for viewports that meet the condition */ }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
-h1, .h1, h2, .h2 {
+h1 > em, .h1 > em, h1 > .subhead, h3, .h3, h4, .h4, h5, .h5, h6, .h6, h1, .h1, h2, .h2 {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal; }
 
-h1 > .subhead, h3, .h3, .main-menu a, .secondary-menu a, h1 > em, .h1 > em, h4, .h4, h5, .h5, h6, .h6, .button {
+h1 > em, .h1 > em, h1 > .subhead, h3, .h3 {
+  font-weight: 600; }
+
+h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 900; }
+
+.main-menu a, .secondary-menu a, .button {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal; }
 
-h1 > .subhead, h3, .h3, .main-menu a, .secondary-menu a {
+.main-menu a, .secondary-menu a {
   font-weight: 700; }
 
-h1 > em, .h1 > em, h4, .h4, h5, .h5, h6, .h6, .button {
+.button {
   font-weight: 900; }
 
 p, li, ol {
@@ -1210,7 +1216,8 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 24px;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-transform: uppercase; }
 
 h4, .h4 {
   font-size: 18px;
@@ -1256,13 +1263,9 @@ p, li, ol {
 .amp {
   font-size: 1.2em; }
 
-footer {
+.main-header, .feature-hero, footer {
   color: white;
   background: #282828; }
-
-.intro {
-  color: white;
-  background: #7c4099; }
 
 /* ==========================================================================
    MODULE styles
@@ -1297,40 +1300,66 @@ html {
     html {
       font-size: 125%; } }
 
-.wrapper, .main-header > nav, .carousel li {
+.wrapper, .feature-blurb {
   *zoom: 1;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   margin: 0 18px;
   margin: 0 1.28571rem; }
-  .wrapper:before, .wrapper:after, .main-header > nav:before, .carousel li:before, .main-header > nav:after, .carousel li:after {
+  .wrapper:before, .wrapper:after, .feature-blurb:before, .feature-blurb:after {
     content: " ";
     display: table; }
-  .wrapper:after, .main-header > nav:after, .carousel li:after {
+  .wrapper:after, .feature-blurb:after {
     clear: both; }
   @media screen and (min-width: 48em) {
-    .wrapper, .main-header > nav, .carousel li {
+    .wrapper, .feature-blurb {
       margin: 0 24px;
       margin: 0 1.5rem; } }
   @media screen and (min-width: 80em) {
-    .wrapper, .main-header > nav, .carousel li {
+    .wrapper, .feature-blurb {
       margin: 0 72px;
       margin: 0 4rem; } }
   @media screen and (min-width: 90em) {
-    .wrapper, .main-header > nav, .carousel li {
+    .wrapper, .feature-blurb {
       margin: 0 auto;
       max-width: 1368px;
       max-width: 68.4rem; } }
 
 .main-header {
-  background: #2F2F2F;
+  font-size: 12px;
+  font-size: 0.75rem;
   border-bottom: 1px solid black;
   height: 5em;
-  font-size: 12px;
-  font-size: 0.75rem; }
-  .main-header > nav {
-    height: 100%; }
+  text-align: justify;
+  width: 100%; }
+  .main-header > a {
+    display: table-cell;
+    height: 5em;
+    vertical-align: middle;
+    text-align: center; }
+  .main-header img {
+    vertical-align: middle; }
+
+.icon-menu {
+  padding: 0 24px;
+  padding: 0 1.5rem;
+  float: left; }
+
+.logo-engage.full {
+  width: 230px;
+  width: 14.375rem;
+  padding: 0 24px;
+  padding: 0 1.5rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -115px; }
+
+.clients-login {
+  padding: 0 24px;
+  padding: 0 1.5rem;
+  position: relative;
+  float: right; }
 
 .brand-icon {
   color: transparent;
@@ -1384,81 +1413,72 @@ html {
     .secondary-menu a:hover, .secondary-menu a:active {
       color: #b3b3b3; }
 
-.intro {
-  padding: 3.125em 0;
-  border-bottom: 8px solid #282828; }
-  .intro .logo-engage.full {
-    display: block;
-    margin: 0 auto 1em auto; }
-  .intro h1 {
-    display: block;
-    float: left;
-    margin-right: 1.94175%;
-    width: 100%;
-    padding-top: 1em;
-    text-align: center;
-    color: white;
-    margin-top: 0;
-    border-top: 1px solid black; }
-    .intro h1:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 80em) {
-      .intro h1 {
-        display: block;
-        float: left;
-        margin-right: 1.94175%;
-        width: 83.00971%;
-        margin-left: 8.49515%; }
-        .intro h1:last-child {
-          margin-right: 0; } }
-    .intro h1 > .subhead {
-      color: #83ae52; }
-  .intro p {
-    display: block;
-    float: left;
-    margin-right: 1.94175%;
-    width: 66.01942%;
-    margin-left: 16.99029%;
-    text-align: center;
-    color: #0e0e0e; }
-    .intro p:last-child {
-      margin-right: 0; }
-
 .feature {
-  *zoom: 1; }
+  *zoom: 1;
+  text-align: center;
+  margin: 0; }
   .feature:before, .feature:after {
     content: " ";
     display: table; }
   .feature:after {
     clear: both; }
 
-.carousel {
+.feature-hero h1 {
+  padding: 0 18px;
+  padding: 0 1.28571rem;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  margin-top: 1.5em; }
+  @media screen and (min-width: 48em) {
+    .feature-hero h1 {
+      padding: 0 24px;
+      padding: 0 1.5rem; } }
+  @media screen and (min-width: 80em) {
+    .feature-hero h1 {
+      padding: 0 72px;
+      padding: 0 4rem; } }
+  @media screen and (min-width: 90em) {
+    .feature-hero h1 {
+      padding: 0 72px;
+      padding: 0 3.6rem; } }
+.feature-hero h3 {
+  margin: 0.8em 0; }
+
+.hero-carousel {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 400px;
-  height: 25rem;
-  background: url(../images/carousel-wolf-900x500-retina.jpg) center center;
+  height: 500px;
+  height: 31.25rem;
+  background: url(../images/carousel-wolf.jpg) center center;
   background-size: cover;
   color: white; }
-  .carousel li {
-    padding-top: 3em;
-    list-style: none; }
-  .carousel .button {
-    margin-top: 3em; }
 
-.feature-slide {
+.hero-carousel-slide {
+  padding: 0 18px;
+  padding: 0 1.28571rem;
+  bottom: 50px;
+  bottom: 3.125rem;
+  position: absolute;
+  text-align: center;
   display: block;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%; }
+  width: 100%;
+  list-style: none; }
+  @media screen and (min-width: 48em) {
+    .hero-carousel-slide {
+      padding: 0 24px;
+      padding: 0 1.5rem; } }
+  @media screen and (min-width: 80em) {
+    .hero-carousel-slide {
+      padding: 0 72px;
+      padding: 0 4rem; } }
+  @media screen and (min-width: 90em) {
+    .hero-carousel-slide {
+      padding: 0 72px;
+      padding: 0 3.6rem; } }
 
 .carousel-nav {
-  position: relative;
-  margin: 0;
-  padding: 0;
   display: block;
   float: left;
   margin-right: 1.94175%;
@@ -1466,10 +1486,18 @@ html {
   margin-left: 8.49515%;
   *zoom: 1;
   display: block;
+  *zoom: 1;
+  position: relative;
   margin-top: -8px;
+  padding: 0;
   z-index: 3; }
   .carousel-nav:last-child {
     margin-right: 0; }
+  .carousel-nav:before, .carousel-nav:after {
+    content: " ";
+    display: table; }
+  .carousel-nav:after {
+    clear: both; }
   .carousel-nav:before, .carousel-nav:after {
     content: " ";
     display: table; }
@@ -1483,19 +1511,30 @@ html {
     display: table;
     padding: 0;
     list-style: none; }
-  .carousel-nav a {
-    height: 160px;
-    height: 10rem;
-    position: relative;
+  .carousel-nav .thumb {
     display: table-cell;
+    height: 160px;
     vertical-align: middle;
     text-align: center;
+    position: relative;
     border-top: 8px solid #282828;
     background: white; }
-    .carousel-nav a.active {
+    .carousel-nav .thumb.active {
       border-color: #7c4099; }
-    .carousel-nav a:hover {
+    .carousel-nav .thumb:hover {
       border-color: #7c4099; }
+
+.feature-blurb {
+  text-align: center;
+  clear: both; }
+  .feature-blurb > p {
+    display: block;
+    float: left;
+    margin-right: 1.94175%;
+    width: 49.02913%;
+    margin-left: 25.48544%; }
+    .feature-blurb > p:last-child {
+      margin-right: 0; }
 
 .what-we-do {
   background: #f4f2f1;

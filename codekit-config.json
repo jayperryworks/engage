@@ -71,16 +71,16 @@
       "initialSize" : 1638,
       "fileType" : 8192
     },
-    "\/assets\/images\/icon-services-mobile.png" : {
+    "\/assets\/js\/app.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
-      "initialSize" : 1322,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/assets\/js\/app.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/app.min.min.js",
+      "fileType" : 64
     },
     "\/_assets\/sass\/core\/helpers\/_html5bp.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -93,17 +93,6 @@
       "outputAbbreviatedPath" : "\/_assets\/sass\/assets\/css\/_html5bp.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/assets\/js\/app.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/app.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/app.min.min.js",
-      "fileType" : 64
     },
     "\/assets\/images\/icon-services-donation.png" : {
       "ignoreWasSetByUser" : 0,
@@ -128,6 +117,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/assets\/images\/carousel-wolf.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/carousel-wolf.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/carousel-wolf.jpg",
+      "initialSize" : 314878,
+      "fileType" : 4096
+    },
     "\/_assets\/sass\/vendor\/_flexslider.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -140,6 +140,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/assets\/images\/icon-services-mobile.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-services-mobile.png",
+      "initialSize" : 1322,
+      "fileType" : 8192
+    },
     "\/_assets\/sass\/core\/_base.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -151,6 +162,17 @@
       "outputAbbreviatedPath" : "\/_assets\/assets\/css\/_base.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/_assets\/js\/plugins\/console.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/console.min.js",
+      "fileType" : 64
     },
     "\/_assets\/sass\/core\/_normalize.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -174,17 +196,6 @@
       "outputAbbreviatedPath" : "\/assets\/images\/carousel-wolf-900x500-retina.jpg",
       "initialSize" : 212295,
       "fileType" : 4096
-    },
-    "\/_assets\/js\/plugins\/console.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_assets\/js\/plugins\/console.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/_assets\/assets\/js\/console.min.js",
-      "fileType" : 64
     },
     "\/assets\/images\/logo-engage--icon-rev.png" : {
       "ignoreWasSetByUser" : 0,
@@ -238,6 +249,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/images\/icon-menu.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-menu.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-menu.png",
+      "initialSize" : 188,
+      "fileType" : 8192
+    },
     "\/assets\/js\/vendor\/modernizr-2.6.2.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -258,6 +280,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/assets\/images\/icon-services-web.png",
       "initialSize" : 2031,
+      "fileType" : 8192
+    },
+    "\/assets\/images\/icon-clients.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/icon-clients.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/icon-clients.png",
+      "initialSize" : 349,
       "fileType" : 8192
     },
     "\/_assets\/sass\/core\/_layout.scss" : {

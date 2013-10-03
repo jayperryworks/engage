@@ -25,3 +25,10 @@
     border-color: $color-primary;
   }
 }
+
+@mixin inline-list--centered($height: 100%) {
+  display: table-cell;
+  height: $height;
+  vertical-align: middle;
+  text-align: center;
+}
