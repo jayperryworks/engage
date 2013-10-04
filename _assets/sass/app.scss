@@ -99,6 +99,7 @@ html {
 	.icon-menu {
 		@include span-columns(3);
 		@include inline-block--centered;
+		text-align: left;
 		padding: 0 em(24);
 
 		& > a {
@@ -217,7 +218,8 @@ html {
 		margin: 0;
 		padding: 0;
 		@include rem(height, 500px);
-		background: url(../images/carousel-tiger.jpg) center center;
+		background: url(../images/carousel-wolf.jpg) center center;
+		// background-attachment: fixed;
 		background-size: cover;
 		color: white;
 	}
@@ -274,7 +276,7 @@ html {
 				
 				& > img {
 					@extend %img-grayscale;
-					@include opacity(0.5);
+					@include opacity(0.6);
 				}
 			}
 		}
@@ -344,6 +346,7 @@ html {
 	text-align: center;
 	border-top: $border--thick;
 	border-color: darken(white, 10);
+	@include rem(padding-bottom, 50px);
 
 	h5 {
 		@extend %header-tag;
@@ -379,10 +382,20 @@ html {
 		vertical-align: middle;
 		text-align: center;
 	}
+
+	p {
+		@include span-columns-center(8);
+		@include row;
+	}
+	.button {
+		text-align: center;
+		margin-top: 1em;
+	}
 }
 
 .blog {
 @extend %theme-midtone;
+@include rem(padding-bottom, 50px);
 
 h6 {
 	@extend %header-underline;
@@ -420,6 +433,8 @@ footer {
 		@include rem(font-size, 14px);
 		background: #1A1A1A;
 		text-transform: uppercase;
+		border-bottom: $border--thin;
+		border-color: darken($gray--dark, 5);
 
 		ul {
 			@extend %wrapper;
@@ -433,7 +448,7 @@ footer {
 			@extend %raleway-bold;
 			display: block;
 			color: $gray--medium;
-			padding: em(12);
+			padding: em(16);
 
 			&:hover {
 				color: $gray--light;
@@ -443,37 +458,63 @@ footer {
 
 	.footer-brand {
 		@include row;
+		@include rem(height, 60px);
 		border-bottom: $border--thin;
 		border-color: $gray--dark;
 
 		.logo-footer {
 			@include span-columns(3);
+			@include inline-block--centered;
 			text-align: left;
 		}
 
 		.social {
 			@include span-columns(6);
+			@include inline-block--centered;
 			text-align: center;
 
 			ul {
+				@include inline-block;
+				vertical-align: middle;
 				margin: 0;
 				padding: 0;
 			}
 
 			li {
 				@include inline-block;
-				@include rem(padding, 0 12px);
+				@include rem(padding, 0 6px);
+				vertical-align: middle;
 			}
 		}
 
 		.brand-group {
 			@include span-columns(3);
+			@include inline-block--centered;
 			text-align: right;
+
+			a {
+				@extend %raleway-bold;
+				text-transform: uppercase;
+				color: $color-secondary;
+			}
 		}
 	}
 
-	.footer-contact {
+	.social-icon-fb {
+		@include ir("icon-social-fb.png", 30px, 30px);
+	}
+	.social-icon-linkedin {
+		@include ir("icon-social-linkedin.png", 30px, 30px);
+	}
+	.social-icon-twitter {
+		@include ir("icon-social-twitter.png", 30px, 30px);
+	}
+	.social-icon-github {
+		@include ir("icon-social-github.png", 30px, 30px);
+	}
 
+	.footer-contact {
+		@include rem(font-size, 14px);
 		dl {
 			@include inline-dl;
 		}
@@ -488,7 +529,7 @@ footer {
 		}
 	}
 
-	.footer-copyright p {
+	.footer-copyright {
 		@include rem(font-size, 14px);
 		color: $gray--dark;
 	}

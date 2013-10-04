@@ -14,6 +14,14 @@ $border--thin: 1px solid black;
 %theme-dark {
 	color: white;
 	background: $bg--dark;
+	
+	p {
+		color: $gray--medium;
+	}
+
+	small {
+		color: $gray--dark;
+	}
 }
 
 %theme-color {
@@ -104,6 +112,11 @@ a {
 	}
 }
 
+small, %small {
+	@extend %lora;
+	@include rem(font-size, 12px);
+}
+
 // makes a white-on-black "tag" from a lower header (h4-h6)
 %header-tag {
 	@include inline-block;
@@ -127,7 +140,7 @@ p, li, ol {
 	margin-top: 0;
 }
 
-.abstract, p:first-child {
+.abstract {
 	@include rem(font-size, 18px);
 }
 
