@@ -61,21 +61,29 @@ html {
 $header-h: em(80);
 
 // Header
-.main-header {
+.header-main {
 
 	@extend %theme-dark;
+	@extend %raleway-bold;
 	@include rem(font-size, 12px);
+	@include outer-container;
+	width: 100%;
+	max-width: 100%;
+	@include row;
 	border-bottom: $border--thin;
 	height: $header-h;
 	text-align: justify;
+	text-transform: uppercase;
 	width: 100%;
 	
 	& > a {
-		@include inline-list--centered($header-h);
+		// @include inline-list--centered($header-h);
+		color: $gray--medium;
 	}
 
-	img {
+	.icon {
 		vertical-align: middle;
+		margin: em(-3) em(8) 0 em(8);
 	}
 
 	// & > nav {
@@ -84,26 +92,29 @@ $header-h: em(80);
 	// }
 }
 	.icon-menu {
-		@include rem(padding, 0 24px);
-		// display: block;
-		float: left;
+		@include span-columns(3);
+		@include inline-block--centered;
+		padding: 0 em(24);
+
+		& > a {
+			@include inline-block;
+			color: $gray--medium;
+
+			&:hover {
+				color: $gray--light;
+			}
+		}
 	}
 	
 	.logo-engage.full {
-		$w: 230px;
-		@include rem(width, $w);
-		@include rem(padding, 0 24px);
-		// display: table;
-		position: absolute;
-		left: 50%;
-		margin-left: -($w/2);
+		@include span-columns(6);
+		@include inline-block--centered;
+		text-align: center;
 	}
 
 	.clients-login {
-		@include rem(padding, 0 24px);
-		position: relative;
-		// display: table;
-		float: right;
+		@extend .icon-menu;
+		text-align: right;
 	}
 
 	.brand-icon {
@@ -282,7 +293,7 @@ $header-h: em(80);
 	.feature-blurb {
 		@extend %wrapper;
 		text-align: center;
-		clear: both;
+		clear: both; 
 
 		& > p {
 			@include span-columns-center(6);
@@ -374,4 +385,85 @@ $header-h: em(80);
 
 footer {
 	@extend %theme-dark;
+	@include rem(padding-bottom, 40px);
+	text-align: center;
+	
 }
+	
+	.menu-footer {
+		@extend %raleway-bold;
+		@include rem(font-size, 14px);
+		background: #1A1A1A;
+		text-transform: uppercase;
+
+		ul {
+			@extend %wrapper;
+
+			li {
+				@include inline-block;
+			}
+		}
+
+		a {
+			@extend %raleway-bold;
+			display: block;
+			color: $gray--medium;
+			padding: em(12);
+
+			&:hover {
+				color: $gray--light;
+			}
+		}
+	}
+
+	.footer-brand {
+		@include row;
+		border-bottom: $border--thin;
+		border-color: $gray--dark;
+
+		.logo-footer {
+			@include span-columns(3);
+			text-align: left;
+		}
+
+		.social {
+			@include span-columns(6);
+			text-align: center;
+
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				@include inline-block;
+				@include rem(padding, 0 12px);
+			}
+		}
+
+		.brand-group {
+			@include span-columns(3);
+			text-align: right;
+		}
+	}
+
+	.footer-contact {
+
+		dl {
+			@include inline-dl;
+		}
+		dt {
+			@extend %raleway-bold;
+			color: $color-primary;
+			text-transform: uppercase;
+		}
+		dd {
+			@extend %lora;
+			color: $gray--medium;
+		}
+	}
+
+	.footer-copyright p {
+		@include rem(font-size, 14px);
+		color: $gray--dark;
+	}
