@@ -56,18 +56,10 @@
   }
 }
 
-@mixin ir($w, $h) {
-  @include hide-text;
-  @include size(161px 30px);
-  @include rem(width, $w);
-  @include rem(height, $h);
-  display: block;
-}
-
 // vertically center the children of an inline block element
 @mixin inline-block--centered($height: 100%) {
-	@include inline-block;
-	vertical-align: middle;
+	// @include inline-block;
+	// vertical-align: middle;
 	height: 100%;
 
 	&:before {
@@ -77,3 +69,4 @@
     height: 100%;
 	}
 }
+

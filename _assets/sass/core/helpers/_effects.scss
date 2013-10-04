@@ -1,0 +1,33 @@
+// change opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// image replacement
+@mixin ir($w, $h) {
+  @include hide-text;
+  @include size(161px 30px);
+  @include rem(width, $w);
+  @include rem(height, $h);
+  display: block;
+}
+
+// use webkit/ie filters to make an image grayscale
+%img-grayscale {
+	@extend %base-transition;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+  filter: gray;  /* For IE 6 - 9 */
+
+  &:hover {
+    @extend %img-grayscale-kill;
+  }
+}
+
+%img-grayscale-kill {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  filter: none;
+}

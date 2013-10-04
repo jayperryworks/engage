@@ -18,6 +18,7 @@
 @import "core/helpers/html5bp"; // helper classes/mixins
 @import "core/helpers/rem"; // helper classes/mixins
 @import "core/helpers/layout"; // general layout helpers
+@import "core/helpers/effects"; // graphic effects
 @import "core/settings"; // global variables
 @import "core/base"; // BP base styles
 @import "core/content"; // global/base-level typography, color etc.
@@ -58,23 +59,27 @@ html {
 	@include base-grid-margins;
 }
 
-$header-h: em(80);
+
 
 // Header
 .header-main {
-
 	@extend %theme-dark;
 	@extend %raleway-bold;
 	@include rem(font-size, 12px);
 	@include outer-container;
+	@include row;
+	position: fixed;
 	width: 100%;
 	max-width: 100%;
-	@include row;
+	top: 0;
+	left: 0;
+	right: 0;
 	border-bottom: $border--thin;
 	height: $header-h;
 	text-align: justify;
 	text-transform: uppercase;
 	width: 100%;
+	z-index: 1000;
 	
 	& > a {
 		// @include inline-list--centered($header-h);
@@ -98,6 +103,7 @@ $header-h: em(80);
 
 		& > a {
 			@include inline-block;
+			height: 100%;
 			color: $gray--medium;
 
 			&:hover {
@@ -214,10 +220,14 @@ $header-h: em(80);
 // 	}
 // }
 
+.first {
+	margin-top: $header-h;
+}
+
 .feature {
 	@include clearfix;
 	text-align: center;
-	margin: 0;
+	// margin: 0;
 }
 
 .feature-hero {
@@ -241,7 +251,7 @@ $header-h: em(80);
 		margin: 0;
 		padding: 0;
 		@include rem(height, 500px);
-		background: url(../images/carousel-wolf.jpg) center center;
+		background: url(../images/carousel-tiger.jpg) center center;
 		background-size: cover;
 		color: white;
 	}
@@ -282,10 +292,25 @@ $header-h: em(80);
 
 				&.active {
 					border-color: $color-primary;
+
+					& > img {
+						@extend %img-grayscale-kill;
+						@include opacity(1);
+					}
 				}
 
 				&:hover {
-					border-color: $color-primary;
+					border-color: $gray--light;
+
+					& > img {
+						@extend %img-grayscale-kill;
+						@include opacity(1);
+					}
+				}
+				
+				& > img {
+					@extend %img-grayscale;
+					@include opacity(0.5);
 				}
 			}
 		}
