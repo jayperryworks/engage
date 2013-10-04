@@ -186,40 +186,6 @@ html {
 		}
 	}
 
-// Intro section
-// KILLED
-// .intro {
-// 	@extend %theme-color;
-// 	padding: em(50) 0;
-// 	border-bottom: $border--thick;
-
-// 	h1 {
-// 		@include span-columns($grid-columns);
-// 		padding-top: 1em;
-// 		text-align: center;
-// 		color: white;
-// 		margin-top: 0;
-// 		border-top: $border--thin;
-		
-// 		@include media($medium) {
-// 			@include span-columns-center(10);
-// 		}
-
-// 		& > .subhead {
-// 			color: $green;
-// 		}
-// 	}
-
-// 	p {
-// 		@include span-columns(8);
-// 		@include shift(2);
-// 		// padding: 1em;
-// 		text-align: center;
-// 		// margin-bottom: em(50);
-// 		color: darken($black, 10);
-// 	}
-// }
-
 .first {
 	margin-top: $header-h;
 }
@@ -256,6 +222,7 @@ html {
 		color: white;
 	}
 		.hero-carousel-slide {
+			// http://css-tricks.com/snippets/css/transparent-background-images/
 			@include base-grid-margins(padding, $full: true);
 			@include rem(bottom, 50px);
 			position: absolute;
@@ -271,17 +238,14 @@ html {
 			@include clearfix;
 			position: relative;
 			margin-top: -8px;
+			margin-bottom: 0;
 			padding: 0;
 			z-index: 3;
 
-			& > li {
-				margin: 0;
-				padding: 0;
+			li {
 				width: 20%;
 				float: left;
 				display: table;
-				padding: 0;
-				list-style: none;
 			}
 
 			.thumb {
@@ -300,7 +264,7 @@ html {
 				}
 
 				&:hover {
-					border-color: $gray--light;
+					border-color: $gray--medium;
 
 					& > img {
 						@extend %img-grayscale-kill;
@@ -318,7 +282,12 @@ html {
 	.feature-blurb {
 		@extend %wrapper;
 		text-align: center;
-		clear: both; 
+		clear: both;
+		@include rem(padding-bottom, 50px);
+
+		& > h3 {
+			color: $color-primary;
+		}
 
 		& > p {
 			@include span-columns-center(6);
@@ -326,9 +295,8 @@ html {
 	}
 
 .what-we-do {
-	background: lighten(#EDEBE8, 3);
-	border-top: $border--thick;
-	border-color: darken(#EDEBE8, 5);
+	@include rem(padding-bottom, 50px);
+	@extend %theme-midtone;
 	text-align: center;
 
 	h5 {
@@ -339,8 +307,6 @@ html {
 		@include span-columns(12);
 		text-align: left;
 
-
-
 		@include media($small) {
 			@include span-columns-center(6, 8);
 		}
@@ -348,12 +314,31 @@ html {
 		@include media($medium) {
 			@include span-columns-center(8, 12);
 		}
-
-		&:last-child {
-			margin-bottom: em(50);
-		}
 	}
 }
+
+	.services {
+		@include span-columns-center(8);
+		@include row;
+		@include clearfix;
+		position: relative;
+		margin-top: 0.5em;
+		margin-bottom: 1.5em;
+
+		li {
+			float: left;
+			display: table;
+			width: (100%/8);
+		}
+
+		.icon {
+			@include inline-list--centered(60px);
+
+			&:hover, &:active {
+				background: white;
+			}
+		}
+	}
 
 .tools {
 	text-align: center;
@@ -379,7 +364,8 @@ html {
 		display: table;
 		padding: 0;
 		list-style: none;
-		border-right: $border--thin;
+		border-right: $border--thick;
+		border-color: darken(white, 10);
 
 		&:last-child {
 			border: none;
@@ -396,15 +382,29 @@ html {
 }
 
 .blog {
+@extend %theme-midtone;
 
+h6 {
+	@extend %header-underline;
+	color: $color-primary;
+	// margin: 0;
+}
 	.recent-articles {
 		@include span-columns(6);
 		@include shift(1);
+		padding: 0;
 	}
 
 	.events {
 		@include span-columns(4);
 		@include omega;
+		padding: 0;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
 	}
 }
 

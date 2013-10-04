@@ -26,19 +26,16 @@
   }
 }
 
-%img-grayscale {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);  /* For Webkit browsers */
-  filter: gray;  /* For IE 6 - 9 */
-  -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
-
-  &:hover {
-    @extend %img-grayscale-kill;
-  }
-}
-
-%img-grayscale-kill {
-  filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
-  filter: none;
+.tooltipsy {
+  // @extend %theme-dark;
+  // @include triangle--centered($w: 10px, $dir: up);
+  @extend %lora;
+  @extend %base-transition;
+  @include rem(font-size, 12px);
+  max-width: 200px;
+  background: $black;
+  color: white;
+  padding: em(8) em(16);
+  border-radius: 5px;
+  text-align: center;
 }

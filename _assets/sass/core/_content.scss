@@ -1,4 +1,38 @@
 // ==============================================================================
+// 	Themes
+// ==============================================================================
+
+$border-weight--thick: 8px;
+
+$border--thick: $border-weight--thick solid $black;
+$border--thin: 1px solid black;
+
+// @mixin $border--thick($side, $color) {
+	
+// }
+
+%theme-dark {
+	color: white;
+	background: $bg--dark;
+}
+
+%theme-color {
+	color: white;
+	background: $bg--color;
+}
+
+%theme-light {
+	color: $color-text--headline;
+	background: $bg--light;
+}
+
+%theme-midtone {
+	background: lighten(#EDEBE8, 3);
+	border-top: $border--thick;
+	border-color: darken(#EDEBE8, 5);
+}
+
+// ==============================================================================
 // 	Global type
 // ==============================================================================
 
@@ -31,12 +65,15 @@ h1 > .subhead {
 h2, .h2, %h2 {
 	@extend %raleway;
 	@include rem(font-size, 36px);
+	line-height: 1.2;
+	margin: 0.5em 0;
 }
 
 h3, .h3, %h3 {
 	@extend %raleway-bold;
 	@include rem(font-size, 24px);
 	text-transform: uppercase;
+	margin: 0.5em 0;
 }
 
 h4, .h4, %h4 {
@@ -46,14 +83,14 @@ h4, .h4, %h4 {
 }
 
 h5, .h5, %h5 {
-	@extend %raleway-heavy;
+	@extend %raleway-bold;
 	@include rem(font-size, 12px);
 	text-transform: uppercase;
 }
 
 h6, .h6, %h6 {
 	@extend %raleway-heavy;
-	@include rem(font-size, 10px);
+	@include rem(font-size, 12px);
 	text-transform: uppercase;
 }
 
@@ -70,11 +107,18 @@ a {
 // makes a white-on-black "tag" from a lower header (h4-h6)
 %header-tag {
 	@include inline-block;
+	@include triangle--centered;
 	position: relative;
+	top: -#{$border-weight--thick};
 	color: $gray--light;
 	background: $bg--dark;
-	padding: em(12) em(27);
-	margin: -8px 0 0 0;
+	padding: em(16) em(27) em(12) em(27);
+	margin: 0 0 em(1) 0;
+}
+
+%header-underline {
+	padding: 0.5em;
+	border-bottom: $border--thick;
 }
 
 p, li, ol {
@@ -96,34 +140,4 @@ p, li, ol {
 // if @fontface is available...
 .fontface .amp {
 	
-}
-
-// ==============================================================================
-// 	Themes
-// ==============================================================================
-
-$border--thick: 8px solid $black;
-$border--thin: 1px solid black;
-
-// @mixin $border--thick($side, $color) {
-	
-// }
-
-%theme-dark {
-	color: white;
-	background: $bg--dark;
-}
-
-%theme-color {
-	color: white;
-	background: $bg--color;
-}
-
-%theme-light {
-	color: $color-text--headline;
-	background: $bg--light;
-}
-
-%theme-midtone {
-	background: $bg--midtone;
 }

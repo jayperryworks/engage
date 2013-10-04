@@ -777,16 +777,16 @@ table {
   -webkit-filter: grayscale(0%);
   filter: none; }
 
-h1 > em, .h1 > em, h1 > .subhead, h3, .h3, .header-main, .menu-footer, .menu-footer a, .footer-contact dt, h4, .h4, h5, .h5, h6, .h6, h1, .h1, h2, .h2 {
+h1 > em, .h1 > em, h1 > .subhead, h3, .h3, h5, .h5, .header-main, .menu-footer, .menu-footer a, .footer-contact dt, h4, .h4, h6, .h6, h1, .h1, h2, .h2 {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal; }
 
-h1 > em, .h1 > em, h1 > .subhead, h3, .h3, .header-main, .menu-footer, .menu-footer a, .footer-contact dt {
+h1 > em, .h1 > em, h1 > .subhead, h3, .h3, h5, .h5, .header-main, .menu-footer, .menu-footer a, .footer-contact dt {
   font-weight: 600; }
 
-h4, .h4, h5, .h5, h6, .h6 {
-  font-weight: 900; }
+h4, .h4, h6, .h6 {
+  font-weight: 800; }
 
 .main-menu a, .secondary-menu a, .button {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -799,7 +799,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 .button {
   font-weight: 900; }
 
-p, li, ol, .footer-contact dd {
+p, li, ol, .tooltipsy, .footer-contact dd {
   font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   font-style: normal; }
@@ -809,7 +809,7 @@ p, li, ol, .footer-contact dd {
   font-style: italic;
   font-weight: normal !important; }
 
-.carousel-nav .thumb > img, a, .button {
+.carousel-nav .thumb > img, a, .button, .tooltipsy {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
@@ -1195,6 +1195,14 @@ fieldset {
 textarea {
   resize: vertical; }
 
+/*
+ * Reset lists that appear in nav elements
+ */
+nav ul, nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
@@ -1203,6 +1211,15 @@ textarea {
   background: #ccc;
   color: #000;
   padding: 0.2em 0; }
+
+.header-main, .feature-hero, footer {
+  color: white;
+  background: #282828; }
+
+.what-we-do, .blog {
+  background: #f4f2f1;
+  border-top: 8px solid #282828;
+  border-color: #e2dfda; }
 
 h1, .h1 {
   font-size: 40px;
@@ -1224,12 +1241,15 @@ h1 > .subhead {
 
 h2, .h2 {
   font-size: 36px;
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin: 0.5em 0; }
 
 h3, .h3 {
   font-size: 24px;
   font-size: 1.5rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 0.5em 0; }
 
 h4, .h4 {
   font-size: 18px;
@@ -1242,8 +1262,8 @@ h5, .h5 {
   text-transform: uppercase; }
 
 h6, .h6 {
-  font-size: 10px;
-  font-size: 0.625rem;
+  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase; }
 
 a {
@@ -1259,10 +1279,27 @@ a {
   *display: inline;
   *vertical-align: auto;
   position: relative;
+  top: -8px;
   color: #cbcbcb;
   background: #282828;
-  padding: 0.75em 1.6875em;
-  margin: -8px 0 0 0; }
+  padding: 1em 1.6875em 0.75em 1.6875em;
+  margin: 0 0 0.0625em 0; }
+  .what-we-do h5:after, .tools h5:after {
+    content: " ";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-top-color: white;
+    top: 0;
+    left: 50%;
+    margin-left: -5px; }
+
+.blog h6 {
+  padding: 0.5em;
+  border-bottom: 8px solid #282828; }
 
 p, li, ol {
   line-height: 1.5;
@@ -1274,10 +1311,6 @@ p, li, ol {
 
 .amp {
   font-size: 1.2em; }
-
-.header-main, .feature-hero, footer {
-  color: white;
-  background: #282828; }
 
 /* ==========================================================================
    MODULE styles
@@ -1296,19 +1329,15 @@ p, li, ol {
     color: #282828;
     border-color: #7c4099; }
 
-.carousel-nav .thumb > img {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  /* For Webkit browsers */
-  filter: gray;
-  /* For IE 6 - 9 */
-  -webkit-transition: all .6s ease;
-  /* Transition for Webkit browsers */ }
-
-.carousel-nav .thumb > img:hover, .carousel-nav .thumb.active > img, .carousel-nav .thumb:hover > img {
-  filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
-  filter: none; }
+.tooltipsy {
+  font-size: 12px;
+  font-size: 0.75rem;
+  max-width: 200px;
+  background: #282828;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-align: center; }
 
 /* ==========================================================================
    Inbox -- 
@@ -1394,6 +1423,12 @@ html {
   float: left;
   margin-right: 1.94175%;
   width: 23.54369%;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  vertical-align: middle;
   height: 100%;
   padding: 0 1.5em; }
   .icon-menu:last-child, .clients-login:last-child {
@@ -1419,6 +1454,12 @@ html {
   float: left;
   margin-right: 1.94175%;
   width: 49.02913%;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  vertical-align: middle;
   height: 100%;
   text-align: center; }
   .logo-engage.full:last-child {
@@ -1562,6 +1603,7 @@ html {
   *zoom: 1;
   position: relative;
   margin-top: -8px;
+  margin-bottom: 0;
   padding: 0;
   z-index: 3; }
   .carousel-nav:last-child {
@@ -1576,17 +1618,14 @@ html {
     display: table; }
   .carousel-nav:after {
     clear: both; }
-  .carousel-nav > li {
-    margin: 0;
-    padding: 0;
+  .carousel-nav li {
     width: 20%;
     float: left;
-    display: table;
-    padding: 0;
-    list-style: none; }
+    display: table; }
   .carousel-nav .thumb {
-    display: table-cell;
     height: 160px;
+    height: 10rem;
+    display: table-cell;
     vertical-align: middle;
     text-align: center;
     position: relative;
@@ -1598,7 +1637,7 @@ html {
         opacity: 1;
         filter: alpha(opacity=100); }
     .carousel-nav .thumb:hover {
-      border-color: #cbcbcb; }
+      border-color: gray; }
       .carousel-nav .thumb:hover > img {
         opacity: 1;
         filter: alpha(opacity=100); }
@@ -1608,7 +1647,11 @@ html {
 
 .feature-blurb {
   text-align: center;
-  clear: both; }
+  clear: both;
+  padding-bottom: 50px;
+  padding-bottom: 3.125rem; }
+  .feature-blurb > h3 {
+    color: #7c4099; }
   .feature-blurb > p {
     display: block;
     float: left;
@@ -1619,9 +1662,8 @@ html {
       margin-right: 0; }
 
 .what-we-do {
-  background: #f4f2f1;
-  border-top: 8px solid #282828;
-  border-color: #e2dfda;
+  padding-bottom: 50px;
+  padding-bottom: 3.125rem;
   text-align: center; }
   .what-we-do p {
     display: block;
@@ -1649,8 +1691,43 @@ html {
         margin-left: 16.99029%; }
         .what-we-do p:last-child {
           margin-right: 0; } }
-    .what-we-do p:last-child {
-      margin-bottom: 3.125em; }
+
+.services {
+  display: block;
+  float: left;
+  margin-right: 1.94175%;
+  width: 66.01942%;
+  margin-left: 16.99029%;
+  *zoom: 1;
+  display: block;
+  *zoom: 1;
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em; }
+  .services:last-child {
+    margin-right: 0; }
+  .services:before, .services:after {
+    content: " ";
+    display: table; }
+  .services:after {
+    clear: both; }
+  .services:before, .services:after {
+    content: " ";
+    display: table; }
+  .services:after {
+    clear: both; }
+  .services li {
+    float: left;
+    display: table;
+    width: 12.5%; }
+  .services .icon {
+    height: 60px;
+    height: 3.75rem;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .services .icon:hover, .services .icon:active {
+      background: white; }
 
 .tools {
   text-align: center;
@@ -1681,7 +1758,8 @@ html {
     display: table;
     padding: 0;
     list-style: none;
-    border-right: 1px solid black; }
+    border-right: 8px solid #282828;
+    border-color: #e6e6e6; }
     .tools li:last-child {
       border: none; }
   .tools .thumb {
@@ -1692,12 +1770,15 @@ html {
     vertical-align: middle;
     text-align: center; }
 
+.blog h6 {
+  color: #7c4099; }
 .blog .recent-articles {
   display: block;
   float: left;
   margin-right: 1.94175%;
   width: 49.02913%;
-  margin-left: 8.49515%; }
+  margin-left: 8.49515%;
+  padding: 0; }
   .blog .recent-articles:last-child {
     margin-right: 0; }
 .blog .events {
@@ -1705,9 +1786,14 @@ html {
   float: left;
   margin-right: 1.94175%;
   width: 32.03883%;
-  margin-right: 0; }
+  margin-right: 0;
+  padding: 0; }
   .blog .events:last-child {
     margin-right: 0; }
+  .blog .events ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
 
 footer {
   padding-bottom: 40px;

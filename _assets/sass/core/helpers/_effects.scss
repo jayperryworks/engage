@@ -15,6 +15,8 @@
 }
 
 // use webkit/ie filters to make an image grayscale
+// http://www.cheesetoast.co.uk/add-grayscale-images-hover-css-black-white/
+// http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css
 %img-grayscale {
 	@extend %base-transition;
   filter: grayscale(100%);
@@ -30,4 +32,30 @@
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   filter: none;
+}
+
+@mixin triangle--centered($w: 10px, $dir: down, $loc: top, $color: white) {
+	&:after {
+		content: " ";
+		position: absolute;
+		@include triangle($w, $color, $dir);
+
+		@if ($loc == top) {
+			top: 0;
+			left: 50%;
+			margin-left: -($w/2);
+		} @else if ($loc == bottom) {
+			bottom: 0;
+			left: 50%;
+			margin-left: -($w/2);
+		} @else if ($loc == left) {
+			left: 0;
+			top: 50%;
+			margin-top: -($w/2);
+		} @else if ($loc == right) {
+			right: 0;
+			top: 50%;
+			margin-top: -($w/2);
+		}
+	}
 }

@@ -36,9 +36,10 @@
 }
 
 // make an inline (horizontal) list and vertically center child elements
+// use this on the li elements or just inside them (ie anchors)
 @mixin inline-list--centered($height: 100%) {
+	@include rem(height, $height);
   display: table-cell;
-  height: $height;
   vertical-align: middle;
   text-align: center;
 }
@@ -58,8 +59,8 @@
 
 // vertically center the children of an inline block element
 @mixin inline-block--centered($height: 100%) {
-	// @include inline-block;
-	// vertical-align: middle;
+	@include inline-block;
+	vertical-align: middle;
 	height: 100%;
 
 	&:before {
