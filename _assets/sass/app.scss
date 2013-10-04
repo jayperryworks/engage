@@ -116,6 +116,7 @@ html {
 	.logo-engage.full {
 		@include span-columns(6);
 		@include inline-block--centered;
+		@include omega;
 		text-align: center;
 	}
 
@@ -136,55 +137,41 @@ html {
 	}
 
 	.main-menu {
-		@include clearfix;
-		float: left;
-		color: $gray--light;
-		padding: 0;
-		margin: 0;
-		height: $header-h;
-		
-		& > li {
+		@extend %raleway-bold;
+		@include rem(font-size, 14px);
+		@include rem(height, 54px);
+		@include opacity(0.9);
+		position: absolute;
+		top: $header-h;
+		left: 0;
+		right: 0;
+		background: #1A1A1A;
+		text-transform: uppercase;
+		z-index: 999;
+
+		& > ul {
+			@extend %wrapper;
+			text-align: center;
+		}
+
+		li {
+			@include inline-block;
+		}
+
+		a {
+			@extend %raleway-bold;
 			display: block;
-			float: left;
-			margin: 0;
-			padding: 0;
-		}
-
-		a {
-			@extend %lato-bold;
-			display: table-cell;
-			padding: 0 em(18);
-			height: $header-h;
-			vertical-align: middle;
-			color: $gray--light;
-			text-transform: uppercase;
-
-			&:hover, &:active {
-				color: white;
-			}
-
-			&.active {
-				color: lighten($gray--light, 20);
-				background: darken($bg--dark, 3);
-			}
-		}
-	}
-
-	.search {
-		float: right;
-	}
-
-	.secondary-menu {
-		@extend .main-menu;
-		float: right;
-
-		a {
 			color: $gray--medium;
+			padding: em(16);
 
-			&:hover, &:active {
-				color: lighten($gray--medium, 20);
+			&:hover {
+				color: $gray--light;
 			}
 		}
+	}
+
+	.main-menu.is-hidden {
+		// @include opacity()
 	}
 
 .first {

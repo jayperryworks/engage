@@ -17,5 +17,31 @@
 	  	offset: [0, 10]
 	  });
 
+	  // main menu show/hide
+	  // --------------------------------------------------------------
+
+	  var $mainMenu = $('.js .main-menu');
+	  var $header = $('.js .header-main');
+
+	  $mainMenu.hide();
+	  $('.js .icon-menu').click(menuToggle);
+
+	  $header.hover(menuHide, menuShow);
+
+	  function menuToggle(e) {
+	  	$mainMenu.slideToggle();
+	  	return false;
+	  }
+
+	  function menuHide(e) {
+	  	$mainMenu.slideDown();
+	  	return false;
+	  }
+
+	  function menuShow(e) {
+	  	$mainMenu.slideUp();
+	  	return false;
+	  }
+
 	});
 })(jQuery);
