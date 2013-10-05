@@ -12,7 +12,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/app.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/app.css">
 
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -20,31 +20,31 @@
    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- Modernizr -->
-    <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="{{ site.baseurl }}assets/js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
   <body id="{{ page.name }}">
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">Oh dear, it looks like your browser is quite old. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- header -->
     <header role="banner" class="header-main">
-      <div class="icon-menu">
+      <div class="header-menu">
         <a href="#">
-          <img class="icon" src="{{ site.url }}/assets/images/icon-menu.png" alt="Menu" /> <span class="icon-label">Menu</span>
+          <img class="header-icon" src="{{ site.baseurl }}assets/images/icon-menu.png" alt="Menu" /> <span class="icon-label">Menu</span>
         </a>
       </div>
-      <div class="logo-engage full">
-        <a href="{{ site.url }}">
-          <img src="{{ site.url }}/assets/images/logo-engage--full.png" alt="The Engage Group. Your cause. Our effect. Online." />
+      <div class="header-logo">
+        <a href="{{ site.baseurl }}">
+          <img class="logo-engage full" src="{{ site.baseurl }}assets/images/logo-engage--full.png" alt="The Engage Group. Your cause. Our effect. Online." />
         </a>
       </div>
       <div class="clients-login">
         <a href="#">
-          <span class="icon-label">Clients</span> <img class="icon" src="{{ site.url }}/assets/images/icon-clients.png" alt="Client login" />
+          <span class="icon-label">Clients</span> <img class="header-icon" src="{{ site.baseurl }}assets/images/icon-clients.png" alt="Client login" />
         </a>
       </div>
-      <nav class="main-menu">
+      <nav class="menu-main">
         <ul>
           <li><a href="#">What we do</a></li>
           <li><a href="#">Company</a></li>
@@ -73,7 +73,7 @@
       <div class="wrapper">
         <section class="footer-brand">
           <div class="logo-footer">
-            <a href="#"><img src="{{ site.url }}/assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
+            <a href="#"><img src="{{ site.baseurl }}assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
           </div>
 
           <nav class="social">
@@ -105,8 +105,8 @@
       </div><!-- /.wrapper -->
     </footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="{{ site.url }}/assets/js/app.min.js"></script>
+    <script src="{{ site.baseurl }}/ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ site.baseurl }}assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="{{ site.baseurl }}assets/js/app.min.js"></script>
   </body>
 </html>

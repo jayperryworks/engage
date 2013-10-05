@@ -1,4 +1,6 @@
 name: The Engage Group
+#url: http://jayperryworks.github.io
+baseurl: 
 
 markdown: redcarpet
 pygments: true

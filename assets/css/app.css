@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Frameworks/dependencies
-   ========================================================================== */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -262,9 +259,6 @@ html[xmlns] .slides {
   .flex-direction-nav .flex-next {
     opacity: 1;
     right: 10px; } }
-/* ==========================================================================
-   CORE styles
-   ========================================================================== */
 /* normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -713,12 +707,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* ==========================================================================
-   HTML5 BP Helper classes
-   ========================================================================== */
-/*
- * Image replacement
- */
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
@@ -728,43 +716,11 @@ table {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.clearfix:after {
-  clear: both; }
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-  *zoom: 1; }
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
 .carousel-nav .thumb > img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
@@ -777,12 +733,12 @@ table {
   -webkit-filter: grayscale(0%);
   filter: none; }
 
-h1 > em, .h1 > em, h1 > .subhead, h3, .h3, h5, .h5, .header-main, .main-menu, .main-menu a, .menu-footer, .menu-footer a, .footer-brand .brand-group a, .footer-contact dt, h4, .h4, h6, .h6, h1, .h1, h2, .h2 {
+h1 > em, .h1 > em, h1 > .subhead, h3, .h3, h5, .h5, .header-main, .menu-main, .menu-main a, .menu-footer, .menu-footer a, .footer-brand .brand-group a, .footer-contact dt, h4, .h4, h6, .h6, h1, .h1, h2, .h2 {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal; }
 
-h1 > em, .h1 > em, h1 > .subhead, h3, .h3, h5, .h5, .header-main, .main-menu, .main-menu a, .menu-footer, .menu-footer a, .footer-brand .brand-group a, .footer-contact dt {
+h1 > em, .h1 > em, h1 > .subhead, h3, .h3, h5, .h5, .header-main, .menu-main, .menu-main a, .menu-footer, .menu-footer a, .footer-brand .brand-group a, .footer-contact dt {
   font-weight: 600; }
 
 h4, .h4, h6, .h6 {
@@ -1129,19 +1085,25 @@ small, p, li, ol, .tooltipsy, .footer-contact dd {
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 html,
 button,
 input,
 select,
 textarea {
-  color: #222; }
+  color: #4d4d4d; }
 
 html {
-  font-size: 1em;
-  line-height: 1.4; }
+  font-size: 87.5%;
+  line-height: 1.5; }
+  @media screen and (min-width: 48em) {
+    html {
+      font-size: 100%; } }
+  @media screen and (min-width: 80em) {
+    html {
+      font-size: 112.5%; } }
+  @media screen and (min-width: 90em) {
+    html {
+      font-size: 125%; } }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -1200,9 +1162,6 @@ nav ul, nav li {
   padding: 0;
   list-style: none; }
 
-/* ==========================================================================
-   Browse Happy prompt
-   ========================================================================== */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -1317,9 +1276,6 @@ p, li, ol {
 .amp {
   font-size: 1.2em; }
 
-/* ==========================================================================
-   MODULE styles
-   ========================================================================== */
 .button {
   font-size: 12px;
   font-size: 0.75rem;
@@ -1355,44 +1311,28 @@ p, li, ol {
     left: 50%;
     margin-left: -5px; }
 
-/* ==========================================================================
-   Inbox -- 
-   add quick and dirty CSS here, clean up and move to the right place later
-   ========================================================================== */
-html {
-  font-size: 87.5%; }
-  @media screen and (min-width: 48em) {
-    html {
-      font-size: 100%; } }
-  @media screen and (min-width: 80em) {
-    html {
-      font-size: 112.5%; } }
-  @media screen and (min-width: 90em) {
-    html {
-      font-size: 125%; } }
-
-.wrapper, .main-menu > ul, .feature-blurb, .menu-footer ul {
+.wrapper, .menu-main > ul, .feature-blurb, .menu-footer ul {
   *zoom: 1;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   margin: 0 18px;
   margin: 0 1.28571rem; }
-  .wrapper:before, .wrapper:after, .main-menu > ul:before, .feature-blurb:before, .menu-footer ul:before, .main-menu > ul:after, .feature-blurb:after, .menu-footer ul:after {
+  .wrapper:before, .wrapper:after, .menu-main > ul:before, .feature-blurb:before, .menu-footer ul:before, .menu-main > ul:after, .feature-blurb:after, .menu-footer ul:after {
     content: " ";
     display: table; }
-  .wrapper:after, .main-menu > ul:after, .feature-blurb:after, .menu-footer ul:after {
+  .wrapper:after, .menu-main > ul:after, .feature-blurb:after, .menu-footer ul:after {
     clear: both; }
   @media screen and (min-width: 48em) {
-    .wrapper, .main-menu > ul, .feature-blurb, .menu-footer ul {
+    .wrapper, .menu-main > ul, .feature-blurb, .menu-footer ul {
       margin: 0 24px;
       margin: 0 1.5rem; } }
   @media screen and (min-width: 80em) {
-    .wrapper, .main-menu > ul, .feature-blurb, .menu-footer ul {
+    .wrapper, .menu-main > ul, .feature-blurb, .menu-footer ul {
       margin: 0 72px;
       margin: 0 4rem; } }
   @media screen and (min-width: 90em) {
-    .wrapper, .main-menu > ul, .feature-blurb, .menu-footer ul {
+    .wrapper, .menu-main > ul, .feature-blurb, .menu-footer ul {
       margin: 0 auto;
       max-width: 1368px;
       max-width: 68.4rem; } }
@@ -1406,6 +1346,8 @@ html {
   margin-right: auto;
   *zoom: 1;
   display: block;
+  height: 60px;
+  height: 3.75rem;
   position: fixed;
   width: 100%;
   max-width: 100%;
@@ -1413,7 +1355,6 @@ html {
   left: 0;
   right: 0;
   border-bottom: 1px solid black;
-  height: 3.75rem;
   text-align: justify;
   text-transform: uppercase;
   width: 100%;
@@ -1428,13 +1369,8 @@ html {
     display: table; }
   .header-main:after {
     clear: both; }
-  .header-main > a {
-    color: gray; }
-  .header-main .icon {
-    vertical-align: middle;
-    margin: -0.1875em 0.5em 0 0.5em; }
 
-.icon-menu, .clients-login {
+.header-menu, .clients-login {
   display: block;
   float: left;
   margin-right: 1.94175%;
@@ -1448,14 +1384,14 @@ html {
   height: 100%;
   text-align: left;
   padding: 0 1.5em; }
-  .icon-menu:last-child, .clients-login:last-child {
+  .header-menu:last-child, .clients-login:last-child {
     margin-right: 0; }
-  .icon-menu:before, .clients-login:before {
+  .header-menu:before, .clients-login:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
     height: 100%; }
-  .icon-menu > a, .clients-login > a {
+  .header-menu > a, .clients-login > a {
     display: inline-block;
     vertical-align: baseline;
     zoom: 1;
@@ -1463,10 +1399,14 @@ html {
     *vertical-align: auto;
     height: 100%;
     color: gray; }
-    .icon-menu > a:hover, .clients-login > a:hover {
+    .header-menu > a:hover, .clients-login > a:hover {
       color: #cbcbcb; }
 
-.logo-engage.full {
+.header-icon {
+  vertical-align: middle;
+  margin: -0.1875em 0.5em 0 0.5em; }
+
+.header-logo {
   display: block;
   float: left;
   margin-right: 1.94175%;
@@ -1478,61 +1418,63 @@ html {
   *vertical-align: auto;
   vertical-align: middle;
   height: 100%;
-  margin-right: 0;
   text-align: center; }
-  .logo-engage.full:last-child {
+  .header-logo:last-child {
     margin-right: 0; }
-  .logo-engage.full:before {
+  .header-logo:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
     height: 100%; }
 
+.logo-engage.full {
+  max-height: 60%; }
+  @media screen and (min-width: 48em) {
+    .logo-engage.full {
+      max-height: 100%; } }
+
 .clients-login {
+  margin-right: 0;
+  display: none;
+  visibility: hidden;
   text-align: right; }
+  @media screen and (min-width: 48em) {
+    .clients-login {
+      display: block;
+      visibility: visible; } }
 
-.brand-icon {
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
-  display: block;
-  width: 60px;
-  height: 100%;
-  top: 0;
-  margin: 0;
-  float: left;
-  background: #282828 url("../images/logo-engage--icon-rev.png") center no-repeat; }
-
-.main-menu {
+.menu-main {
   font-size: 14px;
   font-size: 0.875rem;
   height: 54px;
   height: 3.375rem;
   opacity: 0.9;
   filter: alpha(opacity=90);
-  position: absolute;
+  top: 60px;
   top: 3.75rem;
+  position: absolute;
   left: 0;
   right: 0;
   background: #1A1A1A;
   text-transform: uppercase;
   z-index: 999; }
-  .main-menu > ul {
+  .menu-main > ul {
     text-align: center; }
-  .main-menu li {
+  .menu-main li {
     display: inline-block;
     vertical-align: baseline;
     zoom: 1;
     *display: inline;
     *vertical-align: auto; }
-  .main-menu a {
+  .menu-main a {
     display: block;
     color: gray;
     padding: 1em; }
-    .main-menu a:hover {
+    .menu-main a:hover {
       color: #cbcbcb; }
 
 .first {
+  margin-top: 60px;
   margin-top: 3.75rem; }
 
 .feature {
@@ -1866,7 +1808,7 @@ footer {
     display: block;
     float: left;
     margin-right: 1.94175%;
-    width: 23.54369%;
+    width: 32.03883%;
     display: inline-block;
     vertical-align: baseline;
     zoom: 1;
@@ -1886,7 +1828,7 @@ footer {
     display: block;
     float: left;
     margin-right: 1.94175%;
-    width: 49.02913%;
+    width: 32.03883%;
     display: inline-block;
     vertical-align: baseline;
     zoom: 1;
@@ -1924,7 +1866,7 @@ footer {
     display: block;
     float: left;
     margin-right: 1.94175%;
-    width: 23.54369%;
+    width: 32.03883%;
     display: inline-block;
     vertical-align: baseline;
     zoom: 1;
@@ -1949,9 +1891,7 @@ footer {
   font: 0/0 a;
   text-shadow: none;
   width: 30px;
-  width: 1.875rem;
   height: 30px;
-  height: 1.875rem;
   display: block;
   background: url(../images/icon-social-fb.png) center center no-repeat; }
 
@@ -1960,9 +1900,7 @@ footer {
   font: 0/0 a;
   text-shadow: none;
   width: 30px;
-  width: 1.875rem;
   height: 30px;
-  height: 1.875rem;
   display: block;
   background: url(../images/icon-social-linkedin.png) center center no-repeat; }
 
@@ -1971,9 +1909,7 @@ footer {
   font: 0/0 a;
   text-shadow: none;
   width: 30px;
-  width: 1.875rem;
   height: 30px;
-  height: 1.875rem;
   display: block;
   background: url(../images/icon-social-twitter.png) center center no-repeat; }
 
@@ -1982,9 +1918,7 @@ footer {
   font: 0/0 a;
   text-shadow: none;
   width: 30px;
-  width: 1.875rem;
   height: 30px;
-  height: 1.875rem;
   display: block;
   background: url(../images/icon-social-github.png) center center no-repeat; }
 
