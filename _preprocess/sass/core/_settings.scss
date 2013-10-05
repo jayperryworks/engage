@@ -1,0 +1,174 @@
+// ==========================================================================
+// 	Default paths
+// ==========================================================================
+
+$base-path-img: "../images/";
+
+// ==========================================================================
+// 	Typography settings
+// ==========================================================================
+
+$base-font-size--default: 16; // in pixels
+$base-line-height: 1.5; // base line height (ratio, no units)
+
+// base font sizes @ each breakpoint
+// see media queries below for breakpoint sizes
+$base-font-size--xsmall: 14px;
+$base-font-size--small: 16px;
+$base-font-size--medium: 18px;
+$base-font-size--large: 20px;
+
+$raleway: 'Raleway', #{$helvetica};
+$lato: 'Lato', #{$helvetica};
+$lora: 'Lora', #{$georgia};
+
+$amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
+
+// Raleway (header/display font)
+// -----------------------------------------------------------------------------
+
+%raleway {
+	font-family: $raleway;
+	font-weight: 300;
+	font-style: normal;
+}
+
+%raleway-bold {
+	@extend %raleway;
+	font-weight: 600;
+}
+
+%raleway-heavy {
+	@extend %raleway;
+	font-weight: 800;
+}
+
+// Lato (header/display font)
+// -----------------------------------------------------------------------------
+
+%lato {
+	font-family: $lato;
+	font-weight: 300;
+	font-style: normal;
+}
+
+%lato-bold {
+	@extend %lato;
+	font-weight: 700;
+}
+
+%lato-black {
+	@extend %lato;
+	font-weight: 900;
+}
+
+// Lora (text font)
+// -----------------------------------------------------------------------------
+
+%lora {
+	font-family: $lora;
+	font-weight: 400;
+	font-style: normal;
+}
+
+%lora-bold {
+	@extend %lora;
+	font-weight: 700;
+}
+
+%lora-italic {
+	@extend %lora;
+	font-style: italic;
+}
+
+%lora-bold-italic {
+	@extend %lora;
+	font-weight: 700;
+	font-style: italic;
+}
+
+%amp {
+	font-family: $amp;
+	font-style: italic;
+	font-weight: normal !important; // can't ever be bold. sorry.
+	// margin: 0 em(1) 0 em(-1);
+}
+
+// ==========================================================================
+// 	Media queries
+//  -> mobile first, using base font sizes to scale everything
+// ==========================================================================
+
+// screen size breakpoints (values in px but do not include unit)
+$screen--xsmall: em(480);
+$screen--small: em(768);
+$screen--medium: em(1280);
+$screen--large: em(strip-units($max-width)); //1440px
+
+$xsmall: new-breakpoint(min-width $screen--xsmall 4);
+$small: new-breakpoint(min-width $screen--small 8);
+$medium: new-breakpoint(min-width $screen--medium 12);
+$large: new-breakpoint(min-width $screen--large 12);
+
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+
+// for print and high-resolution displays
+$print: "print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)";
+
+// ==========================================================================
+// 	Layout settings
+//  -> see _neat-settings for grid-specific variables
+// ==========================================================================
+
+// Margins at the outside of the layout (at edges of browser/grid)
+// --------------------------------------------------------------------------
+$base-margin--xsmall: 18px;
+$base-margin--small: 24px;
+$base-margin--medium: 72px;
+$base-margin--large: 72px;
+
+// Dimensions of various containers
+// --------------------------------------------------------------------------
+$header-h: 60px; // in px -- convert to rem in modules
+
+// ==========================================================================
+// 	Animation
+// ==========================================================================
+
+%base-transition {
+	@include transition (all 0.2s ease-in);
+}
+
+// ==========================================================================
+// 	Colors
+// 	-> Use the "theme variables" (bottom) in your actual CSS. 
+// 	-> The "name" variables (ie $purple) are just references for the theme.
+// ==========================================================================
+
+// Highlights - REFERENCE ONLY, DO NOT USE
+// --------------------------------------------------------------------------
+$purple: #7C4099;
+$green: #83AE52;
+$red: #B14B4B;
+
+// Neutrals - REFERENCE ONLY, DO NOT USE
+// --------------------------------------------------------------------------
+$black: #282828;
+$gray--dark: #4d4d4d;
+$gray--medium: #808080;
+$gray--light: #cbcbcb;
+$white: #fff;
+
+// Colors
+// --------------------------------------------------------------------------
+$color-primary: $purple;
+$color-secondary: $green;
+$color-text--headline: $black;
+$color-text--body: $gray--dark;
+$color-text--secondary: $gray--medium;
+
+$bg--dark: $black;
+$bg--color: $color-primary;
+$bg--light: white;
+$bg--midtone: $gray--light;

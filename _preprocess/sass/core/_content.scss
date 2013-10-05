@@ -1,0 +1,156 @@
+// ==============================================================================
+// 	Themes
+// ==============================================================================
+
+$border-weight--thick: 8px;
+
+$border--thick: $border-weight--thick solid $black;
+$border--thin: 1px solid black;
+
+// @mixin $border--thick($side, $color) {
+	
+// }
+
+%theme-dark {
+	color: white;
+	background: $bg--dark;
+	
+	p {
+		color: $gray--medium;
+	}
+
+	small {
+		color: $gray--dark;
+	}
+}
+
+%theme-color {
+	color: white;
+	background: $bg--color;
+}
+
+%theme-light {
+	color: $color-text--headline;
+	background: $bg--light;
+}
+
+%theme-midtone {
+	background: lighten(#EDEBE8, 3);
+	border-top: $border--thick;
+	border-color: darken(#EDEBE8, 5);
+}
+
+// ==============================================================================
+// 	Global type
+// ==============================================================================
+
+// http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
+
+h1, .h1, %h1 {
+	@extend %raleway;
+	@include rem(font-size, 40px);
+	line-height: 1.2;
+
+	& > em {
+		@extend %raleway-bold;
+		@include rem(font-size, 54px);
+		text-transform: uppercase;
+	}
+}
+
+h1 > .subhead {
+	@extend %raleway-bold;
+	font-size: 0.6em; // relative to parent
+	line-height: 1.2;
+	text-transform: uppercase;
+
+	@include media($large) {
+		font-size: 0.5em;
+		text-transform: uppercase;
+	}
+}
+
+h2, .h2, %h2 {
+	@extend %raleway;
+	@include rem(font-size, 36px);
+	line-height: 1.2;
+	margin: 0.5em 0;
+}
+
+h3, .h3, %h3 {
+	@extend %raleway-bold;
+	@include rem(font-size, 24px);
+	text-transform: uppercase;
+	margin: 0.5em 0;
+}
+
+h4, .h4, %h4 {
+	@extend %raleway-heavy;
+	@include rem(font-size, 18px);
+	text-transform: uppercase;
+}
+
+h5, .h5, %h5 {
+	@extend %raleway-bold;
+	@include rem(font-size, 12px);
+	text-transform: uppercase;
+}
+
+h6, .h6, %h6 {
+	@extend %raleway-heavy;
+	@include rem(font-size, 12px);
+	text-transform: uppercase;
+}
+
+a {
+	color: $color-primary;
+	text-decoration: none;
+	@extend %base-transition;
+
+	&:hover, &:active {
+		color: darken($color-primary, 10);
+	}
+}
+
+small, %small {
+	@extend %lora;
+	@include rem(font-size, 12px);
+}
+
+// makes a white-on-black "tag" from a lower header (h4-h6)
+%header-tag {
+	@include inline-block;
+	@include triangle--centered;
+	position: relative;
+	top: -#{$border-weight--thick};
+	color: $gray--light;
+	background: $bg--dark;
+	padding: em(16) em(27) em(12) em(27);
+	margin: 0 0 em(1) 0;
+}
+
+%header-underline {
+	padding: 0.5em;
+	border-bottom: $border--thick;
+}
+
+p, li, ol {
+	@extend %lora;
+	line-height: $base-line-height;
+	margin-top: 0;
+}
+
+.abstract {
+	@include rem(font-size, 18px);
+}
+
+.amp {
+	@extend %amp;
+	font-size: 1.2em; // RELATIVE to its parent. Will be slightly larger.
+	// letter-spacing: -0.05em;
+}
+
+// if @fontface is available...
+.fontface .amp {
+	
+}

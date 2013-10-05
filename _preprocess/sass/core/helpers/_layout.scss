@@ -1,0 +1,73 @@
+// ==================================================================================
+// General layout helpers
+// ==================================================================================
+
+
+// Center an element within the NEAT grid
+// -> Requires Bourbon NEAT
+// -------------------------------------------------------------------------------
+
+@mixin span-columns-center($cols, $total-cols: $grid-columns, $display: block) {
+	@include span-columns($cols);
+	@include shift(($total-cols - $cols)/2);
+}
+
+@mixin base-grid-margins($property: margin, $full: false) {
+	@include rem($property, 0 $base-margin--xsmall, $base-font-size--xsmall);
+
+	@include media($small) {
+		@include rem($property, 0 $base-margin--small, $base-font-size--small);
+	}
+
+	@include media($medium) {
+		@include rem($property, 0 $base-margin--medium, $base-font-size--medium);
+	}
+	
+	@if ($full == true) {
+		@include media($large) {
+			@include rem($property, 0 $base-margin--large, $base-font-size--large);
+		}
+	} @else {
+		@include media($large) {
+			margin: 0 auto;
+			@include rem(max-width, $max-width - $base-margin--large, $base-font-size--large);
+		}
+	}
+}
+
+// make an inline (horizontal) list and vertically center child elements
+// use this on the li elements or just inside them (ie anchors)
+@mixin inline-list--centered($height: 100%) {
+	@include rem(height, $height);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@mixin inline-dl {
+  & > dt, & > dd {
+    display: inline;
+  }
+  & > dt {
+    margin-right: em(6);
+  }
+  & > dd {
+    margin-left: 0;
+    margin-right: em(12);
+  }
+}
+
+// vertically center the children of an inline block element
+@mixin inline-block--centered($height: 100%) {
+	@include inline-block;
+	vertical-align: middle;
+	height: 100%;
+
+	&:before {
+		content: '';
+    display: inline-block;  
+    vertical-align: middle;
+    height: 100%;
+	}
+}
+
