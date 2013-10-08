@@ -1,0 +1,73 @@
+// Main (global) header
+// -----------------------------------------------------------------------------
+
+// header
+.header-global {
+	@extend %theme-dark;
+	@extend %raleway-bold;
+	@include rem(font-size, 12px);
+	@include outer-container;
+	@include row;
+	@include rem(height, $header-h);
+	position: fixed;
+	width: 100%;
+	max-width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: $border--thin;
+	text-align: justify;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: 1000;
+}
+
+	.header-global-menu {
+		@include span-columns(3);
+		@include inline-block--centered;
+		text-align: left;
+		padding: 0 em(24);
+
+		& > a {
+			@include inline-block;
+			height: 100%;
+			color: $gray--medium;
+
+			&:hover {
+				color: $gray--light;
+			}
+		}
+	}
+
+	.header-global-icon {
+		vertical-align: middle;
+		margin: em(-3) em(8) 0 em(8);
+
+		& > .icon-label {
+			@extend visuallyhiden;
+		}
+	}
+	
+	.header-global-logo {
+		@include span-columns(6);
+		@include inline-block--centered;
+		text-align: center;
+	}
+		.logo-engage.full {
+			max-height: 60%;
+
+			@include media($small) {
+				max-height: 100%;
+			}
+		}
+
+	.header-global-clients {
+		@extend .header-global-menu;
+		@include omega;
+		@include hidden;
+		text-align: right;
+
+		@include media($small) {
+			@include restore-visible;
+		}
+	}

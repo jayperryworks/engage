@@ -1,0 +1,35 @@
+// ==============================================================================
+// Story module
+// -> basic content containers
+// ==============================================================================
+
+// BASE
+// ------------------------------------------------------------------------------
+
+.story, %story {
+
+}
+
+// Lead story
+// -> a short section of content, often an introduction pointing to deeper content
+// -------------------------------------------------------------------------------------
+
+.story-lead {
+	@include rem(padding-bottom, 50px);
+	text-align: center;
+}
+
+// Story colors (usually alernate as you scroll down the page)
+// -------------------------------------------------------------------------------------
+
+.story--light {
+	@extend %theme-light;
+}
+
+.story--midtone {
+	@extend %theme-midtone;
+}
+
+.story--dark {
+	@extend %theme-dark;
+}

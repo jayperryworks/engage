@@ -20,8 +20,8 @@
 	  // main menu show/hide
 	  // --------------------------------------------------------------
 
-	  var $mainMenu = $('.js .menu-main');
-	  var $header = $('.js .header-main');
+	  var $mainMenu = $('.js .nav-global');
+	  var $header = $('.js .header-global');
 
 	  $mainMenu.hide();
 	  $('.js .icon-menu').click(menuToggle);

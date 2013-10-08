@@ -1,1 +1,27 @@
-// Layout
+// ==============================================================================
+// Low-level/base layout
+// ==============================================================================
+
+// constrain to grid width, max width, and center in the browser window
+.content, %l-wrapper {
+	@include outer-container;
+	@include base-grid-margins;
+}
+
+// the first container on the page, after the header
+// this is to add the right margin to the top so it doesn't get covered up by the header
+.is-first {
+	@include rem(margin-top, $header-h);
+}
+
+.l-text-base, %l-text-base {
+	@include span-columns(12);
+
+	@include media($small) {
+		@include span-columns-center(6, 8);
+	}
+
+	@include media($medium) {
+		@include span-columns-center(8, 12);
+	}
+}

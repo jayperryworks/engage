@@ -42,9 +42,8 @@ $border--thin: 1px solid black;
 
 // ==============================================================================
 // 	Global type
+// -> http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
 // ==============================================================================
-
-// http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
 
 h1, .h1, %h1 {
 	@extend %raleway;
@@ -72,7 +71,7 @@ h1 > .subhead {
 
 h2, .h2, %h2 {
 	@extend %raleway;
-	@include rem(font-size, 36px);
+	@include rem(font-size, 27px);
 	line-height: 1.2;
 	margin: 0.5em 0;
 }
@@ -140,7 +139,7 @@ p, li, ol {
 	margin-top: 0;
 }
 
-.abstract {
+.intro {
 	@include rem(font-size, 18px);
 }
 

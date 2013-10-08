@@ -1,11 +1,13 @@
 // ==========================================================================
 //  Modules
 // ==========================================================================
+@import "modules/header";
+@import "modules/nav";
+@import "modules/footer";
+
 
 // Buttons
 // ----------------------------------------------------------------------------
-
-// @mixin button(color: $color-primary, )
 
 .button, %button {
   @extend %lato-black;
@@ -23,6 +25,10 @@
     border-color: $color-primary;
   }
 }
+
+
+// Tooltips
+// ----------------------------------------------------------------------------
 
 .tooltipsy {
   // @extend %theme-dark;

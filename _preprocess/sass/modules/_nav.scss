@@ -1,0 +1,105 @@
+// ==============================================================================
+// Navigation/menu modules
+// ==============================================================================
+
+// BASE
+// ---------------------------------------------------------------------------------
+
+.nav, %nav {
+
+}
+
+// Main (global) nav
+// ---------------------------------------------------------------------------------
+
+.nav-global {
+	@extend %raleway-bold;
+	@include rem(font-size, 14px);
+	@include rem(height, 54px);
+	@include opacity(0.9);
+	@include rem(top, $header-h);
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: #1A1A1A;
+	text-transform: uppercase;
+	z-index: 999;
+
+	& > ul {
+		@extend %wrapper;
+		text-align: center;
+	}
+
+	li {
+		@include inline-block;
+	}
+
+	a {
+		@extend %raleway-bold;
+		display: block;
+		color: $gray--medium;
+		padding: em(16);
+
+		&:hover {
+			color: $gray--light;
+		}
+	}
+}
+
+// Jump nav (vertical, for scrolling pages)
+// ---------------------------------------------------------------------------------
+
+
+
+// Local nav (tabs)
+// ---------------------------------------------------------------------------------
+
+
+// Thumb nav (tabs)
+// ---------------------------------------------------------------------------------
+.nav-thumbs {
+	@include span-columns-center(10);
+	@include row;
+	@include clearfix;
+	position: relative;
+	margin-top: -8px;
+	margin-bottom: 0;
+	padding: 0;
+	z-index: 3;
+
+	li {
+		// width: 20%;
+		float: left;
+		display: table;
+	}
+
+	.thumb {
+		@include inline-list--centered($height: 160px);
+		position: relative;
+		border-top: $border--thick;
+		background: $bg--light;
+
+		&.active {
+			border-color: $color-primary;
+
+			& > img {
+				@extend %img-grayscale-kill;
+				@include opacity(1);
+			}
+		}
+
+		&:hover {
+			border-color: $gray--medium;
+
+			& > img {
+				@extend %img-grayscale-kill;
+				@include opacity(1);
+			}
+		}
+		
+		& > img {
+			@extend %img-grayscale;
+			@include opacity(0.6);
+		}
+	}
+}

@@ -1,0 +1,125 @@
+// ==============================================================================
+// Footer modules
+// ==============================================================================
+
+// BASE
+// ---------------------------------------------------------------------------------
+
+.footer, %footer {
+
+}
+
+// Main (global) footer
+// ---------------------------------------------------------------------------------
+
+.footer-global {
+	@extend %theme-dark;
+	@include rem(padding-bottom, 40px);
+	text-align: center;
+}
+	
+	.menu-footer {
+		@extend %raleway-bold;
+		@include rem(font-size, 14px);
+		background: #1A1A1A;
+		text-transform: uppercase;
+		border-bottom: $border--thin;
+		border-color: darken($gray--dark, 5);
+
+		ul {
+			@extend %wrapper;
+
+			li {
+				@include inline-block;
+			}
+		}
+
+		a {
+			@extend %raleway-bold;
+			display: block;
+			color: $gray--medium;
+			padding: em(16);
+
+			&:hover {
+				color: $gray--light;
+			}
+		}
+	}
+
+	.footer-brand {
+		@include row;
+		@include rem(height, 60px);
+		border-bottom: $border--thin;
+		border-color: $gray--dark;
+
+		.logo-footer {
+			@include span-columns(4);
+			@include inline-block--centered;
+			text-align: left;
+		}
+
+		.social {
+			@include span-columns(4);
+			@include inline-block--centered;
+			text-align: center;
+
+			ul {
+				@include inline-block;
+				vertical-align: middle;
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				@include inline-block;
+				@include rem(padding, 0 6px);
+				vertical-align: middle;
+			}
+		}
+
+		.brand-group {
+			@include span-columns(4);
+			@include inline-block--centered;
+			text-align: right;
+
+			a {
+				@extend %raleway-bold;
+				text-transform: uppercase;
+				color: $color-secondary;
+			}
+		}
+	}
+
+	.social-icon-fb {
+		@include ir("icon-social-fb.png", 30px, 30px);
+	}
+	.social-icon-linkedin {
+		@include ir("icon-social-linkedin.png", 30px, 30px);
+	}
+	.social-icon-twitter {
+		@include ir("icon-social-twitter.png", 30px, 30px);
+	}
+	.social-icon-github {
+		@include ir("icon-social-github.png", 30px, 30px);
+	}
+
+	.footer-contact {
+		@include rem(font-size, 14px);
+		dl {
+			@include inline-dl;
+		}
+		dt {
+			@extend %raleway-bold;
+			color: $color-primary;
+			text-transform: uppercase;
+		}
+		dd {
+			@extend %lora;
+			color: $gray--medium;
+		}
+	}
+
+	.footer-copyright {
+		@include rem(font-size, 14px);
+		color: $gray--dark;
+	}
