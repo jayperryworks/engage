@@ -18,12 +18,8 @@
 	@include rem(height, 54px);
 	@include opacity(0.9);
 	@include rem(top, $header-h);
-	position: absolute;
-	left: 0;
-	right: 0;
 	background: #1A1A1A;
 	text-transform: uppercase;
-	z-index: 999;
 
 	& > ul {
 		@extend %wrapper;
@@ -33,18 +29,29 @@
 	li {
 		@include inline-block;
 	}
-
-	a {
-		@extend %raleway-bold;
-		display: block;
-		color: $gray--medium;
-		padding: em(16);
-
-		&:hover {
-			color: $gray--light;
-		}
-	}
 }
+
+	.nav-global-button {
+			@extend %raleway-bold;
+			display: block;
+			color: $gray--medium;
+			padding: em(16);
+
+			&:hover {
+				color: $gray--light;
+			}
+		}
+
+	.active {
+		color: $gray--light;
+	}
+
+	.slideOut {
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 999;
+	}
 
 // Jump nav (vertical, for scrolling pages)
 // ---------------------------------------------------------------------------------

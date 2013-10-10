@@ -35,7 +35,7 @@
         </a>
       </div>
       <div class="header-global-logo">
-        <a href="{{ site.url }}">
+        <a href="/">
           <img class="logo-engage full" src="{{ site.baseurl }}assets/images/logo-engage--full.png" alt="The Engage Group. Your cause. Our effect. Online." />
         </a>
       </div>
@@ -44,32 +44,14 @@
           <span class="icon-label">Clients</span> <img class="header-global-icon" src="{{ site.baseurl }}assets/images/icon-clients.png" alt="Client login" />
         </a>
       </div>
-      <nav class="nav nav-global">
-        <ul>
-          <li><a href="#">What we do</a></li>
-          <li><a href="{{ site.baseurl }}company.html">Company</a></li>
-          <li><a href="#">Case studies</a></li>
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">R+D</a></li>
-        </ul>
-      </nav>
+      {% include nav-global.html slideOut=true %}
     </header>
 
     {{ content }}
 
     <!-- footer -->
     <footer class="footer footer-global">
-      <nav class="nav nav-global" role="banner">
-        <ul>
-          <li><a href="#">What We Do</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Case Studies</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">R+D</a></li>
-        </ul>
-      </nav>
+      {% include nav-global.html slideOut=false %}
       <div class="content">
         <section class="footer-brand">
           <div class="logo-footer">

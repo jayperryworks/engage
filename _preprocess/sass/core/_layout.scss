@@ -2,6 +2,10 @@
 // Low-level/base layout
 // ==============================================================================
 
+body {
+	padding-top: $header-h;
+}
+
 // constrain to grid width, max width, and center in the browser window
 .content, %l-wrapper {
 	@include outer-container;

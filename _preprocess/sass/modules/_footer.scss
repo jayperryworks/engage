@@ -123,3 +123,14 @@
 		@include rem(font-size, 14px);
 		color: $gray--dark;
 	}
+
+// Local footer (appears at the bottom of interior pages)
+// ---------------------------------------------------------------------------------
+
+.footer-local {
+	@extend %theme-midtone;
+	@include base-grid-margins(padding);
+	@include rem(padding-top, 24px);
+	@include rem(padding-bottom, 24px);
+	text-align: center;
+}

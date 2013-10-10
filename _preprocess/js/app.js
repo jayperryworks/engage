@@ -20,7 +20,7 @@
 	  // main menu show/hide
 	  // --------------------------------------------------------------
 
-	  var $mainMenu = $('.js .nav-global');
+	  var $mainMenu = $('#js-slideOut');
 	  var $header = $('.js .header-global');
 
 	  $mainMenu.hide();

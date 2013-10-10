@@ -1,0 +1,10 @@
+<nav class="nav nav-global{% if include.slideOut == true %} slideOut{% endif %}" {% if include.slideOut == true %}id="js-slideOut"{% endif %}>
+  <ul>
+    <li><a href="#" class="nav-global-button {% if page.active == 'what-we-do' %}active{% endif %}">What we do</a></li>
+    <li><a href="{{ site.baseurl }}company.html" class="nav-global-button {% if page.active == 'company' %}active{% endif %}">Company</a></li>
+    <li><a href="#" class="nav-global-button {% if page.active == 'case-studies' %}active{% endif %}">Case studies</a></li>
+    <li><a href="#" class="nav-global-button {% if page.active == 'contact' %}active{% endif %}">Contact us</a></li>
+    <li><a href="#" class="nav-global-button {% if page.active == 'blog' %}active{% endif %}">Blog</a></li>
+    <li><a href="#" class="nav-global-button {% if page.active == 'r+d' %}active{% endif %}">R+D</a></li>
+  </ul>
+</nav>

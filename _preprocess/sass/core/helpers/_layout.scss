@@ -12,6 +12,10 @@
 	@include shift(($total-cols - $cols)/2);
 }
 
+// Add default layout margins at various breakpoints
+// -> Requires _settings.scss (and set up for Bourbon NEAT)
+// -------------------------------------------------------------------------------
+
 @mixin base-grid-margins($property: margin, $full: false) {
 	@include rem($property, 0 $base-margin--xsmall, $base-font-size--xsmall);
 
@@ -23,12 +27,10 @@
 		@include rem($property, 0 $base-margin--medium, $base-font-size--medium);
 	}
 	
-	@if ($full == true) {
-		@include media($large) {
+	@include media($large) {
+		@if ($full == true) {
 			@include rem($property, 0 $base-margin--large, $base-font-size--large);
-		}
-	} @else {
-		@include media($large) {
+		} @else {
 			margin: 0 auto;
 			@include rem(max-width, $max-width - $base-margin--large, $base-font-size--large);
 		}
