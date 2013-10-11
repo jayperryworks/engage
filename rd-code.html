@@ -1,0 +1,28 @@
+---
+layout: rd
+title: Code
+active: r-d
+---
+<h5 class="tag">Code</h5>
+
+{% for i in (1...6) %}
+<article class="">
+	<h1>Snippet name lorem ipsum</h1>
+	<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, dolores, sed veniam ratione tempore optio ex quidem est fugiat doloribus quas harum ab sapiente nesciunt deserunt laudantium dolorum maiores repudiandae molestias ea in cupiditate odit.</p>
+	<code><pre>
+public static String appendFromArray(String string, String[] array, int arrayIndex, int amountOfTimes){
+	if (amountOfTimes &lt; 1 || string == null) {
+	  return string;
+	}
+	for (int i = 0; i &lt; amountOfTimes; i++) {
+	  string = string + array[arrayIndex];
+	}
+	return string;
+}
+	</pre></code>
+	<ul class="meta">
+		<li>View the Github gist</li>
+		<li>Copy to clipboard</li>
+	</ul>
+</article>
+{% endfor %}

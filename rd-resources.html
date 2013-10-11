@@ -1,0 +1,24 @@
+---
+layout: rd
+title: R+D
+active: r-d
+---
+<h5 class="tag">Resources</h5>
+
+{% for i in (1...6) %}
+<article class="post post-excerpt">
+	<img src="http://placehold.it/200x150" class="thumb" />
+	<h1>Tutorial name lorem ipsum dolor sit</h1>
+	<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, dolores, sed veniam ratione tempore optio ex quidem est fugiat doloribus quas harum ab sapiente nesciunt deserunt laudantium dolorum maiores repudiandae molestias ea in cupiditate odit.</p>
+	<ul class="meta">
+		<li>Download</li>
+	</ul>
+	<dl class="post-meta">
+		<dt><time datetime="2013-09-12">September 12, 2013</time></dt>
+		<dt class="post-meta-author">by <a href="#">Sean</a></dt>
+		<dt>Filed under</dt>
+		<dd><a href="#" class="post-meta-tag">News</a></dd>
+		<dd><a href="#" class="post-meta-tag">People</a></dd>
+	</dl>
+</article>
+{% endfor %}

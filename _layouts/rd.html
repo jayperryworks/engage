@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="story story-lead">
+<h1>Engage R+D</h1>
+<h2>Resources, tools <span class="amp">&amp;</span> ideas for direct marketing</h2>
+<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, ipsam, quisquam, sit amet quo vel adipisci corrupti fugit aliquid praesentium dolor ex aliquam earum consequatur vitae necessitatibus nulla quaerat perferendis eos incidunt quia neque rerum nobis possimus atque doloremque maxime.</p>
+</section>
+<section>
+
+	<aside>
+		<nav class="nav-local">
+			<ul>
+				<li><a href="/rd-tools.html" {% if page.title == "Tools" %}class="current"{% endif %}>Tools</a></li>
+				<li><a href="/rd-resources.html" {% if page.title == "Resources" %}class="current"{% endif %}>Resources</a></li>
+				<li><a href="/rd-code.html" {% if page.title == "Code" %}class="current"{% endif %}>Code</a></li>
+			</ul>
+		</nav>
+	</aside>
+
+	{{ content }}
+</section>
