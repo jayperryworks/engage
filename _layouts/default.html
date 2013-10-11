@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.name }} &rsaquo; {{ page.name }}</title>
+    <title>{{ site.name }} {% if page.title != "Home" %}&rsaquo; {{ page.title }}{% endif %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,7 +22,7 @@
     <!-- Modernizr -->
     <script src="{{ site.baseurl }}assets/js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
-  <body id="{{ page.name }}">
+  <body id="{{ page.title }}">
     <!--[if lt IE 7]>
       <p class="browsehappy">Oh dear, it looks like your browser is quite old. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->

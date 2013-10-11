@@ -4,6 +4,25 @@ layout: default
 <h2>{{ page.title }}</h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<article class="post-full">
+	<h1>{{ post.title }}</h1>
+	<section>
+		{{ content }}
+	</section>
+
+	<aside class="post-meta">
+		<dl>
+			<dt><time datetime="2013-09-12">September 12, 2013</time></dt>
+			<dt class="post-meta-author">by <a href="#">Sean</a></dt>
+			<dt>Filed under</dt>
+			<dd><a href="#" class="post-meta-tag">News</a></dd>
+			<dd><a href="#" class="post-meta-tag">People</a></dd>
+		</dl>
+		<dl>
+			<dt>Share</dt>
+			<dd><a href="facebook.com">Facebook</a></dd>
+			<dd><a href="twitter.com">Twitter</a></dd>
+			<dd><a href="linkedin.com">LinkedIn</a></dd>
+			<dd><a href="plus.google.com">Google+</a></dd>
+		</dl>
+</article>

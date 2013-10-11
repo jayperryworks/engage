@@ -3,3 +3,50 @@ layout: default
 title: What We Do
 active: what-we-do
 ---
+
+<!-- Who we help -->
+<section class="story story-lead">
+	<div class="content">
+		<h1>Who we help</h1>
+		<p class="intro">
+			We help strengthen organizations and their causes to help them make a difference online. We put your strategy into action to achieve results that help you reach your goals.
+		</p>
+		<p>Simply put, we work with nonprofits and the agencies that serve them.</p>
+		<p>There are several reasons an organization chooses to work with us.  Sometimes…</p>
+		<ul>
+			<li>There just aren’t enough hours in the day.</li>
+			<li>You wish you had that expert on staff, but you don’t.</li>
+			<li>You’ve spent hours tweaking, testing and pleading with your software and it’s still not right.</li>
+			<li>Your in-house guru just decided to move to a warmer climate.</li>
+			<li>You need an extra set of hands to keep your program on schedule.</li>
+		</ul>
+		<p>Whatever your reason or situation, bring us your strategies and we’ll bring them to life online. We’ll get you and your donors engaged).</p>
+	</div>
+</section><!-- / who we help -->
+
+<!-- Process -->
+<section class="story story-lead">
+	<div class="content">
+		<h1>Our process</h1>
+		<p class="intro">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, et, praesentium, obcaecati recusandae ipsa facere aut odit doloribus accusamus ipsam tempore cum ipsum sint totam molestiae ut minus hic magni porro inventore nesciunt eveniet nulla doloremque accusantium labore quaerat explicabo!
+		</p>
+	</div>
+</section><!-- / process -->
+
+<!-- Our services -->
+<section class="story story-lead">
+	<div class="content">
+		<h1>Our services</h1>
+		<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, excepturi praesentium necessitatibus iste corporis voluptatum maxime sapiente perferendis nemo neque? Quibusdam, molestias, dolore autem quos omnis placeat provident consequuntur expedita modi magni ratione mollitia distinctio. Aliquid, commodi laborum dolores nobis voluptas qui eius saepe sed neque aperiam itaque soluta illo!</p>
+		
+		{% include service-list.html class='nav nav-local' %}
+		
+		{% for i in (1...8) %}
+		{% include service.html num=forloop.index %}
+		{% endfor %}
+
+	</div>
+</section><!-- / our services -->
+
+{% include footer-local.html link='Our story <span class="amp">&amp;</span> our people' %}

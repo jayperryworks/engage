@@ -3,7 +3,7 @@
 // ==============================================================================
 
 body {
-	padding-top: $header-h;
+	@include rem(padding-top, 60px);
 }
 
 // constrain to grid width, max width, and center in the browser window

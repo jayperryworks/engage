@@ -32,17 +32,9 @@
 
 
 // ==============================================================================
-// Inbox, AKA Land of Shame -- 
+// Inbox, AKA Styles of Shame -- 
 // add quick and dirty hacks here, clean up and move to the right place later
 // ==============================================================================
-
-
-
-
-
-	
-
-
 
 .hero {
 	@extend %theme-dark;
@@ -239,4 +231,13 @@ h6 {
 	}
 }
 
+.grid {
+	@include outer-container;
+	margin: 0;
+	padding: 0;
+}
 
+	.grid-thumb {
+		@include span-columns(3);
+		@include omega(4n);
+	}

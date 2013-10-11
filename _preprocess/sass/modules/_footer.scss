@@ -129,8 +129,8 @@
 
 .footer-local {
 	@extend %theme-midtone;
-	@include base-grid-margins(padding);
+	@include base-grid-margins(padding, $full: true);
 	@include rem(padding-top, 24px);
-	@include rem(padding-bottom, 24px);
+	@include rem(padding-bottom, 50px);
 	text-align: center;
 }
