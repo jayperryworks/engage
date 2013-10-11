@@ -35,9 +35,9 @@ $border--thin: 1px solid black;
 }
 
 %theme-midtone {
-	background: lighten(#EDEBE8, 3);
+	background: lighten($bg--midtone, 3);
 	border-top: $border--thick;
-	border-color: darken(#EDEBE8, 5);
+	border-color: darken($bg--midtone, 5);
 }
 
 // ==============================================================================
@@ -117,7 +117,7 @@ small, %small {
 }
 
 // makes a white-on-black "tag" from a lower header (h4-h6)
-%header-tag {
+%headline-tag, .headline-tag {
 	@include inline-block;
 	@include triangle--centered;
 	position: relative;

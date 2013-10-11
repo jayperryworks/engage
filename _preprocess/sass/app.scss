@@ -5,7 +5,7 @@
 
 // bourbon and NEAT grid frameworks
 @import "bourbon/bourbon";
-@import "neat-settings";
+@import "vendor/neat-settings";
 @import "neat/neat";
 
 @import "vendor/flexslider"; // carousel css
@@ -20,7 +20,12 @@
 @import "core/helpers/layout"; // general layout helpers
 @import "core/helpers/effects"; // graphic effects
 @import "core/settings"; // global variables
-@import "core/base"; // BP base styles
+
+@import "core/base/defaults"; // global defaults (BP)
+@import "core/base/syntax"; // syntax highlighting (included w/ jekyll)
+@import "core/base/print"; // print styles (BP)
+@import "core/base/fonts"; // webfonts
+
 @import "core/content"; // global/base-level typography, color etc.
 @import "core/layout"; // global layout
 
@@ -28,7 +33,13 @@
 // MODULE styles
 // ==============================================================================
 
-@import "modules";
+@import "modules/header";
+@import "modules/nav";
+@import "modules/hero";
+@import "modules/story";
+@import "modules/carousel";
+@import "modules/footer";
+@import "modules/misc";
 
 
 // ==============================================================================
@@ -36,75 +47,9 @@
 // add quick and dirty hacks here, clean up and move to the right place later
 // ==============================================================================
 
-.hero {
-	@extend %theme-dark;
-	@include clearfix;
-	text-align: center;
-	background: white;
 
-	& > h1 {
-		@include base-grid-margins(padding, $full: true);
-		position: absolute;
-		width: 100%;
-		z-index: 5;
-		margin-top: 1.5em;
-	}
-}
 
-.hero-carousel {
-	@extend %theme-dark;
 
-	& > h1 {
-		@include base-grid-margins(padding, $full: true);
-		position: absolute;
-		width: 100%;
-		z-index: 5;
-		margin-top: 1.5em;
-	}
-}
-
-	.carousel--wide {
-		position: relative;
-		margin: 0;
-		padding: 0;
-		@include rem(height, 500px);
-		background: url(../images/carousel-wolf.jpg) center center;
-		// background-attachment: fixed;
-		background-size: cover;
-		color: white;
-	}
-		.carousel--wide-slide {
-			// http://css-tricks.com/snippets/css/transparent-background-images/
-			@include base-grid-margins(padding, $full: true);
-			@include rem(bottom, 50px);
-			position: absolute;
-			text-align: center;
-			display: block;
-			width: 100%;
-			list-style: none;	
-
-			& > h3 {
-				margin: 0.8em 0;
-			}
-		}
-
-		
-
-	.hero-blurb {
-		@extend %wrapper;
-		@extend %theme-light;
-		text-align: center;
-		clear: both;
-		@include rem(padding-bottom, 50px);
-
-		& > h3 {
-			color: $color-primary;
-		}
-
-		& > p {
-			@include span-columns-center(6);
-		}
-	}
 
 .what-we-do {
 	@include rem(padding-bottom, 50px);

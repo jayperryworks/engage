@@ -1,0 +1,45 @@
+// ==============================================================================
+// Hero module
+// -> a big splash/feature area, with full-bleed graphics and big headlines
+// ==============================================================================
+
+// BASE
+// ------------------------------------------------------------------------------
+
+.hero, %hero {
+	@extend %theme-dark;
+	@include clearfix;
+	text-align: center;
+	background: white;
+	margin: 0;
+}
+
+// SUBMODULES
+// ------------------------------------------------------------------------------
+
+// main headline (usually an h1)
+.hero-headline {
+	@include base-grid-margins(padding, $full: true);
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	margin-top: 1.5em;
+}
+
+// a section below the hero unit with a short blurb
+.hero-blurb {
+	@extend %wrapper;
+	@extend %theme-light;
+	@include rem(padding-bottom, 50px);
+	text-align: center;
+	clear: both;
+}
+
+	.hero-blurb-headline {
+		margin: 0.8em 0;
+		color: $color-primary;
+	}
+
+	.hero-blurb-copy {
+		@include span-columns-center(6);
+	}

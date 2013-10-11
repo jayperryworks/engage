@@ -1,0 +1,125 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+// ==========================================================================
+// Base styles: opinionated defaults
+// ==========================================================================
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $color-text--body;
+}
+
+html {
+  // set up the base font size at each breakpoint
+  // this will scale the whole layout proportionately as the screen size changes
+  // and we only have to change one thing
+  font-size: percent($base-font-size--xsmall);
+
+  @include media($small) {
+      font-size: percent($base-font-size--small);
+  }
+
+  @include media($medium) {
+      font-size: percent($base-font-size--medium);
+  }
+
+  @include media($large) {
+      font-size: percent($base-font-size--large);
+  }
+
+  line-height: $base-line-height;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+
+/*
+ * Reset lists that appear in nav elements
+ */
+nav ul, nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  text-align: left;
+}
+
+// ==========================================================================
+// Browse Happy prompt
+// ==========================================================================
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}

@@ -1,0 +1,19 @@
+// Buttons
+// ----------------------------------------------------------------------------
+
+.button, %button {
+  @extend %lato-black;
+  @extend %base-transition;
+  @include rem(font-size, 12px);
+  display: inline-block;
+  padding: em(16) em(40);
+  border-radius: em(100);
+  background: white;
+  border: $border--thick;
+  color: $color-primary;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+}

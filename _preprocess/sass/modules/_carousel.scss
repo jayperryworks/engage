@@ -1,0 +1,41 @@
+// ==============================================================================
+// Carousel module
+// -> for showing lots of things in one place
+// ==============================================================================
+
+// BASE
+// ------------------------------------------------------------------------------
+
+.carousel {
+
+}
+
+// SUBMODULES
+// ------------------------------------------------------------------------------
+
+.carousel-hero {
+	@extend %theme-dark;
+	@include rem(height, 500px);
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background: url(../images/carousel-wolf.jpg) center center;
+	// background-attachment: fixed;
+	background-size: cover;
+	color: white;
+
+	& > ul {
+		margin: 0;
+		padding: 0;
+	}
+}
+	.carousel-hero-slide {
+		// http://css-tricks.com/snippets/css/transparent-background-images/
+		@include base-grid-margins(padding, $full: true);
+		@include rem(bottom, 50px);
+		position: absolute;
+		text-align: center;
+		display: block;
+		width: 100%;
+		list-style: none;
+	}

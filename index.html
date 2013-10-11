@@ -3,40 +3,51 @@ layout: default
 title: Home
 ---
 
+<!-- hero unit w/recent work -->
 <section class="hero">
-	<h1>
+	<h1 class="hero-headline">
 		We help nonprofits <span class="amp">&amp;</span> their causes<br />
 		<em>make a difference online.</em>
 	</h1>
-	<ul class="carousel carousel--wide">
-		<li class="carousel--wide-slide">
+	<ul class="carousel carousel-hero">
+		<li class="carousel-hero-slide">
 				<h3>Defenders of Wildlife</h3>
 				<a href="#" class="button">Read the case study</a>
 			<!-- <img class="feature-slide" src="{{ site.baseurl }}assets/images/carousel-wolf-900x500-retina.jpg" alt="Defenders of Wildlife" /> -->
 		</li>
 	</ul>
-	<nav class="nav nav-thumbs">
+	<nav class="carousel-hero-thumbNav">
 		<ul>
-			<li><a href="#" class="thumb active"><img src="{{ site.baseurl }}assets/images/carousel-nav-defenders.png" alt=""></a></li>
-			<li><a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-abd.png" alt=""></a></li>
-			<li><a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-wwf.png" alt=""></a></li>
-			<li><a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-audubon.png" alt=""></a></li>
-			<li><a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-nwa.png" alt=""></a></li>
+			<li class="carousel-hero-thumbNav-item">
+				<a href="#" class="carousel-hero-thumbNav-thumb active"><img class="bw" src="{{ site.baseurl }}assets/images/carousel-nav-defenders.png" alt=""></a>
+			</li>
+			<li class="carousel-hero-thumbNav-item">
+				<a href="#" class="carousel-hero-thumbNav-thumb"><img class="bw" src="{{ site.baseurl }}assets/images/carousel-nav-abd.png" alt=""></a>
+			</li>
+			<li class="carousel-hero-thumbNav-item">
+				<a href="#" class="carousel-hero-thumbNav-thumb"><img class="bw" src="{{ site.baseurl }}assets/images/carousel-nav-wwf.png" alt=""></a>
+			</li>
+			<li class="carousel-hero-thumbNav-item">
+				<a href="#" class="carousel-hero-thumbNav-thumb"><img class="bw" src="{{ site.baseurl }}assets/images/carousel-nav-audubon.png" alt=""></a>
+			</li>
+			<li class="carousel-hero-thumbNav-item">
+				<a href="#" class="carousel-hero-thumbNav-thumb"><img class="bw" src="{{ site.baseurl }}assets/images/carousel-nav-nwa.png" alt=""></a>
+			</li>
 		</ul>
 	</nav>
 	
 	<section class="hero-blurb">
-		<h3>Plain <span class="amp">&amp;</span> simple:</h3>
-		<p class="intro">
+		<h3 class="hero-blurb-headline">Plain <span class="amp">&amp;</span> simple:</h3>
+		<p class="hero-blurb-copy intro">
 			Bring us your fundraising strategies and we’ll bring them to life. We are a team of technically savvy, experienced fundraisers who know how to take your cause online and&nbsp;get&nbsp;results.
 		</p>
 	</section>
+</section><!-- / hero unit, recent work -->
 
-</section><!-- /.recent-work -->
-
-<section class="story story-lead">
+<!-- What we do -->
+<section class="story story-short story--midtone">
 	<div class="content">
-		<h5 class="tag">What we do</h5>
+		<h5 class="headline-tag">What we do</h5>
 		<h2>Combining part art <span class="amp">&amp;</span> part science is our&nbsp;strength.</h2>
 		<nav class="nav nav-thumbs">
 			<ul>
@@ -50,18 +61,19 @@ title: Home
 				<li><a href="#" class="icon has-tooltip" title="E-Append Services"><img src="{{ site.baseurl }}assets/images/icon-services-append.png" alt="E-Append Services"></a></li>
 			</ul>
 		</nav>
-		<p class="intro">
+		<p class="intro base-copy">
 			We’ll handle the translation from offline to the web and then employ the technology to make it all happen in an integrated manner regardless of what platform you’re using. We take the technology tasks and burden off of nonprofit organizations and the agencies that serve them. Consider us your online fundraising solutions&nbsp;team.
 		</p>
-		<p>
+		<p class="base-copy">
 			Need some help to get your pages up and connected with a donations processor? Wish you could have someone make that email look and work the way it’s supposed to when it arrives in all those mailboxes? Want to event fundraise online? Want to increase the response rates to your mailings and online&nbsp;campaigns?
 		</p>
-		<p>
+		<p class="base-copy">
 			We can be your ongoing online fundraising partner, someone to get your systems set-up so you can manage campaigns yourself or work with you to launch a project on a tight&nbsp;deadline.
 		</p>
 	</div>
-</section>
+</section><!-- / What we do -->
 
+<!-- Tools -->
 <section class="tools">
 	<div class="content">
 		<h5>Our tools</h5>
@@ -71,22 +83,24 @@ title: Home
 			<li><a href="#" class="thumb"><img src="http://placehold.it/300x200" alt=""></a></li>
 		</ul>
 		<div>
-			<p>
+			<p class="base-copy">
 				Blurb about the tools and open source work Engage has developed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare ad ea primum, si videtur; Quid turpius quam sapientis vitam ex insipientium sermone pendere? Duo Reges: constructio&nbsp;interrete.
 			</p>
 			<a class="button" href="#">See more tools from Engage R+D</a>
 		</div>
 	</div>
-</section>
+</section><!-- /tools -->
 
-<section class="blog">
+<!-- Blog & events -->
+<section class="story story-lead story-midtone">
 	<div class="content">
+		<!-- blog -->
 		<section class="recent-articles">
 			<h6>From Our Blog</h6>
 			<h2>Odio dignissim qui blandit praesent luptatum zzril</h2>
 			<!-- <img src="http://placehold.it/600x200" /> -->
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, iusto, sit mollitia delectus accusantium eum fuga ipsa soluta veritatis saepe officia et quod veniam laborum commodi ab eligendi beatae nisi inventore voluptatem facilis omnis voluptatibus rerum ratione illo error cumque aperiam quas deleniti atque. Quas, magnam, magni esse vero eaque ipsum dolorum dolores fuga perspiciatis vel similique alias in. Molestias, autem, rem, amet omnis impedit facilis dicta quam fuga error nihil quisquam explicabo necessitatibus vitae voluptas incidunt unde repudiandae iusto nam voluptates itaque id natus ipsa maxime a dignissimos quae nesciunt debitis molestiae ab aspernatur distinctio voluptatem assumenda eaque&nbsp;consequatur!</p>
-		</section>
+		</section><!-- / blog -->
 
 		<aside class="events">
 			<h6>News <span class="amp">&amp;</span> Events</h6>
@@ -104,6 +118,6 @@ title: Home
 					<h5>Investigationes delenit est veniam laoreet feugait</h5>
 				</li>
 			</ul>
-		</aside><!-- /.events -->
+		</aside><!-- / events -->
 	</div>
 </section><!-- /.blog -->

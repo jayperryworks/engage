@@ -67,7 +67,7 @@
 
 // Thumb nav (tabs)
 // ---------------------------------------------------------------------------------
-.nav-thumbs {
+.carousel-hero-thumbNav {
 	@include span-columns-center(10);
 	@include row;
 	@include clearfix;
@@ -77,13 +77,13 @@
 	padding: 0;
 	z-index: 3;
 
-	li {
-		// width: 20%;
+	.carousel-hero-thumbNav-item {
+		width: 20%;
 		float: left;
 		display: table;
 	}
 
-	.thumb {
+	.carousel-hero-thumbNav-thumb {
 		@include inline-list--centered($height: 160px);
 		position: relative;
 		border-top: $border--thick;
@@ -100,16 +100,16 @@
 
 		&:hover {
 			border-color: $gray--medium;
+		}
+	}
+}
 
-			& > img {
-				@extend %img-grayscale-kill;
-				@include opacity(1);
-			}
-		}
-		
-		& > img {
-			@extend %img-grayscale;
-			@include opacity(0.6);
-		}
+.bw {
+	@extend %img-grayscale;
+	@include opacity(0.6);
+
+	&:hover {
+		@extend %img-grayscale-kill;
+		@include opacity(1);
 	}
 }
