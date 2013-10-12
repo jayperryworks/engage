@@ -20,11 +20,12 @@
 	  // main menu show/hide
 	  // --------------------------------------------------------------
 
-	  var $mainMenu = $('#js-slideOut');
-	  var $header = $('.js .header-global');
+	  var $mainMenu = $('.js #js-slideOut');
+	  var $header = $('.js #js-header-global');
+	  var $menuBtn = $('.js #js-header-menuBtn');
 
 	  $mainMenu.hide();
-	  $('.js .icon-menu').click(menuToggle);
+	  $menuBtn.click(menuToggle);
 
 	  $header.hover(menuHide, menuShow);
 

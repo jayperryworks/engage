@@ -31,6 +31,8 @@
 	@extend %wrapper;
 	@extend %theme-light;
 	@include rem(padding-bottom, 50px);
+	@include clearfix;
+	overflow: hidden;
 	text-align: center;
 	clear: both;
 }

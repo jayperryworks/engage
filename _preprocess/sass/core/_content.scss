@@ -1,19 +1,19 @@
 // ==============================================================================
 // 	Themes
+// -> color schemes, borders, etc.
 // ==============================================================================
 
 $border-weight--thick: 8px;
+$border-weight--thin: 1px;
 
-$border--thick: $border-weight--thick solid $black;
-$border--thin: 1px solid black;
-
-// @mixin $border--thick($side, $color) {
+// @mixin $border-weight--thick($side, $color) {
 	
 // }
 
 %theme-dark {
 	color: white;
 	background: $bg--dark;
+	border-color: black;
 	
 	p {
 		color: $gray--medium;
@@ -27,23 +27,44 @@ $border--thin: 1px solid black;
 %theme-color {
 	color: white;
 	background: $bg--color;
+	border-color: darken($bg--color, 3);
+	border-style: solid;
 }
 
 %theme-light {
 	color: $color-text--headline;
 	background: $bg--light;
+	border-color: darken(white, 8);
+	border-style: solid;
+	border-width: 0;
 }
 
 %theme-midtone {
-	background: lighten($bg--midtone, 3);
-	border-top: $border--thick;
-	border-color: darken($bg--midtone, 5);
+	color: $color-text--headline;
+	background: lighten($bg--midtone, 4);
+	border-color: darken($bg--midtone, 3);
+	border-style: solid;
+}
+
+// make an element grayscale
+// and color when you hover on it
+.bw, %bw {
+	@extend %img-grayscale;
+	@include opacity(0.6);
+
+	&:hover {
+		@extend %img-grayscale-kill;
+		@include opacity(1);
+	}
 }
 
 // ==============================================================================
 // 	Global type
 // -> http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
 // ==============================================================================
+
+// Headers
+// -----------------------------------------------------------------------------
 
 h1, .h1, %h1 {
 	@extend %raleway;
@@ -101,6 +122,36 @@ h6, .h6, %h6 {
 	text-transform: uppercase;
 }
 
+// makes a white-on-black "tag" from a lower header (h4-h6)
+.headline-tag, %headline-tag {
+	@include inline-block;
+	@include triangle--centered;
+	position: relative;
+	top: -#{$border-weight--thick};
+	color: $gray--light;
+	background: $bg--dark;
+	padding: em(16) em(27) em(12) em(27);
+	margin: 0 0 em(1) 0;
+}
+
+.headline-underline, %headline-underline {
+	padding: 0.5em;
+	border-bottom-width: $border-weight--thick;
+}
+
+// Body, inline type
+// -----------------------------------------------------------------------------
+
+p, li, ol {
+	@extend %lora;
+	line-height: $base-line-height;
+	margin-top: 0;
+}
+
+.intro {
+	@include rem(font-size, 18px);
+}
+
 a {
 	color: $color-primary;
 	text-decoration: none;
@@ -116,32 +167,8 @@ small, %small {
 	@include rem(font-size, 12px);
 }
 
-// makes a white-on-black "tag" from a lower header (h4-h6)
-%headline-tag, .headline-tag {
-	@include inline-block;
-	@include triangle--centered;
-	position: relative;
-	top: -#{$border-weight--thick};
-	color: $gray--light;
-	background: $bg--dark;
-	padding: em(16) em(27) em(12) em(27);
-	margin: 0 0 em(1) 0;
-}
-
-%header-underline {
-	padding: 0.5em;
-	border-bottom: $border--thick;
-}
-
-p, li, ol {
-	@extend %lora;
-	line-height: $base-line-height;
-	margin-top: 0;
-}
-
-.intro {
-	@include rem(font-size, 18px);
-}
+// Ampesands
+// -----------------------------------------------------------------------------
 
 .amp {
 	@extend %amp;
@@ -152,4 +179,45 @@ p, li, ol {
 // if @fontface is available...
 .fontface .amp {
 	
+}
+
+// ==============================================================================
+// Icon fonts
+// -> Apply an icon font to "data-icon" attributes
+// -> http://css-tricks.com/html-for-icon-font-usage/
+// ==============================================================================
+
+// for icons placed before some text (such as in a button)
+[data-icon]:before {
+  @include icon; //mixin from _webfonts
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+  font-size: 3.5em;
+  line-height: $base-line-height;
+  text-transform: normal;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 0.1em;
+}
+
+// for icons placed before some text (such as in a button)
+[data-icon-social]:before {
+  @include icon-social; //mixin from _webfonts
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
+.screen-reader-text, %screen-reader-text { /* For text that explains what the icon is (ie "RSS" or "Menu") */
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+// for standalone icons
+.icon-alone, %icon-alone {
+  display: inline-block; /* Fix for clickability issue in WebKit */
+
+  [data-icon]:before {
+  	line-height: 1;
+  }
 }

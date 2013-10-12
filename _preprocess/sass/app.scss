@@ -50,56 +50,9 @@
 
 
 
-
-.what-we-do {
-	@include rem(padding-bottom, 50px);
-	@extend %theme-midtone;
-	text-align: center;
-
-	h5 {
-		@extend %header-tag;
-	}
-
-	p {
-		@include span-columns(12);
-		text-align: left;
-
-		@include media($small) {
-			@include span-columns-center(6, 8);
-		}
-
-		@include media($medium) {
-			@include span-columns-center(8, 12);
-		}
-	}
-}
-
-	.services {
-		@include span-columns-center(8);
-		@include row;
-		@include clearfix;
-		position: relative;
-		margin-top: 0.5em;
-		margin-bottom: 1.5em;
-
-		li {
-			float: left;
-			display: table;
-			width: (100%/8);
-		}
-
-		.icon {
-			@include inline-list--centered(60px);
-
-			&:hover, &:active {
-				background: white;
-			}
-		}
-	}
-
 .tools {
 	text-align: center;
-	border-top: $border--thick;
+	border-top: $border-weight--thick;
 	border-color: darken(white, 10);
 	@include rem(padding-bottom, 50px);
 
@@ -122,7 +75,7 @@
 		display: table;
 		padding: 0;
 		list-style: none;
-		border-right: $border--thick;
+		border-right: $border-weight--thick;
 		border-color: darken(white, 10);
 
 		&:last-child {

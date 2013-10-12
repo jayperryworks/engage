@@ -28,11 +28,9 @@
     <![endif]-->
 
     <!-- header -->
-    <header role="banner" class="header header-global">
+    <header role="banner" class="header header-global" id="js-header-global">
       <div class="header-global-menu">
-        <a href="#">
-          <img class="header-global-icon" src="{{ site.baseurl }}assets/images/icon-menu.png" alt="Menu" /> <span class="icon-label">Menu</span>
-        </a>
+        <a href="#" class="header-global-icon" id="js-header-menuBtn"><span aria-hidden="true" data-icon="&#9776;"></span>Menu</a>
       </div>
       <div class="header-global-logo">
         <a href="/">
@@ -40,9 +38,7 @@
         </a>
       </div>
       <div class="header-global-clients">
-        <a href="#">
-          <span class="icon-label">Clients</span> <img class="header-global-icon" src="{{ site.baseurl }}assets/images/icon-clients.png" alt="Client login" />
-        </a>
+        <a href="#" class="header-global-icon" id="js-header-menuBtn">Clients<span aria-hidden="true" data-icon="&#59200;"></span></a>
       </div>
       {% include nav-global.html slideOut=true %}
     </header>

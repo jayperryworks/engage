@@ -13,6 +13,7 @@
 // SUBMODULES
 // ------------------------------------------------------------------------------
 
+// carousel in a hero unit
 .carousel-hero {
 	@extend %theme-dark;
 	@include rem(height, 500px);
@@ -39,3 +40,38 @@
 		width: 100%;
 		list-style: none;
 	}
+
+	// thumbnail navigation appearing below a hero carousel
+	.carousel-hero-thumbNav {
+		@include span-columns-center(10);
+		@include row;
+		@include clearfix;
+		position: relative;
+		margin-top: -8px;
+		margin-bottom: 0;
+		padding: 0;
+		z-index: 3;
+	}
+
+		.carousel-hero-thumbNav-item {
+			width: 20%;
+			float: left;
+			display: table;
+		}
+
+		.carousel-hero-thumbNav-thumb {
+			@include inline-list--centered($height: 160px);
+			position: relative;
+			border-top-width: $border-weight--thick;
+			background: $bg--light;
+
+			&.active {
+				border-top: $border-weight--thick solid $color-border--default;
+				@extend %img-grayscale-kill;
+				@include opacity(1);
+			}
+
+			&:hover {
+				border-color: $gray--medium;
+			}
+		}

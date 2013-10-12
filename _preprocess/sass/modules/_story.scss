@@ -14,22 +14,24 @@
 // -> a short section of content, often an introduction pointing to deeper content
 // -------------------------------------------------------------------------------------
 
-.story-short {
+.story--short {
 	@include rem(padding-bottom, 50px);
 	text-align: center;
+	border-top-width: $border-weight--thick;
+	@extend %theme-light;
 }
 
 // Story colors (usually alernate as you scroll down the page)
 // -------------------------------------------------------------------------------------
 
-.story--light {
+.story--light, %story--light {
 	@extend %theme-light;
 }
 
-.story--midtone {
+.story--midtone, %story--midtone {
 	@extend %theme-midtone;
 }
 
-.story--dark {
+.story--dark, %story--dark {
 	@extend %theme-dark;
 }

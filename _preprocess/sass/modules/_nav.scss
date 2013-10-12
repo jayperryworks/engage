@@ -31,16 +31,16 @@
 	}
 }
 
-	.nav-global-button {
-			@extend %raleway-bold;
-			display: block;
-			color: $gray--medium;
-			padding: em(16);
+	.nav-global-item {
+		@extend %raleway-bold;
+		display: block;
+		color: $gray--medium;
+		padding: em(16);
 
-			&:hover {
-				color: $gray--light;
-			}
+		&:hover {
+			color: $gray--light;
 		}
+	}
 
 	.active {
 		color: $gray--light;
@@ -61,55 +61,26 @@
 // Local nav (tabs)
 // ---------------------------------------------------------------------------------
 
-.nav-horizontal {
-	
-}
 
 // Thumb nav (tabs)
 // ---------------------------------------------------------------------------------
-.carousel-hero-thumbNav {
-	@include span-columns-center(10);
+
+.nav-thumbs--horizontal {
 	@include row;
 	@include clearfix;
-	position: relative;
-	margin-top: -8px;
-	margin-bottom: 0;
-	padding: 0;
-	z-index: 3;
-
-	.carousel-hero-thumbNav-item {
-		width: 20%;
-		float: left;
-		display: table;
-	}
-
-	.carousel-hero-thumbNav-thumb {
-		@include inline-list--centered($height: 160px);
-		position: relative;
-		border-top: $border--thick;
-		background: $bg--light;
-
-		&.active {
-			border-color: $color-primary;
-
-			& > img {
-				@extend %img-grayscale-kill;
-				@include opacity(1);
-			}
-		}
-
-		&:hover {
-			border-color: $gray--medium;
-		}
-	}
+	text-align: center;
 }
 
-.bw {
-	@extend %img-grayscale;
-	@include opacity(0.6);
-
-	&:hover {
-		@extend %img-grayscale-kill;
-		@include opacity(1);
+	.nav-thumbs-item {
+		@include inline-block;
+		vertical-align: center;
 	}
-}
+
+	.nav-thumbs-thumb {
+		@include rem(padding, 0 12px);
+
+		&:hover, &:active {
+			background: white;
+		}
+	}
+
