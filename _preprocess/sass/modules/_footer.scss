@@ -48,8 +48,7 @@
 	.footer-brand {
 		@include row;
 		@include rem(height, 60px);
-		border-bottom-width: $border-weight--thin;
-		border-color: $gray--dark;
+		border-bottom: $border-weight--thin solid $gray--dark;
 
 		.logo-footer {
 			@include span-columns(1);

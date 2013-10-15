@@ -134,25 +134,18 @@
 }
 
 .tabs.vertical {
-	@include span-columns(4);
+	@include span-columns-media(4, $sm: 8, $med: 12);
 	@include row;
 	clear: both;
 	border-top: $border-weight--thin solid $bg--midtone;
-	
-	@include media($small) {
-		@include span-columns(8 of 8);
-	}
-	@include media($medium) {
-		@include span-columns(12 of 12);
-	}
 
 	& > .panel {
 		@include span-columns(3);
-		@include rem(padding, 0 $gutter);
+		// @include rem(padding, 0 $gutter);
 		@include omega;
 		@include hidden;
 		text-align: left;
-		border-left: $border-weight--thin solid $bg--midtone;
+		// border-left: $border-weight--thin solid $bg--midtone;
 
 		@include media($small) {
 			@include span-columns(6 of 8);
@@ -205,18 +198,41 @@
 
 
 [role="navigation"].local {
-
+	
 }
 
 [role="navigation"].local.vertical {
-	@include span-columns(1, collapse);
-	@include rem(padding, 0 $gutter);
+	@include span-columns(1);
+	@include rem(padding-right, $gutter);
+	@include rem(margin, 36px 0);
+	// border-radius: 3px;
 
 	@include media($small) {
-		@include span-columns(2 of 8, collapse);
+		@include span-columns(2 of 8);
 	}
 	@include media($medium) {
-		@include span-columns(4 of 12, collapse);
+		@include span-columns(4 of 12);
+	}
+
+	a {
+		// @extend %raleway;
+		@extend %theme-reverse;
+		// @include rem(font-size, 14px);
+		@extend %h5;
+		display: block;
+		padding: 0.8em 1em;
+		border-bottom: $border-weight--thin solid black;
+		color: $gray--medium;
+
+		&:hover {
+			color: $gray--light;
+			background: lighten($bg--dark, 10);
+		}
+
+		&.active {
+			color: white;
+			background: $color-primary;
+		}
 	}
 }
 
@@ -325,7 +341,7 @@
 
 }
 
-	[role="navigation"].secondary-item {
+	[role="navigation"] .secondary-item {
 		@extend %small;
 	}
 

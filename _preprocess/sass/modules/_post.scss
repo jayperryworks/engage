@@ -21,6 +21,15 @@
 	&:last-child {
 		border-bottom: none;
 	}
+
+	& > hgroup {
+		@include rem(margin-top, 30px);
+
+		h1, h2, h3 {
+			margin: 0;
+			line-height: 1.4;
+		}
+	}
 }
 
 .post.no_hairline {
@@ -35,5 +44,25 @@
 	@include media($medium) {
 		@include span-columns(6 of 12);
 		@include shift(1);
+	}
+}
+
+.post-meta.horizontal {
+	@include inline-block;
+	@extend %h6;
+	@include rem(margin, 16px 0);
+
+	& > dt, & > dd {
+		@include inline-block;
+		@extend %list--unstyled;
+	}
+
+	& > dt {
+		padding: 0 0.4em;
+	}
+
+	& > .post-meta-author {
+		padding: 0 0.4em 0 0;
+		border-right: $border-weight--thin solid $gray--light;
 	}
 }

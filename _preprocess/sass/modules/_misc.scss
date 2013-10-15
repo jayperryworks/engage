@@ -148,10 +148,30 @@ input[type="search"]:before {
   @extend %main;
   @include span-columns-media(4, $sm: 5, $med: 6);
   text-align: left;
+  
+  & > label {
+    @extend %h6;
+  }
 
-  & > label, & > input, & > select, & > textarea {
+  & > input:not([type=submit]):not([type=file]), & > select, & > textarea {
+    @extend %lora;
+    // @extend %theme-well;
+    @include rem(font-size, 12px);
+    @include rem(margin, 6px 0 24px 0);
+    @include rem(padding, 4px);
     display: block;
     width: 100%;
+  }
+
+  & > input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  & > textarea {
+    // @include rem(height, 40px);
   }
 }
 
@@ -159,8 +179,25 @@ aside[role="contentinfo"].right {
   @include span-columns-media(4, $sm: 3, $med: 4);
   @include omega;
   text-align: left;
+  ul {
+    @extend list--unstyled;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    @extend list--unstyled;
+  }
 }
 
-.social {
+.social.vertical {
   @extend %list--unstyled;
+  @extend %lora;
+  @include rem(margin-top, 24px);
+
+  dd {
+    margin: 0;
+    padding: 0;
+  }
 }

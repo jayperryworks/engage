@@ -8,13 +8,13 @@ active: contact
 	<div class="wrapper">
 		<h1>Let's plan your next project</h1>
 		<form class="contact" role="form">
-			<label for="form-contact-name">Your name</label>
+			<label class="secondary" for="form-contact-name">Your name</label>
 			<input type="text" class="form-required" id="form-contact-name" name="form-contact-name" autofocus required />
 
-			<label for="form-contact-email">Your email</label>
+			<label class="secondary" for="form-contact-email">Your email</label>
 			<input type="email" class="form-required" id="form-contact-email" name="form-contact-email" placeholder="you@email.com" required />
 
-			<label for="form-contact-subject">How can we help?</label>
+			<label class="secondary" for="form-contact-subject">How can we help?</label>
 			<select id="form-contact-subject" name="form-contact-subject">	
 				<option value="new-business">New business inquiry</option>
 				<option value="information">Information request</option>
@@ -22,10 +22,10 @@ active: contact
 				<option value="swallow">What is the airspeed velocity of an unladen swallow?</option>
 			</select>
 
-			<label for="form-contact-message">Your message</label>
+			<label class="secondary" for="form-contact-message">Your message</label>
 			<textarea placeholder=""></textarea>
 
-			<input type="submit" value="Send" />
+			<input type="submit" class="button" value="Send" />
 		</form>
 
 		<aside role="contentinfo" class="right">
@@ -38,8 +38,8 @@ active: contact
 					Columbia, MD 21046
 				</li>
 			</ul>
-			<dl class="social">
-				<dt>Connect with us</dt>
+			<dl class="social vertical">
+				<dt><h5>Connect with us</h5></dt>
 				<dd><a href="facebook.com">Facebook</a></dd>
 				<dd><a href="twitter.com">Twitter</a></dd>
 				<dd><a href="linkedin.com">LinkedIn</a></dd>
