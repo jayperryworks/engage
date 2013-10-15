@@ -22,7 +22,7 @@
 	@include base-grid-margins(padding, $full: true);
 	position: absolute;
 	width: 100%;
-	z-index: 5;
+	z-index: $base-z--middle;
 	margin-top: 1.5em;
 }
 
@@ -43,5 +43,6 @@
 	}
 
 	.hero-blurb-copy {
-		@include span-columns-center(6);
+		@include span-columns-media(4, $sm: 6, $med: 6, $center: true);
+		text-align: center;
 	}

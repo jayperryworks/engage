@@ -5,14 +5,16 @@
 // BASE
 // ---------------------------------------------------------------------------------
 
-.nav, %nav {
-
+[role="navigation"], %nav { // .nav
+	& > ul {
+		@extend %list--unstyled;
+	}
 }
 
 // Main (global) nav
 // ---------------------------------------------------------------------------------
 
-.nav-global {
+[role="navigation"].main { // .nav-global
 	@extend %raleway-bold;
 	@include rem(font-size, 14px);
 	@include rem(height, 54px);
@@ -23,15 +25,15 @@
 
 	& > ul {
 		@extend %wrapper;
+		@extend %list--unstyled;
 		text-align: center;
 	}
 
 	li {
 		@include inline-block;
 	}
-}
 
-	.nav-global-item {
+	.main-item {
 		@extend %raleway-bold;
 		display: block;
 		color: $gray--medium;
@@ -42,38 +44,211 @@
 		}
 	}
 
-	.active {
+	.main-item.active {
 		color: $gray--light;
 	}
+}
 
-	.slideOut {
-		position: absolute;
-		left: 0;
-		right: 0;
-		z-index: 999;
-	}
+[role="navigation"].main.slide_out {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: $base-z--middle;
+}
+
 
 // Jump nav (vertical, for scrolling pages)
 // ---------------------------------------------------------------------------------
 
+[role="navigation"].jump {
+	@include hidden;
+	// display: block;
+	position: fixed;
+	text-align: center;
+	right: 0;
+	top: 40%;
+	z-index: $base-z--middle;
+
+	@include media($small) {
+		@include restore-visible;
+		@include rem(width, $base-margin--small - 6px);
+	}
+
+	@include media($medium) {
+		@include rem(width, 36px);
+	}
+	
+	& > .arrow {
+		display: block;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		color: $bg--dark;
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+
+	[data-icon]:before {
+		line-height: 1;
+		font-size: 2.5em;
+	}
+
+	& > ul {
+		@extend %list--unstyled;
+		width: 100%;
+	}
+
+	li {
+		text-align: center;
+
+		a {
+			@extend %raleway;
+			@extend %theme-reverse;
+			display: block;
+			padding: 0.5em 0;
+			border-bottom: $border-weight--thin solid black;
+			color: $gray--medium;
+
+			&:hover {
+				color: $gray--light;
+				background: lighten($bg--dark, 10);
+			}
+
+			&.active {
+				color: white;
+				background: $color-secondary;
+			}
+
+		}
+	}
+}
 
 
 // Local nav (tabs)
 // ---------------------------------------------------------------------------------
 
+.tabs {
+
+}
+
+.tabs.vertical {
+	@include span-columns(4);
+	@include row;
+	clear: both;
+	border-top: $border-weight--thin solid $bg--midtone;
+	
+	@include media($small) {
+		@include span-columns(8 of 8);
+	}
+	@include media($medium) {
+		@include span-columns(12 of 12);
+	}
+
+	& > .panel {
+		@include span-columns(3);
+		@include rem(padding, 0 $gutter);
+		@include omega;
+		@include hidden;
+		text-align: left;
+		border-left: $border-weight--thin solid $bg--midtone;
+
+		@include media($small) {
+			@include span-columns(6 of 8);
+			@include omega;
+			@include hidden;
+		}
+		@include media($medium) {
+			@include span-columns(8 of 12);
+			@include omega;
+			@include hidden;
+		}
+
+		&.panel--active {
+			@include restore-visible;
+		}
+
+		& > [role="main"], & > main, .panel-main, & > h1 {
+			margin: 0;
+	    @include span-columns(2 of 3);
+	    padding: 0;
+
+	    @include media($small) {
+	    	@include span-columns(4 of 6);
+	    }
+	    @include media($medium) {
+	    	@include span-columns(6 of 8);
+	    }
+	  }
+
+	  & > [role="complementary"], .panel-aside {
+	  	@include span-columns(1 of 3);
+	  	@include omega;
+
+	    @include media($small) {
+	    	@include span-columns(2 of 6);
+	    	@include omega;
+	    }
+	    @include media($medium) {
+	    	@include span-columns(2 of 8);
+	    	@include omega;
+	    }
+
+	    ul {
+	    	@extend %list--unstyled;
+	    }
+	  }
+	}
+}
+
+[role="navigation"].local {
+
+}
+
+[role="navigation"].local.vertical {
+	@include span-columns(1, collapse);
+	@include rem(padding, 0 $gutter);
+
+	@include media($small) {
+		@include span-columns(2 of 8, collapse);
+	}
+	@include media($medium) {
+		@include span-columns(4 of 12, collapse);
+	}
+}
+
+[role="navigation"].local.horizontal {
+
+}
 
 // Thumb nav (tabs)
 // ---------------------------------------------------------------------------------
 
-.nav-thumbs--horizontal {
+[role="navigation"].thumbs {
+
+}
+
+[role="navigation"].thumbs.horizontal { // .nav-thumbs--horizontal
 	@include row;
 	@include clearfix;
 	text-align: center;
+	clear: both;
+
+	li {
+		@include inline-block;
+		vertical-align: middle;
+	}
 }
 
-	.nav-thumbs-item {
+	.thumb { // .nav-thumbs-item, 
 		@include inline-block;
-		vertical-align: center;
+		@include rem(padding, 12px 12px);
+		vertical-align: middle;
+
+		&:hover, &:active {
+			background: white;
+		}
 	}
 
 	.nav-thumbs-thumb {
@@ -84,3 +259,42 @@
 		}
 	}
 
+// Grid (of thumbs or whatever)
+// ---------------------------------------------------------------------------------
+
+.grid {
+	clear: both;
+	// display: block;
+	// @include row;
+}
+
+.grid.large {
+	li {
+		// @include span-columns-media(4, $sm: 4, $med: 3);
+		// @include omega-media($sm: 2n, $med: 4n);
+
+		@include span-columns(4 of 4);
+		@include omega;
+		
+		@include media($xsmall) {
+			@include span-columns(2 of 4);
+			@include omega(2n);
+		}
+		@include media($small) {
+			@include span-columns(2 of 8);
+			@include omega-reset(2n, 2, 8);
+			@include omega(4n);
+		}
+	}
+}
+
+// Grid (of thumbs or whatever)
+// ---------------------------------------------------------------------------------
+
+[role="navigation"].secondary {
+
+}
+
+	.nav-secondary-item {
+		@extend %small;
+	}

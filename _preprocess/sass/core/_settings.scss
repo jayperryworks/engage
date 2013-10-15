@@ -105,10 +105,20 @@ $screen--small: em(768);
 $screen--medium: em(1280);
 $screen--large: em(strip-units($max-width)); //1440px
 
-$xsmall: new-breakpoint(min-width $screen--xsmall 4);
-$small: new-breakpoint(min-width $screen--small 8);
-$medium: new-breakpoint(min-width $screen--medium 12);
-$large: new-breakpoint(min-width $screen--large 12);
+$grid-columns--xsmall: 4;
+$grid-columns--small: 8;
+$grid-columns--medium: 12;
+$grid-columns--large: 12;
+
+// mobile screen sizes have 4 columns
+$xsmall: new-breakpoint(min-width $screen--xsmall $grid-columns--xsmall);
+$small: new-breakpoint(min-width $screen--small $grid-columns--small);
+$medium: new-breakpoint(min-width $screen--medium $grid-columns--medium);
+$large: new-breakpoint(min-width $screen--large $grid-columns--large);
+
+// array of breakpoints used for layout helpers
+$breakpoints: $xsmall, $small, $medium, $large;
+$grid-cols: $grid-columns--xsmall, $grid-columns--small, $grid-columns--medium, $grid-columns--large;
 
 $landscape: "only screen and (orientation: landscape)";
 $portrait: "only screen and (orientation: portrait)";
@@ -124,13 +134,21 @@ $print: "print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-rati
 // Margins at the outside of the layout (at edges of browser/grid)
 // --------------------------------------------------------------------------
 $base-margin--xsmall: 18px;
-$base-margin--small: 24px;
+$base-margin--small: 36px;
 $base-margin--medium: 72px;
 $base-margin--large: 72px;
 
 // Dimensions of various containers
 // --------------------------------------------------------------------------
 $header-h: 60px; // in px -- convert to rem in modules
+
+// z-index settings
+// -> reference these variables to keep track of where everything is
+// --------------------------------------------------------------------------
+
+$base-z--top: 3;
+$base-z--middle: 2;
+$base-z--bottom: 1;
 
 // ==========================================================================
 // 	Animation
@@ -167,7 +185,7 @@ $color-primary: $purple;
 $color-secondary: $green;
 $color-border--default: $black;
 $color-text--headline: $black;
-$color-text--body: $gray--dark;
+$color-text--body: lighten($gray--dark, 7);
 $color-text--secondary: $gray--medium;
 
 $bg--dark: $black;

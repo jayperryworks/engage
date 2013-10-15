@@ -10,7 +10,7 @@ $border-weight--thin: 1px;
 	
 // }
 
-%theme-dark {
+.reverse, %theme-reverse, %theme-dark {
 	color: white;
 	background: $bg--dark;
 	border-color: black;
@@ -24,22 +24,38 @@ $border-weight--thin: 1px;
 	}
 }
 
-%theme-color {
+.flood, %theme-flood, %theme-color {
 	color: white;
 	background: $bg--color;
 	border-color: darken($bg--color, 3);
 	border-style: solid;
+
+	hgroup, h1, h2, h3, h4, h5, h6, p, a {
+		color: white;
+	}
+
+	a:hover, a:active {
+		color: lighten($bg--color, 30);
+	}
 }
 
-%theme-light {
+.island, %theme-island, %theme-light {
 	color: $color-text--headline;
 	background: $bg--light;
 	border-color: darken(white, 8);
 	border-style: solid;
 	border-width: 0;
+	
+	p, ul, ol {
+		color: $color-text--body;
+	}
+
+	.intro {
+		color: $color-text--headline;
+	}
 }
 
-%theme-midtone {
+.well, %theme-well, %theme-midtone {
 	color: $color-text--headline;
 	background: lighten($bg--midtone, 4);
 	border-color: darken($bg--midtone, 3);
@@ -48,7 +64,7 @@ $border-weight--thin: 1px;
 
 // make an element grayscale
 // and color when you hover on it
-.bw, %bw {
+.bw, %theme-bw {
 	@extend %img-grayscale;
 	@include opacity(0.6);
 
@@ -68,12 +84,13 @@ $border-weight--thin: 1px;
 
 h1, .h1, %h1 {
 	@extend %raleway;
-	@include rem(font-size, 40px);
+	@include rem(font-size, 48px);
 	line-height: 1.2;
 
 	& > em {
 		@extend %raleway-bold;
-		@include rem(font-size, 54px);
+		// @include rem(font-size, 54px);
+		font-size: 1.4em;
 		text-transform: uppercase;
 	}
 }
@@ -92,51 +109,81 @@ h1 > .subhead {
 
 h2, .h2, %h2 {
 	@extend %raleway;
-	@include rem(font-size, 27px);
+	@include rem(font-size, 30px);
 	line-height: 1.2;
 	margin: 0.5em 0;
 }
 
 h3, .h3, %h3 {
-	@extend %raleway-bold;
-	@include rem(font-size, 24px);
-	text-transform: uppercase;
+	// @extend %raleway-bold;
+	@extend %lora;
+	@include rem(font-size, 18px);
+	// text-transform: uppercase;
 	margin: 0.5em 0;
 }
 
 h4, .h4, %h4 {
-	@extend %raleway-heavy;
-	@include rem(font-size, 18px);
+	@extend %raleway-bold;
+	@include rem(font-size, 22px);
 	text-transform: uppercase;
+	// line-height: 1.2;
+	margin: 0;
 }
 
 h5, .h5, %h5 {
 	@extend %raleway-bold;
 	@include rem(font-size, 12px);
 	text-transform: uppercase;
+	// line-height: 1;
+	margin: 0;
 }
 
 h6, .h6, %h6 {
-	@extend %raleway-heavy;
+	@extend %raleway-bold;
 	@include rem(font-size, 12px);
 	text-transform: uppercase;
+	margin: 0.5em 0;
+}
+
+hgroup {
+	@include rem(padding-bottom, 24px);
+
+	h1 {
+		line-height: 0.8;
+	}
+	h2 {
+		line-height: 1.2;
+	}
 }
 
 // makes a white-on-black "tag" from a lower header (h4-h6)
-.headline-tag, %headline-tag {
+.headline-tag, %headline-tag, .label {
 	@include inline-block;
 	@include triangle--centered;
 	position: relative;
-	top: -#{$border-weight--thick};
+	top: -#{$border-weight--thick + $border-weight--thin};
 	color: $gray--light;
 	background: $bg--dark;
 	padding: em(16) em(27) em(12) em(27);
-	margin: 0 0 em(1) 0;
+	margin: 0 0 em(2) 0;
 }
 
-.headline-underline, %headline-underline {
+.headline-underline, %headline-underline, .underline {
 	padding: 0.5em;
-	border-bottom-width: $border-weight--thick;
+	border-bottom: $border-weight--thick solid $bg--dark;
+}
+
+.underline.thin {
+	@extend .underline;
+	border-bottom: $border-weight--thin solid $bg--dark;
+}
+
+.primary, %primary {
+	color: $color-primary;
+}
+
+.callout, .secondary, %secondary {
+	color: $color-secondary;
 }
 
 // Body, inline type
@@ -144,21 +191,28 @@ h6, .h6, %h6 {
 
 p, li, ol {
 	@extend %lora;
+	//add hyphenation in body text for supporting browsers
+	@include prefixer(hyphen, auto, webkit moz ms spec);
 	line-height: $base-line-height;
 	margin-top: 0;
+	text-align: left;
 }
 
 .intro {
-	@include rem(font-size, 18px);
+	@include rem(font-size, 20px);
 }
 
 a {
+	@extend %base-transition;
 	color: $color-primary;
 	text-decoration: none;
-	@extend %base-transition;
 
 	&:hover, &:active {
 		color: darken($color-primary, 10);
+	}
+
+	& > hgroup, h1, h2, h3, h4, h5, h6 {
+		color: $color-text--headline;
 	}
 }
 
@@ -174,6 +228,7 @@ small, %small {
 	@extend %amp;
 	font-size: 1.2em; // RELATIVE to its parent. Will be slightly larger.
 	// letter-spacing: -0.05em;
+	line-height: 1em;
 }
 
 // if @fontface is available...
@@ -194,7 +249,7 @@ small, %small {
   speak: none; /* Not to be trusted, but hey. */
   font-size: 3.5em;
   line-height: $base-line-height;
-  text-transform: normal;
+  text-transform: none;
   text-align: center;
   vertical-align: middle;
   margin: 0 0.1em;

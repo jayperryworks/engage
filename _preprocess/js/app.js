@@ -13,14 +13,20 @@
 (function($) {
 	$(document).ready(function() {
 		
-	  $('.has-tooltip').tooltipsy({
-	  	offset: [0, 10]
+	  $('.has-tooltip.bottom_tooltip').tooltipsy({
+	  	offset: [0, 10],
+	  	className: "tooltip-bottom"
+	  });
+
+	  $('.has-tooltip.left_tooltip').tooltipsy({
+	  	offset: [-10, 0],
+	  	className: "tooltip-left"
 	  });
 
 	  // main menu show/hide
 	  // --------------------------------------------------------------
 
-	  var $mainMenu = $('.js #js-slideOut');
+	  var $mainMenu = $('.js #js-slide_out');
 	  var $header = $('.js #js-header-global');
 	  var $menuBtn = $('.js #js-header-menuBtn');
 

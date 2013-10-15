@@ -2,13 +2,88 @@
 // General layout helpers
 // ==================================================================================
 
+// Omega Reset
+// -> Requires Bourbon NEAT
+// -> Based on Josh Fry's Omega Reset, but updated
+// -> http://joshfry.me/notes/omega-reset-for-bourbon-neat/
+// -------------------------------------------------------------------------------
+
+@mixin omega-reset($nth, $cols, $gc: $grid-columns) {
+	&:nth-child(#{$nth}) {
+		@include span-columns($cols of $gc);
+	}
+	&:nth-child(#{$nth} + 1) {
+		clear: none;
+	}
+  // &:nth-child(#{$nth}) { margin-right: flex-gutter($fg); }
+  // &:nth-child(#{$nth}+1) { clear: none }
+}
+
+
+// Responsive columns
+// -> Requires Bourbon NEAT
+// -------------------------------------------------------------------------------
+
+@mixin span-columns-media($default, $xsm: null, $sm: null, $med: null, $lg: null, $center: false) {
+
+	$widths: $xsm, $sm, $med, $lg;
+	// $breakpoints: global var, see _settings.scss
+	// $grid-cols: global var, see _settings.scss
+	
+	// set mobile width first with $default
+	@if ($center == false) {
+		@include span-columns($default);
+	} @else if ($center == true) {
+		@include span-columns-center($default);
+	}
+	
+	// now set up media queries for the others
+	@for $i from 1 to length($widths) {
+		
+		$width: nth($widths, $i);
+		$bp: nth($breakpoints, $i);
+		$cols: nth($grid-cols, $i);
+		
+		// null values are skipped (ie, no css for them)
+		@if ($width != null) {
+			@include media($bp) {
+				@if ($center == false) {
+					@include span-columns($width of $cols);
+				} @else if ($center == true) {
+					@include span-columns-center($width, $cols);
+				}
+			}
+		}
+	}
+}
+
+@mixin omega-media($default: null, $xsm: null, $sm: null, $med: null, $lg: null) {
+	$omegas: $default, $xsm, $sm, $med, $lg;
+	// $breakpoints: global var, see _settings.scss
+	
+	// set up media queries for each parameter
+	@for $i from 1 to length($omegas) {
+		$omega: nth($omegas, $i);
+		$p: $i - 1;
+		$omega-prev: nth($omegas, $p);
+		// $omega-prev: nth($omegas, $i-1);
+
+		// null values are skipped (ie, no css for them)
+		@if ($omega != null) {
+			@include media(nth($breakpoints, $i)) {
+				// @include omega-reset($omega-prev);
+				@include omega($omega);
+			}
+		}
+	}
+}
 
 // Center an element within the NEAT grid
 // -> Requires Bourbon NEAT
 // -------------------------------------------------------------------------------
 
 @mixin span-columns-center($cols, $total-cols: $grid-columns, $display: block) {
-	@include span-columns($cols);
+	@include span-columns($cols, $display);
 	@include shift(($total-cols - $cols)/2);
 }
 
@@ -71,5 +146,11 @@
     vertical-align: middle;
     height: 100%;
 	}
+}
+
+%list--unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 

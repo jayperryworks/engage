@@ -3,18 +3,25 @@
 // -> for showing lots of things in one place
 // ==============================================================================
 
-// BASE
+// Base
 // ------------------------------------------------------------------------------
 
 .carousel {
 
 }
 
-// SUBMODULES
+	.carousel-slide {
+
+	}
+
+// Submodules/variations
 // ------------------------------------------------------------------------------
 
-// carousel in a hero unit
-.carousel-hero {
+// --------- Full-bleed carousel ----------------------------------------
+// -> big, full-bleed/full-width carousel
+// -> usually used in a hero unit
+
+.carousel.full_bleed {
 	@extend %theme-dark;
 	@include rem(height, 500px);
 	position: relative;
@@ -30,7 +37,7 @@
 		padding: 0;
 	}
 }
-	.carousel-hero-slide {
+	.carousel-slide.full_bleed {
 		// http://css-tricks.com/snippets/css/transparent-background-images/
 		@include base-grid-margins(padding, $full: true);
 		@include rem(bottom, 50px);
@@ -42,27 +49,34 @@
 	}
 
 	// thumbnail navigation appearing below a hero carousel
-	.carousel-hero-thumbNav {
-		@include span-columns-center(10);
-		@include row;
-		@include clearfix;
+	.carousel-thumbs.full_bleed {
+		@extend %wrapper;
+		
 		position: relative;
 		margin-top: -8px;
 		margin-bottom: 0;
 		padding: 0;
-		z-index: 3;
+		z-index: $base-z--middle;
+
+		& > ul {
+			@extend %list--unstyled;
+			@include span-columns-media(4, $sm: 6, $med: 10, $center: true);
+			@include row;
+			@include omega;
+			@include clearfix;
+		}
 	}
 
-		.carousel-hero-thumbNav-item {
-			width: 20%;
+		.carousel-thumbs-item {
+			width: 20%; // 5 slides
 			float: left;
 			display: table;
 		}
 
-		.carousel-hero-thumbNav-thumb {
+		.carousel-thumbs-thumb {
 			@include inline-list--centered($height: 160px);
 			position: relative;
-			border-top-width: $border-weight--thick;
+			border-top: $border-weight--thick solid white;
 			background: $bg--light;
 
 			&.active {
@@ -72,6 +86,6 @@
 			}
 
 			&:hover {
-				border-color: $gray--medium;
+				border-color: $black;
 			}
 		}

@@ -23,8 +23,7 @@
 		@include rem(font-size, 14px);
 		background: #1A1A1A;
 		text-transform: uppercase;
-		border-bottom-width: $border-weight--thin;
-		border-color: darken($gray--dark, 5);
+		border-bottom: $border-weight--thin solid darken($gray--dark, 5);
 
 		ul {
 			@extend %wrapper;
@@ -53,13 +52,13 @@
 		border-color: $gray--dark;
 
 		.logo-footer {
-			@include span-columns(4);
+			@include span-columns(1);
 			@include inline-block--centered;
 			text-align: left;
 		}
 
 		.social {
-			@include span-columns(4);
+			@include span-columns(2);
 			@include inline-block--centered;
 			text-align: center;
 
@@ -78,7 +77,7 @@
 		}
 
 		.brand-group {
-			@include span-columns(4);
+			@include span-columns(1);
 			@include inline-block--centered;
 			text-align: right;
 
@@ -127,10 +126,23 @@
 // Local footer (appears at the bottom of interior pages)
 // ---------------------------------------------------------------------------------
 
-.footer-local {
-	@extend %theme-midtone;
-	@include base-grid-margins(padding, $full: true);
+.footer-local, footer.local {
+	@extend %theme-color;
+	// @include base-grid-margins(padding, $full: true);
 	@include rem(padding-top, 24px);
-	@include rem(padding-bottom, 50px);
+	@include rem(padding-bottom, 12px);
 	text-align: center;
+	border: none;
+
+	& > hgroup {
+		@extend %main;
+		@include row;
+		@include clearfix;
+		overflow: hidden;
+		float: none;
+	}
+
+	h4 {
+		color: lighten($bg--color, 40);
+	}
 }

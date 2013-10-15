@@ -21,6 +21,12 @@
 
     <!-- Modernizr -->
     <script src="{{ site.baseurl }}assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script>
+      // add the "main" element to html5 shiv -- modernizr does not include yet
+      // http://drublic.de/blog/add-main-element-modernizr/
+      window.html5.elements = 'main'; // add to list
+      window.html5.shivDocument(document); // re-invoke the `shivDocument` method
+    </script>
   </head>
   <body id="{{ page.title }}">
     <!--[if lt IE 7]>
@@ -28,9 +34,9 @@
     <![endif]-->
 
     <!-- header -->
-    <header role="banner" class="header header-global" id="js-header-global">
+    <header role="banner" id="js-header-global">
       <div class="header-global-menu">
-        <a href="#" class="header-global-icon" id="js-header-menuBtn"><span aria-hidden="true" data-icon="&#9776;"></span>Menu</a>
+        <a href="#" class="header-global-icon" id="js-header-menuBtn"><span aria-hidden="true" data-icon="&#9776;"></span><span class="header-global-label">Menu</span></a>
       </div>
       <div class="header-global-logo">
         <a href="/">
@@ -38,16 +44,16 @@
         </a>
       </div>
       <div class="header-global-clients">
-        <a href="#" class="header-global-icon" id="js-header-menuBtn">Clients<span aria-hidden="true" data-icon="&#59200;"></span></a>
+        <a href="#" class="header-global-icon" id="js-header-menuBtn"><span class="header-global-label">Clients</span><span aria-hidden="true" data-icon="&#59200;"></span></a>
       </div>
-      {% include nav-global.html slideOut=true %}
+      {% include nav-global.html slide_out=true %}
     </header>
 
     {{ content }}
 
     <!-- footer -->
-    <footer class="footer footer-global">
-      {% include nav-global.html slideOut=false %}
+    <footer class="footer footer-global" role="">
+      {% include nav-global.html slide_out=false %}
       <div class="content">
         <section class="footer-brand">
           <div class="logo-footer">

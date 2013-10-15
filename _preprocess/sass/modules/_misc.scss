@@ -5,7 +5,7 @@
 // Buttons
 // ----------------------------------------------------------------------------
 
-.button, %button {
+button, .button, %button {
   @extend %lato-black;
   @extend %base-transition;
   @include rem(font-size, 12px);
@@ -26,17 +26,89 @@
 // Tooltips
 // ----------------------------------------------------------------------------
 
-.tooltipsy {
-  // @extend %theme-dark;
-  @include triangle--centered(up, top, -10px, $width: 10px, $color: $black);
+%tooltip-base {
   @extend %raleway;
   @extend %base-transition;
   @include rem(font-size, 11px);
+  position: relative;
   max-width: 200px;
   background: $black;
   color: white;
   padding: em(8) em(16);
   border-radius: 5px;
   text-align: center;
-  // text-transform: uppercase;
+}
+
+.tooltip-bottom {
+  @extend %tooltip-base;
+  @include triangle--centered(up, top, -10px, $width: 10px, $color: $black);
+}
+
+.tooltip-left {
+  @extend %tooltip-base;
+  @include triangle--centered(right, right, $loc: -10px, $width: 10px, $color: $black);
+}
+
+// Panels
+// -> vertically-oriented, self-contained listing
+// ----------------------------------------------------------------------------
+
+.panel {
+  display: block;
+
+  & > img {
+    display: block;
+    @include rem(margin, 12px auto);
+  }
+}
+
+.panel.center {
+  text-align: center;
+}
+
+// Slats
+// -> horizontally-oriented, self-contained lising
+// ----------------------------------------------------------------------------
+
+.slats {
+  @extend %main;
+  @extend %list--unstyled;
+
+  & > ul {
+    @extend %list--unstyled;
+  }
+}
+
+.slat.no_hairline {
+  border-top: none;
+}
+
+[role="complementary"].slats {
+  @include span-columns-media(4, $sm: 3, $med: 4);
+  @include shift(0);
+  text-align: left;
+}
+
+[role="complementary"].slats.right {
+  @include omega;
+}
+
+.slat {
+  @extend %list--unstyled;
+  @include rem(margin, 24px 0);
+  @include rem(padding-top, 12px);
+  text-align: left;
+  border-top: $border-weight--thin solid darken($bg--midtone, 10);
+}
+
+// Articles
+// -> horizontally-oriented, self-contained lising
+// ----------------------------------------------------------------------------
+
+article, .article, %article {
+
+}
+
+article.excerpt, .article.excerpt, %excerpt {
+  
 }

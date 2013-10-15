@@ -7,15 +7,14 @@ body {
 }
 
 // constrain to grid width, max width, and center in the browser window
-.content, %l-wrapper {
+.content, .wrapper, %wrapper, %l-wrapper {
 	@include outer-container;
 	@include base-grid-margins;
 }
 
 // width of main copy
-.base-copy, %l-copy-width {
-	@include span-columns(12);
-	text-align: left;
+.base-copy, %l-copy-width, [role="main"], main, %main {
+	@include span-columns(4);
 
 	@include media($small) {
 		@include span-columns-center(6, 8);

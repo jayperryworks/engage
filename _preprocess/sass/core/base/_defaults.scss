@@ -39,6 +39,11 @@ html {
   line-height: $base-line-height;
 }
 
+// for browsers that don't support the main element yet
+main {
+  display: block;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -97,16 +102,6 @@ fieldset {
 
 textarea {
   resize: vertical;
-}
-
-
-/*
- * Reset lists that appear in nav elements
- */
-nav ul, nav li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 p {

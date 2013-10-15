@@ -6,19 +6,31 @@
 // BASE
 // ------------------------------------------------------------------------------
 
-.story, %story {
-
+.story, .strip, %story, %strip {
+	position: relative;
+	clear: both;
+	@extend %theme-light;
+	// @include rem(padding-top, 36px);
+	@include rem(padding-bottom, 50px);
+	text-align: center;
+	border-top-width: $border-weight--thick;
+	border-bottom: $border-weight--thin solid darken($bg--light, 20);
+	
+	& > hgroup, & > h1 {
+		@include span-columns($grid-columns);
+	}
 }
 
 // Lead story
 // -> a short section of content, often an introduction pointing to deeper content
 // -------------------------------------------------------------------------------------
 
-.story--short {
-	@include rem(padding-bottom, 50px);
-	text-align: center;
-	border-top-width: $border-weight--thick;
-	@extend %theme-light;
+.story--short, .strip {
+	
+}
+
+.strip.first {
+	border-top: none;
 }
 
 // Story colors (usually alernate as you scroll down the page)
@@ -28,10 +40,10 @@
 	@extend %theme-light;
 }
 
-.story--midtone, %story--midtone {
+.strip.well, .story--midtone, %story--midtone {
 	@extend %theme-midtone;
 }
 
-.story--dark, %story--dark {
+.strip.reverse, .story--dark, %story--dark {
 	@extend %theme-dark;
 }

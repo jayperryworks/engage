@@ -1,15 +1,17 @@
-<article id="js-service{{ include.num }}">
+<article class="panel {{ include.class }}" id="js-service{{ include.num }}">
 	<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, distinctio.</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, cum, labore enim quaerat sunt ducimus inventore adipisci ex atque vero dolorum quas voluptas unde expedita debitis rem voluptatem culpa a accusantium eum veritatis magnam saepe quam eveniet quos quidem cupiditate? Nam, tempore quidem ipsum porro eaque sapiente repellendus. Quaerat, accusantium, maxime explicabo atque maiores vel excepturi harum totam corporis dolores.</p>
-	<a href="/contact" class="button button-primary">Tell us about your fundraising</a>
-	<aside>
-		<h3>Recent work</h3>
-		<nav>
+	<main role="main" class="panel-main">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, cum, labore enim quaerat sunt ducimus inventore adipisci ex atque vero dolorum quas voluptas unde expedita debitis rem voluptatem culpa a accusantium eum veritatis magnam saepe quam eveniet quos quidem cupiditate? Nam, tempore quidem ipsum porro eaque sapiente repellendus. Quaerat, accusantium, maxime explicabo atque maiores vel excepturi harum totam corporis dolores.</p>
+		<a href="{{ site.baseurl }}contact" class="button button-primary">Tell us about your fundraising</a>
+	</main>
+	<aside role="complementary" class="panel-aside">
+		<h5>Recent work</h5>
+		<nav role="navigation" class="nav nav-secondary">
 			<ul>
-				<li><a href="">Defenders of Wildlife</a></li>
-				<li><a href="">Audubon Society</a></li>
-				<li><a href="">ABD Direct</a></li>
-				<li><a href="">DMAW Washington</a></li>
+				<li><a class="nav-secondary-item" href="">Defenders of Wildlife</a></li>
+				<li><a class="nav-secondary-item" href="">Audubon Society</a></li>
+				<li><a class="nav-secondary-item" href="">ABD Direct</a></li>
+				<li><a class="nav-secondary-item" href="">DMAW Washington</a></li>
 			</ul>
 		</nav>
 	</aside>

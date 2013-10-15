@@ -2,7 +2,7 @@
 
 $column: modular-scale(16px, 3, 1.5); // Column width
 $gutter: modular-scale(16px, 0, 1.5); //golden-ratio(1em, 1) !default; // Gutter between each two columns
-$grid-columns: 12 !default; // Total number of columns in the grid
+$grid-columns: 4 !default; // Total number of columns in the grid (mobile screen)
 $max-width: 1440px; //1440px/16px -- Max-width of the outer container
 $border-box-sizing: true !default; // Makes all elements have a border-box layout
 $default-feature: min-width; // Default @media feature for the breakpoint() mixin
