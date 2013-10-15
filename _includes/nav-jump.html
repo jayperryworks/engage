@@ -1,0 +1,15 @@
+<nav role="navigation" class="jump">
+	<a href="#" rel="previous" class="arrow">
+		<span aria-hidden="true" data-icon="&#59231;" class="icon-alone"></span>
+		<span class="screen-reader-text">Previous section</span>
+	</a>
+	<ul>
+		{% for i in include.titles %}
+		<li><a href="#who-we-help" class="active has-tooltip left" title="Who we help">{{ i }}</a></li>
+		{% endfor %}
+	</ul>
+	<a href="#" rel="next" class="arrow">
+		<span aria-hidden="true" data-icon="&#59228;" class="icon-alone"></span>
+		<span class="screen-reader-text">Next section</span>
+	</a>
+</nav>

@@ -8,9 +8,9 @@
 // -> http://joshfry.me/notes/omega-reset-for-bourbon-neat/
 // -------------------------------------------------------------------------------
 
-@mixin omega-reset($nth, $cols, $gc: $grid-columns) {
+@mixin omega-reset($nth, $cols, $gc: $grid-columns, $display: block) {
 	&:nth-child(#{$nth}) {
-		@include span-columns($cols of $gc);
+		@include span-columns($cols of $gc, $display);
 	}
 	&:nth-child(#{$nth} + 1) {
 		clear: none;

@@ -54,6 +54,7 @@ button, .button, %button {
 // ----------------------------------------------------------------------------
 
 .panel {
+  @include rem(padding, 12px 0);
   display: block;
 
   & > img {
@@ -79,13 +80,10 @@ button, .button, %button {
   }
 }
 
-.slat.no_hairline {
-  border-top: none;
-}
-
 [role="complementary"].slats {
   @include span-columns-media(4, $sm: 3, $med: 4);
   @include shift(0);
+  @include rem(margin-top, 36px);
   text-align: left;
 }
 
@@ -101,14 +99,68 @@ button, .button, %button {
   border-top: $border-weight--thin solid darken($bg--midtone, 10);
 }
 
-// Articles
-// -> horizontally-oriented, self-contained lising
-// ----------------------------------------------------------------------------
-
-article, .article, %article {
-
+.slat.no_hairline {
+  border-top: none;
+  padding-top: 0;
 }
 
-article.excerpt, .article.excerpt, %excerpt {
-  
+// Forms
+// ----------------------------------------------------------------------------
+
+%input-invisible {
+  border: none;
+  background: transparent;
+  border-bottom: $border-weight--thick solid $color-border--default;
+  padding: 1em;
+
+  &:focus, &:active {
+    border: none;
+    // background: $bg--midtone;
+    border-bottom: $border-weight--thick solid $color-border--default;
+    box-shadow: none;
+  }
+}
+
+[role="search"].large {
+  @include rem(margin-top, 40px);
+
+  & > input[type="search"], & > input[type="text"] {
+    @extend %input-invisible;
+    @extend %h4;
+    // @include rem(font-size, 22px);
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+input[type="search"]:before {
+  @include icon; //mixin from _webfonts
+  content: "&#128269";
+  speak: none; /* Not to be trusted, but hey. */
+  font-size: 3.5em;
+  z-index: $base-z--middle;
+  position: absolute;
+  @include rem(left, 12px);
+}
+
+.contact {
+  @extend %main;
+  @include span-columns-media(4, $sm: 5, $med: 6);
+  text-align: left;
+
+  & > label, & > input, & > select, & > textarea {
+    display: block;
+    width: 100%;
+  }
+}
+
+aside[role="contentinfo"].right {
+  @include span-columns-media(4, $sm: 3, $med: 4);
+  @include omega;
+  text-align: left;
+}
+
+.social {
+  @extend %list--unstyled;
 }

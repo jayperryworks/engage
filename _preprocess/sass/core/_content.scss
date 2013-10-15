@@ -124,7 +124,7 @@ h3, .h3, %h3 {
 
 h4, .h4, %h4 {
 	@extend %raleway-bold;
-	@include rem(font-size, 22px);
+	@include rem(font-size, 18px);
 	text-transform: uppercase;
 	// line-height: 1.2;
 	margin: 0;
@@ -186,6 +186,12 @@ hgroup {
 	color: $color-secondary;
 }
 
+a.secondary {
+	&:hover, &:active {
+		color: darken($color-secondary, 5);
+	}
+}
+
 // Body, inline type
 // -----------------------------------------------------------------------------
 
@@ -202,6 +208,10 @@ p, li, ol {
 	@include rem(font-size, 20px);
 }
 
+.caption {
+	@extend %small;
+}
+
 a {
 	@extend %base-transition;
 	color: $color-primary;
@@ -213,6 +223,10 @@ a {
 
 	& > hgroup, h1, h2, h3, h4, h5, h6 {
 		color: $color-text--headline;
+	}
+
+	& > p {
+		color: $color-text--body;
 	}
 }
 
@@ -243,7 +257,7 @@ small, %small {
 // ==============================================================================
 
 // for icons placed before some text (such as in a button)
-[data-icon]:before {
+%icon, [data-icon]:before {
   @include icon; //mixin from _webfonts
   content: attr(data-icon);
   speak: none; /* Not to be trusted, but hey. */
@@ -256,7 +270,7 @@ small, %small {
 }
 
 // for icons placed before some text (such as in a button)
-[data-icon-social]:before {
+%icon-social, [data-icon-social]:before {
   @include icon-social; //mixin from _webfonts
   content: attr(data-icon);
   speak: none; /* Not to be trusted, but hey. */

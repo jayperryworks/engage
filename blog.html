@@ -3,18 +3,18 @@ layout: default
 title: Blog
 active: blog
 ---
-<div class="content">
+<div class="wrapper">
 	<main role="main">
 		<form role="search" class="large">
 			<input type="search" placeholder="Search the blog" />
 		</form>
 
 		{% for i in (1...10) %}
-		<article class="excerpt">
-			<hgroup>
+		<article class="post excerpt">
+			<hgroup class="post-title">
 				<a href="{{ site.baseurl }}blog-post.html">
 					<h1>We're growing!</h1>
-					<h2>Kelley Kelly joins our team</h2>
+					<h3 class="secondary">Kelley Kelly joins our team</h3>
 				</a>
 			</hgroup>
 			<p>
@@ -32,4 +32,4 @@ active: blog
 	</main>
 </div>
 
-{% include footer-local.html link="Resources <span class='amp'>&amp;</span> Tools" %}
+{% include footer-local.html title="Resources <span class='amp'>&amp;</span> Tools" link="rd-tools.html" %}

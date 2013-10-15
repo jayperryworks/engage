@@ -66,7 +66,7 @@
 	position: fixed;
 	text-align: center;
 	right: 0;
-	top: 40%;
+	top: 25%;
 	z-index: $base-z--middle;
 
 	@include media($small) {
@@ -164,11 +164,11 @@
 			@include omega;
 			@include hidden;
 		}
-
-		&.panel--active {
+		
+		&.active {
 			@include restore-visible;
 		}
-
+		
 		& > [role="main"], & > main, .panel-main, & > h1 {
 			margin: 0;
 	    @include span-columns(2 of 3);
@@ -201,6 +201,8 @@
 	  }
 	}
 }
+
+
 
 [role="navigation"].local {
 
@@ -288,13 +290,49 @@
 	}
 }
 
-// Grid (of thumbs or whatever)
+.grid.divider {
+	li {
+		@include span-columns(4 of 4);
+		@include omega;
+		
+		@include media($xsmall) {
+			@include span-columns(2 of 4);
+			@include omega(2n);
+		}
+		@include media($small) {
+			@include span-columns(2 of 8);
+			clear: none !important;
+			// @include omega-reset(2n, 2, 8);
+			@include omega(4n);
+		}
+		@include media($medium) {
+			@include span-columns(3 of 12);
+			// @include omega-reset(4n, 3, 12);
+			clear: none !important;
+			@include omega(4n);
+		}
+	}
+}
+
+// Secondary/sub-navigation
 // ---------------------------------------------------------------------------------
 
 [role="navigation"].secondary {
 
 }
 
-	.nav-secondary-item {
+	[role="navigation"].secondary-item {
 		@extend %small;
+	}
+
+	[role="navigation"].secondary.horizontal {
+		li {
+			@include inline-block;
+		}
+
+		a {
+			@extend %small;
+			@extend %raleway-bold;
+			text-transform: uppercase;
+		}
 	}

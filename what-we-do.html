@@ -64,7 +64,7 @@ active: what-we-do
 		
 		<div class="tabs vertical">
 			{% include service-list.html class='local vertical' %}
-			{% include service.html num=0 class="panel--active" %}
+			{% include service.html num=0 class="active" %}
 
 			{% for i in (1...7) %}
 			{% include service.html num=forloop.index %}
@@ -74,4 +74,4 @@ active: what-we-do
 	</div>
 </section><!-- / our services -->
 
-{% include footer-local.html title='Our story <span class="amp">&amp;</span> our people' link="/company.html" %}
+{% include footer-local.html title='Our story <span class="amp">&amp;</span> our people' link="company.html" %}

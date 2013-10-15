@@ -4,28 +4,33 @@ title: Case Studies
 active: case-studies
 ---
 
-<section class="story story-lead">
+<section class="strip first well" role="region">
 	<h1>Check out all our awesome work</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, non, eaque, aut molestias inventore dicta assumenda consequatur libero perspiciatis voluptatum odit ipsa saepe corrupti dolorum corporis animi sit fugiat amet.</p>
+	<div class="wrapper">
+		<main role="main">
+			<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, non, eaque, aut molestias inventore dicta assumenda consequatur libero perspiciatis voluptatum odit ipsa saepe corrupti dolorum corporis animi sit fugiat amet.</p>
+		</main>
+	</div>
 </section>
-<section>
-	<div class="content">
-		{% include service-list.html class='nav nav-local nav-horizontal' %}
+<div class="strip">
+	<div class="wrapper">
+		<!-- filters -->
+		{% include service-list.html class='secondary horizontal' %}
 		
-		<ul class="grid">
-		{% for i in (1..9) %}
-			<li class="grid-thumb">
-				{% assign link = "/case-study-details.html" %}
+		<ul class="grid large">
+		{% for i in (1..11) %}
+			<li class="panel">
+				{% assign link = "{{ site.baseurl }}case-study-details.html" %}
 				<!-- {% include case-study-thumb.html has-summary=true %} -->
 				<a href="/case-study-details.html">
-					<img src="http://placehold.it/450x300" class="thumb" />
+					<img src="http://placehold.it/500x300" />
 					<h3>Project name lorem ipsum</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, facilis, nam atque dicta nemo aliquam sit et eaque quas pariatur iure culpa quaerat magnam expedita.</p>
+					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, facilis, nam atque dicta nemo aliquam sit et eaque quas pariatur iure culpa quaerat magnam expedita.</p>
 				</a>
 			</li>
 		{% endfor %}
 		</ul>
 	</div>
-</section>
+</div>
 
-{% include footer-local.html link='Our blog' %}
+{% include footer-local.html title='Our blog' link='blog.html' %}

@@ -16,11 +16,21 @@
 
 .post.excerpt {
 	text-align: left;
+	border-bottom: $border-weight--thin solid $color-border--default;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.post.no_hairline {
+	border-bottom: none;
 }
 
 .post.excerpt.narrow {
 	@include span-columns-media(4, $sm: 5, $med: 6);
 	@include shift(0);
+	@include rem(margin-top, 36px);
 
 	@include media($medium) {
 		@include span-columns(6 of 12);

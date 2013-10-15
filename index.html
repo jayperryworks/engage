@@ -119,10 +119,10 @@ title: Home
 <section class="strip" role="region">
 	<div class="wrapper">
 		<h5 class="headline-tag">Our tools</h5>
-		<ul>
+		<ul class="grid large">
+			{% for i in (1...4) %}
 			<li><a href="#" class="thumb"><img src="http://placehold.it/300x200" alt=""></a></li>
-			<li><a href="#" class="thumb"><img src="http://placehold.it/300x200" alt=""></a></li>
-			<li><a href="#" class="thumb"><img src="http://placehold.it/300x200" alt=""></a></li>
+			{% endfor %}
 		</ul>
 		<main role="main">
 			<p>
@@ -138,7 +138,7 @@ title: Home
 	<div class="wrapper">
 
 		<!-- blog -->
-		<main class="post excerpt narrow" role="main">
+		<main class="post excerpt narrow no_hairline" role="main">
 			<hgroup class="post-title">
 				<h5 class="primary underline">From Our Blog</h5>
 				<h2>Odio dignissim qui blandit praesent luptatum zzril</h2>
