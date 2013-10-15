@@ -13,12 +13,12 @@
 (function($) {
 	$(document).ready(function() {
 		
-	  $('.has-tooltip.bottom_tooltip').tooltipsy({
+	  $('.has-tooltip.bottom').tooltipsy({
 	  	offset: [0, 10],
 	  	className: "tooltip-bottom"
 	  });
 
-	  $('.has-tooltip.left_tooltip').tooltipsy({
+	  $('.has-tooltip.left').tooltipsy({
 	  	offset: [-10, 0],
 	  	className: "tooltip-left"
 	  });

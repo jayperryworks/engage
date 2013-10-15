@@ -11,7 +11,7 @@
 	clear: both;
 	@extend %theme-light;
 	// @include rem(padding-top, 36px);
-	@include rem(padding-bottom, 50px);
+	@include rem(padding-bottom, 40px);
 	text-align: center;
 	border-top-width: $border-weight--thick;
 	border-bottom: $border-weight--thin solid darken($bg--light, 20);

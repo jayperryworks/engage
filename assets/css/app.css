@@ -1930,6 +1930,9 @@ body {
         margin-right: 0; }
       .grid.large li:nth-child(4n+1) {
         clear: left; } }
+.grid.large > .panel {
+  margin-top: 40px;
+  margin-top: 2.5rem; }
 
 .grid.divider li {
   display: block;
@@ -2066,8 +2069,8 @@ body {
 .story, .strip {
   position: relative;
   clear: both;
-  padding-bottom: 50px;
-  padding-bottom: 3.125rem;
+  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
   text-align: center;
   border-top-width: 8px;
   border-bottom: 1px solid #cccccc; }

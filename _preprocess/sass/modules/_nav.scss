@@ -288,6 +288,10 @@
 			@include omega(4n);
 		}
 	}
+
+	& > .panel {
+		@include rem(margin-top, 40px);
+	}
 }
 
 .grid.divider {
