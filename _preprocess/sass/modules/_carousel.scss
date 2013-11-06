@@ -60,15 +60,20 @@
 
 		& > ul {
 			@extend %list--unstyled;
-			@include span-columns-media(4, $sm: 6, $med: 10, $center: true);
-			@include row;
-			@include omega;
-			@include clearfix;
+			@include grid-span(4, 1);
+
+			@include breakpoint($screen--small) {
+				@include grid-span(7, 2);
+			}
+			@include breakpoint($screen--medium) {
+				@include grid-span(10, 2);
+			}
 		}
 	}
 
 		.carousel-thumbs-item {
 			width: 20%; // 5 slides
+			// @include grid-span()
 			float: left;
 			display: table;
 		}

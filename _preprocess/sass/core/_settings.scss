@@ -95,36 +95,49 @@ $amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
 }
 
 // ==========================================================================
-// 	Media queries
+// 	Media queries & grid
 //  -> mobile first, using base font sizes to scale everything
 // ==========================================================================
 
+$grid-width: 1440px; // max width of the layout
+
 // screen size breakpoints (values in px but do not include unit)
-$screen--xsmall: em(480);
-$screen--small: em(768);
-$screen--medium: em(1280);
-$screen--large: em(strip-units($max-width)); //1440px
+// --------------------------------------------------------------------------
+$breakpoint-to-ems: true; // breakpoint setting -- covert all to ems
+
+$screen--xsmall: 480px;
+$screen--small: 768px;
+$screen--medium: 1280px;
+$screen--large: $grid-width;
 
 $grid-columns--xsmall: 4;
-$grid-columns--small: 8;
+$grid-columns--small: 9;
 $grid-columns--medium: 12;
 $grid-columns--large: 12;
 
-// mobile screen sizes have 4 columns
-$xsmall: new-breakpoint(min-width $screen--xsmall $grid-columns--xsmall);
-$small: new-breakpoint(min-width $screen--small $grid-columns--small);
-$medium: new-breakpoint(min-width $screen--medium $grid-columns--medium);
-$large: new-breakpoint(min-width $screen--large $grid-columns--large);
-
-// array of breakpoints used for layout helpers
-$breakpoints: $xsmall, $small, $medium, $large;
+// array of breakpoints used for layout helpers (see _helpers.scss)
+$breakpoints: $screen--xsmall, $screen--small, $screen--medium, $screen--large;
 $grid-cols: $grid-columns--xsmall, $grid-columns--small, $grid-columns--medium, $grid-columns--large;
 
+// html5 bp examples -- not used yet
 $landscape: "only screen and (orientation: landscape)";
 $portrait: "only screen and (orientation: portrait)";
 
 // for print and high-resolution displays
 $print: "print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)";
+
+
+// Singularity.gs settings
+// --------------------------------------------------------------------------
+
+// set up grids
+$grids: $grid-columns--xsmall;
+$grids: add-grid($grid-columns--small at $screen--small);
+$grids: add-grid($grid-columns--medium at $screen--medium);
+$grids: add-grid($grid-columns--large at $screen--large);
+
+$gutters: 0.2; // global gutter width. 1:5 perfect fifth
+$output: 'isolation'; // global output mode for singularity
 
 // ==========================================================================
 // 	Layout settings
@@ -145,7 +158,6 @@ $header-h: 60px; // in px -- convert to rem in modules
 // z-index settings
 // -> reference these variables to keep track of where everything is
 // --------------------------------------------------------------------------
-
 $base-z--top: 3;
 $base-z--middle: 2;
 $base-z--bottom: 1;

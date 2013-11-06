@@ -4,12 +4,32 @@
 		"selected_items":
 		[
 			[
-				"inline-",
-				"inline-block--centered"
+				"border",
+				"border-weight--thin"
 			],
 			[
-				"border",
+				"bg--",
+				"bg--midtone"
+			],
+			[
+				"border-",
 				"border-weight--thick"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"base",
+				"base-line-height"
+			],
+			[
+				"span",
+				"span-columns"
+			],
+			[
+				"inline-",
+				"inline-block--centered"
 			],
 			[
 				"gray",
@@ -24,10 +44,6 @@
 				"gray--medium"
 			],
 			[
-				"span",
-				"span-columns-center"
-			],
-			[
 				"grid",
 				"grid-column"
 			],
@@ -40,26 +56,58 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 6291,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "company.html",
 			"settings":
 			{
-				"buffer_size": 4606,
+				"buffer_size": 6651,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_layouts/default.html",
+			"file": "contact.html",
 			"settings":
 			{
-				"buffer_size": 4832,
+				"buffer_size": 1865,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "what-we-do.html",
+			"settings":
+			{
+				"buffer_size": 3324,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog.html",
+			"settings":
+			{
+				"buffer_size": 1213,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 7599,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/service.html",
+			"settings":
+			{
+				"buffer_size": 1200,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/service-list.html",
+			"settings":
+			{
+				"buffer_size": 621,
 				"line_ending": "Unix"
 			}
 		},
@@ -67,31 +115,23 @@
 			"file": "_preprocess/js/app.js",
 			"settings":
 			{
-				"buffer_size": 940,
+				"buffer_size": 1119,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_preprocess/sass/modules/_nav.scss",
+			"file": "_layouts/default.html",
 			"settings":
 			{
-				"buffer_size": 1943,
+				"buffer_size": 4532,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_preprocess/sass/_modules.scss",
+			"file": "_preprocess/sass/modules/_post.scss",
 			"settings":
 			{
-				"buffer_size": 1088,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/modules/_story.scss",
-			"settings":
-			{
-				"buffer_size": 865,
+				"buffer_size": 1324,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,55 +139,23 @@
 			"file": "_preprocess/sass/core/_layout.scss",
 			"settings":
 			{
-				"buffer_size": 735,
+				"buffer_size": 1045,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_preprocess/sass/core/_settings.scss",
+			"file": "_preprocess/sass/modules/_misc.scss",
 			"settings":
 			{
-				"buffer_size": 4800,
+				"buffer_size": 4194,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_preprocess/sass/_neat-settings.scss",
+			"file": "_preprocess/sass/core/helpers/_effects.scss",
 			"settings":
 			{
-				"buffer_size": 588,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/core/_base.scss",
-			"settings":
-			{
-				"buffer_size": 2359,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/core/_content.scss",
-			"settings":
-			{
-				"buffer_size": 2770,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_config.yml",
-			"settings":
-			{
-				"buffer_size": 207,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/core/helpers/_rem.scss",
-			"settings":
-			{
-				"buffer_size": 1553,
+				"buffer_size": 1680,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,15 +163,55 @@
 			"file": "_preprocess/sass/core/helpers/_layout.scss",
 			"settings":
 			{
-				"buffer_size": 2075,
+				"buffer_size": 4237,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_preprocess/sass/app.scss",
+			"file": "_preprocess/sass/core/helpers/_html5bp.scss",
 			"settings":
 			{
-				"buffer_size": 4472,
+				"buffer_size": 1760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/core/_settings.scss",
+			"settings":
+			{
+				"buffer_size": 5513,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/core/_content.scss",
+			"settings":
+			{
+				"buffer_size": 5864,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/modules/_story.scss",
+			"settings":
+			{
+				"buffer_size": 1275,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/modules/_nav.scss",
+			"settings":
+			{
+				"buffer_size": 6422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/modules/_footer.scss",
+			"settings":
+			{
+				"buffer_size": 2819,
 				"line_ending": "Unix"
 			}
 		}
@@ -171,9 +219,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 387.0,
 		"selected_items":
 		[
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
 			[
 				"pacakge",
 				"Package Control: Install Package"
@@ -220,13 +272,48 @@
 	},
 	"file_history":
 	[
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_layouts/default.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/js/app.js",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/case-studies.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/rd-tools.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_layouts/rd.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/nav-jump.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_footer.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/nav-global.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/service.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/service-list.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/footer-local.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/case-study.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/blog.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/index.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_nav.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_layouts/post.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_carousel.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_hero.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/app.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_layout.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/rd-resources.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_header.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_content.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_footer.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_nav.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/base/_defaults.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/vendor/_neat-settings.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_story.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_settings.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_effects.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_html5bp.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_layout.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_layout.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/base/_fonts.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/_misc.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_defaults.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/_neat-settings.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_buttons.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/rd-code.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/nav-local-rd.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/blog-post.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_posts/2013-09-16-welcome-to-jekyll.markdown",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/_modules.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_rem.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_config.yml",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_base.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/js/app.js",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/_modules.scss",
@@ -235,9 +322,7 @@
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/core/_settings.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/core/helpers/_layout.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/core/helpers/_rem.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_effects.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/app.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_config.yml",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/core/_normalize.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/core/_base.scss",
 		"/Users/jayperry/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
@@ -314,27 +399,7 @@
 		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-font/page.txt",
 		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/_fonts.scss",
 		"/Users/jayperry/Library/Caches/TemporaryItems/.htaccess",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/site.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/app.scss",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/_tables.scss",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/templates/default.php",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/snippets/header.php",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/05-graphics/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/.htaccess",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/.htaccess",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/snippets/footer.php",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/04-structural-engineers/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/02-sk&a-group/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/03-affiliates/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/01-full-name/page.txt",
-		"/Users/jayperry/Library/Application Support/Sublime Text 2/Packages/User/download-dropdown",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/_old/index.html",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/_settings.scss",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/site/config/config.php",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/04-affiliate-lockup/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/normalize.scss",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/images/ska-group-logo.png"
+		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/site.txt"
 	],
 	"find":
 	{
@@ -353,6 +418,106 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			", collapse",
+			"nav-",
+			"label for",
+			"bottom_tooltip",
+			"left_",
+			"tooltip_left",
+			"left",
+			"h2",
+			"left",
+			"class=\"strip\">",
+			"<h3>",
+			"h4",
+			"h3",
+			"h4",
+			"h3",
+			"<h6>",
+			"</a></li>",
+			"<li><a href",
+			", block-collapse",
+			", collapse",
+			");",
+			"class=\"thumb icon-alone",
+			"h6",
+			"h3",
+			"{",
+			"h5",
+			"<li",
+			"li",
+			" class=",
+			"base-copy",
+			"bottom",
+			" class=\"nav-thumbs-item\"",
+			"nav-thumbs-item",
+			"content",
+			"nav-thumbs-thumb",
+			" bw",
+			"thumb_nav",
+			"blurb",
+			"thumb_nav",
+			"carousel-thumb_nav-thumb",
+			"hero-thumbNav",
+			"nav-global-item",
+			"slideOut",
+			"hero-thumbNav",
+			"[role=\"navigation\"]",
+			"h4",
+			", collapse",
+			"block-collapse",
+			"block-",
+			", block-collapse",
+			"<li></li>",
+			"story story-lead",
+			"content",
+			"http://placehold.it/300x150",
+			"<li><a href=\"\" class=\"\"",
+			"{\n			@include span-columns",
+			"{\n			@include",
+			"<a href=\"\" class=\"nav-grid-item\"",
+			"h2",
+			".  ",
+			"?  ",
+			"<li><a href=\"\" class=\"thumb\"",
+			"<li><a href=\"\" class=\"\"><img src=\"http://placehold.it/300x150",
+			"<li><a href=\"\"><img src=\"http://placehold.it/300x150",
+			"content",
+			"strip-lead",
+			"class=\"story story",
+			"class=\"story",
+			"story",
+			"border",
+			"$border--thick",
+			"@include ",
+			"button",
+			"font-url",
+			"story-short",
+			"entypo.eot",
+			"font-url('entypo",
+			"img class=\"bw\"",
+			"carousel-hero-thumbNav-thumb",
+			"story-copy",
+			"@import \"base/",
+			"thumbNav-thumb\"><img",
+			"thumb",
+			"<li class=\"carousel-hero-thumbNav-item\">",
+			"<li><a href=\"#\" class=\"thumb",
+			"<li><a href=\"#\" class=\"thumb active",
+			"<li><a href=\"#\"",
+			");\n",
+			"carousel--wide",
+			"#EDEBE8",
+			"psi-icons",
+			"include.current",
+			">\n",
+			"/li>",
+			"<li>",
+			"li",
+			"ul",
+			"href=\"\"",
+			"<article></article>",
+			"class=\"{% if page.active",
 			"Story",
 			"Carousel",
 			"wrapper",
@@ -380,107 +545,7 @@
 			"tooltip",
 			"images/icon-services",
 			"images/services-icon",
-			"services-icon",
-			"services-icon-",
-			"<img src=\"\"",
-			"href=\"\"",
-			"http://placehold.it/100x100",
-			"href=\"\"",
-			"black",
-			"lato",
-			"img src=\"\"",
-			";\n",
-			"150x150",
-			"http://placehold.it/200x200",
-			"display: inline-block",
-			"<li><a href=\"\" class=\"thumb\"><img src=\"http://placehold.it/200x200\" alt=\"\"></a></li>",
-			"80x80",
-			"img src=\"\" alt=\"\"",
-			"black",
-			"$bg-dark",
-			"lightGray",
-			"medGray",
-			"darkGray",
-			"baseline",
-			"word-wrap",
-			"/$base-font-size--default))*100%",
-			"(strip-units(",
-			"font-size: $base",
-			"font-size",
-			"px",
-			"rem",
-			"ceil",
-			": rem(",
-			"$base-font-size",
-			"base-font-size",
-			"base-font--",
-			"base-font-size",
-			"large-screen",
-			"screen-small",
-			"medium-screen",
-			"small-screen",
-			"$xsmall-screen",
-			"large-font",
-			"small-font",
-			"$xsmall-font",
-			"medium-font",
-			"screen: ",
-			"#{rem(",
-			" 12);",
-			"min-width $",
-			"width ",
-			": rem(",
-			"ms",
-			"$baseline-rem",
-			"font-size: $",
-			"$baseline-px",
-			"@media #{",
-			"} {",
-			"@media #{",
-			"rem(",
-			"font-size: em",
-			"@include transition (all 0.2s ease-in-out);",
-			"http://placehold.it/250x200",
-			"})\";",
-			"\"only",
-			"250",
-			"placehold.it/200x200",
-			"160x160",
-			"alt=\"\"></a><",
-			"li><a",
-			"</li>",
-			"alt=\"\">",
-			"></li>",
-			"img src=",
-			"<li><",
-			"><",
-			"\"assets/",
-			"px)",
-			"px;",
-			"screen:",
-			"screen}",
-			"#{$",
-			"screen}",
-			"/assets/javascripts",
-			"\"assets",
-			"\"",
-			"{{ site.url }}",
-			"\"css/",
-			"stylesheet",
-			"home",
-			"/css",
-			"file",
-			"background",
-			"grid",
-			":",
-			"c",
-			"$c;",
-			"placeholder",
-			"Utlity",
-			"table",
-			"h6",
-			"3px 3px 5px 6px #ccc",
-			", $radius: $global-radius"
+			"services-icon"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -592,23 +657,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "company.html",
 					"settings":
 					{
-						"buffer_size": 6291,
+						"buffer_size": 6651,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4086,
-								4086
+								466,
+								466
 							]
 						],
 						"settings":
@@ -624,18 +689,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "company.html",
+					"file": "contact.html",
 					"settings":
 					{
-						"buffer_size": 4606,
+						"buffer_size": 1865,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1172,
-								1172
+								1099,
+								1099
 							]
 						],
 						"settings":
@@ -651,46 +716,181 @@
 				},
 				{
 					"buffer": 2,
-					"file": "_layouts/default.html",
+					"file": "what-we-do.html",
 					"settings":
 					{
-						"buffer_size": 4832,
+						"buffer_size": 3324,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3079,
-								3079
+								1800,
+								1800
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 943.0,
+						"translation.y": 673.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "_preprocess/js/app.js",
+					"file": "blog.html",
 					"settings":
 					{
-						"buffer_size": 940,
+						"buffer_size": 1213,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								571,
-								571
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 7599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2301,
+								2301
+							],
+							[
+								2557,
+								2557
+							],
+							[
+								2811,
+								2811
+							],
+							[
+								3087,
+								3087
+							],
+							[
+								3346,
+								3346
+							],
+							[
+								3613,
+								3613
+							],
+							[
+								3871,
+								3871
+							],
+							[
+								4127,
+								4127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "_includes/service.html",
+					"settings":
+					{
+						"buffer_size": 1200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								792,
+								792
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "_includes/service-list.html",
+					"settings":
+					{
+						"buffer_size": 621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "_preprocess/js/app.js",
+					"settings":
+					{
+						"buffer_size": 1119,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								798,
+								798
 							]
 						],
 						"settings":
@@ -703,195 +903,88 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 10,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"file": "_preprocess/sass/modules/_nav.scss",
-					"settings":
-					{
-						"buffer_size": 1943,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1437,
-								1437
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "_preprocess/sass/_modules.scss",
+					"buffer": 8,
+					"file": "_layouts/default.html",
 					"settings":
 					{
-						"buffer_size": 1088,
+						"buffer_size": 4532,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								220,
-								220
+								4446,
+								4314
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1230.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "_preprocess/sass/modules/_story.scss",
-					"settings":
-					{
-						"buffer_size": 865,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								582,
-								582
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "_preprocess/sass/core/_layout.scss",
-					"settings":
-					{
-						"buffer_size": 735,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								735,
-								735
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "_preprocess/sass/core/_settings.scss",
-					"settings":
-					{
-						"buffer_size": 4800,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3529,
-								3529
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1605.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
 				{
 					"buffer": 9,
-					"file": "_preprocess/sass/_neat-settings.scss",
+					"file": "_preprocess/sass/modules/_post.scss",
 					"settings":
 					{
-						"buffer_size": 588,
+						"buffer_size": 1324,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								686,
+								686
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 40.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 10,
-					"file": "_preprocess/sass/core/_base.scss",
+					"file": "_preprocess/sass/core/_layout.scss",
 					"settings":
 					{
-						"buffer_size": 2359,
+						"buffer_size": 1045,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2087,
-								2087
+								346,
+								346
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -901,18 +994,72 @@
 				},
 				{
 					"buffer": 11,
-					"file": "_preprocess/sass/core/_content.scss",
+					"file": "_preprocess/sass/modules/_misc.scss",
 					"settings":
 					{
-						"buffer_size": 2770,
+						"buffer_size": 4194,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2547,
-								2547
+								2852,
+								2852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1665.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "_preprocess/sass/core/helpers/_effects.scss",
+					"settings":
+					{
+						"buffer_size": 1680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1138,
+								1680
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 159.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "_preprocess/sass/core/helpers/_layout.scss",
+					"settings":
+					{
+						"buffer_size": 4237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								578,
+								578
 							]
 						],
 						"settings":
@@ -921,51 +1068,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1689.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "_config.yml",
-					"settings":
-					{
-						"buffer_size": 207,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "_preprocess/sass/core/helpers/_rem.scss",
+					"buffer": 14,
+					"file": "_preprocess/sass/core/helpers/_html5bp.scss",
 					"settings":
 					{
-						"buffer_size": 1553,
+						"buffer_size": 1760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1553,
-								1553
+								377,
+								377
 							]
 						],
 						"settings":
@@ -981,45 +1102,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
-					"file": "_preprocess/sass/core/helpers/_layout.scss",
-					"settings":
-					{
-						"buffer_size": 2075,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								511,
-								1336
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 15,
-					"file": "_preprocess/sass/app.scss",
+					"file": "_preprocess/sass/core/_settings.scss",
 					"settings":
 					{
-						"buffer_size": 4472,
+						"buffer_size": 5513,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3928,
+								3928
 							]
 						],
 						"settings":
@@ -1028,7 +1123,115 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7.0,
+						"translation.y": 1817.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "_preprocess/sass/core/_content.scss",
+					"settings":
+					{
+						"buffer_size": 5864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4430,
+								4430
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3285.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "_preprocess/sass/modules/_story.scss",
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								462,
+								462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "_preprocess/sass/modules/_nav.scss",
+					"settings":
+					{
+						"buffer_size": 6422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3611,
+								3611
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5157.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "_preprocess/sass/modules/_footer.scss",
+					"settings":
+					{
+						"buffer_size": 2819,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1047,
+								1047
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1064,7 +1267,7 @@
 		"cols":
 		[
 			0.0,
-			0.427433766705,
+			0.445215831226,
 			1.0
 		],
 		"rows":
@@ -1088,6 +1291,138 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"def",
+				"_layouts/default.html"
+			],
+			[
+				"app",
+				"_preprocess/js/app.js"
+			],
+			[
+				"effec",
+				"_preprocess/sass/core/helpers/_effects.scss"
+			],
+			[
+				"ser",
+				"_includes/service-list.html"
+			],
+			[
+				"foo",
+				"_preprocess/sass/modules/_footer.scss"
+			],
+			[
+				"nav",
+				"_includes/nav-global.html"
+			],
+			[
+				"case",
+				"case-studies.html"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"con",
+				"_preprocess/sass/core/_content.scss"
+			],
+			[
+				"set",
+				"_preprocess/sass/core/_settings.scss"
+			],
+			[
+				"blog",
+				"blog.html"
+			],
+			[
+				"foot",
+				"_includes/footer-local.html"
+			],
+			[
+				"layo",
+				"_preprocess/sass/core/helpers/_layout.scss"
+			],
+			[
+				"str",
+				"_preprocess/sass/modules/_story.scss"
+			],
+			[
+				"",
+				"_preprocess/sass/modules/_post.scss"
+			],
+			[
+				"pos",
+				"_layouts/post.html"
+			],
+			[
+				"se",
+				"_preprocess/sass/core/_settings.scss"
+			],
+			[
+				"mis",
+				"_preprocess/sass/modules/_misc.scss"
+			],
+			[
+				"misc",
+				"_preprocess/sass/modules/_misc.scss"
+			],
+			[
+				"car",
+				"_preprocess/sass/modules/_carousel.scss"
+			],
+			[
+				"her",
+				"_preprocess/sass/modules/_hero.scss"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"de",
+				"_layouts/default.html"
+			],
+			[
+				"head",
+				"_preprocess/sass/modules/_header.scss"
+			],
+			[
+				"conte",
+				"_preprocess/sass/core/_content.scss"
+			],
+			[
+				"base",
+				"_preprocess/sass/core/base/_defaults.scss"
+			],
+			[
+				"neat",
+				"_preprocess/sass/vendor/_neat-settings.scss"
+			],
+			[
+				"serv",
+				"_includes/service.html"
+			],
+			[
+				"wh",
+				"what-we-do.html"
+			],
+			[
+				"html",
+				"_preprocess/sass/core/helpers/_html5bp.scss"
+			],
+			[
+				"cont",
+				"_preprocess/sass/core/_content.scss"
+			],
+			[
+				"effe",
+				"_preprocess/sass/core/helpers/_effects.scss"
+			],
+			[
+				"_base.scss",
+				"_preprocess/sass/core/base/_defaults.scss"
+			]
 		],
 		"width": 0.0
 	},
@@ -1100,9 +1435,9 @@
 		"width": 0.0
 	},
 	"show_minimap": false,
-	"show_open_files": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 230.0,
+	"side_bar_width": 260.0,
 	"status_bar_visible": true
 }

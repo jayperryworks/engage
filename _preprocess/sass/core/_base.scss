@@ -10,6 +10,10 @@
 // Base styles: opinionated defaults
 // ==========================================================================
 
+* {
+  @include box-sizing('border-box'); // use border-box sizing for, well, everything. compass polyfill.
+}
+
 html,
 button,
 input,
@@ -24,24 +28,19 @@ html {
   // and we only have to change one thing
   font-size: percent($base-font-size--xsmall);
 
-  @include media($small) {
+  @include breakpoint($screen--small) {
       font-size: percent($base-font-size--small);
   }
 
-  @include media($medium) {
+  @include breakpoint($screen--medium) {
       font-size: percent($base-font-size--medium);
   }
 
-  @include media($large) {
+  @include breakpoint($screen--large) {
       font-size: percent($base-font-size--large);
   }
 
   line-height: $base-line-height;
-}
-
-// for browsers that don't support the main element yet
-main {
-  display: block;
 }
 
 /*
@@ -104,8 +103,19 @@ textarea {
   resize: vertical;
 }
 
+
+/*
+ * Reset lists that appear in nav elements
+ */
+nav ul, nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 p {
   text-align: left;
+  color: black;
 }
 
 // ==========================================================================

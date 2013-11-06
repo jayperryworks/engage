@@ -101,7 +101,7 @@ h1 > .subhead {
 	line-height: 1.2;
 	text-transform: uppercase;
 
-	@include media($large) {
+	@include breakpoint($screen--large) {
 		font-size: 0.5em;
 		text-transform: uppercase;
 	}

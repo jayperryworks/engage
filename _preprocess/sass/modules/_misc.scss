@@ -135,13 +135,13 @@ button, .button, %button {
 }
 
 input[type="search"]:before {
-  @include icon; //mixin from _webfonts
-  content: "&#128269";
-  speak: none; /* Not to be trusted, but hey. */
-  font-size: 3.5em;
-  z-index: $base-z--middle;
-  position: absolute;
-  @include rem(left, 12px);
+  // @include icon; //mixin from _webfonts
+  // content: "&#128269";
+  // speak: none; Not to be trusted, but hey.
+  // font-size: 3.5em;
+  // z-index: $base-z--middle;
+  // position: absolute;
+  // @include rem(left, 12px);
 }
 
 .contact {

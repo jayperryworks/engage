@@ -5,4 +5,4 @@ baseurl:
 markdown: redcarpet
 pygments: true
 
-exclude: ["README.md", "codekit-config.json", "engage.sublime-project", "engage.sublime-workspace"]
+exclude: ["README.md", "codekit-config.json", "engage.sublime-project", "engage.sublime-workspace", "Gemfile", "Gemfile.lock", "Guardfile"]

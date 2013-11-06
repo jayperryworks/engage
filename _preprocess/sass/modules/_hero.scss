@@ -43,6 +43,14 @@
 	}
 
 	.hero-blurb-copy {
-		@include span-columns-media(4, $sm: 6, $med: 6, $center: true);
+		@include grid-span(4, 1);
 		text-align: center;
+
+		@include breakpoint($screen--small) {
+			@include grid-span(7, 2);
+		}
+
+		@include breakpoint($screen--medium) {
+			@include grid-span(6, 4);
+		}
 	}

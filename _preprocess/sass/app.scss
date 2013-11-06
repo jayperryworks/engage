@@ -3,11 +3,9 @@
 // Frameworks/dependencies
 // ==============================================================================
 
-// bourbon and NEAT grid frameworks
-@import "bourbon/bourbon";
-@import "vendor/neat-settings";
-@import "neat/neat";
-
+@import "compass";
+@import "vendor/bourbon/bourbon"; // bourbon and NEAT grid frameworks
+@import "singularitygs"; // singularity grid framework
 @import "vendor/flexslider"; // carousel css
 
 // ==============================================================================
@@ -15,17 +13,13 @@
 // ==============================================================================
 
 @import "core/normalize"; // reset
-@import "core/helpers/html5bp"; // helper classes/mixins
-@import "core/helpers/rem"; // helper classes/mixins
-@import "core/helpers/layout"; // general layout helpers
-@import "core/helpers/effects"; // graphic effects
+@import "core/helpers"; // helper classes/mixins
 @import "core/settings"; // global variables
 
-@import "core/base/defaults"; // global defaults (BP)
-@import "core/base/syntax"; // syntax highlighting (included w/ jekyll)
-@import "core/base/print"; // print styles (BP)
-@import "core/base/fonts"; // webfonts
-
+@import "core/base"; // defaults, base styles
+@import "core/syntax"; // syntax highlighting (included w/ jekyll)
+@import "core/print"; // print styles (BP)
+@import "core/fonts"; // webfonts
 @import "core/content"; // global/base-level typography, color etc.
 @import "core/layout"; // global layout
 
@@ -36,11 +30,11 @@
 @import "modules/header";
 @import "modules/nav";
 @import "modules/hero";
-@import "modules/story";
+@import "modules/strip";
 @import "modules/carousel";
 @import "modules/footer";
-@import "modules/post";
-@import "modules/misc";
+// @import "modules/post";
+// @import "modules/misc";
 
 
 // ==============================================================================
@@ -48,95 +42,96 @@
 // add quick and dirty hacks here, clean up and move to the right place later
 // ==============================================================================
 
-
-
-
-.tools {
-	text-align: center;
-	border-top: $border-weight--thick;
-	border-color: darken(white, 10);
-	@include rem(padding-bottom, 50px);
-
-	h5 {
-		@extend %header-tag;
-	}
-
-	ul {
-		position: relative;
-		@include rem(margin, 50px 0);
-		padding: 0;
-		@include span-columns(12);
-		@include row;
-	}
-
-	li {
-		margin: 0;
-		width: (100%/3);
-		float: left;
-		display: table;
-		padding: 0;
-		list-style: none;
-		border-right: $border-weight--thick;
-		border-color: darken(white, 10);
-
-		&:last-child {
-			border: none;
-		}
-	}
-
-	.thumb {
-		@include rem(height, 160px);
-		position: relative;
-		display: table-cell;
-		vertical-align: middle;
-		text-align: center;
-	}
-
-	p {
-		@include span-columns-center(8);
-		@include row;
-	}
-	.button {
-		text-align: center;
-		margin-top: 1em;
-	}
+body {
+	// background: white;
 }
 
-.blog {
-@extend %theme-midtone;
-@include rem(padding-bottom, 50px);
+// .tools {
+// 	text-align: center;
+// 	// border-top: $border-weight--thick;
+// 	border-color: darken(white, 10);
+// 	@include rem(padding-bottom, 50px);
 
-h6 {
-	@extend %header-underline;
-	color: $color-primary;
-	// margin: 0;
-}
-	.recent-articles {
-		@include span-columns(6);
-		@include shift(1);
-		padding: 0;
-	}
+// 	h5 {
+// 		@extend %header-tag;
+// 	}
 
-	.events {
-		@include span-columns(4);
-		@include omega;
-		padding: 0;
+// 	ul {
+// 		position: relative;
+// 		@include rem(margin, 50px 0);
+// 		padding: 0;
+// 		@include span-columns(12);
+// 		@include row;
+// 	}
 
-		ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-	}
-}
+// 	li {
+// 		margin: 0;
+// 		width: (100%/3);
+// 		float: left;
+// 		display: table;
+// 		padding: 0;
+// 		list-style: none;
+// 		// border-right: $border-weight--thick;
+// 		border-color: darken(white, 10);
 
-.grid {
-	@include outer-container;
-	margin: 0;
-	padding: 0;
-}
+// 		&:last-child {
+// 			border: none;
+// 		}
+// 	}
 
-	.grid-thumb {
-		@include span-columns(3);
-		@include omega(4n);
-	}
+// 	.thumb {
+// 		@include rem(height, 160px);
+// 		position: relative;
+// 		display: table-cell;
+// 		vertical-align: middle;
+// 		text-align: center;
+// 	}
+
+// 	p {
+// 		@include span-columns-center(8);
+// 		@include row;
+// 	}
+// 	.button {
+// 		text-align: center;
+// 		margin-top: 1em;
+// 	}
+// }
+
+// .blog {
+// @extend %theme-midtone;
+// @include rem(padding-bottom, 50px);
+
+// h6 {
+// 	@extend %header-underline;
+// 	color: $color-primary;
+// 	// margin: 0;
+// }
+// 	.recent-articles {
+// 		@include span-columns(6);
+// 		@include shift(1);
+// 		padding: 0;
+// 	}
+
+// 	.events {
+// 		@include span-columns(4);
+// 		@include omega;
+// 		padding: 0;
+
+// 		ul {
+// 			list-style: none;
+// 			margin: 0;
+// 			padding: 0;
+// 		}
+// 	}
+// }
+
+// .grid {
+// 	@include outer-container;
+// 	margin: 0;
+// 	padding: 0;
+// }
+
+// 	.grid-thumb {
+// 		@include span-columns(3);
+// 		@include omega(4n);
+// 	}

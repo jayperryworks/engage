@@ -7,17 +7,19 @@
 // ------------------------------------------------------------------------------
 
 .story, .strip, %story, %strip {
-	position: relative;
-	clear: both;
 	@extend %theme-light;
 	// @include rem(padding-top, 36px);
 	@include rem(padding-bottom, 40px);
+	@include clearfix;
+	position: relative;
+	clear: both;
+	// overflow: hidden;
 	text-align: center;
 	border-top-width: $border-weight--thick;
 	border-bottom: $border-weight--thin solid darken($bg--light, 20);
 	
 	& > hgroup, & > h1 {
-		@include span-columns($grid-columns);
+		@include grid-span(4, 1);
 	}
 }
 

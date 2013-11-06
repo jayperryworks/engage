@@ -12,7 +12,7 @@
 
 (function($) {
 	$(document).ready(function() {
-		
+
 	  $('.has-tooltip.bottom').tooltipsy({
 	  	offset: [0, 10],
 	  	className: "tooltip-bottom"

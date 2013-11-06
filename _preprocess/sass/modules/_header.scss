@@ -6,8 +6,6 @@
 	@extend %theme-dark;
 	@extend %raleway-bold;
 	@include rem(font-size, 12px);
-	@include outer-container;
-	@include row;
 	@include rem(height, $header-h);
 	position: fixed;
 	width: 100%;
@@ -23,11 +21,19 @@
 }
 
 	.header-global-menu {
-		@include span-columns(1);
+		// @include grid-span(1, 1);
 		@include inline-block--centered;
 		float: left;
 		// text-align: left;
 		padding: 0 em(24);
+
+		@include breakpoint($screen--small) {
+			@include grid-span(2, 1);
+		}
+
+		@include breakpoint($screen--medium) {
+			@include grid-span(3, 1);
+		}
 
 		& > a {
 			@include inline-block;
@@ -38,19 +44,12 @@
 				color: $gray--light;
 			}
 		}
-
-		@include media($small) {
-			@include span-columns(2);
-		}
-		@include media($medium) {
-			@include span-columns(3);
-		}
 	}
 
 	.header-global-label {
 		@include hidden;
 
-		@include media($small) {
+		@include breakpoint($screen--small) {
 			@include restore-visible(inline-block);
 		}
 	}
@@ -61,38 +60,42 @@
 	}
 	
 	.header-global-logo {
-		@include span-columns(2);
-		// @include omega;
 		@include inline-block--centered;
-		text-align: center;
+		float: left;
+		clear: right;
+		text-align: left;
 
-		@include media($small) {
-			@include span-columns(4);
+		@include breakpoint($screen--small) {
+			@include grid-span(5, 3);
 			text-align: center;
 		}
-		@include media($medium) {
-			@include span-columns(6);
+		@include breakpoint($screen--medium) {
+			@include grid-span(6, 4);
 		}
 	}
 		.logo-engage.full {
 			max-height: 50%;
 
-			@include media($small) {
+			@include breakpoint($screen--small) {
 				max-height: 60%;
 			}
 
-			@include media($medium) {
+			@include breakpoint($screen--medium) {
 				max-height: 100%;
 			}
 		}
 
 	.header-global-clients {
 		@extend .header-global-menu;
-		@include omega;
-		// @include hidden;
+		@include hidden;
 		text-align: right;
 
-		@include media($small) {
-			// @include restore-visible;
+		@include breakpoint($screen--small) {
+			@include restore-visible;
+			@include grid-span(2, 8);
+		}
+
+		@include breakpoint($screen--medium) {
+			@include grid-span(3, 10);
 		}
 	}

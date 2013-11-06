@@ -1,15 +1,12 @@
 _site
+_site/*
 
 codekit-config.json
-
-_site/jekyll/update/2013/09/16/welcome-to-jekyll.html
-
-_site/assets/css/app.css
-
-_site/index.html
-
-_site/*
 
 engage.sublime-project
 engage.sublime-workspace
-codekit-config.json
+
+Gemfile
+Gemfile.lock
+Guardfile
+config.rb

@@ -7,21 +7,21 @@ body {
 }
 
 // constrain to grid width, max width, and center in the browser window
-.content, .wrapper, %wrapper, %l-wrapper {
-	@include outer-container;
+.content, .wrapper, %wrapper {
 	@include base-grid-margins;
+	max-width: $grid-width;
 }
 
 // width of main copy
 .base-copy, %l-copy-width, [role="main"], main, %main {
-	@include span-columns(4);
+	@include grid-span(4, 1);
 
-	@include media($small) {
-		@include span-columns-center(6, 8);
+	@include breakpoint($screen--small) {
+		@include grid-span(7, 2);
 	}
 
-	@include media($medium) {
-		@include span-columns-center(8, 12);
+	@include breakpoint($screen--medium) {
+		@include grid-span(8, 3);
 	}
 }
 
@@ -29,16 +29,4 @@ body {
 // this is to add the right margin to the top so it doesn't get covered up by the header
 .is-first {
 	@include rem(margin-top, $header-h);
-}
-
-.l-text-base, %l-text-base {
-	@include span-columns(12);
-
-	@include media($small) {
-		@include span-columns-center(6, 8);
-	}
-
-	@include media($medium) {
-		@include span-columns-center(8, 12);
-	}
 }

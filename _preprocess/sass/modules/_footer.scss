@@ -46,18 +46,17 @@
 	}
 
 	.footer-brand {
-		@include row;
 		@include rem(height, 60px);
 		border-bottom: $border-weight--thin solid $gray--dark;
 
 		.logo-footer {
-			@include span-columns(1);
+			@include grid-span(1, 1);
 			@include inline-block--centered;
 			text-align: left;
 		}
 
 		.social {
-			@include span-columns(2);
+			@include grid-span(2, 2);
 			@include inline-block--centered;
 			text-align: center;
 
@@ -76,7 +75,7 @@
 		}
 
 		.brand-group {
-			@include span-columns(1);
+			@include grid-span(1, 4);
 			@include inline-block--centered;
 			text-align: right;
 
@@ -135,7 +134,6 @@
 
 	& > hgroup {
 		@extend %main;
-		@include row;
 		@include clearfix;
 		overflow: hidden;
 		float: none;

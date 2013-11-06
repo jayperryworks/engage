@@ -69,12 +69,12 @@
 	top: 25%;
 	z-index: $base-z--middle;
 
-	@include media($small) {
+	@include breakpoint($screen--small) {
 		@include restore-visible;
 		@include rem(width, $base-margin--small - 6px);
 	}
 
-	@include media($medium) {
+	@include breakpoint($screen--medium) {
 		@include rem(width, 36px);
 	}
 	
@@ -134,27 +134,31 @@
 }
 
 .tabs.vertical {
-	@include span-columns-media(4, $sm: 8, $med: 12);
-	@include row;
+	@include grid-span(4, 1);
 	clear: both;
 	border-top: $border-weight--thin solid $bg--midtone;
 
+	@include breakpoint($screen--small) {
+		@include grid-span(9, 1);
+	}
+
+	@include breakpoint($screen--medium) {
+		@include grid-span(12, 1);
+	}
+
 	& > .panel {
-		@include span-columns(3);
+		@include grid-span(3);
 		// @include rem(padding, 0 $gutter);
-		@include omega;
 		@include hidden;
 		text-align: left;
 		// border-left: $border-weight--thin solid $bg--midtone;
 
-		@include media($small) {
-			@include span-columns(6 of 8);
-			@include omega;
+		@include breakpoint($screen--small) {
+			@include grid-span(6, 1);
 			@include hidden;
 		}
-		@include media($medium) {
-			@include span-columns(8 of 12);
-			@include omega;
+		@include breakpoint($screen--medium) {
+			@include grid-span(8, 1);
 			@include hidden;
 		}
 		
@@ -164,28 +168,28 @@
 		
 		& > [role="main"], & > main, .panel-main, & > h1 {
 			margin: 0;
-	    @include span-columns(2 of 3);
+	    @include grid-span(2, 1);
 	    padding: 0;
 
-	    @include media($small) {
-	    	@include span-columns(4 of 6);
+	    @include breakpoint($screen--small) {
+	    	@include grid-span(4, 1);
 	    }
-	    @include media($medium) {
-	    	@include span-columns(6 of 8);
+	    @include breakpoint($screen--medium) {
+	    	@include grid-span(6, 1);
 	    }
 	  }
 
 	  & > [role="complementary"], .panel-aside {
-	  	@include span-columns(1 of 3);
-	  	@include omega;
+	  	@include grid-span(1, 3);
+	  	
 
-	    @include media($small) {
-	    	@include span-columns(2 of 6);
-	    	@include omega;
+	    @include breakpoint($screen--small) {
+	    	@include grid-span(2, 6);
+	    	
 	    }
-	    @include media($medium) {
-	    	@include span-columns(2 of 8);
-	    	@include omega;
+	    @include breakpoint($screen--medium) {
+	    	@include grid-span(2, 8);
+	    	
 	    }
 
 	    ul {
@@ -202,16 +206,16 @@
 }
 
 [role="navigation"].local.vertical {
-	@include span-columns(1);
-	@include rem(padding-right, $gutter);
+	@include grid-span(1);
+	@include rem(padding-right, 24px);
 	@include rem(margin, 36px 0);
 	// border-radius: 3px;
 
-	@include media($small) {
-		@include span-columns(2 of 8);
+	@include breakpoint($screen--small) {
+		@include grid-span(2, 8);
 	}
-	@include media($medium) {
-		@include span-columns(4 of 12);
+	@include breakpoint($screen--medium) {
+		@include grid-span(4, 12);
 	}
 
 	a {
@@ -248,7 +252,6 @@
 }
 
 [role="navigation"].thumbs.horizontal { // .nav-thumbs--horizontal
-	@include row;
 	@include clearfix;
 	text-align: center;
 	clear: both;
@@ -281,27 +284,24 @@
 // ---------------------------------------------------------------------------------
 
 .grid {
+	@include clearfix;
 	clear: both;
-	// display: block;
-	// @include row;
 }
 
 .grid.large {
 	li {
-		// @include span-columns-media(4, $sm: 4, $med: 3);
+		// @include grid-span-media(4, $sm: 4, $med: 3);
 		// @include omega-media($sm: 2n, $med: 4n);
-
-		@include span-columns(4 of 4);
-		@include omega;
 		
-		@include media($xsmall) {
-			@include span-columns(2 of 4);
-			@include omega(2n);
+		@extend %list--unstyled;
+		@include grid-span(4, 1);
+		
+		
+		@include breakpoint($screen--xsmall) {
+			@include grid-span(2, 1);
 		}
-		@include media($small) {
-			@include span-columns(2 of 8);
-			@include omega-reset(2n, 2, 8);
-			@include omega(4n);
+		@include breakpoint($screen--small) {
+			@include grid-span(2, 1);
 		}
 	}
 
@@ -312,24 +312,19 @@
 
 .grid.divider {
 	li {
-		@include span-columns(4 of 4);
-		@include omega;
+		@include grid-span(4, 4);
 		
-		@include media($xsmall) {
-			@include span-columns(2 of 4);
-			@include omega(2n);
+		
+		@include breakpoint($screen--xsmall) {
+			@include grid-span(2, 4);
 		}
-		@include media($small) {
-			@include span-columns(2 of 8);
+		@include breakpoint($screen--small) {
+			@include grid-span(2, 8);
 			clear: none !important;
-			// @include omega-reset(2n, 2, 8);
-			@include omega(4n);
 		}
-		@include media($medium) {
-			@include span-columns(3 of 12);
-			// @include omega-reset(4n, 3, 12);
+		@include breakpoint($screen--medium) {
+			@include grid-span(3, 12);
 			clear: none !important;
-			@include omega(4n);
 		}
 	}
 }
