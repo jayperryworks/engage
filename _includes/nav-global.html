@@ -1,8 +1,8 @@
-{% if include.logo == "true" %}
-<a href="{{ path }}/" class="logo icon"><img class="logo-engage icon" src="{{ path }}assets/images/logo-engage--full.png" alt="The Engage Group" /></a>
-{% endif %}
-
 <nav role="navigation" class="global">
+  {% if include.logo == "true" %}
+  <a href="{{ path }}/" class="logo icon"><img class="logo-engage icon" src="{{ path }}assets/images/logo-engage--icon-rev.png" alt="The Engage Group" /></a>
+  {% endif %}
+
   <ul>
     <li><a href="{{ path }}what-we-do.html" class="global-item {% if page.active == 'what-we-do' %}active{% endif %}">What we do</a></li>
     <li><a href="{{ path }}company.html" class="global-item {% if page.active == 'company' %}active{% endif %}">Company</a></li>
@@ -14,8 +14,8 @@
     <li><a href="" class="main-item {% if page.active == 'r+d' %}active{% endif %}">R+D</a></li>
     {% endcomment %}
   </ul>
-</nav>
 
-{% if include.login == "true" %}
-<a href="#" class="login">Sign in</a>
-{% endif %}
+  {% if include.login == "true" %}
+  <a href="#" class="login">Sign in</a>
+  {% endif %}
+</nav>

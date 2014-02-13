@@ -20,17 +20,32 @@
 	// @include rem(height, 54px);
 	// @include opacity(0.9);
 	// @include rem(top, $header-h);
-	background: #1A1A1A;
+	position: relative;
+	background: $black;
 	text-transform: uppercase;
+	border-bottom: $border-weight--thin solid black;
+
+	.logo.icon {
+		@include inline-block--centered($height: 100%);
+		@include grid-margins($property: margin);
+		top: 0;
+		left: 0;
+		position: absolute;
+
+		img {
+			height: 30px;
+		}
+	}
 
 	& > ul {
-		@extend %wrapper;
+		// @extend %wrapper;
 		@include unstyled-list;
 		text-align: center;
 	}
 
 	li {
 		@include inline-block;
+		margin-right: -4px;
 	}
 
 	.global-item {
@@ -41,19 +56,35 @@
 		letter-spacing: -0.01em;
 
 		&:hover {
-			color: $gray--light;
+			color: $color-primary;
 		}
 
 		&.active {
-			color: white;
-			background: $color-primary;
+			color: $gray--superlight;
+			background: darken($gray--medium, 30);
 		}
+	}
+
+	& > .login {
+		@extend .global-item;
+		@include inline-block;
+		@include grid-margins($property: margin);
+		top: 0;
+		right: 0;
+		position: absolute;
+		color: lighten($bg--dark, 15);
 	}
 }
 
 footer.global [role="navigation"].global {
-	.active {
-		background: transparent;
+	background: $black;
+
+	.global-item {
+
+		&.active {
+			color: white;
+			background: transparent;
+		}
 	}
 }
 

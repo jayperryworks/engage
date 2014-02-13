@@ -299,6 +299,10 @@ small, %small {
 		color: $gray--medium;
 	}
 
+	a:hover, a:active {
+		color: lighten($color-primary, 10);
+	}
+
 	small {
 		color: $gray--dark;
 	}

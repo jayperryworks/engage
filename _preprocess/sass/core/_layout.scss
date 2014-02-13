@@ -34,7 +34,7 @@ body {
 	}
 
 	@include breakpoint($screen--large) {
-		@include grid-span(9, 3, $options: both);
+		@include grid-span(8, 3, $options: both);
 	}
 }
 

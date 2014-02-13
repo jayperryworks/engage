@@ -88,6 +88,10 @@
 				@extend %verb-bold;
 				text-transform: uppercase;
 				color: $color-secondary;
+
+				&:hover, &:active {
+					color: lighten($color-secondary, 10);
+				}
 			}
 		}
 	}
