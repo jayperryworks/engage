@@ -2,100 +2,101 @@
 // -----------------------------------------------------------------------------
 
 // header
-[role="banner"] {
+[role="banner"].global {
+	@include clearfix;
 	@extend %theme-dark;
-	@extend %raleway-bold;
+	@extend %verb-bold;
 	@include rem(font-size, 12px);
-	@include rem(height, $header-h);
-	position: fixed;
+	position: relative;
 	width: 100%;
-	max-width: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
 	border-bottom-width: $border-weight--thin;
 	text-align: justify;
-	text-transform: uppercase;
-	width: 100%;
-	z-index: $base-z--top;
 }
 
-	.header-global-menu {
-		// @include grid-span(1, 1);
-		@include inline-block--centered;
-		float: left;
-		// text-align: left;
-		padding: 0 em(24);
+#home [role="banner"].global [role="navigation"].global {
+	border-top: 1px solid black;
+}
 
-		@include breakpoint($screen--small) {
-			@include grid-span(2, 1);
-		}
 
-		@include breakpoint($screen--medium) {
-			@include grid-span(3, 1);
-		}
 
-		& > a {
-			@include inline-block;
-			height: 100%;
-			color: $gray--medium;
 
-			&:hover {
-				color: $gray--light;
-			}
-		}
-	}
 
-	.header-global-label {
-		@include hidden;
+	// .header-global-menu {
+	// 	// @include grid-span(1, 1);
+	// 	@include inline-block--centered;
+	// 	float: left;
+	// 	// text-align: left;
+	// 	padding: 0 em(24);
 
-		@include breakpoint($screen--small) {
-			@include restore-visible(inline-block);
-		}
-	}
+	// 	@include breakpoint($screen--small) {
+	// 		@include grid-span(2, 1);
+	// 	}
 
-	.header-global-icon {
-		vertical-align: middle;
-		margin: em(-3) em(8) 0 em(8);
-	}
+	// 	@include breakpoint($screen--medium) {
+	// 		@include grid-span(3, 1);
+	// 	}
+
+	// 	& > a {
+	// 		@include inline-block;
+	// 		height: 100%;
+	// 		color: $gray--medium;
+
+	// 		&:hover {
+	// 			color: $gray--light;
+	// 		}
+	// 	}
+	// }
+
+	// .header-global-label {
+	// 	@include hidden;
+
+	// 	@include breakpoint($screen--small) {
+	// 		@include restore-visible(inline-block);
+	// 	}
+	// }
+
+	// .header-global-icon {
+	// 	vertical-align: middle;
+	// 	margin: em(-3) em(8) 0 em(8);
+	// }
 	
-	.header-global-logo {
-		@include inline-block--centered;
-		float: left;
-		clear: right;
-		text-align: left;
+	// .header-global-logo {
+	// 	@include inline-block--centered;
+	// 	float: left;
+	// 	clear: right;
+	// 	text-align: left;
 
-		@include breakpoint($screen--small) {
-			@include grid-span(5, 3);
-			text-align: center;
-		}
-		@include breakpoint($screen--medium) {
-			@include grid-span(6, 4);
-		}
-	}
-		.logo-engage.full {
-			max-height: 50%;
+	// 	@include breakpoint($screen--small) {
+	// 		@include grid-span(5, 3);
+	// 		text-align: center;
+	// 	}
+	// 	@include breakpoint($screen--medium) {
+	// 		@include grid-span(6, 4);
+	// 	}
+	// }
+	// 	.logo-engage.full {
+	// 		max-height: 50%;
 
-			@include breakpoint($screen--small) {
-				max-height: 60%;
-			}
+	// 		@include breakpoint($screen--small) {
+	// 			max-height: 60%;
+	// 		}
 
-			@include breakpoint($screen--medium) {
-				max-height: 100%;
-			}
-		}
+	// 		@include breakpoint($screen--medium) {
+	// 			max-height: 100%;
+	// 		}
+	// 	}
 
-	.header-global-clients {
-		@extend .header-global-menu;
-		@include hidden;
-		text-align: right;
+	// .header-global-clients {
+	// 	@extend .header-global-menu;
+	// 	@include hidden;
+	// 	text-align: right;
 
-		@include breakpoint($screen--small) {
-			@include restore-visible;
-			@include grid-span(2, 8);
-		}
+	// 	@include breakpoint($screen--small) {
+	// 		@include restore-visible;
+	// 		@include grid-span(2, 8);
+	// 	}
 
-		@include breakpoint($screen--medium) {
-			@include grid-span(3, 10);
-		}
-	}
+	// 	@include breakpoint($screen--medium) {
+	// 		@include grid-span(3, 10);
+	// 	}
+	// }

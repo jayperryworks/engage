@@ -16,7 +16,7 @@
 	// overflow: hidden;
 	text-align: center;
 	border-top-width: $border-weight--thick;
-	border-bottom: $border-weight--thin solid darken($bg--light, 20);
+	border-bottom: $border-weight--thin solid black;
 	
 	& > hgroup, & > h1 {
 		@include grid-span(4, 1);

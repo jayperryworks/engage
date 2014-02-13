@@ -1,54 +1,46 @@
 ---
 layout: default
-title: Home
+title: home
 ---
 
 <!-- hero unit w/recent work -->
-<section class="hero" role="region" aria-label="Recent Work">
-	<h1 class="hero-headline">
-		We help nonprofits <span class="amp">&amp;</span> their causes<br />
-		<em>make a difference online.</em>
-	</h1>
-	<ul class="carousel full_bleed">
+<section class="carousel" role="region" aria-label="Recent Work">
+	<ul>
 		<li class="carousel-slide full_bleed">
-				<h4>Defenders of Wildlife</h4>
+			<hgroup class="title">
+				<h5>Our Work</h5>
+				<h3>Defenders of Wildlife</h3>
 				<a href="#" class="button">Read the case study</a>
+			</hgroup>
 			<!-- <img class="feature-slide" src="{{ site.baseurl }}assets/images/carousel-wolf-900x500-retina.jpg" alt="Defenders of Wildlife" /> -->
 		</li>
 	</ul>
-	<nav class="carousel-thumbs full_bleed">
+	<nav class="carousel-thumbs">
 		<ul>
-			<li class="carousel-thumbs-item">
-				<a href="#" class="carousel-thumbs-thumb bw active"><img src="{{ site.baseurl }}assets/images/carousel-nav-defenders.png" alt=""></a>
+			<li>
+				<a href="#" class="thumb active"><img src="{{ site.baseurl }}assets/images/carousel-nav-defenders.png" alt="" /></a>
 			</li>
-			<li class="carousel-thumbs-item">
-				<a href="#" class="carousel-thumbs-thumb bw"><img src="{{ site.baseurl }}assets/images/carousel-nav-abd.png" alt=""></a>
+			<li>
+				<a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-abd.png" alt="" /></a>
 			</li>
-			<li class="carousel-thumbs-item">
-				<a href="#" class="carousel-thumbs-thumb bw"><img src="{{ site.baseurl }}assets/images/carousel-nav-wwf.png" alt=""></a>
+			<li>
+				<a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-wwf.png" alt="" /></a>
 			</li>
-			<li class="carousel-thumbs-item">
-				<a href="#" class="carousel-thumbs-thumb bw"><img src="{{ site.baseurl }}assets/images/carousel-nav-audubon.png" alt=""></a>
+			<li>
+				<a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-audubon.png" alt="" /></a>
 			</li>
-			<li class="carousel-thumbs-item">
-				<a href="#" class="carousel-thumbs-thumb bw"><img src="{{ site.baseurl }}assets/images/carousel-nav-nwa.png" alt=""></a>
+			<li>
+				<a href="#" class="thumb"><img src="{{ site.baseurl }}assets/images/carousel-nav-nwa.png" alt="" /></a>
 			</li>
 		</ul>
 	</nav>
-	
-	<section class="hero-blurb">
-		<h4 class="hero-blurb-headline">Plain <span class="amp">&amp;</span> simple:</h4>
-		<p class="hero-blurb-copy intro">
-			Bring us your fundraising strategies and we’ll bring them to life. We are a team of technically savvy, experienced fundraisers who know how to take your cause online and&nbsp;get&nbsp;results.
-		</p>
-	</section>
 </section><!-- / hero unit, recent work -->
 
 <!-- What we do -->
 <section class="strip well" role="region">
 	<div class="wrapper">
 		<h5 class="label">What we do</h5>
-		<h2>Combining part art <span class="amp">&amp;</span> part science is our&nbsp;strength.</h2>
+		<h1>Combining part art &amp; part science is our&nbsp;strength.</h1>
 		<nav class="thumbs horizontal" role="navigation">
 			<ul>
 				<li>
@@ -64,7 +56,7 @@ title: Home
 					</a>
 				</li>
 				<li>
-					<a href="#" class="thumb secondary icon-alone has-tooltip bottom" title="Web Design &amp; Development">
+					<a href="#" class="thumb secondary icon-alone has-tooltip bottom" title="Web Design and Development">
 						<span aria-hidden="true" data-icon="&#9874;"></span>
 		        <span class="screen-reader-text">Web Design &amp; Development</span>
 					</a>
@@ -115,24 +107,6 @@ title: Home
 	</div>
 </section><!-- / What we do -->
 
-<!-- Tools -->
-<section class="strip" role="region">
-	<div class="wrapper">
-		<h5 class="headline-tag">Our tools</h5>
-		<ul class="grid large">
-			{% for i in (1...4) %}
-			<li><a href="#" class="thumb"><img src="http://placehold.it/300x200" alt=""></a></li>
-			{% endfor %}
-		</ul>
-		<main role="main">
-			<p>
-				Blurb about the tools and open source work Engage has developed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare ad ea primum, si videtur; Quid turpius quam sapientis vitam ex insipientium sermone pendere? Duo Reges: constructio&nbsp;interrete.
-			</p>
-			<a class="button" href="#">See more tools from Engage R+D</a>
-		</main>
-	</div>
-</section><!-- /tools -->
-
 <!-- Blog & events -->
 <section class="strip well" role="region">
 	<div class="wrapper">
@@ -149,7 +123,7 @@ title: Home
 
 		<!-- events -->
 		<aside class="slats right" role="complementary">
-			<h5 class="primary underline">News <span class="amp">&amp;</span> Events</h5>
+			<h5 class="primary underline">News &amp; Events</h5>
 			<ul>
 				{% for i in (1...3) %}
 				<li class="slat{% if $i == 1 %} no_hairline{% endif %}">

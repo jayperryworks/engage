@@ -18,88 +18,12 @@ $base-font-size--small: 16px;
 $base-font-size--medium: 18px;
 $base-font-size--large: 20px;
 
-$raleway: 'Raleway', #{$helvetica};
-$lato: 'Lato', #{$helvetica};
-$lora: 'Lora', #{$georgia};
-
-$amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
-
-// Raleway (header/display font)
-// -----------------------------------------------------------------------------
-
-%raleway {
-	font-family: $raleway;
-	font-weight: 300;
-	font-style: normal;
-}
-
-%raleway-bold {
-	@extend %raleway;
-	font-weight: 600;
-}
-
-%raleway-heavy {
-	@extend %raleway;
-	font-weight: 800;
-}
-
-// Lato (header/display font)
-// -----------------------------------------------------------------------------
-
-%lato {
-	font-family: $lato;
-	font-weight: 300;
-	font-style: normal;
-}
-
-%lato-bold {
-	@extend %lato;
-	font-weight: 700;
-}
-
-%lato-black {
-	@extend %lato;
-	font-weight: 900;
-}
-
-// Lora (text font)
-// -----------------------------------------------------------------------------
-
-%lora {
-	font-family: $lora;
-	font-weight: 400;
-	font-style: normal;
-}
-
-%lora-bold {
-	@extend %lora;
-	font-weight: 700;
-}
-
-%lora-italic {
-	@extend %lora;
-	font-style: italic;
-}
-
-%lora-bold-italic {
-	@extend %lora;
-	font-weight: 700;
-	font-style: italic;
-}
-
-%amp {
-	font-family: $amp;
-	font-style: italic;
-	font-weight: normal !important; // can't ever be bold. sorry.
-	// margin: 0 em(1) 0 em(-1);
-}
-
 // ==========================================================================
 // 	Media queries & grid
 //  -> mobile first, using base font sizes to scale everything
 // ==========================================================================
 
-$grid-width: 1440px; // max width of the layout
+$grid-width: 1280px; // max width of the layout
 
 // screen size breakpoints (values in px but do not include unit)
 // --------------------------------------------------------------------------
@@ -108,7 +32,7 @@ $breakpoint-to-ems: true; // breakpoint setting -- covert all to ems
 $screen--xsmall: 480px;
 $screen--small: 768px;
 $screen--medium: 1280px;
-$screen--large: $grid-width;
+$screen--large: 1440px;
 
 $grid-columns--xsmall: 4;
 $grid-columns--small: 9;
@@ -141,7 +65,6 @@ $output: 'isolation'; // global output mode for singularity
 
 // ==========================================================================
 // 	Layout settings
-//  -> see _neat-settings for grid-specific variables
 // ==========================================================================
 
 // Margins at the outside of the layout (at edges of browser/grid)
@@ -151,9 +74,11 @@ $base-margin--small: 36px;
 $base-margin--medium: 72px;
 $base-margin--large: 72px;
 
+$grid-margins: 18px, 36px, 72px, 72px;
+
 // Dimensions of various containers
 // --------------------------------------------------------------------------
-$header-h: 60px; // in px -- convert to rem in modules
+// $header-h: 60px; // in px -- convert to rem in modules
 
 // z-index settings
 // -> reference these variables to keep track of where everything is
@@ -161,6 +86,9 @@ $header-h: 60px; // in px -- convert to rem in modules
 $base-z--top: 3;
 $base-z--middle: 2;
 $base-z--bottom: 1;
+
+$border-weight--thick: 8px;
+$border-weight--thin: 1px;
 
 // ==========================================================================
 // 	Animation
@@ -176,31 +104,29 @@ $base-z--bottom: 1;
 // 	-> The "name" variables (ie $purple) are just references for the theme.
 // ==========================================================================
 
-// Highlights - REFERENCE ONLY, DO NOT USE
+// Highlights
 // --------------------------------------------------------------------------
 $purple: #7C4099;
-$green: #83AE52;
-$red: #B14B4B;
+$green: #7BC33C;
 
-// Neutrals - REFERENCE ONLY, DO NOT USE
+// Neutrals
 // --------------------------------------------------------------------------
-$black: #282828;
-$gray--dark: #4d4d4d;
-$gray--medium: #808080;
-$gray--light: #cbcbcb;
-$beige--light: #edebe8;
-$white: #fff;
+$black: #242828;
+$gray--dark: #2C3333;
+$gray--medium: #798F8F;
+$gray--light: #9CB3B3;
+$gray--superlight: #F2F6F6;
 
-// Colors
+// Color theme
 // --------------------------------------------------------------------------
 $color-primary: $purple;
 $color-secondary: $green;
-$color-border--default: $black;
-$color-text--headline: $black;
-$color-text--body: lighten($gray--dark, 7);
+$color-border--default: $gray--light;
+$color-text--headline: $gray--dark;
+$color-text--body: lighten($gray--dark, 10);
 $color-text--secondary: $gray--medium;
 
 $bg--dark: $black;
 $bg--color: $color-primary;
 $bg--light: white;
-$bg--midtone: $beige--light;
+$bg--midtone: $gray--superlight;

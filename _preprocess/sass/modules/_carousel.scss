@@ -21,46 +21,81 @@
 // -> big, full-bleed/full-width carousel
 // -> usually used in a hero unit
 
-.carousel.full_bleed {
+.carousel {
 	@extend %theme-dark;
-	@include rem(height, 500px);
+	
 	position: relative;
 	margin: 0;
 	padding: 0;
-	background: url(../images/carousel-wolf.jpg) center center;
-	// background-attachment: fixed;
-	background-size: cover;
+	
 	color: white;
+	overflow: hidden;
+	background: white;
 
 	& > ul {
+		@include rem(height, 400px);
 		margin: 0;
 		padding: 0;
+		height: 100%;
+		position: relative;
+	}
+
+	li {
+		
 	}
 }
 	.carousel-slide.full_bleed {
 		// http://css-tricks.com/snippets/css/transparent-background-images/
-		@include base-grid-margins(padding, $full: true);
+		// @include base-grid-margins(padding, $full: true);
 		@include rem(bottom, 50px);
-		position: absolute;
+		@include rem(height, 400px);
+		// position: relative;
 		text-align: center;
 		display: block;
 		width: 100%;
 		list-style: none;
+		background: url(../images/carousel-wolf.jpg) center center;
+		background-size: cover;
+
+		.title {
+			$width: 280px;
+			@include rem(bottom, 48px);
+			// margin: 0 auto;
+			// height: 100%;
+			// padding: 10%;
+			@include rem(width, $width);
+			@include rem(margin-left, -($width/2));
+			position: absolute;
+			left: 50%;
+
+			h5 {
+				@include rem(padding-bottom, 6px);
+				@include rem(margin-bottom, 6px);
+				border-bottom: 1px solid white;
+			}
+
+			h3 {
+				@extend %verb-light;
+				@include rem(font-size, 24px);
+				@include rem(margin-bottom, 18px);
+			}
+		}
 	}
 
 	// thumbnail navigation appearing below a hero carousel
-	.carousel-thumbs.full_bleed {
+	.carousel-thumbs {
 		@extend %wrapper;
-		
 		position: relative;
+		margin-bottom: 0;	
 		margin-top: -8px;
-		margin-bottom: 0;
 		padding: 0;
+		overflow: hidden;
 		z-index: $base-z--middle;
 
 		& > ul {
-			@extend %list--unstyled;
+			@include unstyled-list;
 			@include grid-span(4, 1);
+			@include clearfix;
 
 			@include breakpoint($screen--small) {
 				@include grid-span(7, 2);
@@ -69,28 +104,38 @@
 				@include grid-span(10, 2);
 			}
 		}
-	}
 
-		.carousel-thumbs-item {
-			width: 20%; // 5 slides
-			// @include grid-span()
+		li {
+			@extend %base-transition;
+			// @include inline-block;
+			// @include inline-list--centered($height: 160px);
+			margin-right: -5px;
 			float: left;
 			display: table;
+			padding: 0;
+			width: 20%; // 5 slides
+			text-align: center;
 		}
 
-		.carousel-thumbs-thumb {
+		.thumb {
+			@extend %img-grayscale;
 			@include inline-list--centered($height: 160px);
+			width: 100%;
+			@include opacity(0.6);
 			position: relative;
 			border-top: $border-weight--thick solid white;
 			background: $bg--light;
 
 			&.active {
-				border-top: $border-weight--thick solid $color-border--default;
 				@extend %img-grayscale-kill;
 				@include opacity(1);
+				border-top: $border-weight--thick solid $color-primary;
 			}
 
 			&:hover {
-				border-color: $black;
+				@extend %img-grayscale-kill;
+				@include opacity(1);
+				border-color: $color-primary;
 			}
 		}
+	}

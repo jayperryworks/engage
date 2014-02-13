@@ -6,51 +6,84 @@
 // BASE
 // ------------------------------------------------------------------------------
 
-.hero, %hero {
-	@extend %theme-dark;
-	@include clearfix;
+// .hero, %hero {
+// 	@extend %theme-dark;
+// 	@include clearfix;
+// 	text-align: center;
+// 	background: white;
+// 	margin: 0;
+// }
+
+.hero {
+	$margin-top: 30px;
+	@include rem(padding, $margin-top 0 12px 0);
+	@include grid-margins;
+	position: relative;
 	text-align: center;
-	background: white;
-	margin: 0;
+
+	.logo.full {
+		@include rem(margin, 0 auto);
+		@include inline-block;
+		text-align: center;
+	}
+
+	& > h1 {
+		@extend %verb-light;
+		clear: both;
+		text-align: center;
+
+		& > strong {
+			@extend %verb-bold;
+			font-size: 1.4em;
+		}
+	}
+
+	& > .login {
+		@extend %menu--main;
+		@include rem(top, ($margin-top + 2px));
+		display: block;
+		position: absolute;
+		right: 0;
+	}
 }
 
 // SUBMODULES
 // ------------------------------------------------------------------------------
 
-// main headline (usually an h1)
-.hero-headline {
-	@include base-grid-margins(padding, $full: true);
-	position: absolute;
-	width: 100%;
-	z-index: $base-z--middle;
-	margin-top: 1.5em;
-}
+// // main headline (usually an h1)
+// .hero-headline {
+// 	// @include base-grid-margins(padding, $full: true);
+// 	position: absolute;
+// 	width: 100%;
+// 	z-index: $base-z--middle;
+// 	margin-top: 1.5em;
+// }
 
-// a section below the hero unit with a short blurb
-.hero-blurb {
-	@extend %wrapper;
-	@extend %theme-light;
-	@include rem(padding-bottom, 50px);
-	@include clearfix;
-	overflow: hidden;
-	text-align: center;
-	clear: both;
-}
+// // a section below the hero unit with a short blurb
+// .hero-blurb {
+// 	@extend %wrapper;
+// 	@extend %theme-light;
+// 	@include rem(padding-bottom, 50px);
+// 	@include clearfix;
+// 	overflow: hidden;
+// 	text-align: center;
+// 	clear: both;
+// }
 
-	.hero-blurb-headline {
-		margin: 0.8em 0;
-		color: $color-primary;
-	}
+// 	.hero-blurb-headline {
+// 		margin: 0.8em 0;
+// 		color: $color-primary;
+// 	}
 
-	.hero-blurb-copy {
-		@include grid-span(4, 1);
-		text-align: center;
+// 	.hero-blurb-copy {
+// 		@include grid-span(4, 1);
+// 		text-align: center;
 
-		@include breakpoint($screen--small) {
-			@include grid-span(7, 2);
-		}
+// 		@include breakpoint($screen--small) {
+// 			@include grid-span(7, 2);
+// 		}
 
-		@include breakpoint($screen--medium) {
-			@include grid-span(6, 4);
-		}
-	}
+// 		@include breakpoint($screen--medium) {
+// 			@include grid-span(6, 4);
+// 		}
+// 	}

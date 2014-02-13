@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"grid",
+				"grid-span-center"
+			],
+			[
+				"scre",
+				"screen--medium"
+			],
+			[
+				"screen-",
+				"screen--small"
+			],
+			[
 				"border",
 				"border-weight--thin"
 			],
@@ -44,10 +56,6 @@
 				"gray--medium"
 			],
 			[
-				"grid",
-				"grid-column"
-			],
-			[
 				"default",
 				"default-font"
 			]
@@ -56,34 +64,10 @@
 	"buffers":
 	[
 		{
-			"file": "company.html",
+			"file": "_layouts/default.html",
 			"settings":
 			{
-				"buffer_size": 6651,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "contact.html",
-			"settings":
-			{
-				"buffer_size": 1865,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "what-we-do.html",
-			"settings":
-			{
-				"buffer_size": 3324,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "blog.html",
-			"settings":
-			{
-				"buffer_size": 1213,
+				"buffer_size": 4528,
 				"line_ending": "Unix"
 			}
 		},
@@ -96,114 +80,26 @@
 			}
 		},
 		{
-			"file": "_includes/service.html",
-			"settings":
-			{
-				"buffer_size": 1200,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_includes/service-list.html",
-			"settings":
-			{
-				"buffer_size": 621,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/js/app.js",
-			"settings":
-			{
-				"buffer_size": 1119,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_layouts/default.html",
-			"settings":
-			{
-				"buffer_size": 4532,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/modules/_post.scss",
-			"settings":
-			{
-				"buffer_size": 1324,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/core/_layout.scss",
-			"settings":
-			{
-				"buffer_size": 1045,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/modules/_misc.scss",
-			"settings":
-			{
-				"buffer_size": 4194,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/core/helpers/_effects.scss",
-			"settings":
-			{
-				"buffer_size": 1680,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/core/helpers/_layout.scss",
-			"settings":
-			{
-				"buffer_size": 4237,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/core/helpers/_html5bp.scss",
-			"settings":
-			{
-				"buffer_size": 1760,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "_preprocess/sass/core/_settings.scss",
 			"settings":
 			{
-				"buffer_size": 5513,
+				"buffer_size": 5894,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_preprocess/sass/core/_content.scss",
+			"file": "Guardfile",
 			"settings":
 			{
-				"buffer_size": 5864,
+				"buffer_size": 1342,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_preprocess/sass/modules/_story.scss",
+			"file": "_preprocess/sass/app.scss",
 			"settings":
 			{
-				"buffer_size": 1275,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_preprocess/sass/modules/_nav.scss",
-			"settings":
-			{
-				"buffer_size": 6422,
+				"buffer_size": 3200,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,7 +107,39 @@
 			"file": "_preprocess/sass/modules/_footer.scss",
 			"settings":
 			{
-				"buffer_size": 2819,
+				"buffer_size": 2787,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/modules/_nav.scss",
+			"settings":
+			{
+				"buffer_size": 6262,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/core/_content.scss",
+			"settings":
+			{
+				"buffer_size": 5877,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/core/_layout.scss",
+			"settings":
+			{
+				"buffer_size": 838,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_preprocess/sass/modules/_hero.scss",
+			"settings":
+			{
+				"buffer_size": 1258,
 				"line_ending": "Unix"
 			}
 		}
@@ -272,49 +200,66 @@
 	},
 	"file_history":
 	[
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_layouts/default.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/Gemfile",
+		"/Users/jayperry/Projects/System13/Form Accelerator/prerelease blog/mockups/FA-blog.sublime-project",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_header.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_helpers.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_strip.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_defaults.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_carousel.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_base.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/Guardfile",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_layout.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_normalize.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_buttons.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_layout.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_print.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/base/_defaults.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_effects.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_rem.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_html5bp.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/partials/_base.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_html5bp.scss",
+		"/Users/jayperry/Desktop/project_setup-jekyll_compass_singularity.txt",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_config.yml",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/config.rb",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/.gitignore",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_settings.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_content.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_story.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_nav.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_footer.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/company.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/contact.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/what-we-do.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/blog.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/index.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/service.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/service-list.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/js/app.js",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_layouts/default.html",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_misc.scss",
+		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_post.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/case-studies.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/rd-tools.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_layouts/rd.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/nav-jump.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_footer.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/nav-global.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/service.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/service-list.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/footer-local.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/case-study.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/blog.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/index.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_nav.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_layouts/post.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_carousel.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_hero.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/app.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/rd-resources.html",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_header.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_content.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/base/_defaults.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/vendor/_neat-settings.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_story.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_settings.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_effects.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_html5bp.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_layout.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_layout.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/base/_fonts.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/_misc.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_defaults.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/_neat-settings.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/modules/_buttons.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/rd-code.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_includes/nav-local-rd.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/blog-post.html",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_posts/2013-09-16-welcome-to-jekyll.markdown",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/_modules.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/helpers/_rem.scss",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_config.yml",
-		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_preprocess/sass/core/_base.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/js/app.js",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/_modules.scss",
 		"/Users/jayperry/Projects/Engage/Engage site redesign/mockups/_assets/sass/_neat-settings.scss",
@@ -382,24 +327,7 @@
 		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/sass/_grid_settings.scss",
 		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/javascripts/plugins.js",
 		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/sass/_globals.scss",
-		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/javascripts/vendor/jquery-1.10.2.min.js",
-		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/javascripts/vendor/three.min.js",
-		"/Users/jayperry/Desktop/key",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/04-structural-engineers/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/04-colors/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/03-sk&a-group/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/03-affiliates/page.txt",
-		"/Users/jayperry/Library/Application Support/Sublime Text 2/Packages/User/download-dropdown.sublime-snippet",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/02-full-name/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/06-specialty-tags/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/03-logo/05-specialty-tags/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-logo/01-basic-logo/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/01-home/home.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/02-font/page.txt",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/assets/sass/_fonts.scss",
-		"/Users/jayperry/Library/Caches/TemporaryItems/.htaccess",
-		"/Users/jayperry/Dropbox/Projects/Artsmith/SKandA_Project/_2_Design/styleguide/build/content/site.txt"
+		"/Users/jayperry/Projects/_Internal/Lab/WebGL 2.5D/assets/javascripts/vendor/jquery-1.10.2.min.js"
 	],
 	"find":
 	{
@@ -418,6 +346,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"@include span-columns",
+			" of",
+			"@include omega;",
+			"\n			@include omega;",
+			"@include omega;",
+			" of",
+			"of",
+			"@include span-columns",
+			"@include media",
+			"float-span",
+			");",
+			"grid-span",
+			"@include media",
+			"span-columns",
+			"@include media",
+			";",
+			")",
+			"em(",
+			"l-text-base",
+			"@include span-columns",
+			"$max-width",
+			"$",
+			"@include media",
 			", collapse",
 			"nav-",
 			"label for",
@@ -522,30 +473,7 @@
 			"Carousel",
 			"wrapper",
 			"Nav",
-			"Carousel",
-			"Nav",
-			"Hero",
-			"Nav",
-			"Header",
-			"global",
-			"wrapper",
-			"img src=\"\"",
-			"src=\"\"",
-			"$header-h",
-			"img class=\"icon\"",
-			"{{ site.baseurl }}/",
-			"src=\"/",
-			"{{ site.baseurl }}/",
-			"{{ site.url }}",
-			"toggleMenu",
-			"$w",
-			"<h3>Sept 3</h3>",
-			"h4",
-			"h2>Sept 3</h2",
-			"tooltip",
-			"images/icon-services",
-			"images/services-icon",
-			"services-icon"
+			"Carousel"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -657,50 +585,51 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "company.html",
+					"file": "_layouts/default.html",
 					"settings":
 					{
-						"buffer_size": 6651,
+						"buffer_size": 4528,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								466,
-								466
+								2889,
+								2889
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "contact.html",
+					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 1865,
+						"buffer_size": 7599,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1099,
-								1099
+								5963,
+								5963
 							]
 						],
 						"settings":
@@ -716,105 +645,82 @@
 				},
 				{
 					"buffer": 2,
-					"file": "what-we-do.html",
+					"file": "_preprocess/sass/core/_settings.scss",
 					"settings":
 					{
-						"buffer_size": 3324,
+						"buffer_size": 5894,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1800,
-								1800
+								4554,
+								4554
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 673.0,
+						"translation.y": 2145.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "blog.html",
+					"file": "Guardfile",
 					"settings":
 					{
-						"buffer_size": 1213,
+						"buffer_size": 1342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								164,
-								164
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
 					"buffer": 4,
-					"file": "index.html",
+					"file": "_preprocess/sass/app.scss",
 					"settings":
 					{
-						"buffer_size": 7599,
+						"buffer_size": 3200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2301,
-								2301
-							],
-							[
-								2557,
-								2557
-							],
-							[
-								2811,
-								2811
-							],
-							[
-								3087,
-								3087
-							],
-							[
-								3346,
-								3346
-							],
-							[
-								3613,
-								3613
-							],
-							[
-								3871,
-								3871
-							],
-							[
-								4127,
-								4127
+								1269,
+								1269
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -825,23 +731,23 @@
 				},
 				{
 					"buffer": 5,
-					"file": "_includes/service.html",
+					"file": "_preprocess/sass/modules/_footer.scss",
 					"settings":
 					{
-						"buffer_size": 1200,
+						"buffer_size": 2787,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								792,
-								792
+								1335,
+								1335
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -852,133 +758,72 @@
 				},
 				{
 					"buffer": 6,
-					"file": "_includes/service-list.html",
+					"file": "_preprocess/sass/modules/_nav.scss",
 					"settings":
 					{
-						"buffer_size": 621,
+						"buffer_size": 6262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								101,
-								101
+								5139,
+								5139
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4420.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "_preprocess/js/app.js",
+					"file": "_preprocess/sass/core/_content.scss",
 					"settings":
 					{
-						"buffer_size": 1119,
+						"buffer_size": 5877,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								798,
-								798
+								2130,
+								2130
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3068.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "_layouts/default.html",
-					"settings":
-					{
-						"buffer_size": 4532,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4446,
-								4314
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1230.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 3,
-			"sheets":
-			[
-				{
-					"buffer": 9,
-					"file": "_preprocess/sass/modules/_post.scss",
-					"settings":
-					{
-						"buffer_size": 1324,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								686,
-								686
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 40.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
 					"file": "_preprocess/sass/core/_layout.scss",
 					"settings":
 					{
-						"buffer_size": 1045,
+						"buffer_size": 838,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								346,
-								346
+								498,
+								498
 							]
 						],
 						"settings":
@@ -993,73 +838,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "_preprocess/sass/modules/_misc.scss",
+					"buffer": 9,
+					"file": "_preprocess/sass/modules/_hero.scss",
 					"settings":
 					{
-						"buffer_size": 4194,
+						"buffer_size": 1258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2852,
-								2852
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1665.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "_preprocess/sass/core/helpers/_effects.scss",
-					"settings":
-					{
-						"buffer_size": 1680,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1138,
-								1680
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 159.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "_preprocess/sass/core/helpers/_layout.scss",
-					"settings":
-					{
-						"buffer_size": 4237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								578,
-								578
+								1056,
+								1056
 							]
 						],
 						"settings":
@@ -1069,169 +860,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "_preprocess/sass/core/helpers/_html5bp.scss",
-					"settings":
-					{
-						"buffer_size": 1760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								377,
-								377
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "_preprocess/sass/core/_settings.scss",
-					"settings":
-					{
-						"buffer_size": 5513,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3928,
-								3928
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1817.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "_preprocess/sass/core/_content.scss",
-					"settings":
-					{
-						"buffer_size": 5864,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4430,
-								4430
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3285.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "_preprocess/sass/modules/_story.scss",
-					"settings":
-					{
-						"buffer_size": 1275,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								462,
-								462
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "_preprocess/sass/modules/_nav.scss",
-					"settings":
-					{
-						"buffer_size": 6422,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3611,
-								3611
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5157.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "_preprocess/sass/modules/_footer.scss",
-					"settings":
-					{
-						"buffer_size": 2819,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1047,
-								1047
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1267,7 +895,7 @@
 		"cols":
 		[
 			0.0,
-			0.445215831226,
+			0.481133478488,
 			1.0
 		],
 		"rows":

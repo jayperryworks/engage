@@ -1,28 +1,140 @@
 @charset "UTF-8";
 
+$font-path: "../fonts/";
+
 // Icons -- http://www.entypo.com/characters/
 
 @font-face {
   font-family: 'entypo-icons';
-  src: url('../fonts/entypo.eot');
-  src: url('../fonts/entypo.eot#iefix') format('embedded-opentype'),
-    url('../fonts/entypo.woff') format('woff'),
-    url('../fonts/entypo.ttf') format('truetype'),
-    url('../fonts/entypo.svg') format('svg');
+  src: url('#{$font-path}entypo.eot');
+  src: url('#{$font-path}entypo.eot#iefix') format('embedded-opentype'),
+    url('#{$font-path}entypo.woff') format('woff'),
+    url('#{$font-path}entypo.ttf') format('truetype'),
+    url('#{$font-path}entypo.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'entypo-icons-social';
-  src: url('../fonts/entypo-social.eot');
-  src: url('../fonts/entypo-social.eot#iefix') format('embedded-opentype'),
-    url('../fonts/entypo-social.woff') format('woff'),
-    url('../fonts/entypo-social.ttf') format('truetype'),
-    url('../fonts/entypo-social.svg') format('svg');
+  src: url('#{$font-path}entypo-social.eot');
+  src: url('#{$font-path}entypo-social.eot#iefix') format('embedded-opentype'),
+    url('#{$font-path}entypo-social.woff') format('woff'),
+    url('#{$font-path}entypo-social.ttf') format('truetype'),
+    url('#{$font-path}entypo-social.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
+
+// Verb
+
+@font-face {
+  font-family: 'verb-regular';
+  src: url('#{$font-path}VerbRegular-webfont.eot');
+  src: url('#{$font-path}VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}VerbRegular-webfont.woff') format('woff'),
+       url('#{$font-path}VerbRegular-webfont.ttf') format('truetype'),
+       url('#{$font-path}VerbRegular-webfont.svg#verbregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'verb-bold';
+  src: url('#{$font-path}VerbBold-webfont.eot');
+  src: url('#{$font-path}VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}VerbBold-webfont.woff') format('woff'),
+       url('#{$font-path}VerbBold-webfont.ttf') format('truetype'),
+       url('#{$font-path}VerbBold-webfont.svg#verbbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'verb-light';
+  src: url('#{$font-path}VerbLight-webfont.eot');
+  src: url('#{$font-path}VerbLight-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}VerbLight-webfont.woff') format('woff'),
+       url('#{$font-path}VerbLight-webfont.ttf') format('truetype'),
+       url('#{$font-path}VerbLight-webfont.svg#verblight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$raleway: 'Raleway', #{$helvetica};
+$lato: 'Lato', #{$helvetica};
+$lora: 'Lora', #{$georgia};
+
+$amp: 'Baskerville', 'Palatino', 'Book Antiqua', serif;
+
+// Raleway (header/display font)
+// -----------------------------------------------------------------------------
+
+%raleway {
+  font-family: $raleway;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%raleway-bold {
+  @extend %raleway;
+  font-weight: 600;
+}
+
+%raleway-heavy {
+  @extend %raleway;
+  font-weight: 800;
+}
+
+%verb {
+  font-family: 'verb-regular', #{$helvetica};
+  font-weight: normal;
+  font-style: normal;
+}
+
+%verb-light {
+  @extend %verb;
+  font-family: 'verb-light', #{$helvetica}; 
+}
+
+%verb-bold {
+  @extend %verb;
+  font-family: 'verb-bold', #{$helvetica}; 
+}
+
+// Lora (text font)
+// -----------------------------------------------------------------------------
+
+%lora {
+  font-family: $lora;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%lora-bold {
+  @extend %lora;
+  font-weight: 700;
+}
+
+%lora-italic {
+  @extend %lora;
+  font-style: italic;
+}
+
+%lora-bold-italic {
+  @extend %lora;
+  font-weight: 700;
+  font-style: italic;
+}
+
+%amp {
+  font-family: $amp;
+  font-style: italic;
+  font-weight: normal !important; // can't ever be bold. sorry.
+  // margin: 0 em(1) 0 em(-1);
+}
+
 
 %icon-font {
   font-style: normal;

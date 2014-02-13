@@ -1,80 +1,4 @@
 // ==============================================================================
-// 	Themes
-// -> color schemes, borders, etc.
-// ==============================================================================
-
-$border-weight--thick: 8px;
-$border-weight--thin: 1px;
-
-// @mixin $border-weight--thick($side, $color) {
-	
-// }
-
-.reverse, %theme-reverse, %theme-dark {
-	color: white;
-	background: $bg--dark;
-	border-color: black;
-	
-	p {
-		color: $gray--medium;
-	}
-
-	small {
-		color: $gray--dark;
-	}
-}
-
-.flood, %theme-flood, %theme-color {
-	color: white;
-	background: $bg--color;
-	border-color: darken($bg--color, 3);
-	border-style: solid;
-
-	hgroup, h1, h2, h3, h4, h5, h6, p, a {
-		color: white;
-	}
-
-	a:hover, a:active {
-		color: lighten($bg--color, 30);
-	}
-}
-
-.island, %theme-island, %theme-light {
-	color: $color-text--headline;
-	background: $bg--light;
-	border-color: darken(white, 8);
-	border-style: solid;
-	border-width: 0;
-	
-	p, ul, ol {
-		color: $color-text--body;
-	}
-
-	.intro {
-		color: $color-text--headline;
-	}
-}
-
-.well, %theme-well, %theme-midtone {
-	color: $color-text--headline;
-	background: lighten($bg--midtone, 4);
-	border-color: darken($bg--midtone, 3);
-	border-style: solid;
-}
-
-// make an element grayscale
-// and color when you hover on it
-.bw, %theme-bw {
-	@extend %img-grayscale;
-	@include opacity(0.6);
-
-	&:hover {
-		@extend %img-grayscale-kill;
-		@include opacity(1);
-	}
-}
-
-// ==============================================================================
 // 	Global type
 // -> http://modularscale.com/scale/?px1=16&px2=60&ra1=1.5&ra2=0
 // ==============================================================================
@@ -83,20 +7,19 @@ $border-weight--thin: 1px;
 // -----------------------------------------------------------------------------
 
 h1, .h1, %h1 {
-	@extend %raleway;
-	@include rem(font-size, 48px);
+	@extend %verb-light;
+	@include rem(font-size, 40px);
 	line-height: 1.2;
+	letter-spacing: -0.04em;
 
-	& > em {
-		@extend %raleway-bold;
-		// @include rem(font-size, 54px);
-		font-size: 1.4em;
-		text-transform: uppercase;
+	strong {
+		@extend %verb-bold;
+		letter-spacing: -0.02em;
 	}
 }
 
 h1 > .subhead {
-	@extend %raleway-bold;
+	@extend %verb-bold;
 	font-size: 0.6em; // relative to parent
 	line-height: 1.2;
 	text-transform: uppercase;
@@ -108,14 +31,14 @@ h1 > .subhead {
 }
 
 h2, .h2, %h2 {
-	@extend %raleway;
+	@extend %verb;
 	@include rem(font-size, 30px);
 	line-height: 1.2;
 	margin: 0.5em 0;
 }
 
 h3, .h3, %h3 {
-	// @extend %raleway-bold;
+	// @extend %verb-bold;
 	@extend %lora;
 	@include rem(font-size, 18px);
 	// text-transform: uppercase;
@@ -123,7 +46,7 @@ h3, .h3, %h3 {
 }
 
 h4, .h4, %h4 {
-	@extend %raleway-bold;
+	@extend %verb-bold;
 	@include rem(font-size, 18px);
 	text-transform: uppercase;
 	// line-height: 1.2;
@@ -131,7 +54,7 @@ h4, .h4, %h4 {
 }
 
 h5, .h5, %h5 {
-	@extend %raleway-bold;
+	@extend %verb-bold;
 	@include rem(font-size, 12px);
 	text-transform: uppercase;
 	// line-height: 1;
@@ -139,7 +62,7 @@ h5, .h5, %h5 {
 }
 
 h6, .h6, %h6 {
-	@extend %raleway-bold;
+	@extend %verb-bold;
 	@include rem(font-size, 12px);
 	text-transform: uppercase;
 	margin: 0.5em 0;
@@ -192,6 +115,25 @@ a.secondary {
 	}
 }
 
+// Menu items
+// -----------------------------------------------------------------------------
+
+%menu--main {
+	@extend %verb-bold;
+	@include rem(font-size, 13px);
+	color: $gray--medium;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
+
+	&:hover {
+		color: $gray--light;
+	}
+
+	&.active {
+
+	}
+}
+
 // Body, inline type
 // -----------------------------------------------------------------------------
 
@@ -206,6 +148,7 @@ p, li, ol {
 
 .intro {
 	@include rem(font-size, 20px);
+	color: $color-text--body;
 }
 
 .caption {
@@ -289,4 +232,73 @@ small, %small {
   [data-icon]:before {
   	line-height: 1;
   }
+}
+
+// ==============================================================================
+// 	Themes
+// -> color schemes, borders, etc.
+// ==============================================================================
+
+// @mixin $border-weight--thick($side, $color) {
+	
+// }
+
+.reverse, %theme-reverse, %theme-dark {
+	color: white;
+	background: $bg--dark;
+	border-color: black;
+	
+	p {
+		color: $gray--medium;
+	}
+
+	small {
+		color: $gray--dark;
+	}
+}
+
+.flood, %theme-flood, %theme-color {
+	color: white;
+	background: $bg--color;
+	border-color: darken($bg--color, 3);
+	border-style: solid;
+
+	hgroup, h1, h2, h3, h4, h5, h6, p, a {
+		color: white;
+	}
+
+	a:hover, a:active {
+		color: lighten($bg--color, 30);
+	}
+}
+
+.island, %theme-island, %theme-light {
+	color: $color-text--headline;
+	background: $bg--light;
+	border-color: darken(white, 8);
+	border-style: solid;
+	border-width: 0;
+	
+	p, ul, ol {
+		color: $color-text--body;
+	}
+}
+
+.well, %theme-well, %theme-midtone {
+	color: $color-text--headline;
+	background: lighten($bg--midtone, 4);
+	border-color: darken($bg--midtone, 3);
+	border-style: solid;
+}
+
+// make an element grayscale
+// and color when you hover on it
+.bw, %theme-bw {
+	@extend %img-grayscale;
+	@include opacity(0.6);
+
+	&:hover {
+		@extend %img-grayscale-kill;
+		@include opacity(1);
+	}
 }

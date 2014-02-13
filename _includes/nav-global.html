@@ -1,11 +1,21 @@
-<nav role="navigation" class="main{% if include.slide_out == true %} slide_out{% endif %}" {% if include.slide_out == true %}id="js-slide_out"{% endif %}>
+{% if include.logo == "true" %}
+<a href="{{ path }}/" class="logo icon"><img class="logo-engage icon" src="{{ path }}assets/images/logo-engage--full.png" alt="The Engage Group" /></a>
+{% endif %}
+
+<nav role="navigation" class="global">
   <ul>
-    <li><a href="{{ site.baseurl }}what-we-do.html" class="main-item {% if page.active == 'what-we-do' %}active{% endif %}">What we do</a></li>
-    <li><a href="{{ site.baseurl }}company.html" class="main-item {% if page.active == 'company' %}active{% endif %}">Company</a></li>
-    <li><a href="{{ site.baseurl }}case-studies.html" class="main-item {% if page.active == 'case-studies' %}active{% endif %}">Case studies</a></li>
-    <li><a href="{{ site.baseurl }}contact.html" class="main-item {% if page.active == 'contact' %}active{% endif %}">Contact us</a></li>
-    <li><a href="{{ site.baseurl }}blog.html" class="main-item {% if page.active == 'blog' %}active{% endif %}">Blog</a></li>
+    <li><a href="{{ path }}what-we-do.html" class="global-item {% if page.active == 'what-we-do' %}active{% endif %}">What we do</a></li>
+    <li><a href="{{ path }}company.html" class="global-item {% if page.active == 'company' %}active{% endif %}">Company</a></li>
+    <li><a href="{{ path }}case-studies.html" class="global-item {% if page.active == 'case-studies' %}active{% endif %}">Case studies</a></li>
+    <li><a href="{{ path }}contact.html" class="global-item {% if page.active == 'contact' %}active{% endif %}">Contact us</a></li>
+    <li><a href="{{ path }}blog.html" class="global-item {% if page.active == 'blog' %}active{% endif %}">Blog</a></li>
+    {% comment %}
     <!-- rd-tools.html -->
     <li><a href="" class="main-item {% if page.active == 'r+d' %}active{% endif %}">R+D</a></li>
+    {% endcomment %}
   </ul>
 </nav>
+
+{% if include.login == "true" %}
+<a href="#" class="login">Sign in</a>
+{% endif %}

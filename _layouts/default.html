@@ -6,21 +6,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.name }}{% if page.title != "Home" %} &rsaquo; {{ page.title }}{% endif %}</title>
+    <title>{{ site.name }}{% if page.title != "home" %} &rsaquo; {{ page.title }}{% endif %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/app.css">
+    {% capture level %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+    {% capture relativepath %}{% for i in (3..level) %}../{% endfor %}{% endcapture %}
+    {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
+
+    <link rel="stylesheet" href="{{ path }}assets/css/app.css">
 
     <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,700,900' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- Modernizr -->
-    <script src="{{ site.baseurl }}assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="{{ path }}assets/js/vendor/modernizr-2.6.2.min.js"></script>
     <script>
       // add the "main" element to html5 shiv -- modernizr does not include yet
       // http://drublic.de/blog/add-main-element-modernizr/
@@ -28,36 +30,40 @@
       window.html5.shivDocument(document); // re-invoke the `shivDocument` method
     </script>
   </head>
-  <body id="{{ page.title }}">
+  <body id="{% if page.slug %}{{ page.slug | downcase }}{% else %}{{ page.title | replace: " ", "-" | downcase }}{% endif %}">
     <!--[if lt IE 7]>
       <p class="browsehappy">Oh dear, it looks like your browser is quite old. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- header -->
-    <header role="banner" id="js-header-global">
-      <div class="header-global-menu">
-        <a href="#" class="header-global-icon" id="js-header-menuBtn"><span aria-hidden="true" data-icon="&#9776;"></span><span class="header-global-label">Menu</span></a>
-      </div>
-      <div class="header-global-logo">
-        <a href="/">
-          <img class="logo-engage full" src="{{ site.baseurl }}assets/images/logo-engage--full.png" alt="The Engage Group. Your cause. Our effect. Online." />
-        </a>
-      </div>
-      <div class="header-global-clients">
-        <a href="#" class="header-global-icon" id="js-header-menuBtn"><span class="header-global-label">Clients</span><span aria-hidden="true" data-icon="&#59200;"></span></a>
-      </div>
-      {% include nav-global.html slide_out=true %}
+    <header role="banner" class="global">
+      {% if page.title == "home" %}
+      <section class="hero">
+        <img class="logo full" src="{{ path }}assets/images/logo-engage--full.png" alt="The Engage Group" />
+        <a href="#" class="login">Sign in</a>
+        <h1>
+          We help nonprofits &amp; their causes<br />
+          <strong>make a difference online.</strong>
+        </h1>
+      </section>
+      {% endif %}
+
+      {% if page.title == "home" %}
+      {% include nav-global.html %}
+      {% else %}
+      {% include nav-global.html login="true" logo="true" %}
+      {% endif %}
     </header>
 
     {{ content }}
 
     <!-- footer -->
-    <footer class="footer footer-global" role="">
+    {% comment %}<footer class="footer footer-global" role="">
       {% include nav-global.html slide_out=false %}
       <div class="content">
         <section class="footer-brand">
           <div class="logo-footer">
-            <a href="#"><img src="{{ site.baseurl }}assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
+            <a href="#"><img src="{{ path }}assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
           </div>
 
           <nav class="social horizontal">
@@ -87,10 +93,10 @@
           </small>
         </section>
       </div><!-- /.content -->
-    </footer>
+    </footer>{% endcomment %}
 
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-    <script>window.jQuery || document.write('<script src="{{ site.baseurl }}assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="{{ site.baseurl }}assets/js/app.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ path }}assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="{{ path }}assets/js/app.js"></script>
   </body>
 </html>

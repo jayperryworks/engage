@@ -3,12 +3,13 @@
 // ==============================================================================
 
 body {
-	@include rem(padding-top, 60px);
+	// @include rem(padding-top, 60px);
 }
 
 // constrain to grid width, max width, and center in the browser window
 .content, .wrapper, %wrapper {
-	@include base-grid-margins;
+	@include grid-margins(padding);
+	margin: 0 auto;
 	max-width: $grid-width;
 }
 
@@ -28,5 +29,5 @@ body {
 // the first container on the page, after the header
 // this is to add the right margin to the top so it doesn't get covered up by the header
 .is-first {
-	@include rem(margin-top, $header-h);
+	// @include rem(margin-top, $header-h);
 }
