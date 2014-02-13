@@ -138,7 +138,7 @@ footer.local {
 	border: none;
 
 	& > hgroup {
-		@extend %main;
+		@extend %narrow;
 		@include clearfix;
 		overflow: hidden;
 		float: none;
@@ -153,5 +153,6 @@ footer.local {
 
 	h2 {
 		margin-right: -0.8em; // push to the right a little to compensate for > symbol
+		margin-top: 0.6em;
 	}
 }

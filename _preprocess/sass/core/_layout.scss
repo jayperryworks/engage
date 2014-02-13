@@ -7,23 +7,10 @@ body {
 }
 
 // constrain to grid width, max width, and center in the browser window
-.content, .wrapper, %wrapper {
+.wrapper, %wrapper {
 	@include grid-margins(padding);
 	margin: 0 auto;
 	max-width: $grid-width;
-}
-
-// width of main copy
-.base-copy, %l-copy-width, [role="main"], main, %main {
-	@include grid-span(4, 1);
-
-	@include breakpoint($screen--small) {
-		@include grid-span(7, 2);
-	}
-
-	@include breakpoint($screen--medium) {
-		@include grid-span(8, 3);
-	}
 }
 
 // the first container on the page, after the header
@@ -32,37 +19,49 @@ body {
 	// @include rem(margin-top, $header-h);
 }
 
-.narrow {
-	@include grid-span(4, 1);
+.narrow, %narrow {
+	@include grid-span(4, 1, $options: both);
+	@include clearfix;
+	position: relative;
 
 	@include breakpoint($screen--small) {
-		@include grid-span(7, 2);
+		@include grid-span(7, 2, $options: both);
 		padding-right: 0;
 	}
 
 	@include breakpoint($screen--medium) {
-		@include grid-span(10, 2);
+		@include grid-span(10, 2, $options: both);
 	}
 
 	@include breakpoint($screen--large) {
-		@include grid-span(9, 3);
+		@include grid-span(9, 3, $options: both);
 	}
 }
 
-// Panels
+.overview, %overview {
+	@extend %narrow;
+	@include rem(margin-bottom, 30px);
+
+}
+
+// Tiles
 // -> vertically-oriented, self-contained listing
 // ----------------------------------------------------------------------------
 
-// .panel {
-//   @include rem(padding, 12px 0);
-//   display: block;
+.tile {
+  @include rem(padding, 12px 0);
+  display: block;
 
-//   & > img {
-//     display: block;
-//     @include rem(margin, 12px auto);
-//   }
-// }
+  #{headers()} {
+  	line-height: 1.2;
+  }
 
-// .panel.center {
-//   text-align: center;
-// }
+  & > img {
+    display: block;
+    @include rem(margin, 12px auto);
+  }
+}
+
+.tile.center {
+  text-align: center;
+}

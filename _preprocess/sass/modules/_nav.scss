@@ -253,6 +253,7 @@ footer.global [role="navigation"].global {
 }
 
 // Thumb nav (tabs)
+// -> a row of thumbnail links
 // ---------------------------------------------------------------------------------
 
 [role="navigation"].thumbs {
@@ -293,6 +294,7 @@ h1 + [role="navigation"].thumbs.horizontal {
 	// }
 
 // Grid (of thumbs or whatever)
+// -> similar to thumbnails, but a generic container to make a gridded list
 // ---------------------------------------------------------------------------------
 
 .grid {
@@ -301,9 +303,15 @@ h1 + [role="navigation"].thumbs.horizontal {
 	padding: 0;
 	margin: 0;
 	clear: both;
+	text-align: left;
 
 	li {
-		@include breakpoint($screen--small) {
+		//vertically stack on mobile screens
+		display: block;
+		margin-right: 0;
+		padding-right: 0;
+
+		@include breakpoint($screen--xsmall) {
 			@include inline-block;
 			margin-right: -4px;
 			padding-right: gutter-span();
@@ -312,44 +320,45 @@ h1 + [role="navigation"].thumbs.horizontal {
 	}
 }
 
+.grid.centered {
+	text-align: center;
+}
+
 // 4 columns
 .grid.small {
+	$cols: 4;
 
 	li {
+		@include breakpoint($screen--xsmall) {
+			width: (100%/($cols - 1));
+		}
 		@include breakpoint($screen--small) {
-			width: (100%/4);
-
-			&:nth-child(1n+3) {
-				padding-right: 0;
-			}
+			width: (100%/$cols);
 		}
 	}
 }
 
 // 3 columns
 .grid.medium {
+	$cols: 3;
 
 	li {
+		@include breakpoint($screen--xsmall) {
+			width: (100%/($cols - 1));
+		}
 		@include breakpoint($screen--small) {
-			width: (100%/3);
-
-			&:nth-child(1n+3) {
-				padding-right: 0;
-			}
+			width: (100%/$cols);
 		}
 	}
 }
 
 // 2 columns
 .grid.large {
+	$cols: 2;
 
 	li {
 		@include breakpoint($screen--small) {
-			width: (100%/2);
-
-			&:nth-child(1n+3) {
-				padding-right: 0;
-			}
+			width: (100%/$cols);
 		}
 	}
 
@@ -382,11 +391,10 @@ h1 + [role="navigation"].thumbs.horizontal {
 // ----------------------------------------------------------------------------
 
 .slats {
-  @extend %main;
-  @extend %list--unstyled;
+  @extend %narrow;
 
   & > ul {
-    @extend %list--unstyled;
+    @include unstyled-list;
   }
 }
 
@@ -402,11 +410,11 @@ h1 + [role="navigation"].thumbs.horizontal {
 }
 
 .slat {
-  @extend %list--unstyled;
-  @include rem(margin, 24px 0);
+  @include unstyled-list;
+  @include rem(margin, 0 0 12px 0);
   @include rem(padding-top, 12px);
   text-align: left;
-  border-top: $border-weight--thin solid darken($bg--midtone, 10);
+  border-top: $border-weight--thin solid $color-border--medium;
 }
 
 .slat.no_hairline {

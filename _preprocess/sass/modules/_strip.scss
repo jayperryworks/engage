@@ -22,6 +22,10 @@ $strip-padding: 40px;
 	& > hgroup, & > h1 {
 		@include grid-span(4, 1);
 	}
+
+	hgroup > h2 {
+		color: $gray--medium;
+	}
 }
 
 .strip.first, .strip:first-child {
