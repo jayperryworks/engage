@@ -24,7 +24,7 @@ active: what-we-do
 <section class="strip first" id="who-we-help">
 	<div class="wrapper">
 		<h1>Who we help</h1>
-		<main role="main">
+		<main role="main" class="overview">
 			<p class="intro">
 				We help strengthen organizations and their causes to help them make a difference online. We put your strategy into action to achieve results that help you reach your goals.
 			</p>
@@ -46,32 +46,32 @@ active: what-we-do
 <section class="strip well" id="#our-process">
 	<div class="wrapper">
 		<h1>Our process</h1>
-		<main role="main">
+		<div class="narrow">
 			<p class="intro">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, et, praesentium, obcaecati recusandae ipsa facere aut odit doloribus accusamus ipsam tempore cum ipsum sint totam molestiae ut minus hic magni porro inventore nesciunt eveniet nulla doloremque accusantium labore quaerat explicabo!
 			</p>
-		</main>
+		</div>
 	</div>
 </section><!-- / process -->
 
 <!-- Our services -->
-<section class="strip" id="#our-services">
+<section class="strip full-bottom" id="#our-services">
 	<div class="wrapper">
-		<main role="main">
+		<div class="overview">
 			<h1>Our services</h1>
 			<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, excepturi praesentium necessitatibus iste corporis voluptatum maxime sapiente perferendis nemo neque? Quibusdam, molestias, dolore autem quos omnis placeat provident consequuntur expedita modi magni ratione mollitia distinctio. Aliquid, commodi laborum dolores nobis voluptas qui eius saepe sed neque aperiam itaque soluta illo!</p>
-		</main>
-		
-		<div class="tabs vertical">
-			{% include service-list.html class='local vertical' %}
-			{% include service.html num=0 class="active" %}
-
-			{% for i in (1...7) %}
-			{% include service.html num=forloop.index %}
-			{% endfor %}
 		</div>
-
 	</div>
+		
+	<section class="subsection well tabs vertical">
+		{% include service-list.html class='local vertical' %}
+		{% include service.html num=0 class="active" %}
+
+		{% for i in (1...7) %}
+		{% include service.html num=forloop.index %}
+		{% endfor %}
+	</section>
+
 </section><!-- / our services -->
 
 {% include footer-local.html title='Our story <span class="amp">&amp;</span> our people' link="company.html" %}

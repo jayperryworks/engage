@@ -142,16 +142,15 @@ footer.global [role="navigation"].global {
 }
 
 .tabs.vertical {
-	@include grid-span(4, 1);
-	clear: both;
+	@include grid-span(4, 1, $options: both);
 	border-top: $border-weight--thin solid $bg--midtone;
 
 	@include breakpoint($screen--small) {
-		@include grid-span(9, 1);
+		@include grid-span(9, 1, $options: both);
 	}
 
 	@include breakpoint($screen--medium) {
-		@include grid-span(12, 1);
+		@include grid-span(12, 1, $options: both);
 	}
 
 	& > .panel {
@@ -228,22 +227,22 @@ footer.global [role="navigation"].global {
 
 	a {
 		// @extend %raleway;
-		@extend %theme-reverse;
+		// @extend %theme-reverse;
 		// @include rem(font-size, 14px);
 		@extend %h5;
 		display: block;
 		padding: 0.8em 1em;
-		border-bottom: $border-weight--thin solid black;
-		color: $gray--medium;
+		// border-bottom: $border-weight--thin solid black;
+		// color: $gray--medium;
 
 		&:hover {
 			color: $gray--light;
-			background: lighten($bg--dark, 10);
+			// background: lighten($bg--dark, 10);
 		}
 
 		&.active {
-			color: white;
-			background: $color-primary;
+			// color: white;
+			// background: $color-primary;
 		}
 	}
 }
