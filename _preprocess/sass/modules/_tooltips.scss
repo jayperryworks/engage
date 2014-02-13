@@ -1,0 +1,30 @@
+// Tooltips
+// ----------------------------------------------------------------------------
+
+%tooltip-base {
+  @extend %verb;
+  @extend %base-transition;
+  @include rem(font-size, 11px);
+  position: relative;
+  max-width: 200px;
+  background: $black;
+  color: white;
+  padding: em(8) em(16);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tooltip-bottom {
+  @extend %tooltip-base;
+  @include triangle--centered(up, top, -10px, $width: 10px, $color: $black);
+}
+
+.tooltip-left {
+  @extend %tooltip-base;
+  @include triangle--centered(right, right, $loc: -10px, $width: 10px, $color: $black);
+}
+
+.tooltip-top {
+  @extend %tooltip-base;
+  @include triangle--centered(down, bottom, $width: 10px, $color: $black);
+}

@@ -12,41 +12,46 @@
 // Main (global) footer
 // ---------------------------------------------------------------------------------
 
-.footer-global {
+[role="contentinfo"].global {
 	@extend %theme-dark;
 	@include rem(padding-bottom, 40px);
 	text-align: center;
+
+	small {
+		color: lighten($gray--dark, 15);
+	}
 }
 	
-	.menu-footer {
-		@extend %raleway-bold;
-		@include rem(font-size, 14px);
-		background: #1A1A1A;
-		text-transform: uppercase;
-		border-bottom: $border-weight--thin solid darken($gray--dark, 5);
+	// .menu-footer {
+	// 	@extend %verb-bold;
+	// 	@include rem(font-size, 14px);
+	// 	background: #1A1A1A;
+	// 	text-transform: uppercase;
+	// 	border-bottom: $border-weight--thin solid darken($gray--dark, 5);
 
-		ul {
-			@extend %wrapper;
+	// 	ul {
+	// 		@extend %wrapper;
 
-			li {
-				@include inline-block;
-			}
-		}
+	// 		li {
+	// 			@include inline-block;
+	// 		}
+	// 	}
 
-		a {
-			@extend %raleway-bold;
-			display: block;
-			color: $gray--medium;
-			padding: em(16);
+	// 	a {
+	// 		@extend %verb-bold;
+	// 		display: block;
+	// 		color: $gray--medium;
+	// 		padding: em(16);
 
-			&:hover {
-				color: $gray--light;
-			}
-		}
-	}
+	// 		&:hover {
+	// 			color: $gray--light;
+	// 		}
+	// 	}
+	// }
 
 	.footer-brand {
 		@include rem(height, 60px);
+		@include rem(margin-top, 24px);
 		border-bottom: $border-weight--thin solid $gray--dark;
 
 		.logo-footer {
@@ -80,7 +85,7 @@
 			text-align: right;
 
 			a {
-				@extend %raleway-bold;
+				@extend %verb-bold;
 				text-transform: uppercase;
 				color: $color-secondary;
 			}
@@ -106,7 +111,7 @@
 			@include inline-dl;
 		}
 		dt {
-			@extend %raleway-bold;
+			@extend %verb-bold;
 			color: $color-primary;
 			text-transform: uppercase;
 		}
@@ -124,7 +129,7 @@
 // Local footer (appears at the bottom of interior pages)
 // ---------------------------------------------------------------------------------
 
-.footer-local, footer.local {
+footer.local {
 	@extend %theme-color;
 	// @include base-grid-margins(padding, $full: true);
 	@include rem(padding-top, 24px);
@@ -140,6 +145,13 @@
 	}
 
 	h4 {
-		color: lighten($bg--color, 40);
+		color: $black;
+		text-transform: uppercase;
+
+		border-bottom: $border-weight--thin solid $black;
+	}
+
+	h2 {
+		margin-right: -0.8em; // push to the right a little to compensate for > symbol
 	}
 }

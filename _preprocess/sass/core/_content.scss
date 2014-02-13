@@ -11,6 +11,7 @@ h1, .h1, %h1 {
 	@include rem(font-size, 40px);
 	line-height: 1.2;
 	letter-spacing: -0.04em;
+	margin: 0.5em 0;
 
 	strong {
 		@extend %verb-bold;
@@ -31,10 +32,11 @@ h1 > .subhead {
 }
 
 h2, .h2, %h2 {
-	@extend %verb;
+	@extend %verb-light;
 	@include rem(font-size, 30px);
 	line-height: 1.2;
 	margin: 0.5em 0;
+	letter-spacing: -0.03em;
 }
 
 h3, .h3, %h3 {
@@ -48,7 +50,7 @@ h3, .h3, %h3 {
 h4, .h4, %h4 {
 	@extend %verb-bold;
 	@include rem(font-size, 18px);
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	// line-height: 1.2;
 	margin: 0;
 }
@@ -79,16 +81,35 @@ hgroup {
 	}
 }
 
+#{headers()} {
+	a {
+		color: inherit;
+	}
+}
+
 // makes a white-on-black "tag" from a lower header (h4-h6)
 .headline-tag, %headline-tag, .label {
 	@include inline-block;
 	@include triangle--centered;
 	position: relative;
 	top: -#{$border-weight--thick + $border-weight--thin};
-	color: $gray--light;
+	color: $gray--superlight;
 	background: $bg--dark;
 	padding: em(16) em(27) em(12) em(27);
-	margin: 0 0 em(2) 0;
+	margin: 0 0 em(18) 0;
+	z-index: $base-z--top;
+
+	&.secondary {
+		background: none;
+		border-top: $border-weight--thin solid $color-primary;
+		top: -#{$border-weight--thin};
+		padding: em(16) em(3);
+		color: $color-primary;
+
+		&:after {
+			content: none;
+		}
+	}
 }
 
 .headline-underline, %headline-underline, .underline {
@@ -96,10 +117,15 @@ hgroup {
 	border-bottom: $border-weight--thick solid $bg--dark;
 }
 
-.underline.thin {
-	@extend .underline;
-	border-bottom: $border-weight--thin solid $bg--dark;
+.overline {
+	border-top: $border-weight--thick solid $color-border--medium;
+	padding-top: 0.5em;
 }
+
+// .underline.thin {
+// 	@extend .underline;
+// 	border-bottom: $border-weight--thin solid $bg--dark;
+// }
 
 .primary, %primary {
 	color: $color-primary;
@@ -134,6 +160,7 @@ a.secondary {
 	}
 }
 
+
 // Body, inline type
 // -----------------------------------------------------------------------------
 
@@ -144,6 +171,15 @@ p, li, ol {
 	line-height: $base-line-height;
 	margin-top: 0;
 	text-align: left;
+}
+
+dl {
+	@extend %verb;
+	@include rem(font-size, 13px);
+
+	dt {
+		@extend %verb-bold;
+	}
 }
 
 .intro {
@@ -175,7 +211,16 @@ a {
 
 small, %small {
 	@extend %lora;
-	@include rem(font-size, 12px);
+	@include rem(font-size, 13px);
+}
+
+.read_more {
+	@extend %verb-bold;
+	@include inline-block;
+	margin-left: 0.8em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: $color-primary;
 }
 
 // Ampesands
@@ -261,7 +306,7 @@ small, %small {
 	color: white;
 	background: $bg--color;
 	border-color: darken($bg--color, 3);
-	border-style: solid;
+	// border-style: solid;
 
 	hgroup, h1, h2, h3, h4, h5, h6, p, a {
 		color: white;
@@ -286,9 +331,13 @@ small, %small {
 
 .well, %theme-well, %theme-midtone {
 	color: $color-text--headline;
-	background: lighten($bg--midtone, 4);
-	border-color: darken($bg--midtone, 3);
-	border-style: solid;
+	background: $bg--midtone;
+	// border-color: darken($bg--midtone, 3);
+	// border-style: solid;
+}
+
+.well-secondary, %theme-well--secondary {
+	background: darken($bg--midtone, 4);
 }
 
 // make an element grayscale
@@ -302,3 +351,4 @@ small, %small {
 		@include opacity(1);
 	}
 }
+

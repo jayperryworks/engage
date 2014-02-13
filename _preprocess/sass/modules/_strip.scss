@@ -1,46 +1,39 @@
 // ==============================================================================
-// Story module
-// -> basic content containers
+// Strip module
+// -> basic section containers, for stacking content in a vertical scroll
 // ==============================================================================
 
 // BASE
 // ------------------------------------------------------------------------------
+$strip-padding: 40px;
 
-.story, .strip, %story, %strip {
+.strip, %strip {
 	@extend %theme-light;
 	// @include rem(padding-top, 36px);
-	@include rem(padding-bottom, 40px);
+	@include rem(padding-bottom, $strip-padding);
 	@include clearfix;
 	position: relative;
 	clear: both;
 	// overflow: hidden;
 	text-align: center;
-	border-top-width: $border-weight--thick;
-	border-bottom: $border-weight--thin solid black;
+	border-top: $border-weight--thick solid $color-border--light;
+	border-bottom: $border-weight--thin solid $color-border--medium;
 	
 	& > hgroup, & > h1 {
 		@include grid-span(4, 1);
 	}
 }
 
-// Lead story
-// -> a short section of content, often an introduction pointing to deeper content
-// -------------------------------------------------------------------------------------
-
-.story--short, .strip {
-	
-}
-
-.strip.first {
+.strip.first, .strip:first-child {
 	border-top: none;
 }
 
-// Story colors (usually alernate as you scroll down the page)
-// -------------------------------------------------------------------------------------
-
-.story--light, %story--light {
-	@extend %theme-light;
+.strip.full-bottom {
+	padding-bottom: 0;
 }
+
+// Strip colors (usually alernate as you scroll down the page)
+// -------------------------------------------------------------------------------------
 
 .strip.well, .story--midtone, %story--midtone {
 	@extend %theme-midtone;
@@ -48,4 +41,9 @@
 
 .strip.reverse, .story--dark, %story--dark {
 	@extend %theme-dark;
+}
+
+
+.strip .subsection {
+	border-top: $border-weight--thin solid $color-border--medium;
 }

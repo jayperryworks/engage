@@ -51,12 +51,18 @@
 	}
 }
 
-[role="navigation"].main.slide_out {
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: $base-z--middle;
+footer.global [role="navigation"].global {
+	.active {
+		background: transparent;
+	}
 }
+
+// [role="navigation"].main.slide_out {
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	z-index: $base-z--middle;
+// }
 
 
 // Jump nav (vertical, for scrolling pages)
@@ -264,6 +270,10 @@
 	}
 }
 
+h1 + [role="navigation"].thumbs.horizontal {
+	@include rem(margin-top, -18px);
+}
+
 	.thumb { // .nav-thumbs-item, 
 		@include inline-block;
 		@include rem(padding, 12px 12px);
@@ -274,36 +284,72 @@
 		}
 	}
 
-	.nav-thumbs-thumb {
-		@include rem(padding, 0 12px);
+	// .nav-thumbs-thumb {
+	// 	@include rem(padding, 0 12px);
 
-		&:hover, &:active {
-			background: white;
-		}
-	}
+	// 	&:hover, &:active {
+	// 		background: white;
+	// 	}
+	// }
 
 // Grid (of thumbs or whatever)
 // ---------------------------------------------------------------------------------
 
 .grid {
+	@include unstyled-list;
 	@include clearfix;
+	padding: 0;
+	margin: 0;
 	clear: both;
+
+	li {
+		@include breakpoint($screen--small) {
+			@include inline-block;
+			margin-right: -4px;
+			padding-right: gutter-span();
+			vertical-align: top;
+		}
+	}
 }
 
-.grid.large {
+// 4 columns
+.grid.small {
+
 	li {
-		// @include grid-span-media(4, $sm: 4, $med: 3);
-		// @include omega-media($sm: 2n, $med: 4n);
-		
-		@include unstyled-list;
-		@include grid-span(4, 1);
-		
-		
-		@include breakpoint($screen--xsmall) {
-			@include grid-span(2, 1);
-		}
 		@include breakpoint($screen--small) {
-			@include grid-span(2, 1);
+			width: (100%/4);
+
+			&:nth-child(1n+3) {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+// 3 columns
+.grid.medium {
+
+	li {
+		@include breakpoint($screen--small) {
+			width: (100%/3);
+
+			&:nth-child(1n+3) {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+// 2 columns
+.grid.large {
+
+	li {
+		@include breakpoint($screen--small) {
+			width: (100%/2);
+
+			&:nth-child(1n+3) {
+				padding-right: 0;
+			}
 		}
 	}
 
@@ -312,23 +358,60 @@
 	}
 }
 
-.grid.divider {
-	li {
-		@include grid-span(4, 4);
+// .grid.divider {
+// 	li {
+// 		@include grid-span(4, 4);
 		
 		
-		@include breakpoint($screen--xsmall) {
-			@include grid-span(2, 4);
-		}
-		@include breakpoint($screen--small) {
-			@include grid-span(2, 8);
-			clear: none !important;
-		}
-		@include breakpoint($screen--medium) {
-			@include grid-span(3, 12);
-			clear: none !important;
-		}
-	}
+// 		@include breakpoint($screen--xsmall) {
+// 			@include grid-span(2, 4);
+// 		}
+// 		@include breakpoint($screen--small) {
+// 			@include grid-span(2, 8);
+// 			clear: none !important;
+// 		}
+// 		@include breakpoint($screen--medium) {
+// 			@include grid-span(3, 12);
+// 			clear: none !important;
+// 		}
+// 	}
+// }
+
+// Slats
+// -> horizontally-oriented, self-contained listing
+// ----------------------------------------------------------------------------
+
+.slats {
+  @extend %main;
+  @extend %list--unstyled;
+
+  & > ul {
+    @extend %list--unstyled;
+  }
+}
+
+[role="complementary"].slats {
+  // @include span-columns-media(4, $sm: 3, $med: 4);
+  // @include shift(0);
+  @include rem(margin-top, 36px);
+  text-align: left;
+}
+
+[role="complementary"].slats.right {
+  // @include omega;
+}
+
+.slat {
+  @extend %list--unstyled;
+  @include rem(margin, 24px 0);
+  @include rem(padding-top, 12px);
+  text-align: left;
+  border-top: $border-weight--thin solid darken($bg--midtone, 10);
+}
+
+.slat.no_hairline {
+  border-top: none;
+  padding-top: 0;
 }
 
 // Secondary/sub-navigation

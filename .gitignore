@@ -10,3 +10,5 @@ Gemfile
 Gemfile.lock
 Guardfile
 config.rb
+
+*.sass-cache

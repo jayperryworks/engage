@@ -1,0 +1,97 @@
+// Forms
+// ----------------------------------------------------------------------------
+
+%input-invisible {
+  border: none;
+  background: transparent;
+  border-bottom: $border-weight--thick solid $color-border--light;
+  padding: 1em;
+
+  &:focus, &:active {
+    border: none;
+    // background: $bg--midtone;
+    border-bottom: $border-weight--thick solid $color-border--light;
+    box-shadow: none;
+  }
+}
+
+[role="search"].large {
+  @include rem(margin-top, 40px);
+
+  & > input[type="search"], & > input[type="text"] {
+    @extend %input-invisible;
+    @extend %h4;
+    // @include rem(font-size, 22px);
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+input[type="search"]:before {
+  // @include icon; //mixin from _webfonts
+  // content: "&#128269";
+  // speak: none; Not to be trusted, but hey.
+  // font-size: 3.5em;
+  // z-index: $base-z--middle;
+  // position: absolute;
+  // @include rem(left, 12px);
+}
+
+.contact {
+  @extend %main;
+  // @include span-columns-media(4, $sm: 5, $med: 6);
+  text-align: left;
+  
+  & > label {
+    @extend %h6;
+  }
+
+  & > input:not([type=submit]):not([type=file]), & > select, & > textarea {
+    @extend %lora;
+    // @extend %theme-well;
+    @include rem(font-size, 12px);
+    @include rem(margin, 6px 0 24px 0);
+    @include rem(padding, 4px);
+    display: block;
+    width: 100%;
+  }
+
+  & > input[type="submit"] {
+    @include inline-block;
+    width: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  & > textarea {
+    // @include rem(height, 40px);
+  }
+}
+
+aside[role="contentinfo"].right {
+  // @include span-columns-media(4, $sm: 3, $med: 4);
+  // @include omega;
+  text-align: left;
+  ul {
+    @extend list--unstyled;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    @extend list--unstyled;
+  }
+}
+
+.social.vertical {
+  @extend %list--unstyled;
+  @extend %lora;
+  @include rem(margin-top, 24px);
+
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+}

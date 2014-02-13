@@ -33,9 +33,10 @@
 @import "modules/hero";
 @import "modules/strip";
 @import "modules/carousel";
+@import "modules/tooltips";
 @import "modules/footer";
-// @import "modules/post";
-// @import "modules/misc";
+@import "modules/post";
+@import "modules/forms";
 
 
 // ==============================================================================
@@ -43,96 +44,4 @@
 // add quick and dirty hacks here, clean up and move to the right place later
 // ==============================================================================
 
-body {
-	// background: red;
-}
 
-// .tools {
-// 	text-align: center;
-// 	// border-top: $border-weight--thick;
-// 	border-color: darken(white, 10);
-// 	@include rem(padding-bottom, 50px);
-
-// 	h5 {
-// 		@extend %header-tag;
-// 	}
-
-// 	ul {
-// 		position: relative;
-// 		@include rem(margin, 50px 0);
-// 		padding: 0;
-// 		@include span-columns(12);
-// 		@include row;
-// 	}
-
-// 	li {
-// 		margin: 0;
-// 		width: (100%/3);
-// 		float: left;
-// 		display: table;
-// 		padding: 0;
-// 		list-style: none;
-// 		// border-right: $border-weight--thick;
-// 		border-color: darken(white, 10);
-
-// 		&:last-child {
-// 			border: none;
-// 		}
-// 	}
-
-// 	.thumb {
-// 		@include rem(height, 160px);
-// 		position: relative;
-// 		display: table-cell;
-// 		vertical-align: middle;
-// 		text-align: center;
-// 	}
-
-// 	p {
-// 		@include span-columns-center(8);
-// 		@include row;
-// 	}
-// 	.button {
-// 		text-align: center;
-// 		margin-top: 1em;
-// 	}
-// }
-
-// .blog {
-// @extend %theme-midtone;
-// @include rem(padding-bottom, 50px);
-
-// h6 {
-// 	@extend %header-underline;
-// 	color: $color-primary;
-// 	// margin: 0;
-// }
-// 	.recent-articles {
-// 		@include span-columns(6);
-// 		@include shift(1);
-// 		padding: 0;
-// 	}
-
-// 	.events {
-// 		@include span-columns(4);
-// 		@include omega;
-// 		padding: 0;
-
-// 		ul {
-// 			list-style: none;
-// 			margin: 0;
-// 			padding: 0;
-// 		}
-// 	}
-// }
-
-// .grid {
-// 	@include outer-container;
-// 	margin: 0;
-// 	padding: 0;
-// }
-
-// 	.grid-thumb {
-// 		@include span-columns(3);
-// 		@include omega(4n);
-// 	}

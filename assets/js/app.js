@@ -96,6 +96,10 @@ jQuery(function($) {
 
 (function($) {
 	$(document).ready(function() {
+		$('.has-tooltip.top').tooltipsy({
+	  	offset: [0, -10],
+	  	className: "tooltip-top"
+	  });
 
 	  $('.has-tooltip.bottom').tooltipsy({
 	  	offset: [0, 10],

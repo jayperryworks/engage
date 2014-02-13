@@ -244,36 +244,8 @@
   }
 }
 
-// @mixin base-grid-margins($property: margin, $full: false, $add-gutter: false) {
-//   $gutter: 0;
-//   @if ($add-gutter == true) {
-//     $gutter: $base-gutter/2; // foundation global var - already in ems
-//   }
-  
-//   @include rem($property, 0 ($base-margin--xsmall + $gutter), $base-font-size--default);
-//   // #{$property}: 0 (em-calc($base-margin--xsmall) + $gutter);
-
-//   @media #{$small} {
-//     @include rem($property, 0 ($base-margin--small + $gutter), $base-font-size--default);
-//     // #{$property}: 0 (em-calc($base-margin--small) + $gutter);
-//   }
-
-//   @media #{$medium} {
-//     @include rem($property, 0 ($base-margin--medium + $gutter), $base-font-size--default);
-//     // #{$property}: 0 (em-calc($base-margin--medium) + $gutter);
-//   }
-  
-//   @media #{$large} {
-//     @if ($full == true) {
-//       @include rem($property, 0 ($base-margin--large + $gutter), $base-font-size--default);
-//       // #{$property}: 0 (em-calc($base-margin--large) + $gutter);
-//     } @else {
-//       margin: 0 auto;
-//       // max-width: $row-width - (em-calc($base-margin--large) + $gutter);
-//       @include rem(max-width, $row-width - $base-margin--large, $base-font-size--default);
-//     }
-//   }
-// }
+// List helpers
+// -------------------------------------------------------------------------------
 
 @mixin unstyled-list {
   list-style: none;

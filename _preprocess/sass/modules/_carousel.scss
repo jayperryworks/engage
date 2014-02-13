@@ -22,14 +22,12 @@
 // -> usually used in a hero unit
 
 .carousel {
-	@extend %theme-dark;
-	
+	// @extend %theme-dark;
 	position: relative;
 	margin: 0;
 	padding: 0;
-	
-	color: white;
 	overflow: hidden;
+	color: white;
 	background: white;
 
 	& > ul {
@@ -38,10 +36,6 @@
 		padding: 0;
 		height: 100%;
 		position: relative;
-	}
-
-	li {
-		
 	}
 }
 	.carousel-slide.full_bleed {

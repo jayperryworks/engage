@@ -31,3 +31,38 @@ body {
 .is-first {
 	// @include rem(margin-top, $header-h);
 }
+
+.narrow {
+	@include grid-span(4, 1);
+
+	@include breakpoint($screen--small) {
+		@include grid-span(7, 2);
+		padding-right: 0;
+	}
+
+	@include breakpoint($screen--medium) {
+		@include grid-span(10, 2);
+	}
+
+	@include breakpoint($screen--large) {
+		@include grid-span(9, 3);
+	}
+}
+
+// Panels
+// -> vertically-oriented, self-contained listing
+// ----------------------------------------------------------------------------
+
+// .panel {
+//   @include rem(padding, 12px 0);
+//   display: block;
+
+//   & > img {
+//     display: block;
+//     @include rem(margin, 12px auto);
+//   }
+// }
+
+// .panel.center {
+//   text-align: center;
+// }

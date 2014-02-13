@@ -38,7 +38,7 @@
     <!-- header -->
     <header role="banner" class="global">
       {% if page.title == "home" %}
-      <section class="hero">
+      <section class="masthead">
         <img class="logo full" src="{{ path }}assets/images/logo-engage--full.png" alt="The Engage Group" />
         <a href="#" class="login">Sign in</a>
         <h1>
@@ -58,9 +58,9 @@
     {{ content }}
 
     <!-- footer -->
-    {% comment %}<footer class="footer footer-global" role="">
-      {% include nav-global.html slide_out=false %}
-      <div class="content">
+    <footer class="global" role="contentinfo">
+      {% include nav-global.html %}
+      <div class="wrapper">
         <section class="footer-brand">
           <div class="logo-footer">
             <a href="#"><img src="{{ path }}assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
@@ -93,7 +93,7 @@
           </small>
         </section>
       </div><!-- /.content -->
-    </footer>{% endcomment %}
+    </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ path }}assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
