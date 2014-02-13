@@ -305,6 +305,10 @@ h1 + [role="navigation"].thumbs.horizontal {
 	clear: both;
 	text-align: left;
 
+	@include breakpoint($screen--xsmall) {
+		margin-right: -#{gutter-span()};
+	}
+
 	li {
 		//vertically stack on mobile screens
 		display: block;
@@ -318,6 +322,10 @@ h1 + [role="navigation"].thumbs.horizontal {
 			vertical-align: top;
 		}
 	}
+}
+
+.wrapper > .grid:first-child {
+	@include rem(margin-top, 36px);
 }
 
 .grid.centered {

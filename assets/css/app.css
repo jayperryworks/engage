@@ -1651,7 +1651,7 @@ p {
 }
 
 /* line 90, ../../_preprocess/sass/core/_fonts.scss */
-h1, .h1, h2, .h2, .masthead > h1, .carousel-slide.full_bleed .title h3, h1 strong, .h1 strong, h1 > .subhead, h4, .h4, [role="search"].large > input[type="search"], [role="search"].large > input[type="text"], h5, .h5, [role="navigation"].local.vertical a, h6, .h6, .post-meta.horizontal, .contact > label, .masthead > .login, [role="navigation"].global .global-item, dl dt, .read_more, [role="banner"].global, .masthead > h1 > strong, .button, [role="navigation"].global, [role="navigation"].secondary.horizontal a, .footer-brand .brand-group a, .footer-contact dt, dl, .tooltip-bottom, .tooltip-left, .tooltip-top {
+h1, .h1, h2, .h2, .masthead > h1, .carousel-slide.full_bleed .title h3, h1 strong, .h1 strong, h1 > .subhead, h3, .h3, h4, .h4, [role="search"].large > input[type="search"], [role="search"].large > input[type="text"], h5, .h5, [role="navigation"].local.vertical a, h6, .h6, .post-meta.horizontal, .contact > label, .masthead > .login, [role="navigation"].global .global-item, dl dt, .read_more, [role="banner"].global, .masthead > h1 > strong, .button, [role="navigation"].global, [role="navigation"].secondary.horizontal a, .footer-brand .brand-group a, .footer-contact dt, dl, .tooltip-bottom, .tooltip-left, .tooltip-top {
   font-family: "verb-regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -1663,12 +1663,12 @@ h1, .h1, h2, .h2, .masthead > h1, .carousel-slide.full_bleed .title h3 {
 }
 
 /* line 101, ../../_preprocess/sass/core/_fonts.scss */
-h1 strong, .h1 strong, h1 > .subhead, h4, .h4, [role="search"].large > input[type="search"], [role="search"].large > input[type="text"], h5, .h5, [role="navigation"].local.vertical a, h6, .h6, .post-meta.horizontal, .contact > label, .masthead > .login, [role="navigation"].global .global-item, dl dt, .read_more, [role="banner"].global, .masthead > h1 > strong, .button, [role="navigation"].global, [role="navigation"].secondary.horizontal a, .footer-brand .brand-group a, .footer-contact dt {
+h1 strong, .h1 strong, h1 > .subhead, h3, .h3, h4, .h4, [role="search"].large > input[type="search"], [role="search"].large > input[type="text"], h5, .h5, [role="navigation"].local.vertical a, h6, .h6, .post-meta.horizontal, .contact > label, .masthead > .login, [role="navigation"].global .global-item, dl dt, .read_more, [role="banner"].global, .masthead > h1 > strong, .button, [role="navigation"].global, [role="navigation"].secondary.horizontal a, .footer-brand .brand-group a, .footer-contact dt {
   font-family: "verb-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 109, ../../_preprocess/sass/core/_fonts.scss */
-h3, .h3, p, li, ol, small, .caption, [role="navigation"] .secondary-item, [role="navigation"].secondary.horizontal a, .footer-contact dd, .contact > input:not([type=submit]):not([type=file]), .contact > select, .contact > textarea, .social.vertical {
+p, li, ol, small, .caption, [role="navigation"] .secondary-item, [role="navigation"].secondary.horizontal a, .footer-contact dd, .contact > input:not([type=submit]):not([type=file]), .contact > select, .contact > textarea, .social.vertical {
   font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   font-style: normal;
@@ -2713,14 +2713,20 @@ h1 + [role="navigation"].thumbs.horizontal {
 .grid:after {
   clear: both;
 }
-/* line 308, ../../_preprocess/sass/modules/_nav.scss */
+@media (min-width: 30em) {
+  /* line 300, ../../_preprocess/sass/modules/_nav.scss */
+  .grid {
+    margin-right: -24px;
+  }
+}
+/* line 312, ../../_preprocess/sass/modules/_nav.scss */
 .grid li {
   display: block;
   margin-right: 0;
   padding-right: 0;
 }
 @media (min-width: 30em) {
-  /* line 308, ../../_preprocess/sass/modules/_nav.scss */
+  /* line 312, ../../_preprocess/sass/modules/_nav.scss */
   .grid li {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2734,50 +2740,56 @@ h1 + [role="navigation"].thumbs.horizontal {
   }
 }
 
-/* line 323, ../../_preprocess/sass/modules/_nav.scss */
+/* line 327, ../../_preprocess/sass/modules/_nav.scss */
+.wrapper > .grid:first-child {
+  margin-top: 36px;
+  margin-top: 2.25rem;
+}
+
+/* line 331, ../../_preprocess/sass/modules/_nav.scss */
 .grid.centered {
   text-align: center;
 }
 
 @media (min-width: 30em) {
-  /* line 331, ../../_preprocess/sass/modules/_nav.scss */
+  /* line 339, ../../_preprocess/sass/modules/_nav.scss */
   .grid.small li {
     width: 33.33333%;
   }
 }
 @media (min-width: 48em) {
-  /* line 331, ../../_preprocess/sass/modules/_nav.scss */
+  /* line 339, ../../_preprocess/sass/modules/_nav.scss */
   .grid.small li {
     width: 25%;
   }
 }
 
 @media (min-width: 30em) {
-  /* line 345, ../../_preprocess/sass/modules/_nav.scss */
+  /* line 353, ../../_preprocess/sass/modules/_nav.scss */
   .grid.medium li {
     width: 50%;
   }
 }
 @media (min-width: 48em) {
-  /* line 345, ../../_preprocess/sass/modules/_nav.scss */
+  /* line 353, ../../_preprocess/sass/modules/_nav.scss */
   .grid.medium li {
     width: 33.33333%;
   }
 }
 
 @media (min-width: 48em) {
-  /* line 359, ../../_preprocess/sass/modules/_nav.scss */
+  /* line 367, ../../_preprocess/sass/modules/_nav.scss */
   .grid.large li {
     width: 50%;
   }
 }
-/* line 365, ../../_preprocess/sass/modules/_nav.scss */
+/* line 373, ../../_preprocess/sass/modules/_nav.scss */
 .grid.large > .panel {
   margin-top: 40px;
   margin-top: 2.5rem;
 }
 
-/* line 396, ../../_preprocess/sass/modules/_nav.scss */
+/* line 404, ../../_preprocess/sass/modules/_nav.scss */
 .slats > ul {
   list-style: none;
   list-style-type: none;
@@ -2792,14 +2804,14 @@ h1 + [role="navigation"].thumbs.horizontal {
   padding-left: 0;
 }
 
-/* line 401, ../../_preprocess/sass/modules/_nav.scss */
+/* line 409, ../../_preprocess/sass/modules/_nav.scss */
 [role="complementary"].slats {
   margin-top: 36px;
   margin-top: 2.25rem;
   text-align: left;
 }
 
-/* line 412, ../../_preprocess/sass/modules/_nav.scss */
+/* line 420, ../../_preprocess/sass/modules/_nav.scss */
 .slat {
   list-style: none;
   list-style-type: none;
@@ -2820,13 +2832,13 @@ h1 + [role="navigation"].thumbs.horizontal {
   padding-left: 0;
 }
 
-/* line 420, ../../_preprocess/sass/modules/_nav.scss */
+/* line 428, ../../_preprocess/sass/modules/_nav.scss */
 .slat.no_hairline {
   border-top: none;
   padding-top: 0;
 }
 
-/* line 437, ../../_preprocess/sass/modules/_nav.scss */
+/* line 445, ../../_preprocess/sass/modules/_nav.scss */
 [role="navigation"].secondary.horizontal li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2835,7 +2847,7 @@ h1 + [role="navigation"].thumbs.horizontal {
   zoom: 1;
   *display: inline;
 }
-/* line 441, ../../_preprocess/sass/modules/_nav.scss */
+/* line 449, ../../_preprocess/sass/modules/_nav.scss */
 [role="navigation"].secondary.horizontal a {
   text-transform: uppercase;
 }
@@ -2871,30 +2883,33 @@ h1 + [role="navigation"].thumbs.horizontal {
   clear: both;
 }
 /* line 22, ../../_preprocess/sass/modules/_strip.scss */
-.strip > hgroup, .strip > h1 {
+.strip > hgroup, .strip h1 {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
   padding-right: 24px;
+  text-align: center;
 }
-/* line 26, ../../_preprocess/sass/modules/_strip.scss */
+/* line 27, ../../_preprocess/sass/modules/_strip.scss */
 .strip hgroup > h2 {
   color: #798f8f;
 }
 
-/* line 31, ../../_preprocess/sass/modules/_strip.scss */
+/* line 32, ../../_preprocess/sass/modules/_strip.scss */
 .strip.first, .strip:first-child {
+  padding-top: 40px;
+  padding-top: 2.5rem;
   border-top: none;
 }
 
-/* line 35, ../../_preprocess/sass/modules/_strip.scss */
+/* line 37, ../../_preprocess/sass/modules/_strip.scss */
 .strip.full-bottom {
   padding-bottom: 0;
 }
 
-/* line 51, ../../_preprocess/sass/modules/_strip.scss */
+/* line 53, ../../_preprocess/sass/modules/_strip.scss */
 .strip .subsection {
   border-top: 1px solid #b1bdbd;
 }

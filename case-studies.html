@@ -5,9 +5,9 @@ active: case-studies
 ---
 
 <section class="strip first well" role="region">
-	<h1>Check out all our awesome work</h1>
 	<div class="wrapper">
-		<main role="main">
+		<h1>Headline about all our awesome work</h1>
+		<main role="main" class="overview">
 			<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, non, eaque, aut molestias inventore dicta assumenda consequatur libero perspiciatis voluptatum odit ipsa saepe corrupti dolorum corporis animi sit fugiat amet.</p>
 		</main>
 	</div>
@@ -17,15 +17,16 @@ active: case-studies
 		<!-- filters -->
 		<!-- include service-list.html class='secondary horizontal' -->
 		
-		<ul class="grid large">
+		<ul class="grid small">
 		{% for i in (1..11) %}
 			<li class="panel">
-				{% assign link = "{{ site.baseurl }}case-study-details.html" %}
+				{% assign link = "{{ site.baseurl }}case-study.html" %}
 				<!-- {% include case-study-thumb.html has-summary=true %} -->
-				<a href="/case-study-details.html">
+				<a href="#"> <!-- /case-study.html -->
 					<img src="http://placehold.it/500x300" />
-					<h3>Project name lorem ipsum</h3>
-					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, facilis, nam atque dicta nemo aliquam sit et eaque quas pariatur iure culpa quaerat magnam expedita.</p>
+				</a>
+					<h3><a href="#">Project name lorem ipsum</a></h3>
+					<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, facilis, nam atque dicta nemo aliquam... {% include read_more.html href="#" %}</p>
 				</a>
 			</li>
 		{% endfor %}

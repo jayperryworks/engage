@@ -19,8 +19,9 @@ $strip-padding: 40px;
 	border-top: $border-weight--thick solid $color-border--light;
 	border-bottom: $border-weight--thin solid $color-border--medium;
 	
-	& > hgroup, & > h1 {
+	& > hgroup, h1 {
 		@include grid-span(4, 1);
+		text-align: center;
 	}
 
 	hgroup > h2 {
@@ -29,6 +30,7 @@ $strip-padding: 40px;
 }
 
 .strip.first, .strip:first-child {
+	@include rem(padding-top, 40px);
 	border-top: none;
 }
 
