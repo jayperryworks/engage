@@ -50,9 +50,9 @@
 	// }
 
 	.footer-brand {
-		@include rem(height, 60px);
+		@include rem(height, 48px);
 		@include rem(margin-top, 24px);
-		border-bottom: $border-weight--thin solid $gray--dark;
+		border-bottom: $border-weight--thin solid $black;
 
 		.logo-footer {
 			@include grid-span(1, 1);
