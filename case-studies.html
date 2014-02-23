@@ -21,7 +21,7 @@ active: case-studies
 		{% for i in (1..11) %}
 			<li class="panel">
 				{% assign link = "{{ site.baseurl }}case-study.html" %}
-				<!-- {% include case-study-thumb.html has-summary=true %} -->
+				{% comment %}{% include case-study-thumb.html has-summary=true %}{% endcomment %}
 				<a href="#"> <!-- /case-study.html -->
 					<img src="http://placehold.it/500x300" />
 				</a>

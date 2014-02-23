@@ -90,7 +90,7 @@
 
 	& > dt, & > dd {
 		@include inline-block;
-		@extend %list--unstyled;
+		@include unstyled-list;
 	}
 
 	& > dt {
@@ -117,7 +117,7 @@
 	}
 
 	dl {
-		@extend %list--unstyled;
+		@include unstyled-list;
 		margin: 0;
 		padding: 0;
 	}

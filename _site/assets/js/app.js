@@ -82,179 +82,6 @@ jQuery(function($) {
  * More information visit http://tooltipsy.com/
  */
 ;(function(a){a.tooltipsy=function(c,b){this.options=b;this.$el=a(c);this.title=this.$el.attr("title")||"";this.$el.attr("title","");this.random=parseInt(Math.random()*10000);this.ready=false;this.shown=false;this.width=0;this.height=0;this.delaytimer=null;this.$el.data("tooltipsy",this);this.init()};a.tooltipsy.prototype={init:function(){var e=this,d,b=e.$el,c=b[0];e.settings=d=a.extend({},e.defaults,e.options);d.delay=+d.delay;if(typeof d.content==="function"){e.readify()}if(d.showEvent===d.hideEvent&&d.showEvent==="click"){b.toggle(function(f){if(d.showEvent==="click"&&c.tagName=="A"){f.preventDefault()}if(d.delay>0){e.delaytimer=window.setTimeout(function(){e.show(f)},d.delay)}else{e.show(f)}},function(f){if(d.showEvent==="click"&&c.tagName=="A"){f.preventDefault()}window.clearTimeout(e.delaytimer);e.delaytimer=null;e.hide(f)})}else{b.bind(d.showEvent,function(f){if(d.showEvent==="click"&&c.tagName=="A"){f.preventDefault()}e.delaytimer=window.setTimeout(function(){e.show(f)},d.delay||0)}).bind(d.hideEvent,function(f){if(d.showEvent==="click"&&c.tagName=="A"){f.preventDefault()}window.clearTimeout(e.delaytimer);e.delaytimer=null;e.hide(f)})}},show:function(i){if(this.ready===false){this.readify()}var b=this,f=b.settings,h=b.$tipsy,k=b.$el,d=k[0],g=b.offset(d);if(b.shown===false){if((function(m){var l=0,e;for(e in m){if(m.hasOwnProperty(e)){l++}}return l})(f.css)>0){b.$tip.css(f.css)}b.width=h.outerWidth();b.height=h.outerHeight()}if(f.alignTo==="cursor"&&i){var j=[i.clientX+f.offset[0],i.clientY+f.offset[1]];if(j[0]+b.width>a(window).width()){var c={top:j[1]+"px",right:j[0]+"px",left:"auto"}}else{var c={top:j[1]+"px",left:j[0]+"px",right:"auto"}}}else{var j=[(function(){if(f.offset[0]<0){return g.left-Math.abs(f.offset[0])-b.width}else{if(f.offset[0]===0){return g.left-((b.width-k.outerWidth())/2)}else{return g.left+k.outerWidth()+f.offset[0]}}})(),(function(){if(f.offset[1]<0){return g.top-Math.abs(f.offset[1])-b.height}else{if(f.offset[1]===0){return g.top-((b.height-b.$el.outerHeight())/2)}else{return g.top+b.$el.outerHeight()+f.offset[1]}}})()]}h.css({top:j[1]+"px",left:j[0]+"px"});b.settings.show(i,h.stop(true,true))},hide:function(c){var b=this;if(b.ready===false){return}if(c&&c.relatedTarget===b.$tip[0]){b.$tip.bind("mouseleave",function(d){if(d.relatedTarget===b.$el[0]){return}b.settings.hide(d,b.$tipsy.stop(true,true))});return}b.settings.hide(c,b.$tipsy.stop(true,true))},readify:function(){this.ready=true;this.$tipsy=a('<div id="tooltipsy'+this.random+'" style="position:fixed;z-index:2147483647;display:none">').appendTo("body");this.$tip=a('<div class="'+this.settings.className+'">').appendTo(this.$tipsy);this.$tip.data("rootel",this.$el);var c=this.$el;var b=this.$tip;this.$tip.html(this.settings.content!=""?(typeof this.settings.content=="string"?this.settings.content:this.settings.content(c,b)):this.title)},offset:function(b){return this.$el[0].getBoundingClientRect()},destroy:function(){if(this.$tipsy){this.$tipsy.remove();a.removeData(this.$el,"tooltipsy")}},defaults:{alignTo:"element",offset:[0,-1],content:"",show:function(c,b){b.fadeIn(100)},hide:function(c,b){b.fadeOut(100)},css:{},className:"tooltipsy",delay:200,showEvent:"mouseenter",hideEvent:"mouseleave"}};a.fn.tooltipsy=function(b){return this.each(function(){new a.tooltipsy(this,b)})}})(jQuery);
-// Easy Responsive Tabs Plugin
-// Author: Samson.Onna <Email : samson3d@gmail.com>
-(function ($) {
-    $.fn.extend({
-        easyResponsiveTabs: function (options) {
-            //Set the default values, use comma to separate the settings, example:
-            var defaults = {
-                type: 'default', //default, vertical, accordion;
-                width: 'auto',
-                fit: true,
-                closed: false,
-                activate: function(){}
-            }
-            //Variables
-            var options = $.extend(defaults, options);            
-            var opt = options, jtype = opt.type, jfit = opt.fit, jwidth = opt.width, vtabs = 'vertical', accord = 'accordion';
-            var hash = window.location.hash;
-            var historyApi = !!(window.history && history.replaceState);
-            
-            //Events
-            $(this).bind('tabactivate', function(e, currentTab) {
-                if(typeof options.activate === 'function') {
-                    options.activate.call(currentTab, e)
-                }
-            });
-
-            //Main function
-            this.each(function () {
-                var $respTabs = $(this);
-                var $respTabsList = $respTabs.find('ul.resp-tabs-list');
-                var respTabsId = $respTabs.attr('id');
-                $respTabs.find('ul.resp-tabs-list li').addClass('resp-tab-item');
-                $respTabs.css({
-                    'display': 'block',
-                    'width': jwidth
-                });
-
-                $respTabs.find('.resp-tabs-container > section').addClass('resp-tab-content');
-                jtab_options();
-                //Properties Function
-                function jtab_options() {
-                    if (jtype == vtabs) {
-                        $respTabs.addClass('resp-vtabs');
-                    }
-                    if (jfit == true) {
-                        $respTabs.css({ width: '100%', margin: '0px' });
-                    }
-                    if (jtype == accord) {
-                        $respTabs.addClass('resp-easy-accordion');
-                        $respTabs.find('.resp-tabs-list').css('display', 'none');
-                    }
-                }
-
-                //Assigning the h2 markup to accordion title
-                var $tabItemh2;
-                $respTabs.find('.resp-tab-content').before("<h2 class='resp-accordion' role='tab'><span class='resp-arrow'></span></h2>");
-
-                var itemCount = 0;
-                $respTabs.find('.resp-accordion').each(function () {
-                    $tabItemh2 = $(this);
-                    var $tabItem = $respTabs.find('.resp-tab-item:eq(' + itemCount + ')');
-                    var $accItem = $respTabs.find('.resp-accordion:eq(' + itemCount + ')');
-                    $accItem.append($tabItem.html());
-                    $accItem.data($tabItem.data());
-                    $tabItemh2.attr('aria-controls', 'tab_item-' + (itemCount));
-                    itemCount++;
-                });
-
-                //Assigning the 'aria-controls' to Tab items
-                var count = 0,
-                    $tabContent;
-                $respTabs.find('.resp-tab-item').each(function () {
-                    $tabItem = $(this);
-                    $tabItem.attr('aria-controls', 'tab_item-' + (count));
-                    $tabItem.attr('role', 'tab');
-
-                    //Assigning the 'aria-labelledby' attr to tab-content
-                    var tabcount = 0;
-                    $respTabs.find('.resp-tab-content').each(function () {
-                        $tabContent = $(this);
-                        $tabContent.attr('aria-labelledby', 'tab_item-' + (tabcount));
-                        tabcount++;
-                    });
-                    count++;
-                });
-                
-                // Show correct content area
-                var tabNum = 0;
-                if(hash!='') {
-                    var matches = hash.match(new RegExp(respTabsId+"([0-9]+)"));
-                    if (matches!==null && matches.length===2) {
-                        tabNum = parseInt(matches[1],10)-1;
-                        if (tabNum > count) {
-                            tabNum = 0;
-                        }
-                    }
-                }
-
-                //Active correct tab
-                $($respTabs.find('.resp-tab-item')[tabNum]).addClass('resp-tab-active');
-
-                //keep closed if option = 'closed' or option is 'accordion' and the element is in accordion mode
-                if(options.closed !== true && !(options.closed === 'accordion' && !$respTabsList.is(':visible')) && !(options.closed === 'tabs' && $respTabsList.is(':visible'))) {                  
-                    $($respTabs.find('.resp-accordion')[tabNum]).addClass('resp-tab-active');
-                    $($respTabs.find('.resp-tab-content')[tabNum]).addClass('resp-tab-content-active').attr('style', 'display:block');
-                }
-                //assign proper classes for when tabs mode is activated before making a selection in accordion mode
-                else {
-                    $($respTabs.find('.resp-tab-content')[tabNum]).addClass('resp-tab-content-active resp-accordion-closed')
-                }
-
-                //Tab Click action function
-                $respTabs.find("[role=tab]").each(function () {
-                   
-                    var $currentTab = $(this);
-                    $currentTab.click(function () {
-                        
-                        var $currentTab = $(this);
-                        var $tabAria = $currentTab.attr('aria-controls');
-
-                        if ($currentTab.hasClass('resp-accordion') && $currentTab.hasClass('resp-tab-active')) {
-                            $respTabs.find('.resp-tab-content-active').slideUp('', function () { $(this).addClass('resp-accordion-closed'); });
-                            $currentTab.removeClass('resp-tab-active');
-                            return false;
-                        }
-                        if (!$currentTab.hasClass('resp-tab-active') && $currentTab.hasClass('resp-accordion')) {
-                            $respTabs.find('.resp-tab-active').removeClass('resp-tab-active');
-                            $respTabs.find('.resp-tab-content-active').slideUp().removeClass('resp-tab-content-active resp-accordion-closed');
-                            $respTabs.find("[aria-controls=" + $tabAria + "]").addClass('resp-tab-active');
-
-                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').slideDown().addClass('resp-tab-content-active');
-                        } else {
-                            $respTabs.find('.resp-tab-active').removeClass('resp-tab-active');
-                            $respTabs.find('.resp-tab-content-active').removeAttr('style').removeClass('resp-tab-content-active').removeClass('resp-accordion-closed');
-                            $respTabs.find("[aria-controls=" + $tabAria + "]").addClass('resp-tab-active');
-                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').addClass('resp-tab-content-active').attr('style', 'display:block');
-                        }
-                        //Trigger tab activation event
-                        $currentTab.trigger('tabactivate', $currentTab);
-                        
-                        //Update Browser History
-                        if(historyApi) {
-                            var currentHash = window.location.hash;
-                            var newHash = respTabsId+(parseInt($tabAria.substring(9),10)+1).toString();
-                            if (currentHash!="") {
-                                var re = new RegExp(respTabsId+"[0-9]+");
-                                if (currentHash.match(re)!=null) {                                    
-                                    newHash = currentHash.replace(re,newHash);
-                                }
-                                else {
-                                    newHash = currentHash+"|"+newHash;
-                                }
-                            }
-                            else {
-                                newHash = '#'+newHash;
-                            }
-                            
-                            history.replaceState(null,null,newHash);
-                        }
-                    });
-                    
-                });
-                
-                //Window resize function                   
-                $(window).resize(function () {
-                    $respTabs.find('.resp-accordion-closed').removeAttr('style');
-                });
-            });
-        }
-    });
-})(jQuery);
-
-
 (function($) {
   
   // ================================================================
@@ -316,6 +143,7 @@ jQuery(function($) {
 		  // ----------------------------------------------------------------------------------
 		  active : "active", // the class of the active (current) tab
 		  open: "is-open", // the class of the content currently displayed
+      multiple: true, // can multiple tabs be open? (for accordion state)
 
 		  // methods
 		  // ----------------------------------------------------------------------------------
@@ -336,31 +164,85 @@ jQuery(function($) {
 
 		      // console.log("active tab: " + $active);
 
-		      // Hide the remaining content
-		      $links.not($active).each(function () {
-		        $($(this).attr('href')).removeClass(engage.tabs.open); //hide();
-		      });
+          // if multiple active tabs are not allowed...
+          if (engage.tabs.multiple != true) {
+            // Hide the remaining content
+            $links.not($active).each(function () {
+              $($(this).attr('href')).removeClass(engage.tabs.open);
+            });
+          }
 
 		      // Bind the click event handler
 		      $(this).on('click', 'a', function(e){
-		        // Make the old tab inactive.
-		        $active.removeClass(engage.tabs.active);
-		        $content.removeClass(engage.tabs.open); //hide();
 
-		        // Update the variables with the new link and content
-		        $active = $(this);
-		        $content = $($(this).attr('href'));
+            // if multiple active tabs are not allowed...
+            if (engage.tabs.multiple != true) {
+  		        // Make the old tab inactive.
+  		        $active.removeClass(engage.tabs.active);
+  		        $content.removeClass(engage.tabs.open);
 
-		        // Make the tab active.
-		        $active.addClass(engage.tabs.active);
-		        $content.addClass(engage.tabs.open); //show();
+              // Update the variables with the new link and content
+              $active = $(this);
+              $content = $($(this).attr('href'));
+
+              // Make the tab active.
+              $active.addClass(engage.tabs.active);
+              $content.addClass(engage.tabs.open);
+            } else {
+              // Update the variables with the new link and content
+              $active = $(this);
+              $content = $($(this).attr('href'));
+
+              // Make the tab active.
+              $active.toggleClass(engage.tabs.active);
+              $content.toggleClass(engage.tabs.open);
+            }
 
 		        // Prevent the anchor's default click action
 		        e.preventDefault();
 		      });
 		    });
-		  }
+		  },
+
+      kill : function(el) {
+        $(el).each(function() {
+          $(this).find('a').each(function() {
+            $(this).removeClass(engage.tabs.active);
+            $($(this).attr('href')).removeClass(engage.tabs.open);
+          });
+        });
+      },
+
+      reset : function(el) {
+        var $link = $(el).find('a').first();
+        $link.addClass(engage.tabs.active);
+        $($link.attr('href')).addClass(engage.tabs.open);
+      }
 		},
+
+    // Enquire.js breakpoints
+    // ---------------------------------------------------------------
+    registerBreakpoints : function() {
+
+      // iPad screens and up: > 768px
+      // ---------------------------------------------------------------------
+      enquire.register("only screen and (min-width: 48em)", {
+
+        match : function() {
+          engage.tabs.kill('.accordion-header');
+          engage.tabs.multiple = false;
+          engage.tabs.reset('nav.tabs');
+          engage.tabs.init('nav.tabs');
+        },
+
+        unmatch : function() {
+          console.log("unmatch");
+          engage.tabs.kill('nav.tabs');
+          engage.tabs.multiple = true;
+          engage.tabs.init('.accordion-header');
+        }
+      });
+    },
 
     // Setup
     // ---------------------------------------------------------------
@@ -374,9 +256,11 @@ jQuery(function($) {
         $.fn.transition = $.fn.animate;
       }
 
-      engage.tabs.init('nav.local.tabs'); // set up local tabs
+      engage.tabs.init('.accordion-header'); // set up local tabs
       engage.tooltips();
       engage.carousel();
+
+      engage.registerBreakpoints();
     }
 	}
   

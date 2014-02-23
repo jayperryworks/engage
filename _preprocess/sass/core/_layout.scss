@@ -11,6 +11,11 @@ body {
 	@include grid-margins(padding);
 	margin: 0 auto;
 	max-width: $grid-width;
+
+  &.grid-wrap {
+    @include clearfix;
+    overflow: hidden;
+  }
 }
 
 // the first container on the page, after the header

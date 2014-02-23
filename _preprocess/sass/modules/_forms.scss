@@ -39,7 +39,7 @@ input[type="search"]:before {
 }
 
 .contact {
-  @extend %main;
+  @extend .wrapper;
   // @include span-columns-media(4, $sm: 5, $med: 6);
   text-align: left;
   
@@ -74,19 +74,19 @@ aside[role="contentinfo"].right {
   // @include omega;
   text-align: left;
   ul {
-    @extend list--unstyled;
+    @include unstyled-list;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   li {
-    @extend list--unstyled;
+
   }
 }
 
 .social.vertical {
-  @extend %list--unstyled;
+  @include unstyled-list;
   @extend %lora;
   @include rem(margin-top, 24px);
 

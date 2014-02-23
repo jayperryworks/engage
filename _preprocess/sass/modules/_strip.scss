@@ -51,6 +51,8 @@ $strip-padding: 40px;
 
 
 .strip .subsection {
-	@include rem(padding-bottom, 24px);
+	// @include rem(padding-bottom, 24px);
+	// overflow: hidden;
+	clear: both;
 	border-top: $border-weight--thin solid $color-border--medium;
 }

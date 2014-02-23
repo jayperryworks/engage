@@ -172,66 +172,164 @@ footer.global [role="navigation"].global {
 
 }
 
+// tab links
 .tabs.vertical {
-	@include grid-span(4, 1, $options: both);
-	border-top: $border-weight--thin solid $bg--midtone;
+	// @include grid-span(4, 1, $options: both);
+	// border-top: $border-weight--thin solid $bg--midtone;
+	@include hidden;
+	@include rem(padding, gutter-span() 0);
+	
+	li {
+		line-height: 1.3;
+		text-align: right;
+	}
+
+	a {
+		@extend %h5;
+		display: block;
+		position: relative;
+		color: $color-text--headline;
+		// line-height: 1;
+		margin: 0;
+		padding: 0.8em 0;
+
+		&:hover {
+			color: $color-primary;
+		}
+
+		&.active {
+			$w: 16px;
+
+			color: $color-primary;
+			@include triangle--centered(left, $side: right, $loc: -#{gutter-span()}, $color: $color-border--medium, $width: $w, $selector: before);
+			@include triangle--centered(left, $side: right, $loc: -#{gutter-span() + 3}, $color: $bg--midtone, $width: ($w + 2));
+		}
+	}
 
 	@include breakpoint($screen--small) {
-		@include grid-span(9, 1, $options: both);
+		@include restore-visible;
+		@include grid-span(2, 1);
 	}
 
 	@include breakpoint($screen--medium) {
-		@include grid-span(12, 1, $options: both);
+		@include grid-span(3, 1);
+	}
+}
+
+// content area of the tab/accordion
+.tabs-panel {
+	@include grid-span(4, 1, $options: both);
+	@include clearfix;
+	overflow: hidden;
+	text-align: left;
+
+	@include breakpoint($screen--small) {
+		@include hidden;
+		@include grid-span(7, 3, $options: right);
+		@include rem(padding-bottom, 36px);
+		padding-top: gutter-span();
+		padding-left: gutter-span();
+		border-left: $border-weight--thin solid $color-border--medium;
 	}
 
-	& > .panel {
-		@include grid-span(3);
-		// @include rem(padding, 0 $gutter);
-		@include hidden;
-		text-align: left;
-		// border-left: $border-weight--thin solid $bg--midtone;
+	@include breakpoint($screen--medium) {
+		@include grid-span(9, 4, $options: right);
+	}
+
+	&.is-open {
+		@include restore-visible;
+	}
+
+	.accordion-header {
+		@include restore-visible;
+		position: relative;
+
+		a:after {
+			@include inline-block;
+			@include icon;
+			content: "\E767";
+			margin-left: 0.5em;
+			font-size: 1.2em;
+		}
+
+		.active {
+			color: $color-primary;
+
+			&:after {
+				content: '\E764';
+			}
+		}
 
 		@include breakpoint($screen--small) {
-			@include grid-span(6, 1);
+			// @include grid-span(7, 3, $options: right);
 			@include hidden;
 		}
-		@include breakpoint($screen--medium) {
-			@include grid-span(8, 1);
-			@include hidden;
-		}
-		
-		&.active {
+	}
+
+	.accordion-content {
+		@include hidden;
+
+		&.is-open {
 			@include restore-visible;
 		}
-		
-		& > [role="main"], & > main, .panel-main, & > h1 {
+
+		@include breakpoint($screen--small) {
+			@include restore-visible;
+		}
+	}
+	
+	@include layout(4) {
+
+		.panel-main {
+			@include grid-span(4, 1, $options: both);
+			@include rem(padding-bottom, 24px);
 			margin: 0;
-	    @include grid-span(2, 1);
-	    padding: 0;
 
 	    @include breakpoint($screen--small) {
-	    	@include grid-span(4, 1);
-	    }
-	    @include breakpoint($screen--medium) {
-	    	@include grid-span(6, 1);
+	    	@include grid-span(3, 1);
 	    }
 	  }
 
-	  & > [role="complementary"], .panel-aside {
-	  	@include grid-span(1, 3);
-	  	
+	  .panel-aside {
+	  	@include grid-span(4, 1, $options: both);
 
 	    @include breakpoint($screen--small) {
-	    	@include grid-span(2, 6);
-	    	
-	    }
-	    @include breakpoint($screen--medium) {
-	    	@include grid-span(2, 8);
-	    	
+	    	@include grid-span(1, 4);
 	    }
 
 	    ul {
 	    	@include unstyled-list;
+	    	@include inline-list;
+	    	@include rem(padding-bottom, 8px);
+	    	@include rem(margin-bottom, 16px);
+	    	border-bottom: $border-weight--thin solid $color-border--medium;
+
+	    	li {
+
+	    		&:after {
+	    			content: ' \2022 ';
+	    		}
+
+	    		&:last-child {
+	    			&:after {
+	    				content: '';
+	    			}
+	    		}
+	    	}
+
+	    	@include breakpoint($screen--small) {
+	    		margin-bottom: none;
+	    		padding-bottom: none;
+	    		border-bottom: none;
+
+	    		li {
+	    			display: block;
+
+	    			&:after {
+	    				content: '';
+	    			}
+	    		}
+	    	}
 	    }
 	  }
 	}
@@ -293,6 +391,7 @@ footer.global [role="navigation"].global {
 [role="navigation"].thumbs.horizontal { // .nav-thumbs--horizontal
 	@include clearfix;
 	text-align: center;
+	white-space: nowrap;
 	clear: both;
 
 	li {
