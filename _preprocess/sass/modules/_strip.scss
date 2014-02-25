@@ -66,8 +66,8 @@ $strip-padding: 40px;
 	text-align: center;
 
 	&.feature {
-		@include rem(margin, 24px auto);
 		display: block;
+		margin: 1em auto;
 		clear: both;
 
 		figcaption {

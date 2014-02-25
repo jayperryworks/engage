@@ -24,14 +24,15 @@ body {
   }
 }
 
-// the first container on the page, after the header
-// this is to add the right margin to the top so it doesn't get covered up by the header
-.is-first {
-	// @include rem(margin-top, $header-h);
+%wrapper-grid {
+  @extend .wrapper;
+  @include clearfix;
+  overflow: hidden;
 }
 
 .narrow, %narrow {
   clear: both;
+  overflow: hidden;
 
 	@include grid-span(4, 1, $options: both);
 	// @include clearfix;
@@ -39,16 +40,33 @@ body {
 
 	@include breakpoint($screen--small) {
 		@include grid-span(7, 2, $options: both);
-		padding-right: 0;
+		// padding-right: 0;
 	}
 
 	@include breakpoint($screen--medium) {
-		@include grid-span(10, 2, $options: both);
+		@include grid-span(8, 3, $options: both);
 	}
 
 	@include breakpoint($screen--large) {
-		@include grid-span(8, 3, $options: both);
+		@include grid-span(6, 4, $options: both);
 	}
+}
+
+%narrow-sidebar-right {
+  @include grid-span(4, 1, $options: both);
+  text-align: left;
+
+  @include breakpoint($screen--small) {
+    @include grid-span(1, 9);
+  }
+
+  @include breakpoint($screen--medium) {
+    @include grid-span(2, 11);
+  }
+
+  @include breakpoint($screen--large) {
+    @include grid-span(3, 10);
+  }
 }
 
 .overview, %overview {

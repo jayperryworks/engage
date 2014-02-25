@@ -30,6 +30,56 @@
   }
 }
 
+.meta-post {
+
+  &.horizontal, %meta-post-horizontal {
+    // @extend %h6;
+    @include inline-block;
+    @include rem(margin, 16px 0);
+
+    & > dt, & > dd {
+      @include inline-block;
+      @include unstyled-list;
+    }
+
+    & > dt {
+      padding: 0 0.4em;
+    }
+
+    & > .meta-post-author {
+      padding: 0 0.6em 0 0;
+      border-right: $border-weight--thin solid $gray--light;
+    }
+  }
+
+  &.vertical {
+    @extend %narrow-sidebar-right;
+
+    dl, dt, dd {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    dt {
+      margin-top: 0.5em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    dd {
+      margin-bottom: 0;
+    }
+  }
+}
+
+  .meta-post-author {
+    @extend %verb;
+    font-weight: normal;
+    margin-top: 0;
+  }
+
 .social.vertical {
   @include unstyled-list;
   @extend %lora;
@@ -38,5 +88,49 @@
   dd {
     margin: 0;
     padding: 0;
+  }
+}
+
+.post-meta.vertical {
+  display: none;
+  padding-right: 0;
+
+  @include breakpoint($screen--small) {
+    display: block;
+    @include grid-span(2, 8, $options: 'right');
+  }
+
+  @include breakpoint($screen--medium) {
+    @include grid-span(2, 11, $options: 'right');
+  }
+
+  dl {
+    @include unstyled-list;
+    margin: 0;
+    padding: 0;
+  }
+
+  dt, dd {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  dt {
+    margin-top: 1em;
+    text-transform: uppercase;
+    color: $color-secondary;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  dd {
+    color: $color-text--secondary;
+  }
+
+  & > .post-meta-author {
+    padding: 0 0.4em 0 0;
+    border-right: $border-weight--thin solid $gray--light;
   }
 }

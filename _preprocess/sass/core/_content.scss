@@ -175,6 +175,7 @@ p:last-child {
 	margin-bottom: 0;
 }
 
+// http://miekd.com/articles/pull-quotes-with-html5-and-css/
 .has-pullquote {
 
 	&:before {
@@ -182,14 +183,14 @@ p:last-child {
 		content: attr(data-pullquote) !important;
 		display: block;
 		overflow: auto;
-		padding: 0.5em 0;
+		padding: 0.5em 0.5em;
 		margin: 0 0 1em 0;
 		clear: both;
 		color: $color-primary;
 		border-top: $border-weight--thin solid $color-border--medium;
 		border-bottom: $border-weight--thin solid $color-border--medium;
 		text-align: center;
-		font-size: 1.8em;
+		font-size: 1.6em;
 	}
 }
 
@@ -242,7 +243,7 @@ small, %small {
 .read_more {
 	@extend %verb-bold;
 	@include inline-block;
-	margin-left: 0.8em;
+	// margin-left: 0.8em;
 	font-size: 0.8em;
 	text-transform: uppercase;
 	color: $color-primary;
