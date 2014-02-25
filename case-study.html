@@ -67,4 +67,15 @@ active: case-studies
   </div>
 </section>
 
-{% include footer-local.html title='ABD Direct' link='#' %}
+<footer class="local">
+  <div class="wrapper">
+    <hgroup>
+      <h4 class="underline thin">More Case Studies</h4>
+      <ul class="grid medium">
+      {% for i in (1..3) %}
+        {% include case-study-panel.html %}
+      {% endfor %}
+      </ul>
+    </hgroup>
+  </div>
+</footer>

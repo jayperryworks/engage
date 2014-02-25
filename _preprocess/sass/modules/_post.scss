@@ -6,9 +6,11 @@
 // ---------------------------------------------------------------------------------
 
 .post, %post { 
-	hgroup > h3 {
-		color: lighten($color-text--body, 30);
-	}
+	hgroup {
+		h3 {
+			color: lighten($color-text--body, 30);
+		}
+	} 
 }
 
 // Submodules/Modifiers
@@ -18,7 +20,8 @@
 
 .post.full {
 	@extend %wrapper-grid;
-	@include rem(margin, 48px 0 36px 0);
+	@include rem(padding-top, 48px);
+	@include rem(padding-bottom, 36px);
 
 	hgroup {
 		text-align: center;
@@ -50,6 +53,12 @@
 			margin: 0;
 			line-height: 1.4;
 		}
+	}
+}
+
+#home .post.excerpt {
+	& > hgroup {
+		margin-bottom: 1em;
 	}
 }
 

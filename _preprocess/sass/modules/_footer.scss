@@ -21,33 +21,6 @@
 		color: lighten($gray--dark, 15);
 	}
 }
-	
-	// .menu-footer {
-	// 	@extend %verb-bold;
-	// 	@include rem(font-size, 14px);
-	// 	background: #1A1A1A;
-	// 	text-transform: uppercase;
-	// 	border-bottom: $border-weight--thin solid darken($gray--dark, 5);
-
-	// 	ul {
-	// 		@extend %wrapper;
-
-	// 		li {
-	// 			@include inline-block;
-	// 		}
-	// 	}
-
-	// 	a {
-	// 		@extend %verb-bold;
-	// 		display: block;
-	// 		color: $gray--medium;
-	// 		padding: em(16);
-
-	// 		&:hover {
-	// 			color: $gray--light;
-	// 		}
-	// 	}
-	// }
 
 	.footer-brand {
 		@include rem(height, 48px);
@@ -142,7 +115,7 @@ footer.local {
 	border: none;
 
 	& > hgroup {
-		@extend %narrow;
+		@extend .overview;
 		@include clearfix;
 		overflow: hidden;
 		float: none;
@@ -158,5 +131,19 @@ footer.local {
 	h2 {
 		margin-right: -0.8em; // push to the right a little to compensate for > symbol
 		margin-top: 0.6em;
+	}
+
+	.grid {
+		// @extend .wrapper;
+		@include rem(padding-top, 24px);
+		@include rem(padding-bottom, 24px);
+
+		h3 {
+			margin-top: 0.5em;
+		}
+
+		p, .read_more {
+			color: $black;
+		}
 	}
 }

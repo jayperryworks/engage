@@ -46,10 +46,6 @@ body {
 	@include breakpoint($screen--medium) {
 		@include grid-span(8, 3, $options: both);
 	}
-
-	@include breakpoint($screen--large) {
-		@include grid-span(6, 4, $options: both);
-	}
 }
 
 %narrow-sidebar-right {
@@ -62,10 +58,6 @@ body {
 
   @include breakpoint($screen--medium) {
     @include grid-span(2, 11);
-  }
-
-  @include breakpoint($screen--large) {
-    @include grid-span(3, 10);
   }
 }
 
