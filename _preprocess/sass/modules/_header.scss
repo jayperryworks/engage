@@ -11,6 +11,10 @@
 	width: 100%;
 	border-bottom-width: $border-weight--thin;
 	text-align: justify;
+
+	.masthead strong {
+		font-size: 1.4em;
+	}
 }
 
 #home [role="banner"].global [role="navigation"].global {
@@ -37,7 +41,6 @@
 
 		& > strong {
 			@extend %verb-bold;
-			font-size: 1.4em;
 		}
 	}
 
@@ -50,7 +53,20 @@
 	}
 }
 
+// Main (global) header
+// -----------------------------------------------------------------------------
 
+header.local, .header.local {
+	@extend %theme-dark;
+	margin-bottom: 0;
+	overflow: hidden;
+
+	.masthead {
+		& > strong {
+			font-size: 1em;
+		}
+	}
+}
 
 
 

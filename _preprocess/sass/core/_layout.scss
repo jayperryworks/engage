@@ -32,9 +32,9 @@ body {
 
 .narrow, %narrow {
   clear: both;
-  
+
 	@include grid-span(4, 1, $options: both);
-	@include clearfix;
+	// @include clearfix;
 	position: relative;
 
 	@include breakpoint($screen--small) {
@@ -54,6 +54,7 @@ body {
 .overview, %overview {
 	@extend %narrow;
 	@include rem(margin-bottom, 30px);
+  padding-right: 0;
 
 }
 

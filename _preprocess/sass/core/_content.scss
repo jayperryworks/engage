@@ -175,6 +175,24 @@ p:last-child {
 	margin-bottom: 0;
 }
 
+.has-pullquote {
+
+	&:before {
+		@extend %lora-italic;
+		content: attr(data-pullquote) !important;
+		display: block;
+		overflow: auto;
+		padding: 0.5em 0;
+		margin: 0 0 1em 0;
+		clear: both;
+		color: $color-primary;
+		border-top: $border-weight--thin solid $color-border--medium;
+		border-bottom: $border-weight--thin solid $color-border--medium;
+		text-align: center;
+		font-size: 1.8em;
+	}
+}
+
 dl {
 	@extend %verb;
 	@include rem(font-size, 13px);
@@ -189,8 +207,13 @@ dl {
 	color: $color-text--body;
 }
 
-.caption {
+.caption, figcaption {
 	@extend %small;
+}
+
+figcaption {
+	@extend %lora-italic;
+	color: lighten($color-text--body, 30);
 }
 
 a {

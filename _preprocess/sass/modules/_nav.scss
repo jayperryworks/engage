@@ -438,6 +438,11 @@ h1 + [role="navigation"].thumbs.horizontal {
 		margin-right: -#{gutter-span()};
 	}
 
+	ul {
+		@include unstyled-list;
+		margin: 0;
+	}
+
 	li {
 		//vertically stack on mobile screens
 		display: block;

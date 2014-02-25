@@ -38,7 +38,8 @@ $strip-padding: 40px;
 	padding-bottom: 0;
 }
 
-// Strip colors (usually alernate as you scroll down the page)
+// MODIFIERS
+// -> Strip colors (usually alernate as you scroll down the page)
 // -------------------------------------------------------------------------------------
 
 .strip.well, .story--midtone, %story--midtone {
@@ -55,4 +56,23 @@ $strip-padding: 40px;
 	// overflow: hidden;
 	clear: both;
 	border-top: $border-weight--thin solid $color-border--medium;
+}
+
+
+// SUBMODULES
+// ------------------------------------------------------------------------------
+
+.strip-img {
+	text-align: center;
+
+	&.feature {
+		@include rem(margin, 24px auto);
+		display: block;
+		clear: both;
+
+		figcaption {
+			text-align: right;
+			margin-top: 0.5em;
+		}
+	}
 }

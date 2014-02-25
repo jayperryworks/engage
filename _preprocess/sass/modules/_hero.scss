@@ -21,6 +21,15 @@
 // SUBMODULES
 // ------------------------------------------------------------------------------
 
+#case-study .hero {
+  @include rem(height, 500px);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url(../images/chimp-flickr.jpg) center center;
+  background-size: cover;
+}
+
 // // main headline (usually an h1)
 // .hero-headline {
 // 	// @include base-grid-margins(padding, $full: true);
