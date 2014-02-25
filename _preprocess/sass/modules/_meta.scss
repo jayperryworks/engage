@@ -1,0 +1,42 @@
+// ==============================================================================
+// Navigation/menu modules
+// ==============================================================================
+
+// BASE
+// ---------------------------------------------------------------------------------
+
+.meta { 
+
+}
+
+// SUBMODULES
+// ---------------------------------------------------------------------------------
+
+.meta-contact {
+  @include grid-span(4, 1, $options: both);
+  @include rem(font-size, 13px);
+  text-align: left;
+
+  ul {
+    @include unstyled-list;
+  }
+
+  @include breakpoint($screen--small) {
+    @include grid-span(3, 7, $options: right);
+  }
+
+  @include breakpoint($screen--medium) {
+    @include grid-span(2, 10, $options: right);
+  }
+}
+
+.social.vertical {
+  @include unstyled-list;
+  @extend %lora;
+  @include rem(margin-top, 24px);
+
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+}

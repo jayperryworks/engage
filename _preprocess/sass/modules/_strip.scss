@@ -20,7 +20,7 @@ $strip-padding: 40px;
 	border-bottom: $border-weight--thin solid $color-border--medium;
 	
 	& > hgroup, h1 {
-		@include grid-span(4, 1);
+		// @include grid-span(4, 1);
 		text-align: center;
 	}
 

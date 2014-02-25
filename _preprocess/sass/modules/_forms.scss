@@ -39,9 +39,16 @@ input[type="search"]:before {
 }
 
 .contact {
-  @extend .wrapper;
-  // @include span-columns-media(4, $sm: 5, $med: 6);
+  @include grid-span(4, 1, $options: both);
   text-align: left;
+
+  @include breakpoint($screen--small) {
+    @include grid-span(6, 1, $options: left);
+  }
+
+  @include breakpoint($screen--medium) {
+    @include grid-span(6, 4, $options: left);
+  }
   
   & > label {
     @extend %h6;
@@ -69,29 +76,3 @@ input[type="search"]:before {
   }
 }
 
-aside[role="contentinfo"].right {
-  // @include span-columns-media(4, $sm: 3, $med: 4);
-  // @include omega;
-  text-align: left;
-  ul {
-    @include unstyled-list;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-
-  }
-}
-
-.social.vertical {
-  @include unstyled-list;
-  @extend %lora;
-  @include rem(margin-top, 24px);
-
-  dd {
-    margin: 0;
-    padding: 0;
-  }
-}

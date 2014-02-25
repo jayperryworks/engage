@@ -22,6 +22,7 @@
 	clear: both;
 
 	&:last-child {
+		@include rem(margin-bottom, 36px);
 		border-bottom: none;
 	}
 

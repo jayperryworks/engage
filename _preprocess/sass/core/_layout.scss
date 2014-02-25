@@ -4,17 +4,23 @@
 
 body {
 	// @include rem(padding-top, 60px);
+  background: white !important;
 }
 
 // constrain to grid width, max width, and center in the browser window
 .wrapper, %wrapper {
 	@include grid-margins(padding);
+  background: transparent !important;
 	margin: 0 auto;
 	max-width: $grid-width;
 
   &.grid-wrap {
     @include clearfix;
     overflow: hidden;
+  }
+
+  & > h1 {
+    clear: both;
   }
 }
 
@@ -25,6 +31,8 @@ body {
 }
 
 .narrow, %narrow {
+  clear: both;
+  
 	@include grid-span(4, 1, $options: both);
 	@include clearfix;
 	position: relative;
