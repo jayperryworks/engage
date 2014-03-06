@@ -1,3 +1,9 @@
+// Base
+// ---------------------------------------------------------------------------------
+
+
+
+
 // Forms
 // ----------------------------------------------------------------------------
 
@@ -17,14 +23,14 @@
     overflow: hidden;
     width: 100%;
     padding: 0.5em 1.5em 0.5em 2.8em;
-    border: $border-weight--thin solid $color-border--light;
-    border-radius: 100px;
-    box-shadow: inset 0 1px $color-border--light;
+    // border: $border-weight--thin solid $color-border--light;
+    // border-radius: 100px;
+    // box-shadow: inset 0 1px $color-border--light;
     background: url("#{$base-path-img}icon-search.png") 1em center no-repeat;
 
-    &:focus {
-      border: $border-weight--thin solid $color-secondary;
-    }
+    // &:focus {
+    //   border-color: $color-secondary;
+    // }
   }
 }
 
@@ -45,11 +51,11 @@
   }
 
   & > input:not([type=submit]):not([type=file]), & > select, & > textarea {
-    @extend %lora;
+    // @extend %lora;
     // @extend %theme-well;
     @include rem(font-size, 12px);
     @include rem(margin, 6px 0 24px 0);
-    @include rem(padding, 4px);
+    // @include rem(padding, 4px);
     display: block;
     width: 100%;
   }
