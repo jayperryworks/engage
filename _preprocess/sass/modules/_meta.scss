@@ -31,6 +31,11 @@
 }
 
 .meta-post {
+  @extend %sidebar;
+
+  li, dd {
+    @extend %verb;
+  }
 
   &.horizontal, %meta-post-horizontal {
     // @extend %h6;
@@ -54,6 +59,10 @@
 
   &.vertical {
     @extend %narrow-sidebar-right;
+
+    ul {
+      @include unstyled-list;
+    }
 
     dl, dt, dd {
       margin-left: 0;

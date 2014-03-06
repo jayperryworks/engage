@@ -195,8 +195,7 @@ p:last-child {
 }
 
 dl {
-	@extend %verb;
-	@include rem(font-size, 13px);
+	@extend %sidebar;
 
 	dt {
 		@extend %verb-bold;
@@ -210,6 +209,11 @@ dl {
 
 .caption, figcaption {
 	@extend %small;
+}
+
+%sidebar {
+	@extend %verb;
+	@include rem(font-size, 13px);
 }
 
 figcaption {
