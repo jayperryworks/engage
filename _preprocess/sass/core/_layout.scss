@@ -12,6 +12,7 @@ body {
 	@include grid-margins(padding);
   background: transparent !important;
 	margin: 0 auto;
+  width: 100%;
 	max-width: $grid-width;
 
   &.grid-wrap {
@@ -32,6 +33,7 @@ body {
 
 .narrow, %narrow {
   clear: both;
+  width: 100%;
   overflow: hidden;
 
 	@include grid-span(4, 1, $options: both);

@@ -10,7 +10,7 @@
 // Base styles: opinionated defaults
 // ==========================================================================
 
-* {
+*, *:before, *:after {
   @include box-sizing('border-box'); // use border-box sizing for, well, everything. compass polyfill.
 }
 
@@ -50,12 +50,12 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: $color-secondary;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: $color-secondary;
   text-shadow: none;
 }
 
@@ -93,6 +93,22 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0;
+}
+
+input {
+  @include box-sizing('border-box');
+  text-shadow: none;
+
+  &:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: $color-secondary;
+  }
+}
+
+input[type="search"] {
+  @include box-sizing('border-box');
+  -webkit-appearance: none;
 }
 
 /*

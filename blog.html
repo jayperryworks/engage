@@ -4,13 +4,14 @@ title: Blog
 active: blog
 ---
 
-<form role="search" class="large">
-	<input type="search" placeholder="Search the blog" />
-</form>
+<div class="wrapper grid-wrap">
+	<form role="search" class="large narrow">
+		<input type="search" placeholder="Search the blog" />
+	</form>
+</div>
 
 <div class="wrapper grid-wrap">
-	<main role="main" class="narrow">
-
+	<div class="narrow">
 		{% for i in (1...10) %}
 		<article class="post excerpt">
 			<hgroup class="post-title">
@@ -31,10 +32,10 @@ active: blog
 			</dl>
 		</article>
 		{% endfor %}
-	</main>
+	</div>
 
 	<aside class="meta-post vertical" role="contentinfo">
-		<h3>Categories</h3>
+		<h5>Categories</h5>
 		<ul>
 			<li><a href="#">News</a></li>
 			<li><a href="#">People</a></li>
