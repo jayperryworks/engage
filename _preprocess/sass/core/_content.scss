@@ -10,7 +10,7 @@ h1, .h1, %h1 {
 	@extend %verb-light;
 	@include rem(font-size, 40px);
 	line-height: 1.2;
-	letter-spacing: -0.04em;
+	letter-spacing: -0.05em;
 	margin: 0.5em 0;
 
 	strong {
@@ -321,7 +321,11 @@ small, %small {
 .reverse, %theme-reverse, %theme-dark {
 	color: white;
 	background: $bg--dark;
-	border-color: black;
+	border-color: $color-border--dark;
+
+	h5 {
+		color: $gray--medium;
+	}
 	
 	p {
 		color: $gray--medium;
@@ -333,6 +337,22 @@ small, %small {
 
 	small {
 		color: $gray--dark;
+	}
+
+	input:not([type="submit"]) {
+		@include form-placeholder-color(darken($gray--medium, 10));
+		background: lighten($bg--dark, 5);
+		color: $gray--light;
+		border-color: $color-border--dark;
+		box-shadow: inset 0 1px $color-border--dark;
+
+		&:focus {
+			border-color: $color-primary;
+		}
+	}
+
+	input[type="submit"] {
+		border-color: $color-border--dark;
 	}
 }
 

@@ -23,20 +23,80 @@
 }
 
 	.footer-brand {
-		@include rem(height, 48px);
 		@include rem(margin-top, 24px);
+		display: block;
+		overflow: hidden;
 		border-bottom: $border-weight--thin solid $black;
 
+		@include breakpoint($screen--xsmall) {
+			border-bottom: none;
+		}
+
+		@include breakpoint($screen--small) {
+			// @include grid-span(2, 2);
+			@include rem(height, 48px);
+			border-bottom: $border-weight--thin solid $black;
+		}
+
 		.logo-footer {
-			@include grid-span(1, 1);
 			@include inline-block--centered;
-			text-align: left;
+			display: block;
+			text-align: center;
+
+			@include breakpoint($screen--xsmall) {
+				@include grid-span(2, 1);
+				padding-bottom: 0.8em;
+				text-align: left;
+			}
+
+			@include breakpoint($screen--small) {
+				@include grid-span(3, 1);
+			}
+		}
+
+		.brand-group {
+			@include inline-block--centered;
+			text-align: right;
+
+			@include breakpoint($screen--xsmall) {
+				@include grid-span(2, 3, $options: right);
+				padding-right: 0;
+				text-align: right;
+			}
+
+			@include breakpoint($screen--small) {
+				@include grid-span(3, 7, $options: right);
+				padding-right: 0;
+			}
+
+			a {
+				@extend %verb-bold;
+				text-transform: uppercase;
+				color: $color-secondary;
+
+				&:hover, &:active {
+					color: lighten($color-secondary, 10);
+				}
+			}
 		}
 
 		.social {
-			@include grid-span(2, 2);
 			@include inline-block--centered;
+			@include rem(padding, 12px 0 16px 0);
+			display: block;
+			clear: both;
 			text-align: center;
+
+			@include breakpoint($screen--xsmall) {
+				@include rem(padding, 16px 0 0 0);
+				border-top: $border-weight--thin solid $color-border--dark;
+			}
+
+			@include breakpoint($screen--small) {
+				@include grid-span(3, 4);
+				padding-top: 0;
+				border-top: none;
+			}
 
 			ul {
 				@include inline-block;
@@ -49,22 +109,6 @@
 				@include inline-block;
 				@include rem(padding, 0 6px);
 				vertical-align: middle;
-			}
-		}
-
-		.brand-group {
-			@include grid-span(1, 4);
-			@include inline-block--centered;
-			text-align: right;
-
-			a {
-				@extend %verb-bold;
-				text-transform: uppercase;
-				color: $color-secondary;
-
-				&:hover, &:active {
-					color: lighten($color-secondary, 10);
-				}
 			}
 		}
 	}
@@ -80,6 +124,11 @@
 	}
 	.social-icon-github {
 		@include ir("icon-social-github.png", 30px, 30px);
+	}
+
+	.footer-subscribe {
+		@include rem(padding, 16px 0);
+		border-bottom: $border-weight--thin solid $color-border--dark;
 	}
 
 	.footer-contact {

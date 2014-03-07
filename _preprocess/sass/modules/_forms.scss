@@ -1,11 +1,23 @@
 // Base
 // ---------------------------------------------------------------------------------
 
+input.small {
+  @include rem(font-size, 13px);
+}
 
+input[type="submit"].inline {
+  @include inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  background: $color-primary;
+  border: $border-weight--thin solid $color-primary;
+}
 
 
 // Forms
 // ----------------------------------------------------------------------------
+
+// ------- Large search box -----------------------------------------------------
 
 [role="search"].large {
   @include rem(margin-top, 40px);
@@ -33,6 +45,9 @@
     // }
   }
 }
+
+
+// ------- Contact page form ---------------------------------------------------------
 
 .contact {
   @include grid-span(4, 1, $options: both);
@@ -70,5 +85,48 @@
   & > textarea {
     // @include rem(height, 40px);
   }
+
+  // subscribe checkbox
+  & > label.small {
+    @extend %verb;
+    display: block;
+    margin-top: 1em;
+    color: $color-text--secondary;
+    text-transform: none;
+
+    @include breakpoint($screen--xsmall) {
+      @include inline-block;
+      margin-left: 0.5em;
+      margin-top: 0.5em;
+    }
+
+    input[type='checkbox'] {
+      margin-right: 0.5em;
+    }
+
+  }
 }
 
+
+// ------- Footer subscribe form -----------------------------------------------------
+
+.footer-subscribe form {
+  h5 {
+    margin-bottom: 0.5em;
+
+    @include breakpoint($screen--xsmall) {
+      @include inline-block;
+      padding-right: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  input[type="email"] {
+    border-radius: 5px 0 0 5px;
+    margin-right: -3px;
+  }
+
+  input[type="submit"] {
+    border-radius: 0 5px 5px 0;
+  }
+}

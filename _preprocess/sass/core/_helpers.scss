@@ -138,6 +138,24 @@
 	}
 }
 
+@mixin form-placeholder-color($color: $color-text--secondary) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;  
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;  
+  }
+
+  &:-ms-input-placeholder {  
+    color: $color;  
+  }
+}
+
 // Animation for spinning icons
 @mixin spin-icon {
   -moz-animation: spin 2s infinite linear;

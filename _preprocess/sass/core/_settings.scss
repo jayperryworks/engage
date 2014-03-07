@@ -31,7 +31,7 @@ $breakpoint-to-ems: true; // breakpoint setting -- covert all to ems
 
 $screen--xsmall: 480px;
 $screen--small: 768px;
-$screen--medium: 1000px;
+$screen--medium: 1024px;
 $screen--large: 1280px;
 
 $grid-columns--xsmall: 4;
@@ -133,4 +133,4 @@ $bg--midtone: $gray--superlight;
 
 $color-border--light: darken($gray--superlight, 10);
 $color-border--medium: lighten($gray--medium, 20);
-$color-border--dark: black;
+$color-border--dark: $black;
