@@ -95,7 +95,7 @@ hgroup {
 	background: $bg--dark;
 	padding: em(16) em(27) em(12) em(27);
 	margin: 0 0 em(18) 0;
-	z-index: $base-z--top;
+	z-index: $base-z--middle;
 
 	&.secondary {
 		background: none;

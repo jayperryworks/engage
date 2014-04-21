@@ -7,18 +7,28 @@
 	@extend %theme-dark;
 	@extend %verb-bold;
 	@include rem(font-size, 12px);
-	position: relative;
+	@include rem(height, 50px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	width: 100%;
+	z-index: $base-z--top;
 	border-bottom-width: $border-weight--thin;
-	text-align: justify;
+	text-align: center;
 
 	.masthead strong {
 		font-size: 1.4em;
 	}
 }
 
-#home [role="banner"].global [role="navigation"].global {
-	border-top: 1px solid black;
+#home [role="banner"].global {
+	position: relative;
+	height: auto;
+
+	[role="navigation"].global {
+		border-top: 1px solid black;
+	}
 }
 
 .masthead {
@@ -28,14 +38,9 @@
 	position: relative;
 	text-align: center;
 
-	.logo.full {
-		@include rem(margin, 0 auto);
-		@include inline-block;
-		text-align: center;
-	}
-
 	& > h1 {
 		@extend %verb-light;
+		@include rem(margin, 30px 0);
 		clear: both;
 		text-align: center;
 
@@ -50,8 +55,65 @@
 		display: block;
 		position: absolute;
 		right: 0;
+		margin-left: 0;
+		margin-right: 0;
+		// padding: em(22);
+		height: auto;
+
+		&:before {
+			content: none;
+		}
 	}
 }
+	.menu-btn {
+		@include inline-block--centered(100%);
+		@include grid-margins($property: margin);
+		@extend %menu--main;
+		display: block;
+		position: absolute;
+		// top: 50%;
+		// left: 0;
+		// height: 50px;
+		// margin-top: -25px;
+		color: $gray--medium;
+
+		& > .icon-alone:before {
+			line-height: 0;
+			height: 50px;
+		}
+	}
+
+	.login {
+		@include inline-block--centered(100%);
+		@include grid-margins($property: margin);
+		@extend %menu--main;
+		display: block;
+		top: 0;
+		right: 0;
+		position: absolute;
+		color: lighten($bg--dark, 15);
+		// padding: em(22);
+		letter-spacing: -0.01em;
+
+		&:hover {
+			color: $color-primary;
+		}
+
+		&.active {
+			color: $gray--superlight;
+			background: darken($gray--medium, 30);
+		}
+	}
+
+	.logo.full {
+		@include rem(margin, 0 auto);
+		@include inline-block--centered(100%);
+		text-align: center;
+
+		& > img {
+			height: 50%;
+		}
+	}
 
 // Main (global) header
 // -----------------------------------------------------------------------------

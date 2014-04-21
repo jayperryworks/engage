@@ -67,7 +67,7 @@
 
 	& > .login {
 		@extend .global-item;
-		@include inline-block;
+		@include inline-block; 	
 		@include grid-margins($property: margin);
 		top: 0;
 		right: 0;

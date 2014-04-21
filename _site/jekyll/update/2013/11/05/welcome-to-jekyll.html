@@ -6,23 +6,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.name }}{% if page.title != "home" %} &rsaquo; {{ page.title }}{% endif %}</title>
+    <title>The Engage Group &rsaquo; Welcome to Jekyll!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    {% capture level %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
-    {% capture relativepath %}{% for i in (3..level) %}../{% endfor %}{% endcapture %}
-    {% capture path %}{{ relativepath }}{{ site.baseurl }}{% endcapture %}
+    
+    
+    
 
-    <link rel="stylesheet" href="{{ path }}assets/css/app.css">
+    <link rel="stylesheet" href="../../../../../assets/css/app.css">
 
     <!-- Google fonts -->
    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- Modernizr -->
-    <script src="{{ path }}assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../../../../assets/js/vendor/modernizr-2.6.2.min.js"></script>
     <script>
       // add the "main" element to html5 shiv -- modernizr does not include yet
       // http://drublic.de/blog/add-main-element-modernizr/
@@ -30,60 +30,88 @@
       window.html5.shivDocument(document); // re-invoke the `shivDocument` method
     </script>
   </head>
-  <body id="{% if page.slug %}{{ page.slug | downcase }}{% else %}{{ page.title | replace: " ", "-" | downcase }}{% endif %}">
+  <body id="welcome-to-jekyll!">
     <!--[if lt IE 7]>
       <p class="browsehappy">Oh dear, it looks like your browser is quite old. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- header -->
     <header role="banner" class="global">
-      {% if page.title == "home" %}
-      <section class="masthead">
-        <img class="logo full" src="{{ path }}assets/images/logo-engage--full.png" alt="The Engage Group" />
-        <a href="#" class="login">Sign in</a>
-        <h1>
-          We help nonprofits &amp;&nbsp;their causes<br />
-          <strong>make a difference online.</strong>
-        </h1>
-      </section>
-      {% endif %}
+      
 
-      {% if page.title == "home" %}
-      {% include nav-global.html %}
-      {% else %}
+      
       <a href="#" class="menu-btn">
         <span aria-hidden="true" data-icon="&#9776;" class="icon-alone"></span>
         <span class="screen-reader-text">Previous section</span>
       </a>
-      <a href="{{ path }}index.html" class="logo full"><img src="{{ path }}assets/images/logo-engage--full.png" alt="The Engage Group" /></a>
-      {% comment %}{% include nav-global.html login="true" logo="true" %}{% endcomment %}
-      {% comment %}
-      <nav role="navigation" class="global">
-        <ul>
-          <li><a href="{{ path }}what-we-do.html" class="global-item {% if page.active == 'what-we-do' %}active{% endif %}">What we do</a></li>
-          <li><a href="{{ path }}company.html" class="global-item {% if page.active == 'company' %}active{% endif %}">Company</a></li>
-          <li><a href="{{ path }}case-studies.html" class="global-item {% if page.active == 'case-studies' %}active{% endif %}">Case studies</a></li>
-          <li><a href="{{ path }}blog.html" class="global-item {% if page.active == 'blog' %}active{% endif %}">Blog</a></li>
-          <!-- rd-tools.html -->
-          <li><a href="" class="main-item {% if page.active == 'r+d' %}active{% endif %}">R+D</a></li>
-          <li><a href="{{ path }}contact.html" class="global-item {% if page.active == 'contact' %}active{% endif %}">Contact us</a></li>
-        </ul>
-      </nav>
-      {% endcomment %}
+      <a href="../../../../../index.html" class="logo full"><img src="../../../../../assets/images/logo-engage--full.png" alt="The Engage Group" /></a>
+      
+      
       <a href="#" class="login">Sign in</a>
-      {% endif %}
+      
     </header>
 
-    {{ content }}
+    <!-- <h2>Welcome to Jekyll!</h2>
+<p class="meta">05 Nov 2013</p>
+
+ --><article class="post-full">
+	<h1></h1>
+	<section>
+		<p>You&#39;ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
+To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
+<span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
+</code></pre></div>
+
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll&#39;s GitHub repo</a>.</p>
+
+	</section>
+
+	<aside class="post-meta">
+		<dl>
+			<dt><time datetime="2013-11-05 05:50:31 -0500">05 Nov 2013</time></dt>
+			<dt class="post-meta-author">by <a href="#">Sean</a></dt>
+			<dt>Filed under</dt>
+			<dd><a href="#" class="post-meta-tag">News</a></dd>
+			<dd><a href="#" class="post-meta-tag">People</a></dd>
+		</dl>
+		<dl>
+			<dt>Share</dt>
+			<dd><a href="facebook.com">Facebook</a></dd>
+			<dd><a href="twitter.com">Twitter</a></dd>
+			<dd><a href="linkedin.com">LinkedIn</a></dd>
+			<dd><a href="plus.google.com">Google+</a></dd>
+		</dl>
+</article>
+
 
     <!-- footer -->
     <footer class="global" role="contentinfo">
-      {% include nav-global.html %}
+      <nav role="navigation" class="global">
+  
+
+  <ul>
+    <li><a href="../../../../../what-we-do.html" class="global-item ">What we do</a></li>
+    <li><a href="../../../../../company.html" class="global-item ">Company</a></li>
+    <li><a href="../../../../../case-studies.html" class="global-item ">Case studies</a></li>
+    <li><a href="../../../../../blog.html" class="global-item ">Blog</a></li>
+    
+    <li><a href="../../../../../contact.html" class="global-item ">Contact us</a></li>
+  </ul>
+
+  
+</nav>
       
       <div class="wrapper">
         <section class="footer-brand">
           <div class="logo-footer">
-            <a href="{{ path }}engage/"><img src="{{ path }}assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
+            <a href="../../../../../engage/"><img src="../../../../../assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
           </div>
           
           <div class="brand-group">
@@ -123,7 +151,7 @@
     </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ path }}assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="{{ path }}assets/js/app.js"></script>
+    <script>window.jQuery || document.write('<script src="../../../../../assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="../../../../../assets/js/app.js"></script>
   </body>
 </html>

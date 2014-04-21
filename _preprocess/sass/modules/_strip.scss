@@ -30,6 +30,7 @@ $strip-padding: 40px;
 }
 
 .strip.first, .strip:first-child {
+	@include rem(margin-top, 50px);
 	@include rem(padding-top, 40px);
 	border-top: none;
 }
