@@ -57,19 +57,15 @@
       </a>
       <a href="{{ path }}index.html" class="logo full"><img src="{{ path }}assets/images/logo-engage--full.png" alt="The Engage Group" /></a>
       {% comment %}{% include nav-global.html login="true" logo="true" %}{% endcomment %}
-      {% comment %}
-      <nav role="navigation" class="global">
+      <nav role="navigation" class="global interior is-open">
         <ul>
           <li><a href="{{ path }}what-we-do.html" class="global-item {% if page.active == 'what-we-do' %}active{% endif %}">What we do</a></li>
           <li><a href="{{ path }}company.html" class="global-item {% if page.active == 'company' %}active{% endif %}">Company</a></li>
           <li><a href="{{ path }}case-studies.html" class="global-item {% if page.active == 'case-studies' %}active{% endif %}">Case studies</a></li>
           <li><a href="{{ path }}blog.html" class="global-item {% if page.active == 'blog' %}active{% endif %}">Blog</a></li>
-          <!-- rd-tools.html -->
-          <li><a href="" class="main-item {% if page.active == 'r+d' %}active{% endif %}">R+D</a></li>
           <li><a href="{{ path }}contact.html" class="global-item {% if page.active == 'contact' %}active{% endif %}">Contact us</a></li>
         </ul>
       </nav>
-      {% endcomment %}
       <a href="#" class="login">Sign in</a>
       {% endif %}
     </header>

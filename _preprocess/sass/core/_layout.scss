@@ -7,6 +7,10 @@ body {
   background: white !important;
 }
 
+.wrapper-body.is-open {
+
+}
+
 // constrain to grid width, max width, and center in the browser window
 .wrapper, %wrapper {
 	@include grid-margins(padding);

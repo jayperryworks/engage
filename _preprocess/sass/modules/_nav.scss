@@ -88,6 +88,30 @@ footer.global [role="navigation"].global {
 	}
 }
 
+// off-canvas nav for interior pages
+[role="navigation"].global.interior {
+	@include rem(width, $header-w--int);
+	@include rem(left, -($header-w--int));
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	border-right: $border-weight--thin solid black;
+
+	&.is-open {
+		left: 0;
+	}
+
+	li {
+		display: block;
+		margin: 0;
+	}
+
+	.global-item {
+		border-top: $border-weight--thin solid black;
+	}
+}
+
 // [role="navigation"].main.slide_out {
 // 	position: absolute;
 // 	left: 0;
