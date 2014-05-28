@@ -1,3 +1,11 @@
+%header-margins {
+	@include rem(margin, 0 18px);
+	
+	@include breakpoint($screen--medium) {
+		@include rem(margin, 0 24px);
+	}
+}
+
 // Main (global) header
 // -----------------------------------------------------------------------------
 
@@ -6,8 +14,9 @@
 	@include clearfix;
 	@extend %theme-dark;
 	@extend %verb-bold;
+	@extend %menu-transition;
 	@include rem(font-size, 12px);
-	@include rem(height, 50px);
+	@include rem(height, 48px);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -25,9 +34,20 @@
 #home [role="banner"].global {
 	position: relative;
 	height: auto;
+	border-bottom: $border-weight--thin solid black;
 
 	[role="navigation"].global {
+		@include hidden;
 		border-top: 1px solid black;
+	}
+
+	@include breakpoint($screen--xsmall) {
+		border-bottom: none;
+
+		[role="navigation"].global {
+			@include restore-visible;
+			border-top: 1px solid black;
+		}
 	}
 }
 
@@ -65,10 +85,14 @@
 		}
 	}
 }
+
 	.menu-btn {
-		@include inline-block--centered(100%);
-		@include grid-margins($property: margin);
 		@extend %menu--main;
+		@extend %header-margins;
+		@include inline-block--centered(100%);
+		// @include grid-margins($property: margin);
+		// @include rem(margin, 0 18px);
+		
 		display: block;
 		position: absolute;
 		// top: 50%;
@@ -84,9 +108,11 @@
 	}
 
 	.login {
-		@include inline-block--centered(100%);
-		@include grid-margins($property: margin);
 		@extend %menu--main;
+		@extend %header-margins;
+		@include inline-block--centered(100%);
+		// @include grid-margins($property: margin);
+		// @include rem(margin, 0 18px);
 		display: block;
 		top: 0;
 		right: 0;

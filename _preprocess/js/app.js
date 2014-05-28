@@ -13,6 +13,8 @@
       breakpoints : 'breakpoints.json', // grab breakpoint values from a JSON file, shared by JS and SASS
       duration : 500, // standard duration of animations
       threshold : undefined, // threshold (vertical pixel value) where we reveal the logo icon
+      menuBtn : '.menu-btn', // button to reveal the off-canvas nav (on interior pages)
+      menuBtn_close : '.menu-btn-close',
 
       // flags
       // ---------------------------------------------------------------
@@ -48,6 +50,70 @@
 		  //   animation: 'slide',
 		  //   controlsContainer: '.carousel.nav'
 		  // });
+    },
+
+    // Interior navigation (reveal/hide menu)
+    // ---------------------------------------------------------------
+
+    offCanvasNav : {
+      open : "is-open",
+      target : "body",
+
+      init : function(el) {
+        $(el).each(function() {
+          $(this).click(function(e) {
+            console.log($(engage.offCanvasNav.target));
+            $(engage.offCanvasNav.target).toggleClass(engage.offCanvasNav.open);
+            e.preventDefault();
+          });
+        });
+      },
+
+      // open : function(el) {
+      //   $(el).each(function() {
+      //     $(this).click(function(e) {
+      //       console.log("open");
+      //       $(engage.offCanvasNav.target).addClass(engage.offCanvasNav.open);
+      //     });
+      //   });
+      // },
+
+      // close : function(el) {
+      //   $(el).each(function() {
+      //     $(this).click(function(e) {
+      //       console.log("close");
+      //       $(engage.offCanvasNav.target).removeClass(engage.offCanvasNav.open);
+      //     });
+      //   });
+      // },
+
+      kill : function() {
+        $(engage.offCanvasNav.target).removeClass(engage.offCanvasNav.open);
+      }
+    },
+
+    accordion : {
+
+      active : "active",
+      open : "is-open",
+
+      init : function(el) {
+
+        $(el).each(function() {
+          $(this).on('click', function(e) {
+            $this = $(this);
+            // $content = $($this.attr('href'));
+
+            console.log("hello");
+
+            $($this.attr('href')).toggleClass(engage.accordion.open);
+            $this.toggleClass(engage.accordion.active);
+
+            // Prevent the anchor's default click action
+            e.preventDefault();
+          });
+        });
+      }
     },
 
     // Tabs
@@ -171,6 +237,10 @@
       if (!$.support.transition) {
         $.fn.transition = $.fn.animate;
       }
+
+      // set up the interio (off-canvas) nav
+      engage.offCanvasNav.init(engage.config.menuBtn);
+      // engage.offCanvasNav.close(engage.config.menuBtn_close);
 
       engage.tabs.init('.accordion-header'); // set up local tabs
       engage.tooltips();

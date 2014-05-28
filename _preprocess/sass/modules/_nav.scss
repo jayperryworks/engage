@@ -44,8 +44,14 @@
 	}
 
 	li {
-		@include inline-block;
+		// @include inline-block;
 		margin-right: -4px;
+		text-align: center;
+		border-bottom: $border-weight--thin solid black;
+
+		&:last-child {
+			border-bottom: none;
+		}
 	}
 
 	.global-item {
@@ -74,6 +80,12 @@
 		position: absolute;
 		color: lighten($bg--dark, 15);
 	}
+
+	@include breakpoint($screen--xsmall) {
+		li {
+			@include inline-block;
+		}
+	}
 }
 
 footer.global [role="navigation"].global {
@@ -89,18 +101,21 @@ footer.global [role="navigation"].global {
 }
 
 // off-canvas nav for interior pages
+// see _layout.scss for open state (.is-open)
 [role="navigation"].global.interior {
-	@include rem(width, $header-w--int);
-	@include rem(left, -($header-w--int));
+	@extend %menu-transition;
+	// @include rem(width, $header-w--int);
+	// @include rem(left, -($header-w--int));
 	display: block;
 	position: fixed;
+	left: -($header-w--int);
 	top: 0;
 	bottom: 0;
+	width: $header-w--int;
 	border-right: $border-weight--thin solid black;
-
-	&.is-open {
-		left: 0;
-	}
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 
 	li {
 		display: block;
@@ -108,6 +123,7 @@ footer.global [role="navigation"].global {
 	}
 
 	.global-item {
+		@include rem(padding, 14px 18px);
 		border-top: $border-weight--thin solid black;
 	}
 }

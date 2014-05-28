@@ -4,12 +4,40 @@
 
 body {
 	// @include rem(padding-top, 60px);
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: white !important;
 }
 
-.wrapper-body.is-open {
-
+.content {
+  @extend %menu-transition;
+  position: relative;
+  left: 0;
 }
+
+  .is-open {
+
+    .content, [role="banner"].global, [role="contentinfo"].global {
+      @extend %menu-transition;
+      left: $header-w--int !important;
+    }
+    
+
+    [role="navigation"].global.interior {
+      @extend %menu-transition;
+      left: 0;
+    }
+
+    // @include breakpoint($breakpoint-header) {
+    //   [role="main"], [role="banner"] {
+    //     left: 0;
+    //   }
+    // }
+  }
 
 // constrain to grid width, max width, and center in the browser window
 .wrapper, %wrapper {

@@ -99,6 +99,10 @@ $border-weight--thin: 1px;
 	@include transition (all 0.2s ease-in);
 }
 
+%menu-transition {
+  @include transition(left 0.3s ease);
+}
+
 // ==========================================================================
 // 	Colors
 // 	-> Use the "theme variables" (bottom) in your actual CSS. 

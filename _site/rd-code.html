@@ -31,35 +31,39 @@
     </script>
   </head>
   <body id="code">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">Oh dear, it looks like your browser is quite old. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <!-- header -->
-    <header role="banner" class="global">
-      
+      <!-- header -->
+      <header role="banner" class="global">
+        
 
-      
-      <a href="#" class="menu-btn">
-        <span aria-hidden="true" data-icon="&#9776;" class="icon-alone"></span>
-        <span class="screen-reader-text">Previous section</span>
-      </a>
-      <a href="index.html" class="logo full"><img src="assets/images/logo-engage--full.png" alt="The Engage Group" /></a>
-      
-      <nav role="navigation" class="global interior is-open">
-        <ul>
-          <li><a href="what-we-do.html" class="global-item ">What we do</a></li>
-          <li><a href="company.html" class="global-item ">Company</a></li>
-          <li><a href="case-studies.html" class="global-item ">Case studies</a></li>
-          <li><a href="blog.html" class="global-item ">Blog</a></li>
-          <li><a href="contact.html" class="global-item ">Contact us</a></li>
-        </ul>
-      </nav>
-      <a href="#" class="login">Sign in</a>
-      
-    </header>
+        
+        <a href="#" class="menu-btn">
+            <span aria-hidden="true" data-icon="&#9776;" class="icon-alone"></span>
+            <span class="screen-reader-text">Menu</span>
+          <!-- <span class="menu-btn-closed">
+            <span aria-hidden="true" data-icon="&#10060;" class="icon-alone"></span>
+            <span class="screen-reader-text">Close</span>
+          </span> -->
+        </a>
+        <a href="index.html" class="logo full"><img src="assets/images/logo-engage--full.png" alt="The Engage Group" /></a>
+        
+        <nav role="navigation" class="global interior js-menu">
+          <ul>
+            <li><a href="index.html" class="global-item ">Home</a></li>
+            <li><a href="what-we-do.html" class="global-item ">What we do</a></li>
+            <li><a href="company.html" class="global-item ">Company</a></li>
+            <li><a href="case-studies.html" class="global-item ">Case studies</a></li>
+            <li><a href="blog.html" class="global-item ">Blog</a></li>
+            <li><a href="contact.html" class="global-item ">Contact us</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="login">Sign in</a>
+        
+      </header>
 
-    <section class="story story-lead">
+      <div class="content">
+
+        <section class="story story-lead">
 <h1>Engage R+D</h1>
 <h2>Resources, tools <span class="amp">&amp;</span> ideas for direct marketing</h2>
 <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, ipsam, quisquam, sit amet quo vel adipisci corrupti fugit aliquid praesentium dolor ex aliquam earum consequatur vitae necessitatibus nulla quaerat perferendis eos incidunt quia neque rerum nobis possimus atque doloremque maxime.</p>
@@ -201,9 +205,11 @@ public static String appendFromArray(String string, String[] array, int arrayInd
 
 </section>
 
-    <!-- footer -->
-    <footer class="global" role="contentinfo">
-      <nav role="navigation" class="global">
+      </div><!-- /.content -->
+
+      <!-- footer -->
+      <footer class="global" role="contentinfo">
+        <nav role="navigation" class="global">
   
 
   <ul>
@@ -217,48 +223,48 @@ public static String appendFromArray(String string, String[] array, int arrayInd
 
   
 </nav>
-      
-      <div class="wrapper">
-        <section class="footer-brand">
-          <div class="logo-footer">
-            <a href="engage/"><img src="assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
-          </div>
-          
-          <div class="brand-group">
-            <small>A member of <a href="http://pmgdirect.net/family/">The PMG Group</a></small>
-          </div>
+        
+        <div class="wrapper">
+          <section class="footer-brand">
+            <div class="logo-footer">
+              <a href="engage/"><img src="assets/images/logo-engage--full-small.png" alt="The Engage Group" /></a>
+            </div>
+            
+            <div class="brand-group">
+              <small>A member of <a href="http://pmgdirect.net/family/">The PMG Group</a></small>
+            </div>
 
-          <nav class="social horizontal">
-            <ul>
-              <li><a href="#" class="social-icon-fb">Facebook</a></li>
-              <li><a href="#" class="social-icon-linkedin">LinkedIn</a></li>
-              <li><a href="#" class="social-icon-twitter">Twitter</a></li>
-              <li><a href="#" class="social-icon-github">Github</a></li>
-            </ul>
-          </nav>
-        </section>
-        <section class="footer-subscribe">
-          <form role="form">
-            <h5>Subscribe to our mailing list</h5>
-            <input type="email" class="form-required small" id="form-footer-email" name="form-footer-email" placeholder="Your email address" required />
-            <input type="submit" class="inline right small" value="Subscribe" />
-          </form>
-        </section>
-        <section class="footer-contact">
-          <dl>
-            <dt>E</dt><dd><a href="#">hello@engageyourcause.com</a></dd>
-            <dt>P</dt><dd>443.539.2650</dd>
-            <dt>F</dt><dd>443.539.2750</dd>
-            <dt>A</dt><dd>7160 Columbia Gateway Drive, Suite 300, Columbia, MD 21046</dd>
-          </dl>
-        </section>
-        <section class="footer-copyright">
-          <small>
-            &copy; 2013 The Engage Group, a member of The Production Management Group, Ltd. family. All rights reserved.
-          </small>
-        </section>
-      </div><!-- /.content -->
-    </footer>
+            <nav class="social horizontal">
+              <ul>
+                <li><a href="#" class="social-icon-fb">Facebook</a></li>
+                <li><a href="#" class="social-icon-linkedin">LinkedIn</a></li>
+                <li><a href="#" class="social-icon-twitter">Twitter</a></li>
+                <li><a href="#" class="social-icon-github">Github</a></li>
+              </ul>
+            </nav>
+          </section>
+          <section class="footer-subscribe">
+            <form role="form">
+              <h5>Subscribe to our mailing list</h5>
+              <input type="email" class="form-required small" id="form-footer-email" name="form-footer-email" placeholder="Your email address" required />
+              <input type="submit" class="inline right small" value="Subscribe" />
+            </form>
+          </section>
+          <section class="footer-contact">
+            <dl>
+              <dt>E</dt><dd><a href="#">hello@engageyourcause.com</a></dd>
+              <dt>P</dt><dd>443.539.2650</dd>
+              <dt>F</dt><dd>443.539.2750</dd>
+              <dt>A</dt><dd>7160 Columbia Gateway Drive, Suite 300, Columbia, MD 21046</dd>
+            </dl>
+          </section>
+          <section class="footer-copyright">
+            <small>
+              &copy; 2013 The Engage Group, a member of The Production Management Group, Ltd. family. All rights reserved.
+            </small>
+          </section>
+        </div><!-- /.wrapper -->
+      </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

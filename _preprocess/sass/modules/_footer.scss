@@ -14,7 +14,10 @@
 
 [role="contentinfo"].global {
 	@extend %theme-dark;
+	@extend %menu-transition;
 	@include rem(padding-bottom, 40px);
+	position: relative;
+	left: 0; // for off-canvas nav
 	text-align: center;
 
 	small {
